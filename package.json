@@ -1,0 +1,21 @@
+{
+  "name": "JuejinBookPress",
+  "description": "编程小册，本图书仅供学习使用，不得用于商业用途。",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "rspress dev",
+    "build": "rspress build",
+    "preview": "rspress preview",
+    "docker:buildx": "docker buildx build --platform linux/amd64,linux/arm64 . --no-cache -t chrissong1994/JuejinBookPress:latest --push",
+    "docker:build": "docker build  . --no-cache -t chrissong1994/JuejinBookPress:latest "
+  },
+  "dependencies": {
+    "rspress": "^1.38.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "@types/react": "^19.0.2"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+}
