@@ -210,7 +210,7 @@ delegate(proto, 'request')
 
 可以发现，之所以 Koa 的请求/响应上下文上有那么多方法和属性可以用，或者可以设置，其实就是这里的 delegate 搞的鬼，它对 context 施加了许多能力，剩下的 request.js 和 response.js 就留给大家自行消化了，都是一些属性方法的特定封装，没有太多的门槛，或者大家可以参考这张图：
 
-![](./imgaes/12-1.png)
+![](./images/12-1.png)
 
 其中本册子所讲的几个知识点，在 Koa 中也有大量的使用，比如 path/util/stream/fs/http 等等，不过建议大家学习 Koa 时候重点关注它的网络进出模型，不需要过多关注底层细节。
 

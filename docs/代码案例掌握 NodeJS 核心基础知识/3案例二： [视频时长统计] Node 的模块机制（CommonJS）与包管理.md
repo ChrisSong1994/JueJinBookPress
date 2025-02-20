@@ -7,7 +7,7 @@
 ```
 
 
-![image.png | left | 826x336](./imgaes/3-1.png)
+![image.png | left | 826x336](./images/3-1.png)
 
 Node 世界，一切（独立 JS 文件）皆模块，模块之间互相隔离互不影响，通过引用来互相调用。
 
@@ -496,7 +496,7 @@ Module._resolveFilename = function(request, parent, isMain, options) {};
 
 那么我们平时手写的 JS 代码，包括 node_modules 下的代码，就会被这个 CJS Loader 给接管了，拿到代码后的第一件事就是对它包裹一个函数表达式，传入一些变量，我们可以在 node 命令行模式下，输入 `require('module').wrap.toString()` 和 `require('module').wrapper` 来查看到包裹的方法：
 
-![](./imgaes/3-2.png)
+![](./images/3-2.png)
 
 我们可以拿一段 webpack 源代码举例：
 

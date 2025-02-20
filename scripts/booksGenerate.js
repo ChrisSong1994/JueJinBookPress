@@ -14,6 +14,7 @@ const {
   addBookToCache,
   isBookInCache,
   checkIsDirectory,
+  filenameSortor,
 } = require("./utils");
 
 // books 目录
@@ -38,9 +39,8 @@ async function booksGenerate(booksPath) {
     .readdirSync(booksPath)
     .filter((name) => name.endsWith(".md"))
     .filter((name) => name !== "index.md")
-    .sort((a, b) => {
-      return a.split(".")[0] - b.split(".")[0];
-    });
+    .sort(filenameSortor);
+
   console.log(mdFiles);
   //   生成 index.md 文件
   await bookIndexFileGenerate(booksPath, mdFiles);
@@ -69,6 +69,9 @@ async function run() {
     // 扫描books下的所有书籍
     const books = await fs.readdir(docsBooksPath);
     for (const bookName of books) {
+      if (["public"].includes(bookName)) {
+        continue;
+      }
       const booksPath = path.join(docsBooksPath, bookName);
       const isDirectory = await checkIsDirectory(booksPath);
       if (isDirectory) {

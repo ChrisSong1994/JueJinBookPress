@@ -174,7 +174,7 @@ const newArray = arr.reduce(add1AndPush, [])
 
 大家可以试着在脑海中绘制一下，` reduce(add1AndPush, []) `这个过程对应的函数调用链，它长这样：
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4a5e308c75794c02941dfacebd0325cf~tplv-k3u1fbpfcp-zoom-1.image)如图，我们的)`工作流啊！
+![](./images/bed380e8dcb38a76aa46f356fb378501.png)如图，我们的)`工作流啊！
 
 ### Map 和 Reduce 之间的逻辑关系
 

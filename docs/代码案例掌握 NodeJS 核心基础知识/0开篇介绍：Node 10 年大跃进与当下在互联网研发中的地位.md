@@ -1,7 +1,7 @@
 ### 
 # 0开篇介绍：Node 10 年大跃进与当下在互联网研发中的地位
 
-![image.png | left | 826x155](./imgaes/0-1.png)
+![image.png | left | 826x155](./images/0-1.png)
 
 
 大家好，我是四两哥，很荣幸受掘金邀请，在 Node 十年之际，来为大家编写 Node 的学习小册，这是 Node 学习系列的第一本，我们选择性的学习 Node 里面核心且基础的模块，整体学习难度较小。另外这本册子精心准备了可以练手的小案例，在后面章节中， [Nodejs](https://nodejs.org/en/) 将本色出演，下文一概使用 Node 来作为 Nodejs 的简称。
@@ -30,39 +30,39 @@
 
 ### 2017 Github 图鉴之最流行语言 PR 排名
 
-![2017 Github 图鉴之最流行语言 PR 排名.png | center | 747x560](./imgaes/0-2.png)
+![2017 Github 图鉴之最流行语言 PR 排名.png | center | 747x560](./images/0-2.png)
 
 
 Github 把 Node 相关的项目也归属到了 Javascript 里面，所以上图并没有出现 Node，但是在 Github 上被 Review 最多和被讨论最多的项目中，都有 Node 的身影，同时被 Fork 最多和贡献者数量最多的项目中，至少有 30% 的项目，都是强依赖 Node 的，比如 React、Vue、ReactNative 等，Javascript 生态的繁荣是建立在 Node 这一革命性工具上的：
 
 ### 2017 Github 图鉴之项目热度排名
 
-![2017 Github 图鉴之项目热度排名.png | center | 747x283](./imgaes/0-3.png)
+![2017 Github 图鉴之项目热度排名.png | center | 747x283](./images/0-3.png)
 
 
 换句话讲，没有 Node，就没有 Javascript 各种全家桶的今天，当然没有 Javascript（ECMA）标准规范的支撑，同样没有 Node 今天的生态蓬勃，作为佐证，可以看下 Google 的搜索趋势（Trends），也就是全球开发者关心某项技术的程度，曲线反映了这项技术的热度，越接近 100，热度越高，可以发现 Node 自 2009 年面世以来，热度整体在持续上升，只不过在中国，晚了两三年时间。
 
 ### 谷歌 Nodejs - 美国 9 年热度变化趋势图
 
-![谷歌 Nodejs - 美国 9 年热度变化趋势图.png | center | 747x312](./imgaes/0-4.png)
+![谷歌 Nodejs - 美国 9 年热度变化趋势图.png | center | 747x312](./images/0-4.png)
 
 
 
-![谷歌 Nodejs - 中国 9 年热度变化趋势图.png | center | 747x312](./imgaes/0-5.png)
+![谷歌 Nodejs - 中国 9 年热度变化趋势图.png | center | 747x312](./images/0-5.png)
 
 
 对比下图 Javascript（红色） 和 Node（蓝色），也可以发现两者在热度上也基本保持一样的趋势。
 
 
 
-![谷歌 Nodejs - 中国 9 年热度变化趋势对比图.png | center | 747x312](./imgaes/0-6.png)
+![谷歌 Nodejs - 中国 9 年热度变化趋势对比图.png | center | 747x312](./images/0-6.png)
 
 
 还有更多有趣的数字，大家可以点击查看 [2016 Github Octoverse](https://octoverse.github.com/2017/)、[2017 Github Octoverse](https://octoverse.github.com/2016/) 和 搜索 [Google Trends](https://trends.google.com/trends/explore?date=2009-10-01%202018-10-01&geo=US&q=nodejs)，那么 [2018 Github Octoverse 最新公布的项目情况](https://octoverse.github.com/)，也建议大家特别关注下，来跟 2017 作对比，这些靠前的项目，哪些是离不开 Node 的支撑的：
 
 
-![](./imgaes/0-7.png)
-![](./imgaes/0-8.png)
+![](./images/0-7.png)
+![](./images/0-8.png)
 
 ## Node 的行业前景与就业优势
 

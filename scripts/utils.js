@@ -90,20 +90,21 @@ async function addTitle(content, title) {
  *  @param {number} quality // 图片压缩比
  */
 async function imageUrlConvertToLocalPath(url, booksImagesPath) {
-  let formatUrl = url.replace(/\\/g, "");
+  let formatUrl = url.replace(/\\/g, ""); // 处理 url 中有反斜杠的情况
   if (formatUrl.includes(" ")) {
     formatUrl = formatUrl.split(" ")[0]; // 处理 url 中有空格的情况
   }
-  // 处理 url 中有空格的情况
 
   try {
     const response = await fetch(formatUrl);
     const arrayBuffer = await response.arrayBuffer();
     const buffer = new Uint8Array(arrayBuffer);
+    // 图片重命名
     const filename = `${crypto
       .createHash("md5")
       .update(formatUrl)
       .digest("hex")}`;
+    // 图片路径
     let filepath = path.join(booksImagesPath, filename);
     const urlObj = new URL(formatUrl.replace(/\#/g, ""));
     // image sharp 特殊处理
@@ -125,7 +126,7 @@ async function imageUrlConvertToLocalPath(url, booksImagesPath) {
         .toFile(filepath);
     }
     // 返回相对路径
-    return `./images/${path.parse(filepath).base}`;
+    return `./images/${path.parse(filepath).base} `; // 多增加一个空格，避免垃圾参数影响替换后路径识别
   } catch (e) {
     console.log(`${formatUrl} 转换失败`, e.message);
     return formatUrl;
@@ -134,12 +135,17 @@ async function imageUrlConvertToLocalPath(url, booksImagesPath) {
 
 /**
  * 获取 markdown 中的 image 标签
- * @param {string} input
+ * @param {string} markdown
  */
-function parseMarkdownImagesUrls(input, filter) {
-  const reg = /.*\!\[.*\]\((.*)\).*/g;
-  const matchs = [...input.matchAll(reg)];
-  let urls = matchs.map((m) => m[1]).filter((url) => url.startsWith("http")); // 过滤掉 base64 和 相对路径
+function parseMarkdownImagesUrls(markdown, filter) {
+  const regex = /!\[.*?\]\((['"]?)(.*?)\1(?:\s+["']\S*["'])?\)/g;
+  let urls = [];
+  let match;
+  while ((match = regex.exec(markdown)) !== null) {
+    const url = match[2].trim(); // 提取并清理 URL
+    urls.push(url);
+  }
+  urls = urls.filter((url) => url.startsWith("http")); // 过滤掉 base64 和 相对路径
 
   if (filter) {
     urls = urls.filter((url) => filter.test(url));
@@ -152,7 +158,9 @@ function parseMarkdownImagesUrls(input, filter) {
 async function addBookToCache(bookPath, cacheDirPath) {
   const cacheData = await fs.readJSON(cacheDirPath);
   cacheData.books.push(path.basename(bookPath));
-  await fs.writeJSON(cacheDirPath, cacheData);
+  await fs.writeFile(cacheDirPath, JSON.stringify(cacheData, null, 2), {
+    type: "utf8",
+  });
 }
 
 // 判断书籍是否已经在缓存中
@@ -176,11 +184,41 @@ async function checkIsDirectory(path) {
   }
 }
 
-// 获取URL 中的search params
-function getSearchParams(url) {
-  const urlObj = new URL(url.replace(/\#/g, ""));
-  const searchParams = urlObj.searchParams;
-  return searchParams;
+// 判断文件名是否以数字加点或者空格开头
+function filenameSortor(a, b) {
+  // // (\d\.|\d ) 表示两种情况：要么是数字后面跟一个点（\d\.），要么是数字后面跟一个空格（\d ）。
+  // const regex = /^(\d+)(\.|\s)/;
+  // return ()=>{
+
+  // }
+  // 正则分割：将字符串拆分为数字和非数字段
+  const splitRegex = /(\d+)/;
+  const aParts = a.split(splitRegex).filter((x) => x);
+  const bParts = b.split(splitRegex).filter((x) => x);
+
+  // 逐段比较
+  for (let i = 0; i < Math.min(aParts.length, bParts.length); i++) {
+    const aPart = aParts[i];
+    const bPart = bParts[i];
+
+    // 若两段均为数字，按数值比较
+    if (/\d/.test(aPart) && /\d/.test(bPart)) {
+      const aNum = parseInt(aPart, 10);
+      const bNum = parseInt(bPart, 10);
+      if (aNum !== bNum) return aNum - bNum;
+    } else {
+      // 否则按字符串字典序比较（不区分大小写可添加 .toLowerCase()）
+      if (aPart < bPart) return -1;
+      if (aPart > bPart) return 1;
+    }
+  }
+
+  // 若前缀相同，长度短的排在前面（如 "file1" vs "file1-extra"）
+  return aParts.length - bParts.length;
+}
+
+function isNumber(str) {
+  return /^\d+$/.test(str);
 }
 
 module.exports = {
@@ -190,4 +228,5 @@ module.exports = {
   addBookToCache,
   isBookInCache,
   checkIsDirectory,
+  filenameSortor,
 };

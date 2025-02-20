@@ -8,6 +8,7 @@
 - [《JavaScript 函数式编程实践指南》](/JavaScript%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97)
 - [《JavaScript 设计模式核心原理与应用实践》](/JavaScript%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8%E5%AE%9E%E8%B7%B5)
 - [《深入浅出微前端》](/深入浅出微前端)
+- [《基于 JavaScript 开发灵活的数据应用》](/%E5%9F%BA%E4%BA%8E%20JavaScript%20%E5%BC%80%E5%8F%91%E7%81%B5%E6%B4%BB%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%94%E7%94%A8)
 
 ### 全栈开发
 

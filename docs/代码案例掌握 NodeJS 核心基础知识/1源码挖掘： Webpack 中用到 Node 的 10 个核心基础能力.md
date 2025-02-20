@@ -2,7 +2,7 @@
 
 # 1源码挖掘： Webpack 中用到 Node 的 10 个核心基础能力
 
-![image.png | left | 747x353](./imgaes/1-1.png)
+![image.png | left | 747x353](./images/1-1.png)
 
 
 [Webpack v4.23.1](https://webpack.js.org/)，可以把 JS 文件中依赖的各种资源，分门别类的摘立出来，根据一定的配置规则，该编译编译，该合并合并，该压缩压缩，最终生成干干净净的静态资源文件，那么如此强大的 Webpack，又是站在 Node 的生态和能力之上，一定用到了 Node 的诸多能力，结合小册子，这里面我们可以看看它有用到哪些基础但核心的知识呢？
@@ -87,7 +87,7 @@ Webpack 有着庞大的开发者阵营和用户阵营，意味着他们无论是
 
 
 
-![image.png | left | 747x355](./imgaes/1-2.png)
+![image.png | left | 747x355](./images/1-2.png)
 
 
 
@@ -200,7 +200,7 @@ const WebpackOptionsDefaulter = require("./WebpackOptionsDefaulter")
 
 
 
-![image.png | left | 747x460](./imgaes/1-3.png)
+![image.png | left | 747x460](./images/1-3.png)
 
 
 可以发现，Node 的 fs 能力作为底层，最终在 webpack 里面，作为插件来支持文件的生成，跨目录的复制转移等等这些骚操作。

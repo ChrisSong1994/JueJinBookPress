@@ -5,7 +5,7 @@
 本节有一定理解难度，建议新手同学在完成前面章节后，再来消化本节。
 ```
 
-![image.png | left | 746x363](./imgaes/13-1.png)
+![image.png | left | 746x363](./images/13-1.png)
 
 
 通常，网上搜 Node 的架构或者源码，经常搜到这样一张图，大体把 Node 分为了 3 层：
@@ -90,7 +90,7 @@ Module {
 发现 require 是一个函数而已，通过命令行，我们可以看到许多 Node 运行中提供的对象、方法和属性，比如 `process` `module` `require`，那它们都是怎么来的呢，我们还是得回到源头。
 
 
-![image.png | left | 746x155](./imgaes/13-2.png)
+![image.png | left | 746x155](./images/13-2.png)
 
 
 源码里面藏着一切答案，我们就从源码开始吧，本册源码基于 [v10.x](https://github.com/nodejs/node/tree/v10.x)，下载地址 [https://github.com/nodejs/node/archive/v10.x.zip](https://github.com/nodejs/node/archive/v10.x.zip)，不同版本的源码差异有大有小，但整体加载流程大概一致，首次阅读源码，建议以本册下载的版本为准。
@@ -119,7 +119,7 @@ let 纸篓子 = []
 
 
 
-![image.png | left | 746x163](./imgaes/13-3.png)
+![image.png | left | 746x163](./images/13-3.png)
 
 
 Node 的整个底层代码，大量使用 C/C++，JS 和 C/C++ 各 100 多万行，我们再看下 Node 的源码主要目录结构（暴力删减版）：
