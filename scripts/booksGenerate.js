@@ -17,7 +17,7 @@ const {
 } = require("./utils");
 
 // books 目录
-const docsBooksPath = path.join(__dirname, "../docs/books");
+const docsBooksPath = path.join(__dirname, "../docs");
 // 缓存目录
 const cacheDirPath = path.join(__dirname, "../.cache.json");
 
