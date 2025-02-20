@@ -7,8 +7,8 @@ export default defineConfig({
   root: path.join(__dirname, "docs"),
   title: "前端小册",
   description: '前端知识小册',
-  // icon: "/logo.icon.png",
-  // logo: "/logo.jpeg",
+  icon: "/logo.icon.png",
+  logo: "/logo.png",
   base: BASE_PATH,
   logoText: "前端小册",
   builderConfig: {
