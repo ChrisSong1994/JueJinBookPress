@@ -5,7 +5,7 @@ const BASE_PATH = "/";
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),
-  title: "JuejinBookPress",
+  title: "前端小册",
   // icon: "/logo.icon.png",
   // logo: "/logo.jpeg",
   base: BASE_PATH,
