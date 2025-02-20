@@ -1,0 +1,12 @@
+
+# 剖析 Vue.js 内部运行机制
+
+- [1.Vue.js 运行机制全局概览](./1.Vue.js%20%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6%E5%85%A8%E5%B1%80%E6%A6%82%E8%A7%88)
+- [2.响应式系统的基本原理](./2.%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86)
+- [3.响应式系统的依赖收集追踪原理](./3.%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BE%9D%E8%B5%96%E6%94%B6%E9%9B%86%E8%BF%BD%E8%B8%AA%E5%8E%9F%E7%90%86)
+- [4.实现 Virtual DOM 下的一个 VNode 节点](./4.%E5%AE%9E%E7%8E%B0%20Virtual%20DOM%20%E4%B8%8B%E7%9A%84%E4%B8%80%E4%B8%AA%20VNode%20%E8%8A%82%E7%82%B9)
+- [5.template 模板是怎样通过 Compile 编译的](./5.template%20%E6%A8%A1%E6%9D%BF%E6%98%AF%E6%80%8E%E6%A0%B7%E9%80%9A%E8%BF%87%20Compile%20%E7%BC%96%E8%AF%91%E7%9A%84)
+- [6.数据状态更新时的差异 diff 及 patch 机制](./6.%E6%95%B0%E6%8D%AE%E7%8A%B6%E6%80%81%E6%9B%B4%E6%96%B0%E6%97%B6%E7%9A%84%E5%B7%AE%E5%BC%82%20diff%20%E5%8F%8A%20patch%20%E6%9C%BA%E5%88%B6)
+- [7.批量异步更新策略及 nextTick 原理](./7.%E6%89%B9%E9%87%8F%E5%BC%82%E6%AD%A5%E6%9B%B4%E6%96%B0%E7%AD%96%E7%95%A5%E5%8F%8A%20nextTick%20%E5%8E%9F%E7%90%86)
+- [8.Vuex 状态管理的工作原理](./8.Vuex%20%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86)
+- [9.总结 & 常见问题解答](./9.%E6%80%BB%E7%BB%93%20%26%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94)
