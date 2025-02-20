@@ -6,10 +6,11 @@ const BASE_PATH = "/";
 export default defineConfig({
   root: path.join(__dirname, "docs"),
   title: "前端小册",
+  description: '前端知识小册',
   // icon: "/logo.icon.png",
   // logo: "/logo.jpeg",
   base: BASE_PATH,
-  logoText: "JuejinBookPress",
+  logoText: "前端小册",
   builderConfig: {
     output: {
       assetPrefix: BASE_PATH,
@@ -25,12 +26,12 @@ export default defineConfig({
       {
         icon: "github",
         mode: "link",
-        content: "https://github.com/ChrisSong1994",
+        content: "https://github.com/ChrisSong1994/JueJinBookPress",
       },
     ],
     editLink: {
       docRepoBaseUrl:
-        "https://github.com/ChrisSong1994/tree/main/docs",
+        "https://github.com/ChrisSong1994/JueJinBookPress/tree/main/docs",
       text: "📝 在 GitHub 上编辑此页",
     },
     searchNoResultsText: "未搜索到相关结果",

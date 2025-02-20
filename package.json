@@ -7,7 +7,7 @@
     "dev": "rspress dev",
     "build": "rspress build",
     "preview": "rspress preview",
-    "generate": "node scripts/booksGenerate.js",
+    "gen": "node scripts/booksGenerate.js",
     "docker:buildx": "docker buildx build --platform linux/amd64,linux/arm64 . --no-cache -t chrissong1994/JuejinBookPress:latest --push",
     "docker:build": "docker build  . --no-cache -t chrissong1994/JuejinBookPress:latest "
   },
