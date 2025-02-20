@@ -27,7 +27,7 @@ RUN pnpm run build
 # 运行阶段
 FROM nginx:1.19.2  AS client-server
 
-WORKDIR /usr/share/nginx/html/frontend-stack
+WORKDIR /usr/share/nginx/html/yuejinbookpress
 
 COPY --from=client-builder /app/client/doc_build ./
 COPY --from=client-builder /app/client/nginx.conf /etc/nginx/nginx.conf
