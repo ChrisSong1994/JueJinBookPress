@@ -15,7 +15,6 @@
 - [《Nest 通关秘籍  最新200章》](/books/Nest%20%E9%80%9A%E5%85%B3%E7%A7%98%E7%B1%8D%20%20%E6%9C%80%E6%96%B0200%E7%AB%A0)
 
 ### 框架
-- [《React 实战：设计模式和最佳实践》](/books/React%20%E5%AE%9E%E6%88%98%EF%BC%9A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
 - [《React 进阶实践指南》](/books/React%20%E8%BF%9B%E9%98%B6%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97)
 - [《React 组合式开发实践：打造企业管理系统五大核心模块》](/books/React%20%E7%BB%84%E5%90%88%E5%BC%8F%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5%EF%BC%9A%E6%89%93%E9%80%A0%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E4%BA%94%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97)
 - [《React 通关秘籍》](/books/React%20%E9%80%9A%E5%85%B3%E7%A7%98%E7%B1%8D)
