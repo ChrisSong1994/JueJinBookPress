@@ -39,6 +39,7 @@
 ### Typescript
 
 - [《TypeScript 全面进阶指南》](/TypeScript全面进阶指南/)
+- [《TypeScript 类型体操通关秘籍》](/TypeScript%20类型体操通关秘籍)
 
 ### 低代码
 
