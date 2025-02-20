@@ -31,6 +31,7 @@ const booksFileGenerate = async (booksPath, mdFiles) => {
   // 定义图片目录
   const booksImagesPath = path.join(booksPath, "images");
   fs.ensureDirSync(booksImagesPath);
+
   for (const mdFile of mdFiles) {
     signale.start(`文档： ${mdFile} 开始生成...`);
     await bookUrlImageToLocalPathGenerate(booksPath, mdFile, booksImagesPath);
@@ -48,19 +49,23 @@ async function bookUrlImageToLocalPathGenerate(
 
   let content = await fs.readFile(mdFilePath, { encoding: "utf8" });
   const matchedUrls = parseMarkdownImagesUrls(content);
-  if (matchedUrls.length === 0) return;
-  // 创建图片 http url 和 local path 的映射
-  matchedUrls.forEach((url) => imgUrlMap.set(url, null));
+  if (matchedUrls.length !== 0) {
+    // 创建图片 http url 和 local path 的映射
+    matchedUrls.forEach((url) => imgUrlMap.set(url, null));
 
-  for (const url of imgUrlMap.keys()) {
-    const imgLocalPath = await imageUrlConvertToLocalPath(url, booksImagesPath);
-    imgUrlMap.set(url, imgLocalPath);
-  }
+    for (const url of imgUrlMap.keys()) {
+      const imgLocalPath = await imageUrlConvertToLocalPath(
+        url,
+        booksImagesPath
+      );
+      imgUrlMap.set(url, imgLocalPath);
+    }
 
-  for (const url of imgUrlMap.keys()) {
-    const imgLocalPath = imgUrlMap.get(url);
-    if (imgLocalPath) {
-      content = content.replaceAll(url, imgLocalPath);
+    for (const url of imgUrlMap.keys()) {
+      const imgLocalPath = imgUrlMap.get(url);
+      if (imgLocalPath) {
+        content = content.replaceAll(url, imgLocalPath);
+      }
     }
   }
 
@@ -99,24 +104,28 @@ async function imageUrlConvertToLocalPath(url, booksImagesPath) {
       .createHash("md5")
       .update(formatUrl)
       .digest("hex")}`;
-    const filepath = path.join(booksImagesPath, filename);
+    let filepath = path.join(booksImagesPath, filename);
     const urlObj = new URL(formatUrl.replace(/\#/g, ""));
     // image sharp 特殊处理
     if (path.extname(urlObj.pathname) === ".image") {
       if (urlObj.searchParams.get("e") === "gif") {
-        await fs.writeFile(`${filepath}.gif`, buffer);
+        filepath = `${filepath}.gif`;
+        await fs.writeFile(filepath, buffer);
       } else {
+        filepath = `${filepath}.png`;
         // 根据 url 中带不带 ? e 参数
         await sharp(buffer)
           .png({ compressionLevel: 9, adaptiveFiltering: false })
-          .toFile(`${filepath}.png`);
+          .toFile(filepath);
       }
     } else {
+      filepath = `${filepath}.png`;
       await sharp(buffer)
         .png({ compressionLevel: 9, adaptiveFiltering: false })
-        .toFile(`${filepath}.png`);
+        .toFile(filepath);
     }
-    return `./images/${filename}`;
+    // 返回相对路径
+    return `./images/${path.parse(filepath).base}`;
   } catch (e) {
     console.log(`${formatUrl} 转换失败`, e.message);
     return formatUrl;
