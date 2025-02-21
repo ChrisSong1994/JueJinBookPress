@@ -3,6 +3,16 @@ const fs = require("fs-extra");
 const signale = require("signale");
 const sharp = require("sharp");
 const crypto = require("crypto");
+
+// 文件重命名
+const booksFilenameFormat = async (booksPath, mdFiles) => {
+  const renameMdFiles = [];
+  for (const file of mdFiles) {
+    const newFileName = await renameMdFilename(booksPath, file);
+    renameMdFiles.push(newFileName);
+  }
+  return renameMdFiles;
+};
 // 生成 index.md 文件
 const bookIndexFileGenerate = async (booksPath, mdFiles) => {
   const content = `
@@ -22,7 +32,12 @@ ${mdFiles
 
 // 生成 _meta.json 文件
 const bookMetaFileGenerate = async (booksPath, mdFiles) => {
-  const content = JSON.stringify(mdFiles);
+  const fileName = path.parse(booksPath).base;
+  const mateData = [
+    { type: "file", label: `主页：${fileName}`, name: "index" },
+    ...mdFiles,
+  ];
+  const content = JSON.stringify(mateData, null, 2);
   await fs.writeFile(path.join(booksPath, "_meta.json"), content);
 };
 
@@ -109,26 +124,44 @@ async function imageUrlConvertToLocalPath(url, booksImagesPath) {
     const urlObj = new URL(formatUrl.replace(/\#/g, ""));
     // image sharp 特殊处理
     if (path.extname(urlObj.pathname) === ".image") {
-      if (urlObj.searchParams.get("e") === "gif") {
+      if (
+        urlObj.searchParams.get("e") === "gif" ||
+        urlObj.searchParams.get("f") === "gif"
+      ) {
         filepath = `${filepath}.gif`;
-        await fs.writeFile(filepath, buffer);
+        await sharp(buffer, { animated: true, limitInputPixels: false })
+          .gif({
+            // 压缩核心参数
+            reductionEffort: 1, // 优化等级 (0-7)
+            colours: 24, // 颜色数量 (2-256)
+            interFrameMaxError: 4, // 帧间优化 (0-32)
+            interPaletteMaxError: 4, // 调色板优化 (0-32)
+          })
+          .toFile(filepath);
       } else {
-        filepath = `${filepath}.png`;
         // 根据 url 中带不带 ? e 参数
+        filepath = `${filepath}.webp`;
         await sharp(buffer)
-          .png({ compressionLevel: 9, adaptiveFiltering: false })
+          .webp({
+            quality: 70,
+            effort: 6,
+          })
           .toFile(filepath);
       }
     } else {
-      filepath = `${filepath}.png`;
+      filepath = `${filepath}.webp`;
       await sharp(buffer)
-        .png({ compressionLevel: 9, adaptiveFiltering: false })
+        .webp({
+          quality: 70,
+          effort: 6,
+        })
         .toFile(filepath);
     }
     // 返回相对路径
     return `./images/${path.parse(filepath).base} `; // 多增加一个空格，避免垃圾参数影响替换后路径识别
   } catch (e) {
     console.log(`${formatUrl} 转换失败`, e.message);
+    await fs.appendFile(path.join(__dirname, "../.error.log"), formatUrl);
     return formatUrl;
   }
 }
@@ -186,11 +219,6 @@ async function checkIsDirectory(path) {
 
 // 判断文件名是否以数字加点或者空格开头
 function filenameSortor(a, b) {
-  // // (\d\.|\d ) 表示两种情况：要么是数字后面跟一个点（\d\.），要么是数字后面跟一个空格（\d ）。
-  // const regex = /^(\d+)(\.|\s)/;
-  // return ()=>{
-
-  // }
   // 正则分割：将字符串拆分为数字和非数字段
   const splitRegex = /(\d+)/;
   const aParts = a.split(splitRegex).filter((x) => x);
@@ -217,8 +245,22 @@ function filenameSortor(a, b) {
   return aParts.length - bParts.length;
 }
 
-function isNumber(str) {
-  return /^\d+$/.test(str);
+// 重命名文件，优化显示
+async function renameMdFilename(booksPath, mdFilePath) {
+  const filePathParse = path.parse(mdFilePath);
+  let newFileName = filePathParse.name; // 去除首尾空格
+  // windows 下 路径中不能有 <, >, :, ", /, \, |, ?, * 等符号
+  const illegalCharsTo_ = /[\\/:\*|]+/g;
+  newFileName = newFileName.replaceAll(/\?/g, ""); // 替换 ? 为 空
+  newFileName = newFileName.replaceAll(/[\"\'<>]/g, " "); // 替换 " 为
+  newFileName = newFileName.replaceAll(illegalCharsTo_, "_"); // 其他替换为 _
+  newFileName = newFileName.trim();
+  const newMdFilePath = `${newFileName}${filePathParse.ext}`;
+  await fs.rename(
+    path.join(booksPath, mdFilePath),
+    path.join(booksPath, newMdFilePath)
+  );
+  return newMdFilePath;
 }
 
 module.exports = {
@@ -229,4 +271,5 @@ module.exports = {
   isBookInCache,
   checkIsDirectory,
   filenameSortor,
+  booksFilenameFormat,
 };

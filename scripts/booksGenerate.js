@@ -15,13 +15,17 @@ const {
   isBookInCache,
   checkIsDirectory,
   filenameSortor,
+  booksFilenameFormat,
 } = require("./utils");
 
 // books 目录
 const docsBooksPath = path.join(__dirname, "../docs");
 // 缓存目录
 const cacheDirPath = path.join(__dirname, "../.cache.json");
+// 错误日志，记录解析错误的 链接
+const errorLogPath = path.join(__dirname, "../.error.log");
 
+fs.ensureFileSync(errorLogPath);
 async function booksGenerate(booksPath) {
   if (!fs.existsSync(booksPath)) {
     signale.fatal(new Error(`${booksPath} 目录不存在`));
@@ -35,13 +39,15 @@ async function booksGenerate(booksPath) {
   }
   signale.start(`${bookName} 开始归档`);
   // 扫描目录生成 index.md 和 _meta.json 文件，根据文件下的 md 名称生成
-  const mdFiles = fs
+  let mdFiles = fs
     .readdirSync(booksPath)
     .filter((name) => name.endsWith(".md"))
     .filter((name) => name !== "index.md")
     .sort(filenameSortor);
 
   console.log(mdFiles);
+  // 格式化 md 文件名
+  mdFiles = await booksFilenameFormat(booksPath, mdFiles);
   //   生成 index.md 文件
   await bookIndexFileGenerate(booksPath, mdFiles);
   //   生成 _meta.json 文件
