@@ -7,6 +7,7 @@
     "dev": "rspress dev",
     "build": "rspress build",
     "preview": "rspress preview",
+    "start": "serve -p 3090  ./doc_build",
     "gen": "node scripts/booksGenerate.js",
     "docker:buildx": "docker buildx build --platform linux/amd64,linux/arm64 . --no-cache -t chrissong1994/JuejinBookPress:latest --push",
     "docker:build": "docker build  . --no-cache -t chrissong1994/JuejinBookPress:latest "
@@ -17,9 +18,9 @@
   "devDependencies": {
     "@types/node": "^18.11.17",
     "@types/react": "^19.0.2",
-    "chokidar": "^4.0.3",
     "fs-extra": "^11.3.0",
     "node-fetch": "^2.7.0",
+    "serve": "^14.2.4",
     "sharp": "^0.33.5",
     "signale": "^1.4.0"
   },
