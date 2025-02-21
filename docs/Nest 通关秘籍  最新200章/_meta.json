@@ -1,4 +1,9 @@
 [
+  {
+    "type": "file",
+    "label": "主页：Nest 通关秘籍  最新200章",
+    "name": "index"
+  },
   "1. 开篇词.md",
   "2. 给你 5 个学习 Nest 的理由，你会心动么.md",
   "3. Nest 基础概念扫盲.md",
@@ -16,7 +21,7 @@
   "15. Module 和 Provider 的循环依赖怎么处理？.md",
   "16. 如何创建动态模块.md",
   "17. Nest 和 Express 的关系，如何切到 fastify.md",
-  "18. Nest 的 Middleware .md",
+  "18. Nest 的 Middleware.md",
   "19. RxJS 和 Interceptor.md",
   "20. 内置 Pipe 和自定义 Pipe.md",
   "21. 如何使用 ValidationPipe 验证 post 请求参数.md",
