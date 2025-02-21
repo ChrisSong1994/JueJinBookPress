@@ -92,7 +92,7 @@ SVG 的矢量特性确保了图形在任何尺寸下都能保持清晰和像素�
 
 正如你所看到的，按钮在三个状态具有不同的形状：
 
-![](./images/64ed4d037bf68a75a519c63bf40c150c.png )
+![](./images/64ed4d037bf68a75a519c63bf40c150c.webp )
 
 仅使用 CSS 自身能力要绘制矩形，很容易。因为在 CSS 中，任何元素默认就是一个矩形框，但要在悬停状态（`:hover`）和激活状态（`:active`）将矩形分别变成凸出和凹进的形状，就显得非常的吃力。在绘制图形方面，SVG 具有绝对强的优势，使用 SVG 的 `<path>` 元素，非常容易绘制出按钮所需的三种形状：
 
@@ -281,7 +281,7 @@ h1 {
   
 
 
-![](./images/4b2766c775a270cbf9618348bddf35f7.png )
+![](./images/4b2766c775a270cbf9618348bddf35f7.webp )
 
   
 
@@ -306,7 +306,7 @@ h1 {
   
 
 
-![](./images/00d602086abf3c9a4ba4b52b73fba24a.png )
+![](./images/00d602086abf3c9a4ba4b52b73fba24a.webp )
 
   
 
@@ -348,7 +348,7 @@ h1 {
   
 
 
-![](./images/c807be3f62932ca0e964f35645c7ee6a.png )
+![](./images/c807be3f62932ca0e964f35645c7ee6a.webp )
 
 
 > Demo 地址：https://codepen.io/airen/full/VwOemRz
@@ -356,7 +356,7 @@ h1 {
 直到目前，仅使用 CSS 要实现类似的文本效果是不太现实的，一旦将 SVG 的能力注入进来，一切皆有可能：
 
 
-![](./images/14a27ba0bcdb9ab59f09e448b742cead.png )
+![](./images/14a27ba0bcdb9ab59f09e448b742cead.webp )
 
 
 > Demo 地址：https://codepen.io/collection/ArxmyO
@@ -400,7 +400,7 @@ SVG 与 CSS 的结合不仅使 Web 界面更加美观，还能营造出更加沉
 ```
 
 
-![](./images/b9bd9397e7c2a2cbf635f963bd781691.png )
+![](./images/b9bd9397e7c2a2cbf635f963bd781691.webp )
 
 当用户鼠标悬停在按钮上时，第一个 `<path>` （即 `<`）和第三个 `<path>` （即 `>`）会移出按钮可视区域，而第二个 `<path>` （即 `|`）由竖线变成横线。这些变换效果，我们可以通过 CSS 的变换来实现。
 
@@ -582,13 +582,13 @@ SVG 与 CSS 的结合不仅使 Web 界面更加美观，还能营造出更加沉
   
 
 
-![](./images/045e4f85e14e916c4100cbaad8d73900.png )
+![](./images/045e4f85e14e916c4100cbaad8d73900.webp )
 
 > Echarts 官网：https://echarts.apache.org/zh/index.html
 
 
 
-![](./images/6a0cbbbdd426bfffaad4d98829d3535b.png )
+![](./images/6a0cbbbdd426bfffaad4d98829d3535b.webp )
 
 > D3 官网：https://d3js.org/
 
@@ -612,7 +612,7 @@ SVG 的可缩放特性使其成为响应式 Web 设计的理想选择。图形�
 例如 Web 上带有水波纹的 UI 效果：
 
 
-![](./images/b1f5c272a321858e742d4a134e53188d.png )
+![](./images/b1f5c272a321858e742d4a134e53188d.webp )
 
 
 使用 SVG 创建水波纹要比使用 CSS 简单得多。因为 SVG 最大的特性就是可以无限缩放，而且还不会失真。另外就是，可以使用 `<path>` 绘制出任何你想要的水波纹效果。即使你不懂 SVG，你也可以借且诸如 Figma 这样的图形设计软件或在线工具（例如 [getwaves.io](https://getwaves.io/) 、[ShapeDriver](https://www.shapedivider.app/) 和 [Haikei app](https://haikei.app/) 等）获得绘制水波纹的 SVG 代码。
@@ -656,7 +656,7 @@ SVG 的可缩放特性使其成为响应式 Web 设计的理想选择。图形�
 
 上面的 SVG 代码创建了多种不同的形状：
 
-![](./images/d224c012c70191610d723f2d0e946a97.png )
+![](./images/d224c012c70191610d723f2d0e946a97.webp )
 
   
 
@@ -738,7 +738,7 @@ SVG 的可缩放特性使其成为响应式 Web 设计的理想选择。图形�
 
 你最终看到的效果如下：
 
-![](./images/e7f994ca0fa6596ca7a4c226f8f36d4a.png )
+![](./images/e7f994ca0fa6596ca7a4c226f8f36d4a.webp )
 
 
 > Demo 地址：https://codepen.io/airen/full/oNRbZGR
@@ -836,7 +836,7 @@ SVG 本质上具有交互性，允许用户输入触发视觉变化或动画。�
 与此同时，在 `<clipPath>` 内嵌入一个 `<path>` 元素，创建了一个不规则的剪切形状。并将该剪切路径应用于 `<image>` 元素上。这样，呈现给你的结果就是一个不规则形状的用户头像：
 
 
-![](./images/fe20075f8fd18bea138108c8b8de7c0a.png )
+![](./images/fe20075f8fd18bea138108c8b8de7c0a.webp )
 
 
 接下来，只需要在鼠标悬浮的时候，改变 `<path>` 的 `d` 属性值，并且使用 CSS 的 `transition` 给 `d` 属性设置一个过渡效果。[这样就完成了一个带有交互效果的用户头像](https://codepen.io/airen/full/ZENQKNE)：

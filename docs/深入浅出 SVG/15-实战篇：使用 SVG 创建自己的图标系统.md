@@ -25,7 +25,7 @@
   
 
 
-![](./images/83bee01af5d1e09ee4a49048e3579873.png )
+![](./images/83bee01af5d1e09ee4a49048e3579873.webp )
 
   
 
@@ -73,7 +73,7 @@
   
 
 
-![](./images/64c779d51d249fcbae3a0a4bba27872f.png )
+![](./images/64c779d51d249fcbae3a0a4bba27872f.webp )
 
   
 
@@ -114,7 +114,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/f2929a924997512b0a74e691f46da570.png )
+![](./images/f2929a924997512b0a74e691f46da570.webp )
 
   
 
@@ -129,7 +129,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/d06770c395d7a21949086e1eb07e68f0.png )
+![](./images/d06770c395d7a21949086e1eb07e68f0.webp )
 
   
 
@@ -139,7 +139,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/10f42a6a27d1e297f2f3a49d4cd5d21a.png )
+![](./images/10f42a6a27d1e297f2f3a49d4cd5d21a.webp )
 
   
 
@@ -149,7 +149,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/0c63c4f9a1efdb0b115709b210dd43cd.png )
+![](./images/0c63c4f9a1efdb0b115709b210dd43cd.webp )
 
   
 
@@ -164,7 +164,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/d08e6201a3f966984baa972e2b8fde78.png )
+![](./images/d08e6201a3f966984baa972e2b8fde78.webp )
 
   
 
@@ -184,7 +184,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/6431d4a1b3ebc3e6361a13ec951f0c71.png )
+![](./images/6431d4a1b3ebc3e6361a13ec951f0c71.webp )
 
   
 
@@ -370,7 +370,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/15849169f843b92b0f6662482e16aad6.png )
+![](./images/15849169f843b92b0f6662482e16aad6.webp )
 
   
 
@@ -385,7 +385,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/a94e5b47bfdd93df49e08aa4903074b2.png )
+![](./images/a94e5b47bfdd93df49e08aa4903074b2.webp )
 
   
 
@@ -569,7 +569,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/affe1e72c581bc3a343a631fbaf9f918.png )
+![](./images/affe1e72c581bc3a343a631fbaf9f918.webp )
 
   
 
@@ -627,7 +627,7 @@ SVG 图标具有灵活性、清晰度、小文件大小、可编辑性、动态�
   
 
 
-![](./images/a00053a3ffe995d124ba083f688b7089.png )
+![](./images/a00053a3ffe995d124ba083f688b7089.webp )
 
   
 
@@ -746,7 +746,7 @@ exports.default = series(spritePage, spriteShortcut);
   
 
 
-![](./images/651c0e2e2cbd5104cf9c0ddc236b926b.png )
+![](./images/651c0e2e2cbd5104cf9c0ddc236b926b.webp )
 
   
 
@@ -756,7 +756,7 @@ exports.default = series(spritePage, spriteShortcut);
   
 
 
-![](./images/bb3d31c206fc914eb90a343a20c776a8.png )
+![](./images/bb3d31c206fc914eb90a343a20c776a8.webp )
 
   
 
@@ -766,7 +766,7 @@ exports.default = series(spritePage, spriteShortcut);
   
 
 
-![](./images/4d8ce5140c2538685e14a81478e1a5db.png )
+![](./images/4d8ce5140c2538685e14a81478e1a5db.webp )
 
   
 
@@ -793,7 +793,7 @@ exports.default = series(spritePage, spriteShortcut);
   
 
 
-![](./images/d82642cdf35a81d695671e5815e56c89.png )
+![](./images/d82642cdf35a81d695671e5815e56c89.webp )
 
   
 
@@ -857,7 +857,7 @@ icons/
   
 
 
-![](./images/65ea09949fcb02f0a26854c8cbc4f578.png )
+![](./images/65ea09949fcb02f0a26854c8cbc4f578.webp )
 
   
 
@@ -910,7 +910,7 @@ icons/
   
 
 
-![](./images/89d8e968a512f36a52ce188ef9312dea.png )
+![](./images/89d8e968a512f36a52ce188ef9312dea.webp )
 
   
 
@@ -1084,7 +1084,7 @@ const config = {
   
 
 
-![](./images/fa782090bf700b9396a59392933ae4f2.png )
+![](./images/fa782090bf700b9396a59392933ae4f2.webp )
 
   
 
@@ -1228,7 +1228,7 @@ body {
   
 
 
-![](./images/fb990ad4c54bbdaf40f9c091dd6064f7.png )
+![](./images/fb990ad4c54bbdaf40f9c091dd6064f7.webp )
 
 最后一种是 SVG 视图（`<view>` ）的使用方式。
 
@@ -1323,7 +1323,7 @@ img {
   
 
 
-![](./images/b776d86abea292ff3799a2285505844c.png )
+![](./images/b776d86abea292ff3799a2285505844c.webp )
 
   
 
@@ -1573,7 +1573,7 @@ img {
   
 
 
-![](./images/dda41e581ef223f8592d0c2af39f501f.png )
+![](./images/dda41e581ef223f8592d0c2af39f501f.webp )
 
   
 
@@ -1655,7 +1655,7 @@ img {
   
 
 
-![](./images/5e86ac47433c0835f5beb5d6c770ba5e.png )
+![](./images/5e86ac47433c0835f5beb5d6c770ba5e.webp )
 
   
 
@@ -1697,7 +1697,7 @@ img {
   
 
 
-![](./images/528e17030864174409d137648464bd6d.png )
+![](./images/528e17030864174409d137648464bd6d.webp )
 
   
 
@@ -1712,7 +1712,7 @@ img {
   
 
 
-![](./images/cd5b4d0eb3ac0cf4a84576a18e8696c6.png )
+![](./images/cd5b4d0eb3ac0cf4a84576a18e8696c6.webp )
 
   
 

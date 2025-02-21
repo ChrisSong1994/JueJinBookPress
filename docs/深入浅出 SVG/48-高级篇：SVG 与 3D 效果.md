@@ -1,6 +1,6 @@
 # 48-高级篇：SVG 与 3D 效果
 
-![](./images/90161b9516be3d1c4f0a160701ed5862.png )
+![](./images/90161b9516be3d1c4f0a160701ed5862.webp )
 
   
 
@@ -37,7 +37,7 @@
   
 
 
-![](./images/7200264a707f37d5bc5cc6f6449f32bf.png )
+![](./images/7200264a707f37d5bc5cc6f6449f32bf.webp )
 
 传统上，SVG 局限于 `x` 轴和 `y` 轴，但当我们引入 `z` 轴时，SVG 将焕发新生命，为 SVG 图形增添了深度。要实现这一点，需要结合 SVG 属性和 CSS 变换，从而模拟三维空间。
 
@@ -77,7 +77,7 @@
   
 
 
-![](./images/587cf0ee4360983e0cd7329f44af3427.png )
+![](./images/587cf0ee4360983e0cd7329f44af3427.webp )
 
   
 
@@ -114,7 +114,7 @@ Web 上的 3D 效果大多依赖于光照和阴影，为大脑提供有关物体
   
 
 
-![](./images/65b145d6e2011cbe3f6ba0c434db317f.png )
+![](./images/65b145d6e2011cbe3f6ba0c434db317f.webp )
 
   
 
@@ -145,7 +145,7 @@ Web 上的 3D 效果大多依赖于光照和阴影，为大脑提供有关物体
   
 
 
-![](./images/612deb78631c95d6e846222899c80054.png )
+![](./images/612deb78631c95d6e846222899c80054.webp )
 
   
 
@@ -271,7 +271,7 @@ Web 上的 3D 效果大多依赖于光照和阴影，为大脑提供有关物体
   
 
 
-![](./images/293ceed5ccb41716842a57d9652ad3ca.png )
+![](./images/293ceed5ccb41716842a57d9652ad3ca.webp )
 
   
 
@@ -286,7 +286,7 @@ Web 上的 3D 效果大多依赖于光照和阴影，为大脑提供有关物体
   
 
 
-![](./images/7fd36b56b5b462988f97d8ca93ec56db.png )
+![](./images/7fd36b56b5b462988f97d8ca93ec56db.webp )
 
   
 
@@ -328,7 +328,7 @@ Web 上的 3D 效果大多依赖于光照和阴影，为大脑提供有关物体
   
 
 
-![](./images/835bfc5202cc5f9885658d43fe95ccaf.png )
+![](./images/835bfc5202cc5f9885658d43fe95ccaf.webp )
 
   
 
@@ -443,7 +443,7 @@ rect.face--front {
   
 
 
-![](./images/f3c3b4f6bc2224bac8eed3d1b201dd06.png )
+![](./images/f3c3b4f6bc2224bac8eed3d1b201dd06.webp )
 
   
 
@@ -494,7 +494,7 @@ rect {
   
 
 
-![](./images/cd8d08fd3636d626e6e3522182821f8c.png )
+![](./images/cd8d08fd3636d626e6e3522182821f8c.webp )
 
   
 
@@ -546,7 +546,7 @@ rect {
   
 
 
-![](./images/c405074c11c43348aa5a55c3277f7a54.png )
+![](./images/c405074c11c43348aa5a55c3277f7a54.webp )
 
   
 
@@ -652,7 +652,7 @@ rect {
   
 
 
-![](./images/bc4bdb3d3c053ee5f4279553adda4bcc.png )
+![](./images/bc4bdb3d3c053ee5f4279553adda4bcc.webp )
 
   
 
@@ -890,7 +890,7 @@ rect {
   
 
 
-![](./images/f1a8dcfca4f86102d09958ecb9f6ea5c.png )
+![](./images/f1a8dcfca4f86102d09958ecb9f6ea5c.webp )
 
   
 
@@ -955,7 +955,7 @@ rect {
   
 
 
-![](./images/20c4c951483f133d69cb99992efa08d3.png )
+![](./images/20c4c951483f133d69cb99992efa08d3.webp )
 
   
 

@@ -25,7 +25,7 @@
   
 
 
-![](./images/f30a1d6b9706a0521339e625064024a7.png )
+![](./images/f30a1d6b9706a0521339e625064024a7.webp )
 
   
 
@@ -35,7 +35,7 @@
   
 
 
-![](./images/5b41a61853f732ce2468780f328f0e03.png )
+![](./images/5b41a61853f732ce2468780f328f0e03.webp )
 
   
 
@@ -45,7 +45,7 @@
   
 
 
-![](./images/6346843c48787ba0984398ac7b9a18b8.png )
+![](./images/6346843c48787ba0984398ac7b9a18b8.webp )
 
   
 
@@ -97,7 +97,7 @@ h3 {
   
 
 
-![](./images/4672644c0ea3cbf9e1af390ed6ec0d4c.png )
+![](./images/4672644c0ea3cbf9e1af390ed6ec0d4c.webp )
 
   
 
@@ -112,7 +112,7 @@ h3 {
   
 
 
-![](./images/db3b56d3b0f2bea56a63e33c2a09243a.png )
+![](./images/db3b56d3b0f2bea56a63e33c2a09243a.webp )
 
   
 
@@ -150,7 +150,7 @@ h3 {
   
 
 
-![](./images/691e7f85b3163908c395379c7818554c.png )
+![](./images/691e7f85b3163908c395379c7818554c.webp )
 
   
 
@@ -165,7 +165,7 @@ h3 {
   
 
 
-![](./images/08b9e6ac55fbf48973b532613e7d683e.png )
+![](./images/08b9e6ac55fbf48973b532613e7d683e.webp )
 
   
 
@@ -236,7 +236,7 @@ h3 {
   
 
 
-![](./images/ddfb709424bfdf79e22d3c3dfafce3fb.png )
+![](./images/ddfb709424bfdf79e22d3c3dfafce3fb.webp )
 
   
 
@@ -280,7 +280,7 @@ text {
   
 
 
-![](./images/0e4473af0c23262a51ae95666547788e.png )
+![](./images/0e4473af0c23262a51ae95666547788e.webp )
 
   
 
@@ -317,7 +317,7 @@ text {
   
 
 
-![](./images/e05d033d107f1aa46a9ea1e8fbf7a7d4.png )
+![](./images/e05d033d107f1aa46a9ea1e8fbf7a7d4.webp )
 
   
 
@@ -394,7 +394,7 @@ SVG 的 `<feMorphology>` 滤镜元素作用于物体的形态。它提供了两�
   
 
 
-![](./images/f1c59d87be35c58584c430f75726097a.png )
+![](./images/f1c59d87be35c58584c430f75726097a.webp )
 
   
 
@@ -448,7 +448,7 @@ SVG 的 `<feMorphology>` 滤镜元素作用于物体的形态。它提供了两�
   
 
 
-![](./images/76951d5cb0fa0431003dd2d34daa069f.png )
+![](./images/76951d5cb0fa0431003dd2d34daa069f.webp )
 
   
 
@@ -485,7 +485,7 @@ SVG 的 `<feMorphology>` 滤镜元素作用于物体的形态。它提供了两�
   
 
 
-![](./images/8863f10d700571f4501a937f1e018826.png )
+![](./images/8863f10d700571f4501a937f1e018826.webp )
 
   
 
@@ -536,7 +536,7 @@ SVG 的 `<feMorphology>` 滤镜元素作用于物体的形态。它提供了两�
   
 
 
-![](./images/3fabe28f513ab1c7b338a9dc6eb55395.png )
+![](./images/3fabe28f513ab1c7b338a9dc6eb55395.webp )
 
   
 
@@ -561,7 +561,7 @@ SVG 的 `<feMorphology>` 滤镜元素作用于物体的形态。它提供了两�
   
 
 
-![](./images/0b27e29d479b43a459bac3d8b8789c9a.png )
+![](./images/0b27e29d479b43a459bac3d8b8789c9a.webp )
 
   
 
@@ -665,7 +665,7 @@ h3 {
   
 
 
-![](./images/f1cad77afa835c17cae838add1cc3c07.png )
+![](./images/f1cad77afa835c17cae838add1cc3c07.webp )
 
   
 
@@ -733,7 +733,7 @@ h3 {
   
 
 
-![](./images/163c2a70954cad49cf99c3e181e34330.png )
+![](./images/163c2a70954cad49cf99c3e181e34330.webp )
 
   
 
@@ -748,7 +748,7 @@ h3 {
   
 
 
-![](./images/ba3197db9b0fa8c5802005cec3ebf355.png )
+![](./images/ba3197db9b0fa8c5802005cec3ebf355.webp )
 
   
 
@@ -773,7 +773,7 @@ h3 {
   
 
 
-![](./images/fc5a6cc955fdb30aa32be920049e2b86.png )
+![](./images/fc5a6cc955fdb30aa32be920049e2b86.webp )
 
   
 
@@ -804,7 +804,7 @@ h3 {
   
 
 
-![](./images/dada972242bbd165c63f7a3c66f62fd8.png )
+![](./images/dada972242bbd165c63f7a3c66f62fd8.webp )
 
   
 
@@ -945,7 +945,7 @@ h3 {
   
 
 
-![](./images/2921686e984b76d8620d4707130f82de.png )
+![](./images/2921686e984b76d8620d4707130f82de.webp )
 
   
 
@@ -965,7 +965,7 @@ h3 {
   
 
 
-![](./images/c2bdb7bda4c0865097e402dbcc13dfbc.png )
+![](./images/c2bdb7bda4c0865097e402dbcc13dfbc.webp )
 
   
 
@@ -1039,7 +1039,7 @@ h3 {
   
 
 
-![](./images/35c6cacc6b191dc7ad9500ef454fd3dd.png )
+![](./images/35c6cacc6b191dc7ad9500ef454fd3dd.webp )
 
   
 
@@ -1064,7 +1064,7 @@ h3 {
   
 
 
-![](./images/a11a17dbda0e4b2898e4552aec8b20b8.png )
+![](./images/a11a17dbda0e4b2898e4552aec8b20b8.webp )
 
   
 
@@ -1074,7 +1074,7 @@ h3 {
   
 
 
-![](./images/b1bce6f3941337eef95dc4754de48273.png )
+![](./images/b1bce6f3941337eef95dc4754de48273.webp )
 
   
 
@@ -1084,7 +1084,7 @@ h3 {
   
 
 
-![](./images/8f2b3472bc740db1f7bdb811e5c6f6e4.png )
+![](./images/8f2b3472bc740db1f7bdb811e5c6f6e4.webp )
 
   
 
@@ -1094,7 +1094,7 @@ h3 {
   
 
 
-![](./images/963d208c6437c7fbb65738bfddbafa9b.png )
+![](./images/963d208c6437c7fbb65738bfddbafa9b.webp )
 
   
 
@@ -1104,7 +1104,7 @@ h3 {
   
 
 
-![](./images/a974a8209d23b7d17fb51d7453ee91d8.png )
+![](./images/a974a8209d23b7d17fb51d7453ee91d8.webp )
 
   
 
@@ -1114,7 +1114,7 @@ h3 {
   
 
 
-![](./images/b0d4d01ab82be9523b01f155e1c82830.png )
+![](./images/b0d4d01ab82be9523b01f155e1c82830.webp )
 
   
 
@@ -1139,7 +1139,7 @@ h3 {
   
 
 
-![](./images/ab999e0f7d42dfb2ee97de451b8facf5.png )
+![](./images/ab999e0f7d42dfb2ee97de451b8facf5.webp )
 
   
 
@@ -1167,7 +1167,7 @@ h3 {
   
 
 
-![](./images/0991c7f859d98a3195f707888c0b334f.png )
+![](./images/0991c7f859d98a3195f707888c0b334f.webp )
 
   
 
@@ -1211,7 +1211,7 @@ h3 {
   
 
 
-![](./images/49d8590cdfde00a9c8316e33ca068f9f.png )
+![](./images/49d8590cdfde00a9c8316e33ca068f9f.webp )
 
 注意，接下来，我们要往 `<filter>` 元素中添加多个滤镜基元，相比之前的案例，这个滤镜会复杂得多。这意味着，我们在制作一个复杂的滤镜过程中，可能会添加和删除滤镜规则，改变滤镜基元出现的先后顺序和值。在这个过程中很可能会使自己迷失方向。因此，我们在使用滤镜时，就要养成一些好的习惯，或制定一些规则，有助于自己跟踪发生的事情，避免在混乱的场景中迷失自我。
 
@@ -1370,7 +1370,7 @@ h3 {
   
 
 
-![](./images/7ed1b8825a7e8a0d1cbabf48feb0e672.png )
+![](./images/7ed1b8825a7e8a0d1cbabf48feb0e672.webp )
 
 现在文本是变粗了，但整个文本并没有任何立体感。而目标效果是一个带有 3D 立体感的文本。
 
@@ -1438,7 +1438,7 @@ h3 {
   
 
 
-![](./images/43e03abdd8b26d07388815c8c976dc9d.png )
+![](./images/43e03abdd8b26d07388815c8c976dc9d.webp )
 
 紧接着，我们使用 `<feOffset>` 对 `<feConvolveMatrix>` 滤镜的输出结果 `BEVEL_20` 进行偏移处理，使其与文本之间有一定的间隔：
 
@@ -1560,7 +1560,7 @@ h3 {
   
 
 
-![](./images/13ae571b9aea7c57d9d77fb53b0db8b0.png )
+![](./images/13ae571b9aea7c57d9d77fb53b0db8b0.webp )
 
 离目标越来越近了！还记得之前 `<feFlood>` 和 `<feTurbulence>` 创建的素材吗？接下来，就可以用上了。我们继续使用 `<feComposite>` 滤镜，将 `<feFlood>` 创建的填充图像应用到 `BEVEL_30` ：
 
@@ -1617,7 +1617,7 @@ h3 {
   
 
 
-![](./images/b13644c75d65bb21850c5ecb2905b2d3.png )
+![](./images/b13644c75d65bb21850c5ecb2905b2d3.webp )
 
   
 
@@ -1677,7 +1677,7 @@ h3 {
   
 
 
-![](./images/ae1bc04be023fc0b1e301bd4acf77868.png )
+![](./images/ae1bc04be023fc0b1e301bd4acf77868.webp )
 
   
 
@@ -1739,7 +1739,7 @@ h3 {
   
 
 
-![](./images/d34c77e9037246a9de3d2b80dc3583e6.png )
+![](./images/d34c77e9037246a9de3d2b80dc3583e6.webp )
 
   
 
@@ -1765,7 +1765,7 @@ body {
   
 
 
-![](./images/4c96238463b707b3420ac667c6599df8.png )
+![](./images/4c96238463b707b3420ac667c6599df8.webp )
 
   
 
@@ -1805,7 +1805,7 @@ body {
   
 
 
-![](./images/8150d161ae7a7c8da7ae6c13812ade00.png )
+![](./images/8150d161ae7a7c8da7ae6c13812ade00.webp )
 
   
 
@@ -1815,7 +1815,7 @@ body {
   
 
 
-![](./images/0d305e968182d5a49798932166b16216.png )
+![](./images/0d305e968182d5a49798932166b16216.webp )
 
   
 

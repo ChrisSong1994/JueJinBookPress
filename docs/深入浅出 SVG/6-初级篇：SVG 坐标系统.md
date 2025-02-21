@@ -38,7 +38,7 @@ Web 坐标系统的默认原点位于给定上下文的左上角，即元素盒�
   
 
 
-![](./images/b7ffa2359f7bd1d2d737702051751f8f.png )
+![](./images/b7ffa2359f7bd1d2d737702051751f8f.webp )
 
   
 
@@ -48,7 +48,7 @@ Web 坐标系统的默认原点位于给定上下文的左上角，即元素盒�
   
 
 
-![](./images/60988fa134b2f7efca469c25a97b2282.png )
+![](./images/60988fa134b2f7efca469c25a97b2282.webp )
 
   
 
@@ -121,7 +121,7 @@ SVG 将使用不同的坐标系来描述元素的位置和方向。其中，用�
   
 
 
-![](./images/d3aad731f6d3940da508e6bbc0468bef.png )
+![](./images/d3aad731f6d3940da508e6bbc0468bef.webp )
 
   
 
@@ -141,7 +141,7 @@ SVG 将使用不同的坐标系来描述元素的位置和方向。其中，用�
   
 
 
-![](./images/5a7ecb0a6f47d9269407a710b7bbfa09.png )
+![](./images/5a7ecb0a6f47d9269407a710b7bbfa09.webp )
 
   
 
@@ -155,7 +155,7 @@ SVG 将使用不同的坐标系来描述元素的位置和方向。其中，用�
   
 
 
-![](./images/9c45e0dc3f78bb9645bb4fdd611a1f20.png )
+![](./images/9c45e0dc3f78bb9645bb4fdd611a1f20.webp )
 
   
 
@@ -212,7 +212,7 @@ svg {
   
 
 
-![](./images/8ee3d54afeac94726ecca9c8903732d2.png )
+![](./images/8ee3d54afeac94726ecca9c8903732d2.webp )
 
   
 
@@ -406,7 +406,7 @@ svg {
   
 
 
-![](./images/f86c6b801be5ba387c068a555c08951d.png )
+![](./images/f86c6b801be5ba387c068a555c08951d.webp )
 
   
 
@@ -432,7 +432,7 @@ svg {
   
 
 
-![](./images/06e52c628e2d28d1acb505e027226e62.png )
+![](./images/06e52c628e2d28d1acb505e027226e62.webp )
 
   
 
@@ -447,7 +447,7 @@ SVG 中的 Viewport（视口）和 `viewBox` 属性是两个至关重要的概�
   
 
 
-![](./images/41135ced38e99a76bbb956efb90d9e83.png )
+![](./images/41135ced38e99a76bbb956efb90d9e83.webp )
 
   
 
@@ -474,7 +474,7 @@ SVG 中的 Viewport（视口）和 `viewBox` 属性是两个至关重要的概�
   
 
 
-![](./images/3fdf58424b85fea9bb19403ce007fe83.png )
+![](./images/3fdf58424b85fea9bb19403ce007fe83.webp )
 
   
 
@@ -628,7 +628,7 @@ viewBox = "<min-x> <min-y> <width> <height>"
   
 
 
-![](./images/af94ffa24f74b95b8420833276cfe0c6.png )
+![](./images/af94ffa24f74b95b8420833276cfe0c6.webp )
 
   
 
@@ -674,7 +674,7 @@ viewBox = "<min-x> <min-y> <width> <height>"
   
 
 
-![](./images/682dba044e2b204b106b361419d60ebf.png )
+![](./images/682dba044e2b204b106b361419d60ebf.webp )
 
   
 
@@ -720,7 +720,7 @@ viewBox = "<min-x> <min-y> <width> <height>"
   
 
 
-![](./images/fb5a3a7d9613e71e619c470ecb86b1d3.png )
+![](./images/fb5a3a7d9613e71e619c470ecb86b1d3.webp )
 
   
 
@@ -806,7 +806,7 @@ viewBox = "<min-x> <min-y> <width> <height>"
 
   
 
-![Frame 822.jpg](./images/08d2d0c13f7200630dc8197156091ef8.png )
+![Frame 822.jpg](./images/08d2d0c13f7200630dc8197156091ef8.webp )
 
 
 
@@ -821,7 +821,7 @@ viewBox = "<min-x> <min-y> <width> <height>"
   
 
 
-![](./images/081600c12fcc73506262f08c05980387.png )
+![](./images/081600c12fcc73506262f08c05980387.webp )
 
   
 
@@ -910,7 +910,7 @@ viewBox = "<min-x> <min-y> <width> <height>"
   
 
 
-![](./images/96ca572910a26a3d2d67d7fbbf20e288.png )
+![](./images/96ca572910a26a3d2d67d7fbbf20e288.webp )
 
   
 
@@ -1068,7 +1068,7 @@ preserveAspectRatio = <align> <meetOrSlice>?
   
 
 
-![](./images/9f9904bbb7eb9671058a7bb7df8b582e.png )
+![](./images/9f9904bbb7eb9671058a7bb7df8b582e.webp )
 
 上图中左侧展示了 SVG 视口的“轴”，右侧则是 `viewBox` 的“轴”。通过理解这些“轴”，我们可以指导 SVG 如何在视口和 `viewBox` 中对齐各自的轴。
 
@@ -1125,7 +1125,7 @@ preserveAspectRatio = <align> <meetOrSlice>?
   
 
 
-![](./images/dca07ead2fdbe1cf5b060de3ad57c31f.png )
+![](./images/dca07ead2fdbe1cf5b060de3ad57c31f.webp )
 
   
 

@@ -1,1 +1,20 @@
-["1.概览：ChatGPT 与自然语言处理.md","2.发展：从 GPT1.0 到 ChatGPT，经历了什么？.md","3.基础：ChatGPT 是一个语言模型.md","4.核心：ChatGPT 是如何处理文字输入的？.md","5.ChatGPT 的灵魂：Attention 注意力机制.md","6.ChatGPT 的组件：Transformer 模型结构.md","7.ChatGPT 的结构：Encoder-Decoder .md","8.模型训练基础：监督学习与 ChatGPT 预训练.md","9.模型训练基础：GPT 中的 few-shot 小样本学习.md","10.模型训练基础：什么是强化学习？.md","11.模型训练核心：ChatGPT 中的 RLHF 人工反馈强化学习模式.md","12.模型训练核心：GPT 系列模型所依赖的数据.md","13.ChatGPT 的优缺点及影响.md","14.ChatGPT 吹响了第四次产业革命（AI 革命）的号角.md"]
+[
+  {
+    "type": "file",
+    "label": "主页：人人都能看懂的 ChatGPT 原理课",
+    "name": "index"
+  },
+  "1.概览：ChatGPT 与自然语言处理.md",
+  "2.发展：从 GPT1.0 到 ChatGPT，经历了什么？.md",
+  "3.基础：ChatGPT 是一个语言模型.md",
+  "4.核心：ChatGPT 是如何处理文字输入的？.md",
+  "5.ChatGPT 的灵魂：Attention 注意力机制.md",
+  "6.ChatGPT 的组件：Transformer 模型结构.md",
+  "8.模型训练基础：监督学习与 ChatGPT 预训练.md",
+  "9.模型训练基础：GPT 中的 few-shot 小样本学习.md",
+  "10.模型训练基础：什么是强化学习？.md",
+  "11.模型训练核心：ChatGPT 中的 RLHF 人工反馈强化学习模式.md",
+  "12.模型训练核心：GPT 系列模型所依赖的数据.md",
+  "13.ChatGPT 的优缺点及影响.md",
+  "14.ChatGPT 吹响了第四次产业革命（AI 革命）的号角.md"
+]

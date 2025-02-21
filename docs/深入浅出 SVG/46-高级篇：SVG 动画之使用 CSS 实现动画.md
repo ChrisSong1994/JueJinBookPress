@@ -217,7 +217,7 @@ HTML 和 SVG 之间的另一个重要区别是 **SVG 元素不像 HTML 元素那
   
 
 
-![](./images/6a5f3aef5d5a3ac6e00c65c21a6d828c.png )
+![](./images/6a5f3aef5d5a3ac6e00c65c21a6d828c.webp )
 
   
 
@@ -270,7 +270,7 @@ HTML 和 SVG 之间的另一个重要区别是 **SVG 元素不像 HTML 元素那
   
 
 
-![](./images/6b0073dda98b40dfee5a134c71d1758e.png )
+![](./images/6b0073dda98b40dfee5a134c71d1758e.webp )
 
   
 
@@ -280,7 +280,7 @@ HTML 和 SVG 之间的另一个重要区别是 **SVG 元素不像 HTML 元素那
   
 
 
-![](./images/e96220782f44bfe5245217e8989e35bd.png )
+![](./images/e96220782f44bfe5245217e8989e35bd.webp )
 
   
 
@@ -2382,7 +2382,7 @@ SMIL 的 `<animateMotion>` 构建路径动画很简单，可 SMIL 将会慢慢�
   
 
 
-![](./images/8523f0dc76a1ae6663f38ae175d9f7ff.png )
+![](./images/8523f0dc76a1ae6663f38ae175d9f7ff.webp )
 
   
 

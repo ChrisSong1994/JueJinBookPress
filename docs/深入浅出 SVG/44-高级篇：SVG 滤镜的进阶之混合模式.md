@@ -10,7 +10,7 @@
   
 
 
-![](./images/57467d47bc94001ab3e462f37a220511.png )
+![](./images/57467d47bc94001ab3e462f37a220511.webp )
 
   
 
@@ -20,7 +20,7 @@
   
 
 
-![](./images/3af0ee72ec6c63be79a6b6fe77d0168a.png )
+![](./images/3af0ee72ec6c63be79a6b6fe77d0168a.webp )
 
   
 
@@ -35,7 +35,7 @@
   
 
 
-![](./images/41abeba4d45873ed75f0eafb64e7acd7.png )
+![](./images/41abeba4d45873ed75f0eafb64e7acd7.webp )
 
   
 
@@ -53,7 +53,7 @@
   
 
 
-![](./images/cf54b164137c8d2db014fe859c1c8e19.png )
+![](./images/cf54b164137c8d2db014fe859c1c8e19.webp )
 
   
 
@@ -68,7 +68,7 @@
   
 
 
-![](./images/038791090bd2ddd266d184659406ef16.png )
+![](./images/038791090bd2ddd266d184659406ef16.webp )
 
   
 
@@ -78,7 +78,7 @@
   
 
 
-![](./images/42ee484a3c2c8731e4eba2a8b30aa0cf.png )
+![](./images/42ee484a3c2c8731e4eba2a8b30aa0cf.webp )
 
   
 
@@ -93,7 +93,7 @@
   
 
 
-![](./images/f403b46ab8d04c1269e738d5f218cd5d.png )
+![](./images/f403b46ab8d04c1269e738d5f218cd5d.webp )
 
   
 
@@ -103,14 +103,14 @@
   
 
 
-![](./images/7db329df8b46977af9f876c16e0dbed6.png )
+![](./images/7db329df8b46977af9f876c16e0dbed6.webp )
 
 ### 加深模式
 
   
 
 
-![](./images/74fa0503c587c0c108e10b9bcc86bd32.png )
+![](./images/74fa0503c587c0c108e10b9bcc86bd32.webp )
 
   
 
@@ -130,7 +130,7 @@
   
 
 
-![](./images/95f1fcd7e97054c3b58edf13e9959967.png )
+![](./images/95f1fcd7e97054c3b58edf13e9959967.webp )
 
 这种模式会保留混合图层和基础图层之间的最暗色。
 
@@ -147,7 +147,7 @@
   
 
 
-![](./images/a3c14682131b189f9bb50940d32035ea.png )
+![](./images/a3c14682131b189f9bb50940d32035ea.webp )
 
 #### 颜色加深：`color-burn`
 
@@ -159,7 +159,7 @@
   
 
 
-![](./images/6b40caf7b31f621a099460ed06d2c971.png )
+![](./images/6b40caf7b31f621a099460ed06d2c971.webp )
 
 #### **较暗颜色：Plus Darker**
 
@@ -171,7 +171,7 @@
   
 
 
-![](./images/ebc0130de9e230f343d06118752e90e1.png )
+![](./images/ebc0130de9e230f343d06118752e90e1.webp )
 
   
 
@@ -191,7 +191,7 @@
   
 
 
-![](./images/42ecc944175f15bffa0f2e0e7827a9ea.png )
+![](./images/42ecc944175f15bffa0f2e0e7827a9ea.webp )
 
   
 
@@ -211,7 +211,7 @@
   
 
 
-![](./images/1cebb7fb5417c174241c500fe94d4a52.png )
+![](./images/1cebb7fb5417c174241c500fe94d4a52.webp )
 
   
 
@@ -226,7 +226,7 @@
   
 
 
-![](./images/5e31e428b8391b75b048f106158d7fe0.png )
+![](./images/5e31e428b8391b75b048f106158d7fe0.webp )
 
   
 
@@ -241,7 +241,7 @@
   
 
 
-![](./images/db28139fe63cfbc2d806c44a434e9b7c.png )
+![](./images/db28139fe63cfbc2d806c44a434e9b7c.webp )
 
   
 
@@ -256,7 +256,7 @@
   
 
 
-![](./images/b96469fbdfcb38723d96ce7a66cc06d5.png )
+![](./images/b96469fbdfcb38723d96ce7a66cc06d5.webp )
 
   
 
@@ -276,7 +276,7 @@
   
 
 
-![](./images/4bc11efe964ee1e7373aa0cd1143af47.png )
+![](./images/4bc11efe964ee1e7373aa0cd1143af47.webp )
 
   
 
@@ -296,7 +296,7 @@
   
 
 
-![](./images/49558ca8af90a4326294ecd3e7d93fcc.png )
+![](./images/49558ca8af90a4326294ecd3e7d93fcc.webp )
 
   
 
@@ -311,7 +311,7 @@
   
 
 
-![](./images/f87d8fb7ba71a366bc42d836844c7208.png )
+![](./images/f87d8fb7ba71a366bc42d836844c7208.webp )
 
   
 
@@ -326,7 +326,7 @@
   
 
 
-![](./images/4de1b760cf04d1f2cafb50bf02c7652e.png )
+![](./images/4de1b760cf04d1f2cafb50bf02c7652e.webp )
 
   
 
@@ -346,7 +346,7 @@
   
 
 
-![](./images/58d5431f1b7f6ab9804db68cc3f27941.png )
+![](./images/58d5431f1b7f6ab9804db68cc3f27941.webp )
 
   
 
@@ -366,7 +366,7 @@
   
 
 
-![](./images/4c08bc46d0880233704c35b8c1a65b33.png )
+![](./images/4c08bc46d0880233704c35b8c1a65b33.webp )
 
   
 
@@ -381,7 +381,7 @@
   
 
 
-![](./images/d2b5d7c26e50d9d7253bda4f8c03ba98.png )
+![](./images/d2b5d7c26e50d9d7253bda4f8c03ba98.webp )
 
   
 
@@ -396,7 +396,7 @@
   
 
 
-![](./images/dbc779b41295b7932d61ad801865e0d3.png )
+![](./images/dbc779b41295b7932d61ad801865e0d3.webp )
 
   
 
@@ -416,7 +416,7 @@
   
 
 
-![](./images/647fbbccf7abab275eb2067dcead6564.png )
+![](./images/647fbbccf7abab275eb2067dcead6564.webp )
 
   
 
@@ -431,7 +431,7 @@
   
 
 
-![](./images/436e100790184d29f9a5eda01a6f1fbd.png )
+![](./images/436e100790184d29f9a5eda01a6f1fbd.webp )
 
   
 
@@ -446,7 +446,7 @@
   
 
 
-![](./images/25ee50b322af9247581676c7890566ba.png )
+![](./images/25ee50b322af9247581676c7890566ba.webp )
 
   
 
@@ -461,7 +461,7 @@
   
 
 
-![](./images/44152734e1aa74fc4c2010fe069f0300.png )
+![](./images/44152734e1aa74fc4c2010fe069f0300.webp )
 
   
 
@@ -476,7 +476,7 @@
   
 
 
-![](./images/867ed0269771f9325f3858b8cd54f42f.png )
+![](./images/867ed0269771f9325f3858b8cd54f42f.webp )
 
   
 
@@ -712,7 +712,7 @@ CSS 提供了两个主要属性，允许 Web 开发者在 Web 中应用混合模
   
 
 
-![](./images/a8fce12e301c3c72eea21c29ed131204.png )
+![](./images/a8fce12e301c3c72eea21c29ed131204.webp )
 
   
 
@@ -801,7 +801,7 @@ SVG 混合模式与 CSS 混合模式虽然都有助于实现图像或元素的�
   
 
 
-![](./images/b286c44cc778a7e7a9d1baf4209e03f5.png )
+![](./images/b286c44cc778a7e7a9d1baf4209e03f5.webp )
 
   
 
@@ -829,7 +829,7 @@ SVG 混合模式与 CSS 混合模式虽然都有助于实现图像或元素的�
   
 
 
-![](./images/93516a360d4de488f676c95f6f064f87.png )
+![](./images/93516a360d4de488f676c95f6f064f87.webp )
 
   
 
@@ -1015,7 +1015,7 @@ SVG 混合模式与 CSS 混合模式虽然都有助于实现图像或元素的�
   
 
 
-![](./images/4f0247c1116b2b868e479a60931b5e47.png )
+![](./images/4f0247c1116b2b868e479a60931b5e47.webp )
 
   
 

@@ -1,6 +1,6 @@
 # 51-SVG 未来发展趋势
 
-![](./images/b770a8e28f0ddc4d0531c5c1da210d23.png )
+![](./images/b770a8e28f0ddc4d0531c5c1da210d23.webp )
 
   
 
@@ -20,7 +20,7 @@
   
 
 
-![](./images/93d7857b73b70cdf0f67248f099614cc.png )
+![](./images/93d7857b73b70cdf0f67248f099614cc.webp )
 
   
 

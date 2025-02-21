@@ -1,6 +1,6 @@
 # 34-实战篇： SVG 与 Web 开发之 SVG 在 Next.js 的应用
 
-![](./images/2e581a661375879057893afc2138284f.png )
+![](./images/2e581a661375879057893afc2138284f.webp )
 
   
 
@@ -25,7 +25,7 @@
   
 
 
-![](./images/ba90b3323f501597ded0f2600e98d9d4.png )
+![](./images/ba90b3323f501597ded0f2600e98d9d4.webp )
 
   
 
@@ -78,14 +78,14 @@ pnpm create next-app
   
 
 
-![](./images/2c473bad00cf6604cc40e3db8dbcb879.png )
+![](./images/2c473bad00cf6604cc40e3db8dbcb879.webp )
 
 接下来，进入项目目录，并在命令行中执行 `pnpm run dev`，这将启动你新创建的 Next.js 应用。然后，在浏览器地址栏中输入 `http://localhost:3000`，你将会在浏览器中看到类似下面这样的页面：
 
   
 
 
-![](./images/2b8a35369053efd00e73a8758a6b526a.png )
+![](./images/2b8a35369053efd00e73a8758a6b526a.webp )
 
   
 
@@ -100,7 +100,7 @@ pnpm create next-app
   
 
 
-![](./images/9146e7189f59788e0204ea5a2b17a4aa.png )
+![](./images/9146e7189f59788e0204ea5a2b17a4aa.webp )
 
   
 
@@ -155,7 +155,7 @@ svg-nextjs/
   
 
 
-![](./images/32bb9ade71a7525882bd8090b97668ef.png )
+![](./images/32bb9ade71a7525882bd8090b97668ef.webp )
 
   
 
@@ -165,7 +165,7 @@ svg-nextjs/
   
 
 
-![](./images/e203da46b84c64186d6df683176c419a.png )
+![](./images/e203da46b84c64186d6df683176c419a.webp )
 
   
 
@@ -175,7 +175,7 @@ svg-nextjs/
   
 
 
-![](./images/0825000cdde13e854c05c42de2a5007f.png )
+![](./images/0825000cdde13e854c05c42de2a5007f.webp )
 
 现在，准备就绪，我们开始进入今天真正的主题吧！
 
@@ -275,7 +275,7 @@ export default function Home() {
   
 
 
-![](./images/85430f9f70281fff033f3d0f70b2d7e3.png )
+![](./images/85430f9f70281fff033f3d0f70b2d7e3.webp )
 
   
 
@@ -285,7 +285,7 @@ export default function Home() {
   
 
 
-![](./images/5dab3f1044aab8b78b95f9d1645c9922.png )
+![](./images/5dab3f1044aab8b78b95f9d1645c9922.webp )
 
   
 
@@ -317,7 +317,7 @@ export default function Home() {
   
 
 
-![](./images/17c66d23a2107f06d63b76e9424fd9ec.png )
+![](./images/17c66d23a2107f06d63b76e9424fd9ec.webp )
 
   
 
@@ -385,7 +385,7 @@ export default function Home() {
   
 
 
-![](./images/3c73ccbc252c61820b7d2fe7319fb541.png )
+![](./images/3c73ccbc252c61820b7d2fe7319fb541.webp )
 
   
 
@@ -463,7 +463,7 @@ export default function Home() {
   
 
 
-![](./images/9662dbeaf8eb75897a91dd7abf46415e.png )
+![](./images/9662dbeaf8eb75897a91dd7abf46415e.webp )
 
   
 
@@ -495,7 +495,7 @@ export default function Home() {
   
 
 
-![](./images/ef6526d6e76068dd74dbdbe1c22f4b50.png )
+![](./images/ef6526d6e76068dd74dbdbe1c22f4b50.webp )
 
   
 
@@ -505,7 +505,7 @@ export default function Home() {
   
 
 
-![](./images/96b2275f22b25051f51e12a2083b07a2.png )
+![](./images/96b2275f22b25051f51e12a2083b07a2.webp )
 
   
 
@@ -515,7 +515,7 @@ export default function Home() {
   
 
 
-![](./images/9a6d982b2bce315c0a4da8c63c8321a2.png )
+![](./images/9a6d982b2bce315c0a4da8c63c8321a2.webp )
 
   
 
@@ -582,7 +582,7 @@ export default function Home() {
   
 
 
-![](./images/5e3e2b2fb9b3fd18f34c1618d5eaeab4.png )
+![](./images/5e3e2b2fb9b3fd18f34c1618d5eaeab4.webp )
 
   
 
@@ -655,7 +655,7 @@ export default function Home() {
   
 
 
-![](./images/e75b95e76fafb1be92e85ecb5bdecdee.png )
+![](./images/e75b95e76fafb1be92e85ecb5bdecdee.webp )
 
   
 
@@ -829,7 +829,7 @@ export default function Home() {
   
 
 
-![](./images/e9ddfc30c47c69a4c7eb9777175d7b91.png )
+![](./images/e9ddfc30c47c69a4c7eb9777175d7b91.webp )
 
   
 
@@ -842,7 +842,7 @@ export default function Home() {
   
 
 
-![](./images/1335d2eec5720e1b041656426d04fd89.png )
+![](./images/1335d2eec5720e1b041656426d04fd89.webp )
 
   
 
@@ -880,7 +880,7 @@ export default function Home() {
   
 
 
-![](./images/b0dbfb8d1cf55f03c9ad363b0e530014.png )
+![](./images/b0dbfb8d1cf55f03c9ad363b0e530014.webp )
 
   
 
@@ -890,7 +890,7 @@ export default function Home() {
   
 
 
-![](./images/c4d5cd17f17f9bce85d8cae98ad23172.png )
+![](./images/c4d5cd17f17f9bce85d8cae98ad23172.webp )
 
   
 
@@ -935,7 +935,7 @@ export default function Home() {
   
 
 
-![](./images/bacfaed48a85dc01e81de7e5c008be55.png )
+![](./images/bacfaed48a85dc01e81de7e5c008be55.webp )
 
   
 
@@ -1074,7 +1074,7 @@ export default function Home() {
   
 
 
-![](./images/e8270f6895317a2be94e259d1e3b0c74.png )
+![](./images/e8270f6895317a2be94e259d1e3b0c74.webp )
 
   
 
@@ -1188,7 +1188,7 @@ export default function Home() {
   
 
 
-![](./images/d7dc234883b1aa2fafb67d063077ca40.png )
+![](./images/d7dc234883b1aa2fafb67d063077ca40.webp )
 
   
 
@@ -1719,7 +1719,7 @@ export default function Home() {
   
 
 
-![](./images/009ea8ab367c9ab0892dfbf4f7558e8e.png )
+![](./images/009ea8ab367c9ab0892dfbf4f7558e8e.webp )
 
   
 
@@ -1794,7 +1794,7 @@ export default function Home() {
   
 
 
-![](./images/15926c7049dd58af77c8c582bd41907c.png )
+![](./images/15926c7049dd58af77c8c582bd41907c.webp )
 
   
 

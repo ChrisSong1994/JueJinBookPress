@@ -55,7 +55,7 @@
   
 
 
-![](./images/e4cbc8fb3eb0884f35f8fc700a57eb73.png )
+![](./images/e4cbc8fb3eb0884f35f8fc700a57eb73.webp )
 
   
 
@@ -115,7 +115,7 @@
   
 
 
-![](./images/012b008b8e8c412408b8366c34a3c8b7.png )
+![](./images/012b008b8e8c412408b8366c34a3c8b7.webp )
 
   
 
@@ -130,7 +130,7 @@
   
 
 
-![](./images/162b1cff1f67a2e365aca1ae83f6f3e6.png )
+![](./images/162b1cff1f67a2e365aca1ae83f6f3e6.webp )
 
   
 
@@ -156,7 +156,7 @@
   
 
 
-![](./images/ebbc87adb0b531ba9ff35107fceec0e9.png )
+![](./images/ebbc87adb0b531ba9ff35107fceec0e9.webp )
 
   
 
@@ -171,7 +171,7 @@
   
 
 
-![](./images/a264d98dea349f7dd23cc9c34684b1bc.png )
+![](./images/a264d98dea349f7dd23cc9c34684b1bc.webp )
 
 也就是说，`<feDisplacementMap>` 滤镜基元对图像进行位置映射时，会通过上面这个公式来来进行映射。这意味着，只要我们理解了这个映射公式，就能对输出进行像素级的精确控制。
 
@@ -200,7 +200,7 @@
   
 
 
-![](./images/c1ad97e585186fa06e1c898ff01be5f6.png )
+![](./images/c1ad97e585186fa06e1c898ff01be5f6.webp )
 
   
 
@@ -258,7 +258,7 @@ Y = y - scale × （YC - 0.5） = 100 - 100 × (51 ÷ 255 - 0.5) = 130
   
 
 
-![](./images/0c59f7dededb4fda4dde8b5ab950639e.png )
+![](./images/0c59f7dededb4fda4dde8b5ab950639e.webp )
 
   
 
@@ -311,7 +311,7 @@ Y = y - scale × （YC - 0.5） = 100 - 100 × (127 ÷ 255 - 0.5) = 100.196 ≈ 
   
 
 
-![](./images/6ea74e538ee0c089d371639adbb328d7.png )
+![](./images/6ea74e538ee0c089d371639adbb328d7.webp )
 
   
 
@@ -361,7 +361,7 @@ Y = y - scale × （YC - 0.5） = 100 - 100 × (204 ÷ 255 - 0.5) = 70
   
 
 
-![](./images/d53f3cfd4782ccdf183a3dcd9681c10a.png )
+![](./images/d53f3cfd4782ccdf183a3dcd9681c10a.webp )
 
   
 
@@ -388,7 +388,7 @@ Y = y - scale × （YC - 0.5） = 100 - 100 × (204 ÷ 255 - 0.5) = 70
   
 
 
-![](./images/399c32d720ad279ea34c94f9dd99bb88.png )
+![](./images/399c32d720ad279ea34c94f9dd99bb88.webp )
 
   
 
@@ -413,7 +413,7 @@ Y = y - scale × （YC - 0.5） = 100 - 100 × (204 ÷ 255 - 0.5) = 70
   
 
 
-![](./images/de5c077894d3298cbb68b14b7ca77484.png )
+![](./images/de5c077894d3298cbb68b14b7ca77484.webp )
 
   
 
@@ -514,7 +514,7 @@ P′(x,y) ← P(x + scale × 0.5,y)
   
 
 
-![](./images/ec7f5f0c89c045fd5ff6834225b2f945.png )
+![](./images/ec7f5f0c89c045fd5ff6834225b2f945.webp )
 
   
 
@@ -539,7 +539,7 @@ P′(x,y) ← P(x + scale × 0.5,y)
   
 
 
-![](./images/c01a8f8b18eb76bed9ac88aaaf2b9969.png )
+![](./images/c01a8f8b18eb76bed9ac88aaaf2b9969.webp )
 
   
 
@@ -554,7 +554,7 @@ P′(x,y) ← P(x + scale × 0.5,y)
   
 
 
-![](./images/158cb7dfcf9ca71fe5d33b668703b60a.png )
+![](./images/158cb7dfcf9ca71fe5d33b668703b60a.webp )
 
   
 
@@ -635,7 +635,7 @@ P′(x,y) ← P(x + scale × 0.5,y)
   
 
 
-![](./images/94cb5ebb42365f9ed65a4147d30775a8.png )
+![](./images/94cb5ebb42365f9ed65a4147d30775a8.webp )
 
   
 

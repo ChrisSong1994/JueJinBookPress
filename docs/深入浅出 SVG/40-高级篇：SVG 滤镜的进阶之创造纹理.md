@@ -25,7 +25,7 @@
   
 
 
-![](./images/2365e7bd6791dbc2d656d7af0625fd09.png )
+![](./images/2365e7bd6791dbc2d656d7af0625fd09.webp )
 
   
 
@@ -40,7 +40,7 @@
   
 
 
-![](./images/b2add4f1e35bf89f288cc87fb14e8cfa.png )
+![](./images/b2add4f1e35bf89f288cc87fb14e8cfa.webp )
 
   
 
@@ -55,7 +55,7 @@
   
 
 
-![](./images/99b86911c859ced3b4679227b1087c72.png )
+![](./images/99b86911c859ced3b4679227b1087c72.webp )
 
   
 
@@ -135,7 +135,7 @@
   
 
 
-![](./images/151c68bbf80d8056e5dbe734551c5fac.png )
+![](./images/151c68bbf80d8056e5dbe734551c5fac.webp )
 
   
 
@@ -499,7 +499,7 @@
   
 
 
-![](./images/b0540f14c3e59333e5052a012dfd43e5.png )
+![](./images/b0540f14c3e59333e5052a012dfd43e5.webp )
 
   
 
@@ -578,7 +578,7 @@
   
 
 
-![](./images/1f6110b942b1915737233394e600638d.png )
+![](./images/1f6110b942b1915737233394e600638d.webp )
 
   
 
@@ -593,7 +593,7 @@
   
 
 
-![](./images/26599bd48959e0f4693a84220057dc07.png )
+![](./images/26599bd48959e0f4693a84220057dc07.webp )
 
   
 
@@ -603,7 +603,7 @@
   
 
 
-![](./images/5f64ac85d357ce18db4a723d01914443.png )
+![](./images/5f64ac85d357ce18db4a723d01914443.webp )
 
   
 
@@ -631,7 +631,7 @@
   
 
 
-![](./images/3626cf2ad726c51ba704481da59b9028.png )
+![](./images/3626cf2ad726c51ba704481da59b9028.webp )
 
 
   
@@ -676,7 +676,7 @@
   
 
 
-![](./images/f442861e422f1e8288a0ff0210625252.png )
+![](./images/f442861e422f1e8288a0ff0210625252.webp )
 
   
 
@@ -691,7 +691,7 @@
   
 
 
-![](./images/ae483cabf364db7e275142b512d830a6.png )
+![](./images/ae483cabf364db7e275142b512d830a6.webp )
 
   
 
@@ -745,7 +745,7 @@
   
 
 
-![](./images/4180bded23e3c18a5caf1dbc2defc1f2.png )
+![](./images/4180bded23e3c18a5caf1dbc2defc1f2.webp )
 
   
 
@@ -767,14 +767,14 @@
   
 
 
-![](./images/843d74fe18e7a57bd7d8064f1e436448.png )
+![](./images/843d74fe18e7a57bd7d8064f1e436448.webp )
 
 这些规则意味着红色保留在红色和绿色及/或蓝色曾经重叠的地方；绿色保留在绿色和蓝色重叠的地方。生成的图像包含四种类型的像素：红色、绿色、蓝色或黑色。
 
   
 
 
-![](./images/af229fa5aba530bba4533cb864c43c93.png )
+![](./images/af229fa5aba530bba4533cb864c43c93.webp )
 
   
 
@@ -797,7 +797,7 @@
   
 
 
-![](./images/ba023f8634d67e350a8a38caad7a5460.png )
+![](./images/ba023f8634d67e350a8a38caad7a5460.webp )
 
   
 
@@ -835,7 +835,7 @@
   
 
 
-![](./images/1691b57c368049a9eaab91e816fb7814.png )
+![](./images/1691b57c368049a9eaab91e816fb7814.webp )
 
   
 
@@ -855,7 +855,7 @@
   
 
 
-![](./images/50fe2fa240794bb3531af1f9464bc986.png )
+![](./images/50fe2fa240794bb3531af1f9464bc986.webp )
 
   
 
@@ -956,7 +956,7 @@
   
 
 
-![](./images/870a56fa7590220cae66b855fb2eea4b.png )
+![](./images/870a56fa7590220cae66b855fb2eea4b.webp )
 
   
 
@@ -992,7 +992,7 @@
   
 
 
-![](./images/9eec1909e5c8294410132612104e1cb6.png )
+![](./images/9eec1909e5c8294410132612104e1cb6.webp )
 
   
 
@@ -1007,7 +1007,7 @@
   
 
 
-![](./images/9eff7238b4ba7710e9378968bac9aef8.png )
+![](./images/9eff7238b4ba7710e9378968bac9aef8.webp )
 
   
 
@@ -1022,7 +1022,7 @@
   
 
 
-![](./images/93e063465a35f0229e32e006a1757cb3.png )
+![](./images/93e063465a35f0229e32e006a1757cb3.webp )
 
   
 
@@ -1037,7 +1037,7 @@
   
 
 
-![](./images/43c99329bfcaec0136791f853d3e457f.png )
+![](./images/43c99329bfcaec0136791f853d3e457f.webp )
 
   
 
@@ -1052,7 +1052,7 @@
   
 
 
-![](./images/c59e7414dd8ab853e56b54d72664c4cb.png )
+![](./images/c59e7414dd8ab853e56b54d72664c4cb.webp )
 
   
 
@@ -1072,7 +1072,7 @@
   
 
 
-![](./images/6c4f4916520eefec91b35fdd4c664871.png )
+![](./images/6c4f4916520eefec91b35fdd4c664871.webp )
 
   
 
@@ -1106,7 +1106,7 @@
   
 
 
-![](./images/93d3012f384d833f441da4826677c665.png )
+![](./images/93d3012f384d833f441da4826677c665.webp )
 
   
 
@@ -1136,7 +1136,7 @@
   
 
 
-![](./images/1bace718b9f14c362ce10c531c47b8da.png )
+![](./images/1bace718b9f14c362ce10c531c47b8da.webp )
 
   
 
@@ -1169,7 +1169,7 @@
   
 
 
-![](./images/4846890d4458b178042355c43b8d905a.png )
+![](./images/4846890d4458b178042355c43b8d905a.webp )
 
   
 
@@ -1193,7 +1193,7 @@
   
 
 
-![](./images/bf0cdbe0cc265be27662965228ab0fb2.png )
+![](./images/bf0cdbe0cc265be27662965228ab0fb2.webp )
 
   
 
@@ -1423,7 +1423,7 @@ button.addEventListener("click", () => {
   
 
 
-![](./images/a2a39d3c1b2fd949694c5e3c110c25c7.png )
+![](./images/a2a39d3c1b2fd949694c5e3c110c25c7.webp )
 
   
 

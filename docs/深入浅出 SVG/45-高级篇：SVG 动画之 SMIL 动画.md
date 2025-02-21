@@ -533,7 +533,7 @@ aniEle.animate(spin, options);
   
 
 
-![](./images/2cc5e6ce32a12cd3cbddf199b4870ea0.png )
+![](./images/2cc5e6ce32a12cd3cbddf199b4870ea0.webp )
 
   
 
@@ -677,7 +677,7 @@ SVG 动画在性质上类似于 CSS 动画和过渡。关键帧被创建，物�
   
 
 
-![](./images/0435862c778f6fc2010c0593fab20a93.png )
+![](./images/0435862c778f6fc2010c0593fab20a93.webp )
 
   
 
@@ -2258,7 +2258,7 @@ const move = [
   
 
 
-![](./images/83379b0121891fcc9930240ba73fe778.png )
+![](./images/83379b0121891fcc9930240ba73fe778.webp )
 
   
 
@@ -2561,7 +2561,7 @@ const move = [
   
 
 
-![](./images/3aff4f20f79cdcd021de8adfb152401b.png )
+![](./images/3aff4f20f79cdcd021de8adfb152401b.webp )
 
   
 
@@ -3578,7 +3578,7 @@ text {
   
 
 
-![](./images/2d09d66e45a1979163f111c4e69a30ac.png )
+![](./images/2d09d66e45a1979163f111c4e69a30ac.webp )
 
   
 
@@ -4024,7 +4024,7 @@ text {
   
 
 
-![](./images/4037ee573b45fffbb1f0149ac8c6ace1.png )
+![](./images/4037ee573b45fffbb1f0149ac8c6ace1.webp )
 
   
 
@@ -4094,7 +4094,7 @@ text {
   
 
 
-![](./images/631dfd2f2e29cbedbe93f0f5d69277ff.png )
+![](./images/631dfd2f2e29cbedbe93f0f5d69277ff.webp )
 
   
 

@@ -1,6 +1,6 @@
 # 41-高级篇：SVG 滤镜的进阶之创建颗粒效果
 
-![](./images/b561f96499ef6a3b413b7d7bf17ee6ba.png )
+![](./images/b561f96499ef6a3b413b7d7bf17ee6ba.webp )
 
   
 
@@ -45,7 +45,7 @@
   
 
 
-![](./images/a6b88020ac2c24f3fa7f0495b77c8d45.png )
+![](./images/a6b88020ac2c24f3fa7f0495b77c8d45.webp )
 
   
 
@@ -80,7 +80,7 @@
   
 
 
-![](./images/5c0cca4f6e56e0894b557c34e7133101.png )
+![](./images/5c0cca4f6e56e0894b557c34e7133101.webp )
 
   
 
@@ -109,7 +109,7 @@
   
 
 
-![](./images/3ad5de32f48bbe178e31768d2166be74.png )
+![](./images/3ad5de32f48bbe178e31768d2166be74.webp )
 
   
 
@@ -184,7 +184,7 @@
   
 
 
-![](./images/fd5161b09a6b231e335e2a785a1c73f0.png )
+![](./images/fd5161b09a6b231e335e2a785a1c73f0.webp )
 
 > URL:https://yoksel.github.io/url-encoder/
 
@@ -330,7 +330,7 @@ applySvgAsBackground(svgElement, grainyElement);
   
 
 
-![](./images/5a29d1af86c9ada7bc1b42a4c37adfc4.png )
+![](./images/5a29d1af86c9ada7bc1b42a4c37adfc4.webp )
 
   
 
@@ -350,7 +350,7 @@ applySvgAsBackground(svgElement, grainyElement);
   
 
 
-![](./images/b694e9796675e73c7ca95c23c4e76e5c.png )
+![](./images/b694e9796675e73c7ca95c23c4e76e5c.webp )
 
   
 
@@ -365,7 +365,7 @@ applySvgAsBackground(svgElement, grainyElement);
   
 
 
-![](./images/bdfa41a5c69b3e02e588fef1c6015894.png )
+![](./images/bdfa41a5c69b3e02e588fef1c6015894.webp )
 
   
 
@@ -444,7 +444,7 @@ radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
   
 
 
-![](./images/fa5df836815550ef4400d3b2f631009c.png )
+![](./images/fa5df836815550ef4400d3b2f631009c.webp )
 
   
 
@@ -454,7 +454,7 @@ radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
   
 
 
-![](./images/22a7990fa7c0730daf6c0e0b321124c6.png )
+![](./images/22a7990fa7c0730daf6c0e0b321124c6.webp )
 
   
 
@@ -885,7 +885,7 @@ radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
   
 
 
-![](./images/877fbae218609cf58e7d0861a52e3b5e.png )
+![](./images/877fbae218609cf58e7d0861a52e3b5e.webp )
 
   
 
@@ -1043,7 +1043,7 @@ applySvgAsBackground(svgElement, rootEle);
   
 
 
-![](./images/012aa6acf8abae38d814bc2903281434.png )
+![](./images/012aa6acf8abae38d814bc2903281434.webp )
 
   
 
@@ -1053,7 +1053,7 @@ applySvgAsBackground(svgElement, rootEle);
   
 
 
-![](./images/ddf6c6e0201a3c08cc0e71ee1498c345.png )
+![](./images/ddf6c6e0201a3c08cc0e71ee1498c345.webp )
 
   
 

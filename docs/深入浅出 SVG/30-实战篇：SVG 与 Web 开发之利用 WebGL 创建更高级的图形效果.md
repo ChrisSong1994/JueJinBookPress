@@ -80,7 +80,7 @@ SVG 和 WebGL 的结合为 Web 开发开辟了新的可能性，带来了许多�
   
 
 
-![](./images/f33282e2207491560932c912522cda9e.png )
+![](./images/f33282e2207491560932c912522cda9e.webp )
 
   
 
@@ -331,7 +331,7 @@ pnpm create vite
   
 
 
-![](./images/aca65f7afeaaa6d85f661faebe3baadd.png )
+![](./images/aca65f7afeaaa6d85f661faebe3baadd.webp )
 
   
 
@@ -365,7 +365,7 @@ pnpm run dev
   
 
 
-![](./images/79e2d02b39b8b3c1a5147cc828fc0c6d.png )
+![](./images/79e2d02b39b8b3c1a5147cc828fc0c6d.webp )
 
   
 
@@ -631,7 +631,7 @@ extrusionInput.value = defaultExtrusion;
   
 
 
-![](./images/f8684ab924510dc325cbeed653d0ea0b.png )
+![](./images/f8684ab924510dc325cbeed653d0ea0b.webp )
 
   
 
@@ -1109,7 +1109,7 @@ extrusionInput.value = defaultExtrusion;
   
 
 
-![](./images/c78f26352903a588f3c955f5a0166663.png )
+![](./images/c78f26352903a588f3c955f5a0166663.webp )
 
   
 
@@ -1141,7 +1141,7 @@ pnpm three @react-three/fiber @react-three/drei -D
   
 
 
-![](./images/523527e86492a79c463c971b61c0906b.png )
+![](./images/523527e86492a79c463c971b61c0906b.webp )
 
   
 
@@ -1151,7 +1151,7 @@ pnpm three @react-three/fiber @react-three/drei -D
   
 
 
-![](./images/76d9cf39d7267af0783c582c664f71c6.png )
+![](./images/76d9cf39d7267af0783c582c664f71c6.webp )
 
   
 
@@ -1328,7 +1328,7 @@ export default function App() {
   
 
 
-![](./images/3c7a2c47e7f1e17fd6093455c0709cc2.png )
+![](./images/3c7a2c47e7f1e17fd6093455c0709cc2.webp )
 
   
 
@@ -1338,7 +1338,7 @@ export default function App() {
   
 
 
-![](./images/7f4246ca4cdd4f8ec2d6bfe1785fc70d.png )
+![](./images/7f4246ca4cdd4f8ec2d6bfe1785fc70d.webp )
 
   
 

@@ -62,7 +62,7 @@
   
 
 
-![](./images/50a9a7f6d5fdc32c9337076305f214ca.png )
+![](./images/50a9a7f6d5fdc32c9337076305f214ca.webp )
 
   
 
@@ -72,7 +72,7 @@
   
 
 
-![](./images/a4ee517659aaf95bdda2c6242f8d2b3a.png )
+![](./images/a4ee517659aaf95bdda2c6242f8d2b3a.webp )
 
   
 
@@ -87,7 +87,7 @@
   
 
 
-![](./images/3958a69c0d3fcfcca1bfcc5e7da1d830.png )
+![](./images/3958a69c0d3fcfcca1bfcc5e7da1d830.webp )
 
   
 
@@ -221,7 +221,7 @@ HTML 元素和 SVG 元素之间主要的不同之处在于元素自身的局部�
   
 
 
-![](./images/19bbf9542362d072c3254a9cfb594d98.png )
+![](./images/19bbf9542362d072c3254a9cfb594d98.webp )
 
   
 
@@ -346,7 +346,7 @@ rect {
   
 
 
-![](./images/fede08bc0343ff9d63b3d7a832b75aae.png )
+![](./images/fede08bc0343ff9d63b3d7a832b75aae.webp )
 
   
 
@@ -520,7 +520,7 @@ rect {
   
 
 
-![](./images/bb357a64cb177bc92237ec4732ce5a33.png )
+![](./images/bb357a64cb177bc92237ec4732ce5a33.webp )
 
   
 
@@ -790,7 +790,7 @@ rotate(a, cx, cy) = translate(cx, cy) rotate(a) translate(-cx, -cy);
   
 
 
-![](./images/52c37765b3d2838914cf72b06266987e.png )
+![](./images/52c37765b3d2838914cf72b06266987e.webp )
 
   
 
@@ -834,7 +834,7 @@ rotate(a, cx, cy) = translate(cx, cy) rotate(a) translate(-cx, -cy);
   
 
 
-![](./images/ade6b6a20a1d2a0f51350172240ebb82.png )
+![](./images/ade6b6a20a1d2a0f51350172240ebb82.webp )
 
   
 
@@ -873,7 +873,7 @@ rotate(a, cx, cy) = translate(cx, cy) rotate(a) translate(-cx, -cy);
   
 
 
-![](./images/d0f5f6b6becad880b61f9fbc20bffb89.png )
+![](./images/d0f5f6b6becad880b61f9fbc20bffb89.webp )
 
   
 
@@ -888,7 +888,7 @@ rotate(a, cx, cy) = translate(cx, cy) rotate(a) translate(-cx, -cy);
   
 
 
-![](./images/aa6a95beb5a42a4efb7020d587c5f4e5.png )
+![](./images/aa6a95beb5a42a4efb7020d587c5f4e5.webp )
 
   
 
@@ -991,7 +991,7 @@ rotate(a, cx, cy) = translate(cx, cy) rotate(a) translate(-cx, -cy);
   
 
 
-![](./images/8af83b390adfc669173bd75807d75d59.png )
+![](./images/8af83b390adfc669173bd75807d75d59.webp )
 
   
 
@@ -1079,7 +1079,7 @@ scale(sx, sy) 👉 (x,y)⇒(x′,y′)=(sx*x,sy*y)
   
 
 
-![](./images/311bb89765afef229c8da92daaa9e480.png )
+![](./images/311bb89765afef229c8da92daaa9e480.webp )
 
   
 
@@ -1179,7 +1179,7 @@ SVG 缩放变换（`scale()`）与旋转变换（`rotate()`）在坐标上都令
   
 
 
-![](./images/efd5480697de7cc97d458b5101116c07.png )
+![](./images/efd5480697de7cc97d458b5101116c07.webp )
 
   
 
@@ -1369,7 +1369,7 @@ skewY(a) 👉 (x,y)⇒(x′,y′)=(x,(tan(a)*x+y))
   
 
 
-![](./images/d6d98470421cdf873526ae50616793d8.png )
+![](./images/d6d98470421cdf873526ae50616793d8.webp )
 
   
 
@@ -1432,7 +1432,7 @@ skewY(a) 👉 (x,y)⇒(x′,y′)=(x,(tan(a)*x+y))
   
 
 
-![](./images/afd08da2dbb20d02e79dcc0561297ed1.png )
+![](./images/afd08da2dbb20d02e79dcc0561297ed1.webp )
 
   
 
@@ -1507,7 +1507,7 @@ skewY(a) 👉 (x,y)⇒(x′,y′)=(x,(tan(a)*x+y))
   
 
 
-![](./images/952afa7539f768ca1a37bf9b874904cb.png )
+![](./images/952afa7539f768ca1a37bf9b874904cb.webp )
 
   
 
@@ -1527,7 +1527,7 @@ skewY(a) 👉 (x,y)⇒(x′,y′)=(x,(tan(a)*x+y))
   
 
 
-![](./images/711aa7f7094db5709d4c0933aff41924.png )
+![](./images/711aa7f7094db5709d4c0933aff41924.webp )
 
   
 
@@ -1537,7 +1537,7 @@ skewY(a) 👉 (x,y)⇒(x′,y′)=(x,(tan(a)*x+y))
   
 
 
-![](./images/7b4c8b701d91687814f9ebcd6ba37e83.png )
+![](./images/7b4c8b701d91687814f9ebcd6ba37e83.webp )
 
 在 SVG 中，可以通过 `transform` 属性中的 `matrix()` 函数更改对象，例如：`transform="matrix(a,b,c,d,e,f)"`。此处只能指定前六个值。因此，你向矩阵变换函数提供六个值来设置平移、缩放、旋转和斜切等操作。
 
@@ -1554,7 +1554,7 @@ SVG 中 `translate(tx,ty)` 使元素沿着 `x` 轴和 `y` 轴称动 `tx` 和 `ty
   
 
 
-![](./images/e36735dc83ef78c03a5838136cd3cac3.png )
+![](./images/e36735dc83ef78c03a5838136cd3cac3.webp )
 
   
 
@@ -1589,7 +1589,7 @@ SVG 中 `translate(tx,ty)` 使元素沿着 `x` 轴和 `y` 轴称动 `tx` 和 `ty
   
 
 
-![](./images/2adde903607162ae55b807ad9bb02c3f.png )
+![](./images/2adde903607162ae55b807ad9bb02c3f.webp )
 
   
 
@@ -1624,7 +1624,7 @@ SVG 中 `translate(tx,ty)` 使元素沿着 `x` 轴和 `y` 轴称动 `tx` 和 `ty
   
 
 
-![](./images/839f1244baf48f22b01d1b231938e97c.png )
+![](./images/839f1244baf48f22b01d1b231938e97c.webp )
 
   
 
@@ -1663,7 +1663,7 @@ SVG 中 `translate(tx,ty)` 使元素沿着 `x` 轴和 `y` 轴称动 `tx` 和 `ty
   
 
 
-![](./images/ff58fdf754d57f28f61c3c4fe12bc1c1.png )
+![](./images/ff58fdf754d57f28f61c3c4fe12bc1c1.webp )
 
   
 
@@ -1723,7 +1723,7 @@ var sinAlpha = Math.sin(alphaRadians);
   
 
 
-![](./images/fcf1e6cce740d03cc0898615e8505676.png )
+![](./images/fcf1e6cce740d03cc0898615e8505676.webp )
 
   
 
@@ -1764,7 +1764,7 @@ SVG 中，可以使用倾斜矩阵 `matrix(1,0,tan(α),1,0,0)` 替代 `skewX(α)
   
 
 
-![](./images/e61e5fa64fa1a5d17d45498242fe5f5e.png )
+![](./images/e61e5fa64fa1a5d17d45498242fe5f5e.webp )
 
   
 
@@ -1774,7 +1774,7 @@ SVG 中，可以使用倾斜矩阵 `matrix(1,0,tan(α),1,0,0)` 替代 `skewX(α)
   
 
 
-![](./images/f4f006ebab083fdfb3702223dba535e4.png )
+![](./images/f4f006ebab083fdfb3702223dba535e4.webp )
 
   
 
@@ -1887,7 +1887,7 @@ skewY(-30) 👉 matrix(1,tan(-30),0,1,0,0) 👉 matrix(1,-0.5773502691896257,0,1
   
 
 
-![](./images/9e37fc9b5aef33a33ffc8c6d6c08392d.png )
+![](./images/9e37fc9b5aef33a33ffc8c6d6c08392d.webp )
 
   
 
@@ -1908,7 +1908,7 @@ skewY(-30) 👉 matrix(1,tan(-30),0,1,0,0) 👉 matrix(1,-0.5773502691896257,0,1
   
 
 
-![](./images/d42a8c9afdd55bd30b4a3d50f1ac7cc1.png )
+![](./images/d42a8c9afdd55bd30b4a3d50f1ac7cc1.webp )
 
   
 
@@ -2107,7 +2107,7 @@ CSS 中的 3D 变换允许开发在 Web 页面上创建立体的视觉效果，�
   
 
 
-![](./images/23fc626cf4342880e187ab0cf1c838a2.png )
+![](./images/23fc626cf4342880e187ab0cf1c838a2.webp )
 
   
 
@@ -2187,7 +2187,7 @@ CSS 中的 3D 变换允许开发在 Web 页面上创建立体的视觉效果，�
   
 
 
-![](./images/6f331868b6522dbe966ccd7b8ba26bbe.png )
+![](./images/6f331868b6522dbe966ccd7b8ba26bbe.webp )
 
   
 
@@ -2252,7 +2252,7 @@ rect {
   
 
 
-![](./images/e12c38cb76f91f13a50bd42dd5f69d94.png )
+![](./images/e12c38cb76f91f13a50bd42dd5f69d94.webp )
 
   
 
@@ -2282,7 +2282,7 @@ rect {
   
 
 
-![](./images/964592158b2e27c72efe406d15b8f732.png )
+![](./images/964592158b2e27c72efe406d15b8f732.webp )
 
   
 

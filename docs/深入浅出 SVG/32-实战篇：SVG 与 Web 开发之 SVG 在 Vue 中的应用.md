@@ -20,7 +20,7 @@ SVG 的特性使其成为了构建交互性、响应式用户界面的理想选�
   
 
 
-![](./images/65e0ee09bc61fa2d73da4f86da7c263e.png )
+![](./images/65e0ee09bc61fa2d73da4f86da7c263e.webp )
 
   
 
@@ -76,7 +76,7 @@ pnpm install
   
 
 
-![](./images/4640d56b5fe93b71b6dce2a9704df182.png )
+![](./images/4640d56b5fe93b71b6dce2a9704df182.webp )
 
   
 
@@ -86,7 +86,7 @@ pnpm install
   
 
 
-![](./images/4640a1ffcf7c9db5fa7d63181ce02361.png )
+![](./images/4640a1ffcf7c9db5fa7d63181ce02361.webp )
 
   
 
@@ -303,7 +303,7 @@ pnpm install
   
 
 
-![](./images/92d26c5226ba044f13cfa302db32a126.png )
+![](./images/92d26c5226ba044f13cfa302db32a126.webp )
 
   
 
@@ -384,7 +384,7 @@ pnpm install
   
 
 
-![](./images/c2e0ce078a34ac9dbc301cfbfd0a7749.png )
+![](./images/c2e0ce078a34ac9dbc301cfbfd0a7749.webp )
 
 在 Vue 的开发环境之下，除了动态绑定属性之外，还可以使用 Vue 的指令和事件处理器对 SVG 进行更复杂的交互。例如，当用户点击 SVG 图标时，改变其颜色：
 
@@ -593,7 +593,7 @@ export default defineConfig({
   
 
 
-![](./images/0183ecbcf9b0159cf781e82e3162d48e.png )
+![](./images/0183ecbcf9b0159cf781e82e3162d48e.webp )
 
   
 
@@ -635,7 +635,7 @@ export default defineConfig({
   
 
 
-![](./images/0aa21c38dd86abf3c24f69c09abe18dc.png )
+![](./images/0aa21c38dd86abf3c24f69c09abe18dc.webp )
 
   
 
@@ -1086,7 +1086,7 @@ export default defineConfig({
   
 
 
-![](./images/5050dd7399375845f7a1d40bfdb03857.png )
+![](./images/5050dd7399375845f7a1d40bfdb03857.webp )
 
   
 
@@ -1227,7 +1227,7 @@ export default defineConfig({
   
 
 
-![](./images/48a9a5d5010f5fb4863f81d892f8161b.png )
+![](./images/48a9a5d5010f5fb4863f81d892f8161b.webp )
 
   
 
@@ -1828,7 +1828,7 @@ export default defineConfig({
   
 
 
-![](./images/c94948c8e976693ec5c5e08212fb7741.png )
+![](./images/c94948c8e976693ec5c5e08212fb7741.webp )
 
   
 
@@ -2282,7 +2282,7 @@ const symbols = Object.entries(svgFiles).map(([path, content]) => {
   
 
 
-![](./images/65b7880818e9e0db784b121a8936011b.png )
+![](./images/65b7880818e9e0db784b121a8936011b.webp )
 
   
 

@@ -21,7 +21,7 @@
 
 ## 理解 SVG
 
-![](./images/1970c52c3678ce59298bc6a9c9409e02.png )
+![](./images/1970c52c3678ce59298bc6a9c9409e02.webp )
 
 
 当你初次接触 SVG，或者可缩放矢量图形（Scalable Vector Graphics）时，可能觉得有些望而生畏，想要接近它，却不确定从何开始。别怕，我将与你一同踏上 SVG 的神秘之旅。在这个旅程中，我将全面深入地教授 SVG 的技能以及一些令人惊叹的技术。
@@ -80,7 +80,7 @@ SVG 不同于你熟悉的静态图片格式，不仅具备可伸缩性，还具�
   
 
 
-![](./images/89a756a57796f791e0fe2a8fa0bbdb3d.png )
+![](./images/89a756a57796f791e0fe2a8fa0bbdb3d.webp )
 
 
 
@@ -109,7 +109,7 @@ SVG 优化是将臃肿的 SVG 文件变得更加精简、高效、并保持原�
 
 
 
-![](./images/062689a903eba3315e9cf7e169dd722c.png )
+![](./images/062689a903eba3315e9cf7e169dd722c.webp )
 
   
 
@@ -138,7 +138,7 @@ SVG 动画和 CSS 动画以及 JavaScript 一样，是当下创作 Web 动画的
   
 
 
-![](./images/8b1582cc9ee99a5129da4ac4a0f91499.png )
+![](./images/8b1582cc9ee99a5129da4ac4a0f91499.webp )
 
   
 
@@ -167,7 +167,7 @@ SVG 滤镜，犹如烹饪中的调味料，有着令人惊艳的魔力。它们�
   
 
 
-![](./images/f406cc92e1c8d1ed67c7376883d7c862.png )
+![](./images/f406cc92e1c8d1ed67c7376883d7c862.webp )
 
   
 
@@ -199,7 +199,7 @@ SVG 滤镜，犹如烹饪中的调味料，有着令人惊艳的魔力。它们�
   
 
 
-![](./images/01053ce24a036b7ac7a0675b4eea8659.png )
+![](./images/01053ce24a036b7ac7a0675b4eea8659.webp )
 
   
 
@@ -351,7 +351,7 @@ SVG 滤镜技术还可以让你“模拟”材料，如油漆和纸张，自然�
   
 
 
-![](./images/3b073f0f59f138ecbc20f1460ae5b575.png )
+![](./images/3b073f0f59f138ecbc20f1460ae5b575.webp )
 
   
 
@@ -371,7 +371,7 @@ SVG 滤镜技术还可以让你“模拟”材料，如油漆和纸张，自然�
   
 Web 设计师为了实现自己的创意，他们可能会在 Web 上添加一些不规则的分隔线，或为页头和页脚区域设计一些不规则的背景，如下图所示：
 
-![](./images/6c9b9edec6ca032a5660730e61021f1f.png )
+![](./images/6c9b9edec6ca032a5660730e61021f1f.webp )
   
 
 
@@ -410,7 +410,7 @@ SVG 动画是在 Web 上常见动画，[给 SVG 插图添加动画效果是常�
   
 
 
-![](./images/a701691162808cf18b00c4304cafae28.png )
+![](./images/a701691162808cf18b00c4304cafae28.webp )
 
   
 

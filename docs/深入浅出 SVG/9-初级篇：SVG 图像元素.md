@@ -57,7 +57,7 @@ Web 开发者通过使用 SVG 图像元素可以引入外部图像文件并进�
   
 
 
-![](./images/f76d215b612501b3c4059f5348969ae9.png )
+![](./images/f76d215b612501b3c4059f5348969ae9.webp )
 
   
 
@@ -122,7 +122,7 @@ img {
   
 
 
-![](./images/f24f47e3ccd16781a76e245273a2106a.png )
+![](./images/f24f47e3ccd16781a76e245273a2106a.webp )
 
   
 
@@ -236,7 +236,7 @@ svg {
   
 
 
-![](./images/ade898a8b97e30dffdedf5f5d660bdc8.png )
+![](./images/ade898a8b97e30dffdedf5f5d660bdc8.webp )
 
   
 
@@ -413,7 +413,7 @@ image {
   
 
 
-![](./images/8eb1f242c7fd56bfa2dd786a07cea645.png )
+![](./images/8eb1f242c7fd56bfa2dd786a07cea645.webp )
 
   
 
@@ -481,7 +481,7 @@ image {
   
 
 
-![](./images/42f79e353233b33961267ba6b9ac53e2.png )
+![](./images/42f79e353233b33961267ba6b9ac53e2.webp )
 
   
 
@@ -522,7 +522,7 @@ image {
   
 
 
-![](./images/a831e8ae7acc4e7defb27e98fffeed9b.png )
+![](./images/a831e8ae7acc4e7defb27e98fffeed9b.webp )
 
   
 
@@ -546,7 +546,7 @@ image {
   
 
 
-![](./images/e1b45e91ea5b69846457bb803b955a4e.png )
+![](./images/e1b45e91ea5b69846457bb803b955a4e.webp )
 
   
 
@@ -651,7 +651,7 @@ CSS 提供了多种不同的方式允许你对图片进行裁剪、缩放和定�
   
 
 
-![](./images/0a298832901957440d4eb5d018fa5d8c.png )
+![](./images/0a298832901957440d4eb5d018fa5d8c.webp )
 
   
 
@@ -729,7 +729,7 @@ CSS 提供了多种不同的方式允许你对图片进行裁剪、缩放和定�
   
 
 
-![](./images/eee868637153317191eb654f10ca6da4.png )
+![](./images/eee868637153317191eb654f10ca6da4.webp )
 
   
 
@@ -944,7 +944,7 @@ SVG 的 `preserveAspectRatio` 属性除了可以应用于 `<svg>` 元素上之�
   
 
 
-![](./images/009b87c34b48feb80d7cc016cb3c1b67.png )
+![](./images/009b87c34b48feb80d7cc016cb3c1b67.webp )
 
   
 

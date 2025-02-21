@@ -1,6 +1,6 @@
 # 29-实战篇：SVG 与 Web 开发之 SVG vs. Canvas
 
-![](./images/b7f19f45f1ecd03708f222ed5162017e.png )
+![](./images/b7f19f45f1ecd03708f222ed5162017e.webp )
 
 
 
@@ -63,7 +63,7 @@ SVG 和 Canvas 是在 Web 页面上创建和显示图形最常用的两种技术
   
 
 
-![](./images/82dc62edb5bd10ec6eb8257649b099e0.png )
+![](./images/82dc62edb5bd10ec6eb8257649b099e0.webp )
 
   
 
@@ -139,7 +139,7 @@ context.fillRect(10, 10, 100, 100);
   
 
 
-![](./images/a33a31b98d0b3563052c39f84f2d96ec.png )
+![](./images/a33a31b98d0b3563052c39f84f2d96ec.webp )
 
   
 
@@ -365,7 +365,7 @@ draw();
   
 
 
-![](./images/e379b96bba0a72a771314e2f21d01dd8.png )
+![](./images/e379b96bba0a72a771314e2f21d01dd8.webp )
 
   
 
@@ -378,7 +378,7 @@ draw();
 虽然说，使用 SVG 滤镜可以实现一些相似的噪音渐变效果，但要实现类似上面示例的效果，是相当的困难。
 
 
-![](./images/8ea5c2e4f5f7f33f79fb9e384837942a.png )
+![](./images/8ea5c2e4f5f7f33f79fb9e384837942a.webp )
 
   
 

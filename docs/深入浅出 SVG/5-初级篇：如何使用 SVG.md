@@ -1,6 +1,6 @@
 # 5-初级篇：如何使用 SVG
 
-![](./images/2ecd3384745d9fb86d69434bc11efd9a.png )
+![](./images/2ecd3384745d9fb86d69434bc11efd9a.webp )
 
   
 
@@ -70,7 +70,7 @@
   
 
 
-![](./images/64c260b71f918624eeab64a6288c761e.png )
+![](./images/64c260b71f918624eeab64a6288c761e.webp )
 
   
 
@@ -177,7 +177,7 @@
   
 
 
-![](./images/297161878cbd32660877ba2b3f7c7dc2.png )
+![](./images/297161878cbd32660877ba2b3f7c7dc2.webp )
 
   
 
@@ -518,7 +518,7 @@ img {
   
 
 
-![](./images/6581602af6cf1c757b6514327a34b0c1.png )
+![](./images/6581602af6cf1c757b6514327a34b0c1.webp )
 
   
 
@@ -773,7 +773,7 @@ svg.folder {
   
 
 
-![](./images/7bfe29ec9a05f6b15951623b79fecd4e.png )
+![](./images/7bfe29ec9a05f6b15951623b79fecd4e.webp )
 
   
 
@@ -833,7 +833,7 @@ SVG 与 HTML 有一个显著的区别，即其内建了一些独特的特效功�
   
 
 
-![](./images/ea66cfd2c5d573d62f351fa503ebfd36.png )
+![](./images/ea66cfd2c5d573d62f351fa503ebfd36.webp )
 
   
 
@@ -848,7 +848,7 @@ SVG 与 HTML 有一个显著的区别，即其内建了一些独特的特效功�
   
 
 
-![](./images/43403709e1d4e9f0304c42868c29d4cd.png )
+![](./images/43403709e1d4e9f0304c42868c29d4cd.webp )
 
   
 
@@ -863,7 +863,7 @@ SVG 与 HTML 有一个显著的区别，即其内建了一些独特的特效功�
   
 
 
-![](./images/e3e7172b517034df8dfad7aa68443724.png )
+![](./images/e3e7172b517034df8dfad7aa68443724.webp )
 
   
 
@@ -888,7 +888,7 @@ SVG 与 HTML 有一个显著的区别，即其内建了一些独特的特效功�
   
 
 
-![](./images/a766478b5a9a16e5c899c5a4c91f2147.png )
+![](./images/a766478b5a9a16e5c899c5a4c91f2147.webp )
 
   
 
@@ -898,7 +898,7 @@ SVG 与 HTML 有一个显著的区别，即其内建了一些独特的特效功�
   
 
 
-![](./images/25d75a6b34b5448cd9047366907a7ba6.png )
+![](./images/25d75a6b34b5448cd9047366907a7ba6.webp )
 
   
 
@@ -924,7 +924,7 @@ SVG 与 HTML 有一个显著的区别，即其内建了一些独特的特效功�
   
 
 
-![](./images/a9c90103db9e6dc1fd865a068bdf1464.png )
+![](./images/a9c90103db9e6dc1fd865a068bdf1464.webp )
 
   
 
@@ -1005,7 +1005,7 @@ data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//...
   
 
 
-![](./images/68315eea3617e74b81e21b3340a07aff.png )
+![](./images/68315eea3617e74b81e21b3340a07aff.webp )
 
   
 
@@ -1244,7 +1244,7 @@ xhr.send();
   
 
 
-![](./images/eabaefbd1755d8d47ca3f49acb519661.png )
+![](./images/eabaefbd1755d8d47ca3f49acb519661.webp )
 
   
 
@@ -1312,7 +1312,7 @@ xhr.send();
   
 
 
-![](./images/52082d691048ea9b198c5e2afa1bbb68.png )
+![](./images/52082d691048ea9b198c5e2afa1bbb68.webp )
 
   
 
@@ -1390,7 +1390,7 @@ kiwiEle.style.backgroundImage = `url(${svgFilePath})`;
   
 
 
-![](./images/d4de3927acd6cfd7919531a53025ff31.png )
+![](./images/d4de3927acd6cfd7919531a53025ff31.webp )
 
   
 
@@ -1433,7 +1433,7 @@ kiwiEle.style.setProperty(`--bg-image`, `url(${svgFilePath})`);
   
 
 
-![](./images/0b8dbbc15dfd2bd99d8b5008082cd344.png )
+![](./images/0b8dbbc15dfd2bd99d8b5008082cd344.webp )
 
   
 
@@ -1569,7 +1569,7 @@ swanEle.innerHTML = inlineSVG;
   
 
 
-![](./images/85e1beca6913690d3eb0f61c8acbf96c.png )
+![](./images/85e1beca6913690d3eb0f61c8acbf96c.webp )
 
   
 
@@ -1643,7 +1643,7 @@ swanEle.style.backgroundImage = `url("data:image/svg+xml,${encodedSVG}")`;
   
 
 
-![](./images/2ee8f637fec6c42fd96cfe910a8c4454.png )
+![](./images/2ee8f637fec6c42fd96cfe910a8c4454.webp )
 
   
 
@@ -1708,7 +1708,7 @@ swanEle.style.backgroundImage = `url("data:image/svg+xml;base64,${base64version}
   
 
 
-![](./images/f217b95d0ad8bafba3711ec2b3f8874a.png )
+![](./images/f217b95d0ad8bafba3711ec2b3f8874a.webp )
 
   
 

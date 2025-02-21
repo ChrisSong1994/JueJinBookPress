@@ -1,6 +1,6 @@
 # 33-实战篇：SVG 与 Web 开发之 SVG 在 React 的应用
 
-![](./images/34b5b3aab9ae5b16e53e584b5bd43e82.png )
+![](./images/34b5b3aab9ae5b16e53e584b5bd43e82.webp )
 
   
 
@@ -120,7 +120,7 @@ pnpm create vite svg-in-react
   
 
 
-![](./images/c1bd78acb8230b8c0e8152a335979d7e.png )
+![](./images/c1bd78acb8230b8c0e8152a335979d7e.webp )
 
   
 
@@ -135,7 +135,7 @@ pnpm create vite svg-in-react
   
 
 
-![](./images/76e65a0e1f98a5a934511f6e268fcd82.png )
+![](./images/76e65a0e1f98a5a934511f6e268fcd82.webp )
 
   
 
@@ -180,7 +180,7 @@ export default App
   
 
 
-![](./images/a38bbd788521faf4bfb420ae85f033cf.png )
+![](./images/a38bbd788521faf4bfb420ae85f033cf.webp )
 
   
 
@@ -240,7 +240,7 @@ export default App
   
 
 
-![](./images/3348e74ac26ffcc6de7021a7e35ab89a.png )
+![](./images/3348e74ac26ffcc6de7021a7e35ab89a.webp )
 
   
 
@@ -334,7 +334,7 @@ export default App;
   
 
 
-![](./images/f1be0d549c311b1192cea9753d4acaaa.png )
+![](./images/f1be0d549c311b1192cea9753d4acaaa.webp )
 
   
 
@@ -349,7 +349,7 @@ export default App;
   
 
 
-![](./images/31db4c623c268270f20e878018febbcc.png )
+![](./images/31db4c623c268270f20e878018febbcc.webp )
 
   
 
@@ -364,7 +364,7 @@ export default App;
   
 
 
-![](./images/eab3248da45c195dea0df0d7c006744a.png )
+![](./images/eab3248da45c195dea0df0d7c006744a.webp )
 
   
 
@@ -771,7 +771,7 @@ export default App;
   
 
 
-![](./images/75f0c5ecc9e1c3ab6eea4953d0912e58.png )
+![](./images/75f0c5ecc9e1c3ab6eea4953d0912e58.webp )
 
   
 
@@ -933,7 +933,7 @@ export default App;
   
 
 
-![](./images/5a2993b202e53220d1589d4f6d4c23cf.png )
+![](./images/5a2993b202e53220d1589d4f6d4c23cf.webp )
 
   
 
@@ -972,7 +972,7 @@ const Page404 = () => {
   
 
 
-![](./images/b1beccbbd47fbf310a22baf2605e1262.png )
+![](./images/b1beccbbd47fbf310a22baf2605e1262.webp )
 
   
 
@@ -1100,7 +1100,7 @@ export default Page404;
   
 
 
-![](./images/2ea85f9fe3c1dfb2798d770d177b68cf.png )
+![](./images/2ea85f9fe3c1dfb2798d770d177b68cf.webp )
 
   
 
@@ -2072,7 +2072,7 @@ input {
   
 
 
-![](./images/1aaedeeee2a5302e38f3c423e1a0d9b8.png )
+![](./images/1aaedeeee2a5302e38f3c423e1a0d9b8.webp )
 
   
 
@@ -2425,7 +2425,7 @@ export default App;
   
 
 
-![](./images/88ebd9e76f132a38198a15bf75242d37.png )
+![](./images/88ebd9e76f132a38198a15bf75242d37.webp )
 
   
 
@@ -2506,7 +2506,7 @@ export default SpecialTextEffect;
   
 
 
-![](./images/6fbbbd9de31d670ced74175bdcf94748.png )
+![](./images/6fbbbd9de31d670ced74175bdcf94748.webp )
 
   
 
@@ -2556,7 +2556,7 @@ export default SpecialTextEffect;
   
 
 
-![](./images/224a62d02e6f647d3e2d52fd9384b6cf.png )
+![](./images/224a62d02e6f647d3e2d52fd9384b6cf.webp )
 
   
 
@@ -2754,7 +2754,7 @@ export default SpecialTextEffect;
   
 
 
-![](./images/1091ae8e21ba13b15df5782cd9f0f354.png )
+![](./images/1091ae8e21ba13b15df5782cd9f0f354.webp )
 
   
 
@@ -2779,7 +2779,7 @@ window.addEventListener('mousemove', (e) => {
   
 
 
-![](./images/85b99e3292d595cb9b76f8f21fc9a11a.png )
+![](./images/85b99e3292d595cb9b76f8f21fc9a11a.webp )
 
   
 

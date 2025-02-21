@@ -2,14 +2,14 @@
 # 你不知道的 Chrome 调试技巧
 
 - [1.写在前面](./1.%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2)
-- [2.通用篇 - copying & saving ](./2.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20copying%20%26%20saving%20)
+- [2.通用篇 - copying & saving](./2.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20copying%20%26%20saving)
 - [3.通用篇 - 快捷键和通用技巧](./3.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7)
 - [4.通用篇 - 使用 Command](./4.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20%E4%BD%BF%E7%94%A8%20Command)
 - [5.通用篇 - 代码块的使用](./5.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8)
 - [6.console 篇 - console 中的 $](./6.console%20%E7%AF%87%20-%20console%20%E4%B8%AD%E7%9A%84%20%24)
-- [7.console 篇 - console 的 bug](./7.console%20%E7%AF%87%20-%20console%20%E7%9A%84%20bug)
+- [7.console 篇 - console 的  bug](./7.console%20%E7%AF%87%20-%20console%20%E7%9A%84%20%20bug)
 - [8.console 篇 - 异步的 console](./8.console%20%E7%AF%87%20-%20%E5%BC%82%E6%AD%A5%E7%9A%84%20console)
-- [9.console 篇 - Ninja console.log ](./9.console%20%E7%AF%87%20-%20Ninja%20console.log%20)
+- [9.console 篇 - Ninja console.log （忍者打印）](./9.console%20%E7%AF%87%20-%20Ninja%20console.log%20%EF%BC%88%E5%BF%8D%E8%80%85%E6%89%93%E5%8D%B0%EF%BC%89)
 - [10.console 篇 - 自定义格式转换器](./10.console%20%E7%AF%87%20-%20%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%99%A8)
 - [11.console 篇 - 对象 & 方法](./11.console%20%E7%AF%87%20-%20%E5%AF%B9%E8%B1%A1%20%26%20%E6%96%B9%E6%B3%95)
 - [12.console 篇 - console 中骚操作](./12.console%20%E7%AF%87%20-%20console%20%E4%B8%AD%E9%AA%9A%E6%93%8D%E4%BD%9C)

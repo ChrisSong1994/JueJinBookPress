@@ -88,11 +88,11 @@ pnpm create vite
 ```
 
 
-![](./images/28fe8f3eb132ee4f8250e69e2576883e.png )
+![](./images/28fe8f3eb132ee4f8250e69e2576883e.webp )
 
 根据终端命令提示的操作，最终可以在你本地运行这个 React 应用：
 
-![](./images/0a79a9eca33393ee5260baf7dd44614d.png )
+![](./images/0a79a9eca33393ee5260baf7dd44614d.webp )
 
 
 
@@ -101,7 +101,7 @@ pnpm create vite
 为了能更好地向大家展示 SVG 构建工具的使用，需要为该项目准备一些 SVG 文件。在这里，我在项目的 `/src/assets/` 目录下新创建了一个 `icons` 目录，用于放置测试的 SVG 文件：
 
 
-![](./images/52adfc3ba03cd91c47b8d5fb9837d7f2.png )
+![](./images/52adfc3ba03cd91c47b8d5fb9837d7f2.webp )
 
 
 
@@ -137,7 +137,7 @@ export default App;
 此时，`woman.svg` 正常地在浏览器中呈现：
 
 
-![](./images/5a39f23da17770938acd400acb296b67.png )
+![](./images/5a39f23da17770938acd400acb296b67.webp )
 
 请注意：虽然这种方法很简单，但它有一个明显的的缺点，你无法对导入的 SVG 进行样式化处理。因此，它适用于不需要自定义样式的 SVG，比如网站的 Logo。
 
@@ -159,7 +159,7 @@ export default App;
 如果我们希望在 React 应用程序中可以对导入的 SVG 进行操作，例如样式化处理 SVG，那么可以考虑内联的方式将 SVG 导入 React 应用程序。这种方法之所以可行，是因为 SVG 是 XML 格式，就像 HTML 一样。不过，与直接将 SVG 内联到 HTML 文档有所不同，在这里我们需要以 JSX 的语法格式将 SVG 导入 React 应用程序。这意味着，你需要先通过相关的工具，将 SVG 的 XML 格式转换为 JSX 语法格式，例如 [svg2jsx](https://svg2jsx.com/)：
 
 
-![](./images/91751b7f1ee15064340decf4ce67321b.png )
+![](./images/91751b7f1ee15064340decf4ce67321b.webp )
 
 
 
@@ -188,7 +188,7 @@ export default App;
   
 
 
-![](./images/daf4ad110de513aa56b62af133d8d714.png )
+![](./images/daf4ad110de513aa56b62af133d8d714.webp )
 
 
 内联 SVG 的优势在于我们可以直接在其元素上使用属性或在 CSS 中对其进行样式化处理：
@@ -270,7 +270,7 @@ export default App;
 ```
 
 
-![](./images/7e99e11d94dca2b4350c7d0186174155.png )
+![](./images/7e99e11d94dca2b4350c7d0186174155.webp )
 
 
 眼睛这个图标将会在浏览器中呈现。
@@ -298,7 +298,7 @@ export default App;
 
 该图标同样会在浏览器中正常呈现，但是你使用浏览器开发者工具审查该 SVG 时，你会发现该 SVG 有很多冗余数据并没有删除：
 
-![](./images/d15285782e76a89e11d1065d6c1b3b88.png )
+![](./images/d15285782e76a89e11d1065d6c1b3b88.webp )
 
 
 这是因为，项目中的 `woman.svg` 文件并没有做过任何优化。当然，[我们可以根据上节课的内容来对 SVG 进行优化](https://juejin.cn/book/7341630791099383835/section/7368114202180845605)，但我们这里既然探讨 SVG 构建工具，还是希望将优化的事情也交给相应的 SVG 构建工具来完成。
@@ -499,7 +499,7 @@ export default defineConfig({
 
 这个时候，你使用浏览器开发者工具再次审查 `Woman` 时，你会发现，SVG 代码已经变得非常干净：
 
-![](./images/558e31fe110276f3068940342de3dec6.png )
+![](./images/558e31fe110276f3068940342de3dec6.webp )
 
 
 除了使用 svgr 的 `@svgr/plugin-svgo` 插件之外，你还可以使用 [vite-plugin-svgo](https://github.com/r3dDoX/vite-plugin-svgo) 插件来减小 SVG 文件大小，提高性能。该插件的使用方式与 `@svgr/plugin-svgo` 相似，这里就不再做重复性的阐述，[感兴趣的小伙伴可以根据它的官方文档进行配置](https://github.com/r3dDoX/vite-plugin-svgo)。
@@ -597,7 +597,7 @@ export default App;
 
 你在浏览器中看到的效果如下：
 
-![](./images/8c874ab05433bbe3c1431b60951dd846.png )
+![](./images/8c874ab05433bbe3c1431b60951dd846.webp )
 
 
 

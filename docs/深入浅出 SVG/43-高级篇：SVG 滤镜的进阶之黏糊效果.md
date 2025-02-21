@@ -1,6 +1,6 @@
 # 43-高级篇：SVG 滤镜的进阶之黏糊效果
 
-![](./images/221efce910dfff8a79217916e5ee3810.png )
+![](./images/221efce910dfff8a79217916e5ee3810.webp )
 
   
 
@@ -25,7 +25,7 @@
   
 
 
-![](./images/32b678c5cb3d154189bbf5514acb2ebb.png )
+![](./images/32b678c5cb3d154189bbf5514acb2ebb.webp )
 
   
 
@@ -325,7 +325,7 @@ Web 上的黏糊效果（Gooey Effect）是一种视觉效果。它的主要特�
   
 
 
-![](./images/916414e41111c004eb0e337a6a2e8d10.png )
+![](./images/916414e41111c004eb0e337a6a2e8d10.webp )
 
   
 
@@ -382,7 +382,7 @@ Web 上的黏糊效果（Gooey Effect）是一种视觉效果。它的主要特�
   
 
 
-![](./images/c19fceb27620b339c9aaf4ceac570d7d.png )
+![](./images/c19fceb27620b339c9aaf4ceac570d7d.webp )
 
 > Demo 地址：https://codepen.io/airen/full/GRaQyJQ
 
@@ -736,7 +736,7 @@ Web 上的黏糊效果（Gooey Effect）是一种视觉效果。它的主要特�
   
 
 
-![](./images/63a00d61a7a301491f154d7cfd314d1b.png )
+![](./images/63a00d61a7a301491f154d7cfd314d1b.webp )
 
   
 
@@ -746,7 +746,7 @@ Web 上的黏糊效果（Gooey Effect）是一种视觉效果。它的主要特�
   
 
 
-![](./images/07a1d271d26a472d401940e11fbc6ba6.png )
+![](./images/07a1d271d26a472d401940e11fbc6ba6.webp )
 
   
 
@@ -781,7 +781,7 @@ Web 上的黏糊效果（Gooey Effect）是一种视觉效果。它的主要特�
   
 
 
-![](./images/cd6edf773a704ea0bd2f87695c1c2ebd.png )
+![](./images/cd6edf773a704ea0bd2f87695c1c2ebd.webp )
 
   
 

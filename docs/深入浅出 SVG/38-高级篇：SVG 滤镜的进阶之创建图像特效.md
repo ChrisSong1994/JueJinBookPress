@@ -110,7 +110,7 @@
   
 
 
-![](./images/7678c39eb949a06521fba98411d56888.png )
+![](./images/7678c39eb949a06521fba98411d56888.webp )
 
   
 
@@ -135,7 +135,7 @@
   
 
 
-![](./images/bffaf0c3da3fe54116985f407c67d61d.png )
+![](./images/bffaf0c3da3fe54116985f407c67d61d.webp )
 
   
 
@@ -157,7 +157,7 @@
   
 
 
-![](./images/38756c90cc79cc6c009d00da1c4213af.png )
+![](./images/38756c90cc79cc6c009d00da1c4213af.webp )
 
   
 
@@ -201,7 +201,7 @@ img {
   
 
 
-![](./images/52e08858f1e832870cbe63ffeabb7943.png )
+![](./images/52e08858f1e832870cbe63ffeabb7943.webp )
 
   
 
@@ -274,7 +274,7 @@ img {
   
 
 
-![](./images/c6ebca476b85a85f223aec53089bd584.png )
+![](./images/c6ebca476b85a85f223aec53089bd584.webp )
 
   
 
@@ -297,7 +297,7 @@ img {
   
 
 
-![](./images/c8d0b79d98399d0cc389db45fa8d1e04.png )
+![](./images/c8d0b79d98399d0cc389db45fa8d1e04.webp )
 
 我想你现在知道海报化图像是什么了？我们把焦点重新放到 `<feComponentTransfer>` 滤镜中来。
 
@@ -309,7 +309,7 @@ img {
   
 
 
-![](./images/ecc4a90f069864f25889eeee427efe30.png )
+![](./images/ecc4a90f069864f25889eeee427efe30.webp )
 
   
 
@@ -324,7 +324,7 @@ img {
   
 
 
-![](./images/3f39051e8f6693d19ce08628bc546aa8.png )
+![](./images/3f39051e8f6693d19ce08628bc546aa8.webp )
 
   
 
@@ -369,7 +369,7 @@ img {
   
 
 
-![](./images/99320d5cb9ecd015dbee67e91c25e580.png )
+![](./images/99320d5cb9ecd015dbee67e91c25e580.webp )
 
   
 
@@ -402,7 +402,7 @@ img {
   
 
 
-![](./images/c9907f8573a696f44262367a3ed5a587.png )
+![](./images/c9907f8573a696f44262367a3ed5a587.webp )
 
   
 
@@ -450,7 +450,7 @@ img {
   
 
 
-![](./images/2ed01a724745d5008c12dfc24dd2edc9.png )
+![](./images/2ed01a724745d5008c12dfc24dd2edc9.webp )
 
   
 
@@ -465,7 +465,7 @@ img {
   
 
 
-![](./images/af89582dce87ec5bc1e1bffec1287d1c.png )
+![](./images/af89582dce87ec5bc1e1bffec1287d1c.webp )
 
   
 
@@ -517,7 +517,7 @@ img {
   
 
 
-![](./images/552476fb394f3bc89eabe4fbc1314496.png )
+![](./images/552476fb394f3bc89eabe4fbc1314496.webp )
 
   
 
@@ -527,7 +527,7 @@ img {
   
 
 
-![](./images/1513dcd1387541694bacac610c5508c8.png )
+![](./images/1513dcd1387541694bacac610c5508c8.webp )
 
   
 
@@ -537,7 +537,7 @@ img {
   
 
 
-![](./images/0b1f90419d8cd7a6c47fd463a21f8ac8.png )
+![](./images/0b1f90419d8cd7a6c47fd463a21f8ac8.webp )
 
   
 
@@ -568,7 +568,7 @@ img {
   
 
 
-![](./images/867ab46ae0539c313948b3da8e4a21f4.png )
+![](./images/867ab46ae0539c313948b3da8e4a21f4.webp )
 
   
 
@@ -669,7 +669,7 @@ figure {
   
 
 
-![](./images/a2c89b4befc4b80211e8d500f7438f57.png )
+![](./images/a2c89b4befc4b80211e8d500f7438f57.webp )
 
   
 
@@ -709,7 +709,7 @@ figure {
   
 
 
-![](./images/b6a1af876fb860f4bc855c716b7bb1d4.png )
+![](./images/b6a1af876fb860f4bc855c716b7bb1d4.webp )
 
   
 
@@ -719,7 +719,7 @@ figure {
   
 
 
-![](./images/0b6b708fd7b5a4cab778b4b6be7af1b6.png )
+![](./images/0b6b708fd7b5a4cab778b4b6be7af1b6.webp )
 
   
 
@@ -729,7 +729,7 @@ figure {
   
 
 
-![](./images/0a268d16f71b5f868a8c6c8ef2915137.png )
+![](./images/0a268d16f71b5f868a8c6c8ef2915137.webp )
 
 为了在 `<feComponentTransfer>` 中使用这些颜色，我们需要做一些简单的数学计算。首先，我们要获取 `#f00e2e` 和 `#192550` 颜色的各通道的值（即 `R` 、`G` 和 `B` 通道的值），并将这些值转换为分数，因为 `tableValues` 属性的值是以分数形式提供。
 
@@ -803,7 +803,7 @@ A: 1   (1.00)    |  A: 1  (1.00)
   
 
 
-![](./images/6e6701157ebcea90cfbf3398a77ee015.png )
+![](./images/6e6701157ebcea90cfbf3398a77ee015.webp )
 
   
 
@@ -826,7 +826,7 @@ A: 1   (1.00)    |  A: 1  (1.00)
   
 
 
-![](./images/7b153d3e1db331cd8de3c0a215a17496.png )
+![](./images/7b153d3e1db331cd8de3c0a215a17496.webp )
 
   
 
@@ -871,7 +871,7 @@ A: 1   (1.00)    |  A: 1  (1.00)
   
 
 
-![](./images/adbadb9aef50dfb7644b299ab350fcfc.png )
+![](./images/adbadb9aef50dfb7644b299ab350fcfc.webp )
 
   
 
@@ -897,7 +897,7 @@ A: 1   (1.00)    |  A: 1   (1.00)    | A: 1   (1.00)
   
 
 
-![](./images/36caebea824df39060431da2c8aae46f.png )
+![](./images/36caebea824df39060431da2c8aae46f.webp )
 
   
 
@@ -937,7 +937,7 @@ A: 1   (1.00)    |  A: 1   (1.00)    | A: 1   (1.00)
   
 
 
-![](./images/501f0a7ccdd305e8d5f87d3c69cf27b3.png )
+![](./images/501f0a7ccdd305e8d5f87d3c69cf27b3.webp )
 
   
 
@@ -993,7 +993,7 @@ A: 1   (1.00)    |  A: 1   (1.00)    | A: 1   (1.00)
   
 
 
-![](./images/f9ecc95760a789be9d640ddd84c521c6.png )
+![](./images/f9ecc95760a789be9d640ddd84c521c6.webp )
 
   
 
@@ -1090,7 +1090,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/1a6a73fade38804065c6169754680981.png )
+![](./images/1a6a73fade38804065c6169754680981.webp )
 
   
 
@@ -1144,7 +1144,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/9122b541ec28b10d7293add368b4eadd.png )
+![](./images/9122b541ec28b10d7293add368b4eadd.webp )
 
   
 
@@ -1215,7 +1215,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/ea489166bb0a9e271d2209482c3d00b6.png )
+![](./images/ea489166bb0a9e271d2209482c3d00b6.webp )
 
   
 
@@ -1285,7 +1285,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/b5f255e17971604dacfeec637541195e.png )
+![](./images/b5f255e17971604dacfeec637541195e.webp )
 
   
 
@@ -1335,7 +1335,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/e792b1d80dd23ee1e108f58f46bb9091.png )
+![](./images/e792b1d80dd23ee1e108f58f46bb9091.webp )
 
   
 
@@ -1368,7 +1368,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/4590fb900460c88b4ac14d509b324072.png )
+![](./images/4590fb900460c88b4ac14d509b324072.webp )
 
   
 
@@ -1407,7 +1407,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/64b8473ca6560be622ca6ebc13a58c74.png )
+![](./images/64b8473ca6560be622ca6ebc13a58c74.webp )
 
   
 
@@ -1458,7 +1458,7 @@ C′=amplitude × pow(C,exponent) + offset
   
 
 
-![](./images/08c804183ba8a8633a77fa0bc1cd5beb.png )
+![](./images/08c804183ba8a8633a77fa0bc1cd5beb.webp )
 
   
 
@@ -1525,7 +1525,7 @@ A: 1  (1.00)   | A: 1   (1.00)    |  A: 1   (1.00)    |  A: 1   (1.00)   | A: 1 
   
 
 
-![](./images/04c4b3658024509f4b02b84c41b79883.png )
+![](./images/04c4b3658024509f4b02b84c41b79883.webp )
 
   
 
@@ -1540,7 +1540,7 @@ A: 1  (1.00)   | A: 1   (1.00)    |  A: 1   (1.00)    |  A: 1   (1.00)   | A: 1 
   
 
 
-![](./images/700817802e8b1e8059364c9392a59c9d.png )
+![](./images/700817802e8b1e8059364c9392a59c9d.webp )
 
   
 
@@ -1566,7 +1566,7 @@ h3 {
   
 
 
-![](./images/b5767eff4e71c9f97a627d84c1f16434.png )
+![](./images/b5767eff4e71c9f97a627d84c1f16434.webp )
 
   
 
@@ -1581,7 +1581,7 @@ h3 {
   
 
 
-![](./images/3c02f18e45203a6daead4ce5a6710858.png )
+![](./images/3c02f18e45203a6daead4ce5a6710858.webp )
 
   
 
@@ -1657,7 +1657,7 @@ h3 {
   
 
 
-![](./images/5d0a7adf5a6bfa8a1da6665e3965a616.png )
+![](./images/5d0a7adf5a6bfa8a1da6665e3965a616.webp )
 
   
 
@@ -1691,7 +1691,7 @@ h3 {
   
 
 
-![](./images/2eed67499ba45a0fe9748cb54d1834f3.png )
+![](./images/2eed67499ba45a0fe9748cb54d1834f3.webp )
 
   
 
@@ -1757,7 +1757,7 @@ C′=slope × C + intercept
   
 
 
-![](./images/011bbb2dd407805a9078ec1ea59bd111.png )
+![](./images/011bbb2dd407805a9078ec1ea59bd111.webp )
 
   
 
@@ -1797,7 +1797,7 @@ C′=slope × C + intercept
   
 
 
-![](./images/c9df8b9a010cc56319df22befe7ebaf4.png )
+![](./images/c9df8b9a010cc56319df22befe7ebaf4.webp )
 
   
 
@@ -1817,7 +1817,7 @@ C′=slope × C + intercept
   
 
 
-![](./images/17fe2c3c0b044c13b280ad61ae9243e9.png )
+![](./images/17fe2c3c0b044c13b280ad61ae9243e9.webp )
 
   
 
@@ -1867,7 +1867,7 @@ C′=slope × C + intercept
   
 
 
-![](./images/671da66343626ab1cfdb6d44eccfff6a.png )
+![](./images/671da66343626ab1cfdb6d44eccfff6a.webp )
 
   
 
@@ -1935,7 +1935,7 @@ SVG 滤镜制作的噪声纹理图形，可以用于任何地方，例如用它�
   
 
 
-![](./images/046ee45554a8936a786c43c6292cc0be.png )
+![](./images/046ee45554a8936a786c43c6292cc0be.webp )
 
   
 
@@ -1950,7 +1950,7 @@ SVG 滤镜制作的噪声纹理图形，可以用于任何地方，例如用它�
   
 
 
-![](./images/e5401ba9cc0906cdc4a998ab207873a2.png )
+![](./images/e5401ba9cc0906cdc4a998ab207873a2.webp )
 
   
 
@@ -2022,7 +2022,7 @@ SVG 滤镜制作的噪声纹理图形，可以用于任何地方，例如用它�
   
 
 
-![](./images/4b9f8731c3b7c93d6aaa61946e762ffe.png )
+![](./images/4b9f8731c3b7c93d6aaa61946e762ffe.webp )
 
   
 
@@ -2105,7 +2105,7 @@ SVG 滤镜制作的噪声纹理图形，可以用于任何地方，例如用它�
   
 
 
-![](./images/3db697443df12a6765194105dbc08ca5.png )
+![](./images/3db697443df12a6765194105dbc08ca5.webp )
 
   
 
@@ -2155,7 +2155,7 @@ SVG 滤镜制作的噪声纹理图形，可以用于任何地方，例如用它�
   
 
 
-![](./images/3c81e6ac2e980abc47f431a1159a40a9.png )
+![](./images/3c81e6ac2e980abc47f431a1159a40a9.webp )
 
   
 
