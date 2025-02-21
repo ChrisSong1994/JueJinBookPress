@@ -1,6 +1,5 @@
 {
   "books": [
-    "Nest 通关秘籍  最新200章",
     "Babel 插件通关秘籍",
     "Electron + React 从 0 到 1 实现简历平台实战",
     "Electron + Vue 3 桌面应用开发",
@@ -8,7 +7,6 @@
     "JavaScript 函数式编程实践指南",
     "JavaScript 设计模式核心原理与应用实践",
     "JavaScript 语言编程进阶",
-    "Next.js 开发指南",
     "Node + React 实战：从 0 到 1 实现记账本 ",
     "React 组合式开发实践：打造企业管理系统五大核心模块",
     "React 进阶实践指南",
@@ -59,6 +57,8 @@
     "深入浅出 Vite",
     "深入浅出 SVG",
     "现代CSS",
-    "程序员的必修课"
+    "程序员的必修课",
+    "Nest 通关秘籍  最新200章",
+    "Next.js 开发指南"
   ]
 }
