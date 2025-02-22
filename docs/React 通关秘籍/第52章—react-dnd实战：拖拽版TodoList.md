@@ -4,11 +4,11 @@
 
 当然，不是普通的那种，而是拖拽版：
 
-![](./images/823fa0c9806a461a1a7e444066a04dae.png )
+![](./images/823fa0c9806a461a1a7e444066a04dae.webp )
 
 可以拖拽右边的 Todo Item 到列表里：
 
-![](./images/c2cb94581e1ce31f8c02f03ca9d64187.png )
+![](./images/c2cb94581e1ce31f8c02f03ca9d64187.webp )
 
 拖拽到空白区域的时候，会高亮标出，松手后插入到该位置。
 
@@ -16,21 +16,21 @@
 
 还可以拖到垃圾箱删除：
 
-![](./images/cc8a731005ef160df9aa1b1b7e31d617.png )
+![](./images/cc8a731005ef160df9aa1b1b7e31d617.webp )
 
 当拖动过来或者双击 TodoItem 的时候，可以进入编辑模式：
 
-![](./images/a06625ae8c4aec8deaf5482f70e6ddfa.png )
+![](./images/a06625ae8c4aec8deaf5482f70e6ddfa.webp )
 
 此外，Todo Item 勾选后代表完成：
 
-![](./images/e0f4460545d58a8e16a3ef481f505870.png )
+![](./images/e0f4460545d58a8e16a3ef481f505870.webp )
 
 技术栈用 react-dnd + zustand + tailwind + react-spring。
 
 列表的数据都在 Store 里存储：
 
-![](./images/97e86a1627a84e5cfca932e838d54323.png )
+![](./images/97e86a1627a84e5cfca932e838d54323.webp )
 
 增删改之后修改 Store 里的数据。
 
@@ -46,11 +46,11 @@
 npx create-vite
 ```
 
-![](./images/5b5c11837c2ee6be7edc266beaf29be9.png )
+![](./images/5b5c11837c2ee6be7edc266beaf29be9.webp )
 
 进入项目，去掉 StrictMode：
 
-![](./images/158635dbbc9382a5b1a9d4420273d34a.png )
+![](./images/158635dbbc9382a5b1a9d4420273d34a.webp )
 
 然后新建 TodoList/index.tsx 组件：
 
@@ -77,7 +77,7 @@ npx tailwindcss init -p
 
 会生成 tailwind 和 postcss 配置文件：
 
-![](./images/2e11834ef1e4247d0c6fd5783e6d9e50.png )
+![](./images/2e11834ef1e4247d0c6fd5783e6d9e50.webp )
 
 修改下 content 配置，也就是从哪里提取 className：
 
@@ -106,11 +106,11 @@ export default {
 
 安装 tailwind 插件之后：
 
-![](./images/c59ffea76ccbff5cb7b305d3ff0baaf1.png )
+![](./images/c59ffea76ccbff5cb7b305d3ff0baaf1.webp )
 
 在写代码的时候就会提示 className 和对应的样式值：
 
-![](./images/ef1947ec77d1dadfba9cd3387b753ffa.png )
+![](./images/ef1947ec77d1dadfba9cd3387b753ffa.webp )
 
 这个插件触发提示需要先敲一个空格，这点要注意下：
 
@@ -118,7 +118,7 @@ export default {
 
 有的你不知道 className 叫啥的样式，还可以在 [tailwind 文档](https://www.tailwindcss.cn/docs/border-width)里搜：
 
-![](./images/c69e7e6253a5c8ba4175e88a30a6f63b.png )
+![](./images/c69e7e6253a5c8ba4175e88a30a6f63b.webp )
 
 改下 TodoList 的样式：
 
@@ -156,11 +156,11 @@ npm install
 
 npm run dev
 ```
-![](./images/33cf6efd434c3dc7605656a3afd30275.png )
+![](./images/33cf6efd434c3dc7605656a3afd30275.webp )
 
 为啥部分样式没生效呢？
 
-![](./images/f40f80008cec971c89cc3712928ca916.png )
+![](./images/f40f80008cec971c89cc3712928ca916.webp )
 
 因为像 w-1000 h-600 mt-100 这种，在内置的 className 里并没有。
 
@@ -191,7 +191,7 @@ export default {
 ```
 这样就好了：
 
-![](./images/200fc75d7bd336be04fad10a19d277d6.png )
+![](./images/200fc75d7bd336be04fad10a19d277d6.webp )
 
 然后继续写布局：
 ```javascript
@@ -226,16 +226,16 @@ export const TodoList:FC<TodoListProps> = (props) => {
 
 flex-2 要配置下：
 
-![](./images/b249872c631327ca3d980ca82b209a4f.png )
+![](./images/b249872c631327ca3d980ca82b209a4f.webp )
 
 看一下：
-![](./images/44ffe4c50e70b8395a75afd5dd9d4888.png )
+![](./images/44ffe4c50e70b8395a75afd5dd9d4888.webp )
 
 你会发现 margin 和 padding 都不是 10px，而是 2.5rem
 
-![](./images/bfeb6a0116dc88c2aeb4b0d753feb338.png )
+![](./images/bfeb6a0116dc88c2aeb4b0d753feb338.webp )
 
-![](./images/f422d4f916746cc9eec584f310128ac0.png )
+![](./images/f422d4f916746cc9eec584f310128ac0.webp )
 
 我们在 tailwind.config.js 里覆盖下：
 
@@ -272,7 +272,7 @@ export default {
 ```
 这样就好了：
 
-![](./images/7bf3a81f8b24a9c59782aeeb2ad5f7f1.png )
+![](./images/7bf3a81f8b24a9c59782aeeb2ad5f7f1.webp )
 
 然后去掉背景颜色，添加 List、GarbageBin、NewItem 这三个组件：
 
@@ -377,11 +377,11 @@ export const List: FC<ListProps> = (props) => {
 
 这里的 h-200、h-100 要在配置文件里加一下：
 
-![](./images/ef5922c647201ca86acc41e60e060e46.png )
+![](./images/ef5922c647201ca86acc41e60e060e46.webp )
 
 现在界面是这样的：
 
-![](./images/aa2a986963a8f96d853b52a2585cd79e.png )
+![](./images/aa2a986963a8f96d853b52a2585cd79e.webp )
 
 然后先来实现 List 组件部分：
 
@@ -425,7 +425,7 @@ function Item() {
 
 配置文件加一下 w-40、h-40 的配置：
 
-![](./images/74968cf7e53c1c62c0acf84dfdf6b891.png )
+![](./images/74968cf7e53c1c62c0acf84dfdf6b891.webp )
 
 看下效果：
 
@@ -521,11 +521,11 @@ export default {
 }
 ```
 
-![](./images/f883d7da09c923ae73021ea820055425.png )
+![](./images/f883d7da09c923ae73021ea820055425.webp )
 
 其实这些 width、height、margin、padding 的值的覆盖可以统一放到 spacing 里：
 
-![](./images/7ac035ba511951b501d31fb526582ff3.png )
+![](./images/7ac035ba511951b501d31fb526582ff3.webp )
 
 ```javascript
 /** @type {import('tailwindcss').Config} */
@@ -579,13 +579,13 @@ export default {
 
 [tailwind 文档](https://www.tailwindcss.cn/docs/customizing-spacing)里写了，很多样式都继承 spacing 的配置：
 
-![](./images/e9529ecc321aa54159f2f0a240be32e7.png )
+![](./images/e9529ecc321aa54159f2f0a240be32e7.webp )
 
 或者不想全局改默认配置，也可以用 text-[14px] 这种方式。
 
 text-[14px] 就会生成 font-size:14px 的样式：
 
-![](./images/7705cdf151a94e6b46c90ab6f67119f1.png )
+![](./images/7705cdf151a94e6b46c90ab6f67119f1.webp )
 
 接下来加上 react-dnd 来做拖拽。
 
@@ -596,7 +596,7 @@ npm install react-dnd react-dnd-html5-backend
 ```
 在 main.tsx 引入下 DndProvider
 
-![](./images/5ac4c6d884a6ec8a2785418287bee7a0.png )
+![](./images/5ac4c6d884a6ec8a2785418287bee7a0.webp )
 
 ```javascript
 import ReactDOM from 'react-dom/client'
@@ -654,7 +654,7 @@ export const NewItem: FC<NewItemProps> = (props) => {
 }
 ```
 
-![](./images/8ab4d3ddd4f86bfdca2eb8b6737f5bfd.png )
+![](./images/8ab4d3ddd4f86bfdca2eb8b6737f5bfd.webp )
 
 拖动过程中，设置 border 虚线、背景白色。
 
@@ -744,11 +744,11 @@ accept 指定了 list-item，只有对应的 type 拖拽到这里才能触发 is
 那新的 todo item 拖到哪里呢？
 
 到这里：
-![](./images/9953c7fe19807bafd24cd8618e900f71.png )
+![](./images/9953c7fe19807bafd24cd8618e900f71.webp )
 
 所以我们要把这些地方也新建个组件，然后添加 useDrop：
 
-![](./images/f88e9901fc12b2489281633eff9f9961.png )
+![](./images/f88e9901fc12b2489281633eff9f9961.webp )
 
 去掉之前 Item 的 mt-10 换成 Gap 的 h-10：
 
@@ -844,7 +844,7 @@ function Item() {
 ```
 覆盖下 w-10、h-10 的值，默认是 rem，我们还是用 px：
 
-![](./images/f25521bb4789187982e47065ba05c8e9.png )
+![](./images/f25521bb4789187982e47065ba05c8e9.webp )
 
 现在 new-item 就能拖过来了：
 
@@ -852,7 +852,7 @@ function Item() {
 
 现在 Gap 和 Item 代码挺多了，分离出去作为单独的模块 Gap.tsx 和 Item.tsx
 
-![](./images/1dde99f0d029602330445872f6a667d0.png )
+![](./images/1dde99f0d029602330445872f6a667d0.webp )
 
 接下来处理下具体的状态逻辑。
 
@@ -921,7 +921,7 @@ state 就是 list，然后添加 addItem、deleteItem、updateItem 的方法。
 
 在 List 组件里引入下：
 
-![](./images/952ac1688b92b088999a79a0463f0f72.png )
+![](./images/952ac1688b92b088999a79a0463f0f72.webp )
 
 传入 data，顺便指定 key：
 
@@ -960,19 +960,19 @@ export const List: FC<ListProps> = (props) => {
 ```
 \<Fragment> 也可以写 <></>，它只是用来给多个 children 包一层，但不会生成 dom 节点。
 
-![](./images/0d28dbba442d0b6f98db244daa4613a5.png )
+![](./images/0d28dbba442d0b6f98db244daa4613a5.webp )
 
 在 Item 组件添加 content 参数：
 
-![](./images/106fc7f3093c8e115dad646a494cc815.png )
+![](./images/106fc7f3093c8e115dad646a494cc815.webp )
 
 看下效果：
 
-![](./images/689a2007f01b38e9cde66e523e6675fa.png )
+![](./images/689a2007f01b38e9cde66e523e6675fa.webp )
 
 我们加一下添加 item 的处理：
 
-![](./images/b3bcbb0471911fc9c0d63296d6e7a0ae.png )
+![](./images/b3bcbb0471911fc9c0d63296d6e7a0ae.webp )
 
 ```javascript
 import classNames from "classnames";
@@ -1018,7 +1018,7 @@ export function Gap() {
 
 这里用 Math.random 生成 6 位的随机数：
 
-![](./images/7d2cabaca223c0ba2c1b911b9c6ed63c.png )
+![](./images/7d2cabaca223c0ba2c1b911b9c6ed63c.webp )
 
 ![](./images/fc2bc07267cd00e75c0a6043ec5468eb.gif )
 
@@ -1026,11 +1026,11 @@ export function Gap() {
 
 drag 的时候加上传递的数据：
 
-![](./images/b5e36eb32d2bc797e8ff4b0b0be75e9f.png )
+![](./images/b5e36eb32d2bc797e8ff4b0b0be75e9f.webp )
 
 drop 的时候拿到 id 执行删除：
 
-![](./images/924a19e018467cebd5295f55702f19ee.png )
+![](./images/924a19e018467cebd5295f55702f19ee.webp )
 
 测试下：
 
@@ -1040,7 +1040,7 @@ drop 的时候拿到 id 执行删除：
 
 然后加上编辑功能：
 
-![](./images/2f7a88f821ec88d65e69b195cd0219a7.png )
+![](./images/2f7a88f821ec88d65e69b195cd0219a7.webp )
 
 用两个 state 分别保存 editing 状态和 input 内容。
 
@@ -1050,7 +1050,7 @@ onBlur 的时候修改 editing 状态为 false。
 
 并且用 updateItem 更新状态：
 
-![](./images/c7f3c83208ede425d6f91359f4ffdfbe.png )
+![](./images/c7f3c83208ede425d6f91359f4ffdfbe.webp )
 
 没啥问题：
 
@@ -1058,7 +1058,7 @@ onBlur 的时候修改 editing 状态为 false。
 
 然后当选中 checkbox 的时候，也要 updateItem：
 
-![](./images/dc9686e3d747bb4a558f830b0771e39d.png )
+![](./images/dc9686e3d747bb4a558f830b0771e39d.webp )
 
 ```javascript
 import classNames from "classnames";
@@ -1150,15 +1150,15 @@ export function Item(props: ItemProps) {
 
 所以给 Gap 传入 id 参数：
 
-![](./images/2d7280e4b9eadb1b81e4bb1df0e8d0ef.png )
+![](./images/2d7280e4b9eadb1b81e4bb1df0e8d0ef.webp )
 
 然后 Gap 组件 drop 的时候传入 addItem 方法：
 
-![](./images/e40143161e72b420cc862e7ec7999763.png )
+![](./images/e40143161e72b420cc862e7ec7999763.webp )
 
 addItem 方法里根据 id 插入：
 
-![](./images/42c92c7c575406bbe8e3ff181efc5ddf.png )
+![](./images/42c92c7c575406bbe8e3ff181efc5ddf.webp )
 
 没有传就插入在后面，否则 findIndex，然后在那个位置插入。
 
@@ -1176,13 +1176,13 @@ addItem 方法里根据 id 插入：
 
 我们给 zustand 加上 persist 中间件：
 
-![](./images/1f38282f8c57a07d279e80cde4c80f90.png )
+![](./images/1f38282f8c57a07d279e80cde4c80f90.webp )
 
 注意，ts + middleware 的场景，zustand 要换这种写法。
 
 [文档的解释](https://github.com/pmndrs/zustand/blob/main/docs/guides/typescript.md)是为了更好的处理类型：
 
-![](./images/4c5a38f877c86ef87aae1ead06ca22be.png )
+![](./images/4c5a38f877c86ef87aae1ead06ca22be.webp )
 
 反正功能是一样的。
 
@@ -1261,7 +1261,7 @@ export const useTodoListStore = create<State & Action>()(persist(stateCreator, {
 ```
 测试下：
 
-![](./images/ed284bc84fc9cc6d534480dd1b12bde5.png )
+![](./images/ed284bc84fc9cc6d534480dd1b12bde5.webp )
 
 ![](./images/65ccfbfa7017473247127d202b17314b.gif )
 
@@ -1278,7 +1278,7 @@ npm install --save @react-spring/web
 ```
 然后渲染 list 的时候用 react-spring 的 useTransition 的 hook 处理下：
 
-![](./images/5dbcec02a3a6f82fbb8e633c41be886c.png )
+![](./images/5dbcec02a3a6f82fbb8e633c41be886c.webp )
 
 useTransition 会根据传入的配置来生成 style，这些 style 要加在 animated.div 上。
 

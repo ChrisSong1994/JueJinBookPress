@@ -4,7 +4,7 @@
 
 ![](./images/873f4c3d064b6ee2930109f210b087e5.gif )
 
-![](./images/7f0b1388eb9b6f7bd626f095179304a9.png )
+![](./images/7f0b1388eb9b6f7bd626f095179304a9.webp )
 
 用 Form.Item 包裹 Input、Checkbox 等表单项，可以定义 rules，也就是每个表单项的校验规则。
 
@@ -16,7 +16,7 @@ Form 组件每天都在用，那它是怎么实现的呢？
 
 每个表单项都有 value 和 onChange 参数，我们只要在 Item 组件里给 children 传入这俩参数，把值收集到全局的 Store 里。
 
-![](./images/ac0d81a270023947794a073755255789.png )
+![](./images/ac0d81a270023947794a073755255789.webp )
 
 这样在 Store 里就存储了所有表单项的值，在 submit 时就可以取出来传入 onFinish 回调。
 
@@ -24,7 +24,7 @@ Form 组件每天都在用，那它是怎么实现的呢？
 
 那这些 Item 是怎么拿到 Store 来同步表单值的呢？
 
-![](./images/4039da6a9e667bb8aede7557aea0ed3d.png )
+![](./images/4039da6a9e667bb8aede7557aea0ed3d.webp )
 
 用 Context。
 
@@ -36,11 +36,11 @@ Form 组件每天都在用，那它是怎么实现的呢？
 npx create-vite
 ```
 
-![](./images/c4a92fd88a08a581f5ec5c3d5079b964.png )
+![](./images/c4a92fd88a08a581f5ec5c3d5079b964.webp )
 
 安装依赖，改下 main.tsx
 
-![](./images/0f2251685e11c66a6978d257cf422178.png )
+![](./images/0f2251685e11c66a6978d257cf422178.webp )
 
 然后创建 Form/FormContext.ts
 
@@ -66,7 +66,7 @@ validateRegister 用来注册表单项的校验规则，也就是 rules 指定�
 
 然后写下 Form 组件 Form/Form.tsx
 
-![](./images/1aacb7b672ed44c3fbbcafeb026803a5.png )
+![](./images/1aacb7b672ed44c3fbbcafeb026803a5.webp )
 
 参数传入初始值 initialValues、点击提交的回调 onFinish、点击提交有错误时的回调 onFinishFailed。
 
@@ -74,7 +74,7 @@ validateRegister 用来注册表单项的校验规则，也就是 rules 指定�
 
 用 useState 保存 values，用 useRef 保存 errors 和 validator
 
-![](./images/703a4fd4d46f2239068915d5b84ced85.png )
+![](./images/703a4fd4d46f2239068915d5b84ced85.webp )
 
 为什么不都用 useState 呢？
 
@@ -88,11 +88,11 @@ errors、validator 这种就是不需要触发重新渲染的数据。
 
 submit 的时候调用 onFinish，传入 values，再调用所有 validator 对值做校验，如果有错误，调用 onFinishFailed 回调：
 
-![](./images/14f558e3298f59c1dc90cf2921a73e63.png )
+![](./images/14f558e3298f59c1dc90cf2921a73e63.webp )
 
 然后把这些方法保存到 context 中，并且给原生 form 元素添加 onSubmit 的处理：
 
-![](./images/82cd692148711be5b0e16bc443e96b7a.png )
+![](./images/82cd692148711be5b0e16bc443e96b7a.webp )
 
 ```javascript
 import React, { CSSProperties, useState, useRef, FormEvent, ReactNode } from 'react';
@@ -179,21 +179,21 @@ npm install --save classnames
 
 接下来添加 Form/Item.tsx，也就是包装表单项用的组件：
 
-![](./images/31f693a90a80a4ac2953312c3d67c0b0.png )
+![](./images/31f693a90a80a4ac2953312c3d67c0b0.webp )
 
 首先是参数，可以传入 label、name、valuePropName、rules 等：
 
-![](./images/bc2df80615c2d481cd878775c73aabaa.png )
+![](./images/bc2df80615c2d481cd878775c73aabaa.webp )
 
 valuePropName 默认是 value，当 checkbox 等表单项就要取 checked 属性了：
 
-![](./images/b0cb13edd0bc0e127939013c580723cd.png )
+![](./images/b0cb13edd0bc0e127939013c580723cd.webp )
 
 这里 children 类型为 ReactElement 而不是 ReactNode。
 
 因为 ReactNode 除了包含 ReactElement 外，还有 string、number 等：
 
-![](./images/e6e788a3761599e83e77b73e8ddaca95.png )
+![](./images/e6e788a3761599e83e77b73e8ddaca95.webp )
 
 而作为 Form.Item 组件的 children，只能是 ReactElement。
 
@@ -201,41 +201,41 @@ valuePropName 默认是 value，当 checkbox 等表单项就要取 checked 属�
 
 如果没有传入 name 参数，那就直接返回 children。
 
-![](./images/dff311348c0cc794372a44636bcf0b5b.png )
+![](./images/dff311348c0cc794372a44636bcf0b5b.webp )
 
 比如这种就不需要包装：
 
-![](./images/2a000b425c7998a8f2a261c6d9c97563.png )
+![](./images/2a000b425c7998a8f2a261c6d9c97563.webp )
 
 创建两个 state，分别存储表单值 value 和 error。
 
 从 context 中读取对应 name 的 values 的值，同步设置 value：
 
-![](./images/495284640859658b2416fd7e6e8dcad3.png )
+![](./images/495284640859658b2416fd7e6e8dcad3.webp )
 
 然后 React.cloneElement 复制 chilren，额外传入 value、onChange 等参数：
 
-![](./images/87cdc5e31bf08db676cbc51bf249c5f1.png )
+![](./images/87cdc5e31bf08db676cbc51bf249c5f1.webp )
 
 onChange 回调里设置 value，并且修改 context 里的 values 的值：
 
-![](./images/63931964a649749e00a418c3e77582ab.png )
+![](./images/63931964a649749e00a418c3e77582ab.webp )
 
 这里的 getValueFromEvent 是根据表单项类型来获取 value：
 
-![](./images/4c651972aab4eabcf938545ee77973ff.png )
+![](./images/4c651972aab4eabcf938545ee77973ff.webp )
 
 然后是校验 rules，这个是用 async-validator 这个包：
 
-![](./images/3dfdd92e5d450007117c25d1ca99b2f1.png )
+![](./images/3dfdd92e5d450007117c25d1ca99b2f1.webp )
 
 在 context 注册 name 对应的 validator 函数：
 
-![](./images/342901ae5d4b6ba90513ccd0088cf2af.png )
+![](./images/342901ae5d4b6ba90513ccd0088cf2af.webp )
 
 然后 Item 组件渲染 label、children、error
 
-![](./images/0617638fe0a5cb105856874de1f849d4.png )
+![](./images/0617638fe0a5cb105856874de1f849d4.webp )
 
 ```javascript
 import React, { ReactNode, CSSProperties, useState, useContext, ReactElement, useEffect, PropsWithChildren, ChangeEvent } from 'react';
@@ -467,28 +467,28 @@ form 的 initialValues 的设置、表单的值的保存，规则的校验和错
 
 antd 的 Form 有个叫 FormStore 的类：
 
-![](./images/27e82b3c373fda5a3de842251dd1eb29.png )
+![](./images/27e82b3c373fda5a3de842251dd1eb29.webp )
 
 它的 store 属性保存表单值，然后暴露 getFieldValue、setFieldValue 等方法来读写 store。
 
 然后它提供了一个 useForm 的 hook 来创建 store：
 
-![](./images/70be804333647bb6e2963873fe2db1af.png )
+![](./images/70be804333647bb6e2963873fe2db1af.webp )
 
 用的时候这样用：
 
-![](./images/37cbbafe80ec4c9995b7106403251cf3.png )
+![](./images/37cbbafe80ec4c9995b7106403251cf3.webp )
 
 这样，Form 组件里就可以通过传进来的 store 的 api 来读写 store 了：
 
-![](./images/3d232aa6471aa44fac38302c231f53eb.png )
+![](./images/3d232aa6471aa44fac38302c231f53eb.webp )
 
 当然，它会通过 context 把 store 传递下去：
-![](./images/ce9faf39ccd49111e4f7c51dcf538103.png )
+![](./images/ce9faf39ccd49111e4f7c51dcf538103.webp )
 
 在 Field 也就是 Item 组件里就通过 context 取出 store 的 api 来读写 store：
 
-![](./images/8a07091f96270f2e74c4c8854e9bbe10.png )
+![](./images/8a07091f96270f2e74c4c8854e9bbe10.webp )
 
 和我们的实现有区别么？
 
@@ -502,7 +502,7 @@ antd 的 Form 有个叫 FormStore 的类：
 
 当然，我们也可以通过 ref 来做这个：
 
-![](./images/86b0568fa43b0cfa357f395d75d5cf3c.png )
+![](./images/86b0568fa43b0cfa357f395d75d5cf3c.webp )
 
 ```javascript
 import React, { CSSProperties, useState, useRef, FormEvent, ReactNode, ForwardRefRenderFunction, useImperativeHandle, forwardRef } from 'react';
@@ -600,7 +600,7 @@ export default Form;
 
 然后在 App.tsx 试试：
 
-![](./images/77c6a09efeeaf80a52535e2eac76fdec.png )
+![](./images/77c6a09efeeaf80a52535e2eac76fdec.webp )
 
 ```javascript
 import { Button, Checkbox, Input } from "antd";

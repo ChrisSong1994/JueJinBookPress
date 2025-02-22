@@ -12,7 +12,7 @@ css 我们用过 CSS Modules、用过 tailwind，这节用 css in js 方法 styl
 npx create-vite online-piano
 ```
 
-![image.png](./images/2fdd58cbf6e49fa70797e3f206882d5a.png )
+![image.png](./images/2fdd58cbf6e49fa70797e3f206882d5a.webp )
 
 安装 styled-components
 
@@ -24,7 +24,7 @@ npm install --save styled-components
 
 去掉 index.css 和 StrictMode：
 
-![](./images/ff2b30a930d2dad36c608576254253f9.png )
+![](./images/ff2b30a930d2dad36c608576254253f9.webp )
 
 然后改下 App.tsx：
 
@@ -124,7 +124,7 @@ export default App
 用 styled-components 来写样式。
 
 
-![image.png](./images/4a95cd3f4cf7e2fdeb43fe3a2390ca65.png )
+![image.png](./images/4a95cd3f4cf7e2fdeb43fe3a2390ca65.webp )
 
 这里用到 3 个 styled-components 的 api：
 
@@ -136,7 +136,7 @@ export default App
 
 样式组件自然就是可以当作组件来用的：
 
-![image.png](./images/abb5ccaef5046181c48ea647d8c36b2c.png )
+![image.png](./images/abb5ccaef5046181c48ea647d8c36b2c.webp )
 
 这也是用了 styled-components 的代码的特点。
 
@@ -148,7 +148,7 @@ export default App
 npm run start:dev
 ```
 
-![image.png](./images/fcf1a9da77010da81d94c8ec34fbf334.png )
+![image.png](./images/fcf1a9da77010da81d94c8ec34fbf334.webp )
 
 看下效果：
 
@@ -159,7 +159,7 @@ npm run start:dev
 打开控制台看下：
 
 
-![image.png](./images/39adcc041897f105d7dfd136dfdf98cc.png )
+![image.png](./images/39adcc041897f105d7dfd136dfdf98cc.webp )
 
 可以看到，className 是编译过的，完全不用担心样式冲突问题。
 
@@ -169,7 +169,7 @@ npm run start:dev
 
 然后我们来写 Audio 部分：
 
-![image.png](./images/67ddd58374d0a08719cc26652a4d7032.png )
+![image.png](./images/67ddd58374d0a08719cc26652a4d7032.webp )
 
 ```javascript
 const context = useMemo(()=> {
@@ -201,19 +201,19 @@ const play = (key: string) => {
 ```
 我们从上到下看下代码：
 
-![image.png](./images/e39f85d617d89075ceb66f8de406cb87.png )
+![image.png](./images/e39f85d617d89075ceb66f8de406cb87.webp )
 
 首先，创建 AudioContext，这个不需要每次渲染都创建，所以用 useMemo 包裹。
 
 然后创建 oscillator 节点、gain 节点、destination 节点，连接起来。
 
-![image.png](./images/39005221d8ad2f047cb7702aedf9af8f.png )
+![image.png](./images/39005221d8ad2f047cb7702aedf9af8f.webp )
 
 这些我们比较熟悉了。
 
 重点是下面部分：
 
-![image.png](./images/9cfd7434ec0f53765bf50e80b8d3b854.png )
+![image.png](./images/9cfd7434ec0f53765bf50e80b8d3b854.webp )
 
 前面我们用 GainNode 修改音量的方式都是直接改 value。
 
@@ -229,14 +229,14 @@ const play = (key: string) => {
 
 大概是这样变化的：
 
-![image.png](./images/10ebcde2b674ebb446fbe71d977fd58e.png )
+![image.png](./images/10ebcde2b674ebb446fbe71d977fd58e.webp )
 
 这样听起来就很自然。
 
 正好 start 到 stop 间隔 1 秒，就是按照上面的规律变化的音量：
 
 
-![image.png](./images/ece0fd63e645d8449212d85f8486da22.png )
+![image.png](./images/ece0fd63e645d8449212d85f8486da22.webp )
 
 我们试一下：
 
@@ -253,7 +253,7 @@ const play = (key: string) => {
 
 注释掉试试：
 
-![image.png](./images/7a33457c6faca92bf7457e927d3ffa0a.png )
+![image.png](./images/7a33457c6faca92bf7457e927d3ffa0a.webp )
 
 听下现在的声音：
 
@@ -265,7 +265,7 @@ const play = (key: string) => {
 
 但这样不方便，我们再加上键盘控制：
 
-![image.png](./images/e13e7160ca698a29d2f1ac91c3b39c59.png )
+![image.png](./images/e13e7160ca698a29d2f1ac91c3b39c59.webp )
 
 监听 keydown 事件，调用 play 方法传入 key 就可以了。
 
@@ -273,7 +273,7 @@ const play = (key: string) => {
 
 在 global style 加一下这个全局的 className：
 
-![image.png](./images/691ace4ae755d326638ba427889400d0.png )
+![image.png](./images/691ace4ae755d326638ba427889400d0.webp )
 
 全局 className 不会被编译。
 
@@ -288,15 +288,15 @@ const play = (key: string) => {
 
 从网上找下歌曲的简谱：
 
-![image.png](./images/bac05ea622b5b78dee9e044273d18c10.png )
+![image.png](./images/bac05ea622b5b78dee9e044273d18c10.webp )
 
 这里我们就只演奏第一句吧
 
 
-![image.png](./images/411442b83648db62d69218501d143a4c.png )
+![image.png](./images/411442b83648db62d69218501d143a4c.webp )
 
 
-![image.png](./images/6e84666dcb23cc11caf231ac052a6bdb.png )
+![image.png](./images/6e84666dcb23cc11caf231ac052a6bdb.webp )
 
 我们定义了简谱数字和键的对应关系。
 
@@ -472,9 +472,9 @@ export default App
 
 再加一首《奢香夫人》：
 
-![image.png](./images/e3d50fb21741baa70ea1555b26edca0b.png )
+![image.png](./images/e3d50fb21741baa70ea1555b26edca0b.webp )
 
-![image.png](./images/5ca0eca67b5b91eeda41b8a99cd47530.png )
+![image.png](./images/5ca0eca67b5b91eeda41b8a99cd47530.webp )
 
 抽取一个 playMusic 的方法，并且 startTime 缩短一半。
 

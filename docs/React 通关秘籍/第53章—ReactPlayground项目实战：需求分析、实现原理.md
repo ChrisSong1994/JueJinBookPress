@@ -4,7 +4,7 @@
 
 类似 [vue 的 playground](https://play.vuejs.org/)：
 
-![](./images/02d6cc9c1da8c51d13ec5e40b38a7a9b.png )
+![](./images/02d6cc9c1da8c51d13ec5e40b38a7a9b.webp )
 
 左边写代码，右边实时预览。
 
@@ -26,7 +26,7 @@
 npx create-vite
 ```
 
-![](./images/eb76438deb6c1b6f235afd62ab2886f1.png )
+![](./images/eb76438deb6c1b6f235afd62ab2886f1.webp )
 
 进入项目安装 @babel/standalone 和它的 ts 类型：
 
@@ -38,7 +38,7 @@ npm i --save-dev @types/babel__standalone
 
 去掉 index.css 和 StrictMode：
 
-![](./images/65069aa545abef0c21ee688b29c15eb3.png )
+![](./images/65069aa545abef0c21ee688b29c15eb3.webp )
 
 改下 App.tsx
 
@@ -97,13 +97,13 @@ export default App
 
 可以看到，打印了编译后的代码：
 
-![](./images/7819090ea65ff428c654379add2e0c59.png )
+![](./images/7819090ea65ff428c654379add2e0c59.webp )
 
 但现在编译后的代码也不能跑啊：
 
 主要是 import 语句这里：
 
-![](./images/96c70897dc547dc1ee722a8b10afefc9.png )
+![](./images/96c70897dc547dc1ee722a8b10afefc9.webp )
 
 运行代码的时候，会引入 import 的模块，这时会找不到。
 
@@ -148,11 +148,11 @@ export default App
 ```
 浏览器访问下：
 
-![](./images/a63b0b00d952de461450b06260944735.png )
+![](./images/a63b0b00d952de461450b06260944735.webp )
 
 这里用的就是 blob url：
 
-![](./images/f8f80b1897dfaa81fa3da249be89f4e4.png )
+![](./images/f8f80b1897dfaa81fa3da249be89f4e4.webp )
 
 我们可以把一段 JS 代码，用 URL.createObjectURL 和 new Blob 的方式变为一个 url：
 
@@ -161,7 +161,7 @@ URL.createObjectURL(new Blob([code], { type: 'application/javascript' }))
 ```
 那接下来的问题就简单了，左侧写的所有代码都是有文件名的。
 
-![](./images/05199b10ce675c163f8881f3d489c1c8.png )
+![](./images/05199b10ce675c163f8881f3d489c1c8.webp )
 
 我们只需要根据文件名替换下 import 的 url 就好了。
 
@@ -187,11 +187,11 @@ babel 编译流程分为 parse、transform、generate 三个阶段。
 
 babel 插件就是在 transform 的阶段增删改 AST 的：
 
-![](./images/5d54ec371415f2cdfad0e3f3fa1914d4.png )
+![](./images/5d54ec371415f2cdfad0e3f3fa1914d4.webp )
 
 通过 [astexplorer.net](https://astexplorer.net/#/gist/6f01ee950445813f623214fb2c7abba9/b45fffd5a735f829d15098efa4f860438c3a070e) 看下对应的 AST：
 
-![](./images/b16f959e3b546c63c0fcef13d400c788.png )
+![](./images/b16f959e3b546c63c0fcef13d400c788.webp )
 
 只要在对 ImportDeclaration 的 AST 做处理，把 source.value 替换为对应文件的 blob url 就行了。
 
@@ -252,7 +252,7 @@ npm i --save-dev @types/babel__core
 把 ImportDeclaration 的 soure 的值改为了 blob url。
 
 
-![](./images/f0f570efaf8b8ae1c9937d0218d5b7e8.png )
+![](./images/f0f570efaf8b8ae1c9937d0218d5b7e8.webp )
 
 这样，浏览器里就能直接跑这段代码。
 
@@ -288,7 +288,7 @@ npm i --save-dev @types/babel__core
 ```
 访问下：
 
-![](./images/c157978a6f5e081cbe7b5b9598aa7560.png )
+![](./images/c157978a6f5e081cbe7b5b9598aa7560.webp )
 
 可以看到，import react 生效了。
 
@@ -296,15 +296,15 @@ npm i --save-dev @types/babel__core
 
 你访问下可以看到，[返回的内容](https://esm.sh/react@18.2.0)也是 import url 的方式：
 
-![](./images/f4afe6db68ef1bbf0d8fe10f20125c9f.png )
+![](./images/f4afe6db68ef1bbf0d8fe10f20125c9f.webp )
 
 这里的 [esm.sh](https://esm.sh) 就是专门提供 esm 模块的 CDN 服务：
 
-![](./images/cdf3a7e0704d87aa88268b293b9b0aed.png )
+![](./images/cdf3a7e0704d87aa88268b293b9b0aed.webp )
 
 这是它们做的 [react playground](https://code.esm.sh/)：
 
-![](./images/738cfd655ab24e11321c2fffd3e104fe.png )
+![](./images/738cfd655ab24e11321c2fffd3e104fe.webp )
 
 这样，如何引入编辑器里写的 ./Aaa.tsx 这种模块，如何引入 react、react-dom 这种模块我们就都清楚了。
 
@@ -356,7 +356,7 @@ Editor 有很多[参数](https://github.com/suren-atoyan/monaco-react?tab=readme
 
 接下来看下预览部分：
 
-![](./images/f469586d62bf70ccfb806e100ff34747.png )
+![](./images/f469586d62bf70ccfb806e100ff34747.webp )
 
 这部分就是 iframe，然后加一个通信机制，左边编辑器的结果，编译之后传到 iframe 里渲染就好了。
 
@@ -437,11 +437,11 @@ iframe.html：
 ```
 这里路径后面加个 ?raw 是通过字符串引入（webpack 和 vite 都有这种功能），用 URL.createObjectURL + Blob 生成 blob url 设置到 iframe 的 src 就好了：
 
-![](./images/bbbd6d5347072d389324b407c8199fe2.png )
+![](./images/bbbd6d5347072d389324b407c8199fe2.webp )
 
 渲染的没问题：
 
-![](./images/1ff433dd6d0109cf851b5c3f76450f91.png )
+![](./images/1ff433dd6d0109cf851b5c3f76450f91.webp )
 
 这样，我们只需要内容变了之后生成新的 blob url 就好了。
 

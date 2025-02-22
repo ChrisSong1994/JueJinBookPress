@@ -10,7 +10,7 @@
 npx create-react-app --template typescript closure-trap
 ```
 
-![](./images/77eb740a758475a263241cefa066dffe.png )
+![](./images/77eb740a758475a263241cefa066dffe.webp )
 
 改一下 index.tsx：
 
@@ -50,13 +50,13 @@ export default App;
 
 可以看到，setCount 时拿到的 count 一直是 0:
 
-![](./images/a34a15952f14dd353875fb5a9c161bf6.png )
+![](./images/a34a15952f14dd353875fb5a9c161bf6.webp )
 
 为什么呢？
 
 大家可能觉得，每次渲染都引用最新的 count，然后加 1，所以觉得没问题：
 
-![](./images/0355c42ce8af537522505571f179501d.png )
+![](./images/0355c42ce8af537522505571f179501d.webp )
 
 但是，现在 useEffect 的依赖数组是 []，也就是只会执行并保留第一次的 function。
 
@@ -64,7 +64,7 @@ export default App;
 
 也就是实际上的执行是这样的：
 
-![](./images/0213f9801d34b169cd5f3a4e83fb199b.png )
+![](./images/0213f9801d34b169cd5f3a4e83fb199b.webp )
 
 这就导致了每次执行定时器的时候，都是在 count = 0 的基础上加一。
 
@@ -78,7 +78,7 @@ export default App;
 
 这时候可以用 setState 的另一种参数：
 
-![](./images/534bdf6e63832550ad6ca2bed359323b.png )
+![](./images/534bdf6e63832550ad6ca2bed359323b.webp )
 
 这次并没有形成闭包，每次的 count 都是参数传入的上一次的 state。
 
@@ -90,7 +90,7 @@ export default App;
 
 因为它是 dispatch 一个 action，不直接引用 state，所以也不会形成闭包：
 
-![](./images/84029e6732df779ebb49a64390a537b5.png )
+![](./images/84029e6732df779ebb49a64390a537b5.webp )
 
 ```javascript
 import { Reducer, useEffect, useReducer } from "react";
@@ -138,7 +138,7 @@ export default App;
 
 比如这里，console.log 的 count 就用到了外面的 count，形成了闭包，但又不能把它挪到 setState 里去写：
 
-![](./images/391ed9c4a2a2e590e1af1480b29efd0b.png )
+![](./images/391ed9c4a2a2e590e1af1480b29efd0b.webp )
 
 这种情况怎么办呢？
 
@@ -148,7 +148,7 @@ export default App;
 
 所以可以这样：
 
-![](./images/a8bdd0caa53ca7d3adadb6ad1118dd24.png )
+![](./images/a8bdd0caa53ca7d3adadb6ad1118dd24.webp )
 
 ```javascript
 import { useEffect, useState } from 'react';
@@ -282,16 +282,16 @@ export default App;
 
 但是[文档](https://react.dev/reference/react/useRef#caveats)里不建议：
 
-![](./images/d4a4e5593e3810b32248717083d1793c.png )
+![](./images/d4a4e5593e3810b32248717083d1793c.webp )
 
 不过这也没啥，ahooks 里就是直接在渲染过程中[改了 ref.current](https://github.com/alibaba/hooks/blob/master/packages/hooks/src/useMemoizedFn/index.ts#L23)：
 
-![](./images/b21ebc65dd93c18d94fa3fc071d9ffab.png )
+![](./images/b21ebc65dd93c18d94fa3fc071d9ffab.webp )
 
 
 上面的 useInterval 没有返回 clean 函数，调用者不能停止定时器，所以我们再加一个 ref 来保存 clean 函数，然后返回：
 
-![](./images/cc7431ebb5eb80f0190ebbef9c226f33.png )
+![](./images/cc7431ebb5eb80f0190ebbef9c226f33.webp )
 
 ```javascript
 function useInterval(fn: Function, time: number) {

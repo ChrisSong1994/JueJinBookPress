@@ -10,11 +10,11 @@
 
 我们在组件里通过 JSX 描述页面：
 
-![](./images/fa297eb4e09cf9144ec3bfd44b743846.png )
+![](./images/fa297eb4e09cf9144ec3bfd44b743846.webp )
 
 jsx 会被 babel 或者 tsc 等编译器编译成 render function，也就是类似 React.createElement 这种：
 
-![](./images/1dc7132d8c786a9f1a55100cf0b24522.png )
+![](./images/1dc7132d8c786a9f1a55100cf0b24522.webp )
 
 所以之前写 React 组件都必须有一行 import * as React from 'react'，因为编译后会用到 React 的 api。
 
@@ -22,31 +22,31 @@ jsx 会被 babel 或者 tsc 等编译器编译成 render function，也就是类
 
 但后来改为了这种 render function：
 
-![](./images/be4bd2a92acbd8bc868f680005a56475.png )
+![](./images/be4bd2a92acbd8bc868f680005a56475.webp )
 
 由 babel、tsc 等编译工具自动引入一个 react/jsx-runtime 的包，
 
 把这里的 React Runtime 切换成自动引入的就可以看到：
 
-![](./images/9881a9fbf884710bf98b7fbe7a072b7d.png )
+![](./images/9881a9fbf884710bf98b7fbe7a072b7d.webp )
 
 所以现在写组件就可以不引入 React 了。
 
 然后 render function 执行后产生 React Element 对象，也就是常说的虚拟 dom。
 
-![](./images/dede72c9c50672b04f189b6fb5994b23.png )
+![](./images/dede72c9c50672b04f189b6fb5994b23.webp )
 
 也就是这样的流程：
 
-![](./images/be23631286693935a179bad5468db147.png )
+![](./images/be23631286693935a179bad5468db147.webp )
 
 vdom （React Element）是一个通过 chilren 串联起来的树。
 
-![](./images/61b821da71bf11a947dbd85e93e1a2ab.png )
+![](./images/61b821da71bf11a947dbd85e93e1a2ab.webp )
 
 之后 React 会把 React Element 树转换为 fiber 结构，它是一个链表：
 
-![](./images/6d6c521d591266ddf241fb454d436b1e.png )
+![](./images/6d6c521d591266ddf241fb454d436b1e.webp )
 
 React Element 只有 children 属性来链接父子节点，但是转为 fiber 结构之后就有了 child、sibling、return 属性来关联父子、兄弟节点。
 
@@ -54,7 +54,7 @@ React Element 只有 children 属性来链接父子节点，但是转为 fiber �
 
 因为按照 child、sibling、sibling、return、sibling、return 之类的遍历顺序，可以把整个 vdom 树变成线性的链表结构：
 
-![](./images/665849c1cb28dc61387a2f9636c05691.png )
+![](./images/665849c1cb28dc61387a2f9636c05691.webp )
 
 这样一个循环就可以处理完。
 
@@ -68,7 +68,7 @@ react 在处理 fiber 链表的时候通过一个叫 workInProgress 的指针指
 
 所以现在完全可以先处理这个 fiber 树的某几个节点，然后暂停，处理其它的 fiber 树，之后再回来继续处理：
 
-![](./images/4b59746ebc72859562348207218678ac.png )
+![](./images/4b59746ebc72859562348207218678ac.webp )
 
 这也就是 React 所谓的并发。
 
@@ -92,7 +92,7 @@ https://claudiopro.github.io/react-fiber-vs-stack-demo/stack.html
 
 可以看到有很多超过 50ms 的长任务：
 
-![](./images/7990241370783457cd6ea2ee36aeb553.png )
+![](./images/7990241370783457cd6ea2ee36aeb553.webp )
 
 再看下 fiber 架构版本的 react
 
@@ -100,7 +100,7 @@ https://claudiopro.github.io/react-fiber-vs-stack-demo/fiber.html
 
 ![](./images/f993334683f75740c4590c759b8a261f.gif )
 
-![](./images/1e0309c5ad61943648a2e43791744978.png )
+![](./images/1e0309c5ad61943648a2e43791744978.webp )
 
 可以看到，每个任务都是固定的时间内跑完的。
 
@@ -110,13 +110,13 @@ https://claudiopro.github.io/react-fiber-vs-stack-demo/fiber.html
 
 很简单，fiber 链表的处理是可以打断的，每次处理一个节点：
 
-![](./images/d6d4e52ec8eb70d4a6e2f995d47701aa.png )
+![](./images/d6d4e52ec8eb70d4a6e2f995d47701aa.webp )
 
 然后处理下个节点之前判断下当前时间片还有没有空余时间，有的话继续 performUnitOfWork 处理下个 fiber 节点。
 
 否则放到下一次任务里跑。
 
-![](./images/54777c3e8b4b11423081005c4d2fa682.png )
+![](./images/54777c3e8b4b11423081005c4d2fa682.webp )
 
 这个时间片的判断就是通过当前时间和任务开始时间点的差值。
 
@@ -128,7 +128,7 @@ https://claudiopro.github.io/react-fiber-vs-stack-demo/fiber.html
 
 知道了 fiber 架构的好处之后，我们继续来看 React 渲染流程。
 
-![](./images/6426bd9a95fdcf07367f89c1709c8a53.png )
+![](./images/6426bd9a95fdcf07367f89c1709c8a53.webp )
 
 JSX 通过 babel、tsc 等编译成 render function，执行后变成 React Element 的树。
 
@@ -136,27 +136,27 @@ JSX 通过 babel、tsc 等编译成 render function，执行后变成 React Elem
 
 之前 React Element 是这样的：
 
-![](./images/3e6fb34a3569e2de7ec755a3697b1c81.png )
+![](./images/3e6fb34a3569e2de7ec755a3697b1c81.webp )
 
 会变成这样的 fiber 节点：
 
-![](./images/70f3f2ba2f672adf698b437ff3ffaad1.png )
+![](./images/70f3f2ba2f672adf698b437ff3ffaad1.webp )
 
 之后会根据 fiber 的类型做不同的处理：
 
-![](./images/1c92ef4e461c3d02a06e0d91e8c3d1e4.png )
+![](./images/1c92ef4e461c3d02a06e0d91e8c3d1e4.webp )
 
 function 组件、Provider、Lazy 组件等类型的 fiber 节点，都会做相应的处理。
 
 比如 function 组件的 fiber 节点，会调用函数，拿到返回值，之后继续 reconcile 它的 children：
 
-![](./images/02f448c04459ae5bb0162646a6d0ddd9.png )
+![](./images/02f448c04459ae5bb0162646a6d0ddd9.webp )
 
 当然，reconcile 并不只是创建新的 fiber 节点，当更新的时候，还会和之前的 fiber 节点做 diff，判断是新增、修改、还是删除，然后打上对应的标记。
 
 reconcile 完之后，fiber 链表也就构建好了，并且在每个 fiber 节点上保存了当前一些额外的信息。
 
-![](./images/6a19728bd09786270950df9ce7e75f8d.png )
+![](./images/6a19728bd09786270950df9ce7e75f8d.webp )
 
 比如 function 组件要执行的 effect 函数。
 
@@ -182,7 +182,7 @@ React 团队按照操作 dom 前后来分了三个小阶段，更清晰了一点
 
 再就是 ref，在 mutaion 阶段更新了 dom，所以在 layout 阶段就可以拿到 ref 了。
 
-![](./images/4b26a0c86a28150daee893084c29297a.png )
+![](./images/4b26a0c86a28150daee893084c29297a.webp )
 
 当然，我们实现的时候对 commit 阶段不用分的那么细。
 

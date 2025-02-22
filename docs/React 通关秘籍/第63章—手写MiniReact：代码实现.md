@@ -4,7 +4,7 @@
 
 首先先完成从 JSX 到 React Element 的转换：
 
-![](./images/be23631286693935a179bad5468db147.png )
+![](./images/be23631286693935a179bad5468db147.webp )
 
 从 JSX 到 render function 这步是 babel 或者 tsc 帮我们做的。
 
@@ -16,7 +16,7 @@ cd mini-react
 npm init -y
 ```
 
-![](./images/df6dbbf021d2a7d619f2ac43cba18fd5.png )
+![](./images/df6dbbf021d2a7d619f2ac43cba18fd5.webp )
 
 安装 typescript：
 
@@ -29,7 +29,7 @@ npm install --save-dev typescript
 ```
 npx tsc --init
 ```
-![](./images/e268b06bad3b1d0c2f3a99be906e2754.png )
+![](./images/e268b06bad3b1d0c2f3a99be906e2754.webp )
 
 改一下生成的 tsconfig.json
 
@@ -63,21 +63,21 @@ npx tsc
 
 可以看到，生成的代码是这样的：
 
-![](./images/6830479d6b20a397c08696fb6ff9dca0.png )
+![](./images/6830479d6b20a397c08696fb6ff9dca0.webp )
 
 React.createElement 第一个参数是类型，第二个参数是 props，第三个参数是 children。
 
 具体的 render function 的名字也可以指定：
 
-![](./images/d0f480f8f2bde425a7907675c4e17e88.png )
+![](./images/d0f480f8f2bde425a7907675c4e17e88.webp )
 
 再次执行编译，生成的就是这样的：
 
-![](./images/e74a316f21bc8da77b349842a4e6c483.png )
+![](./images/e74a316f21bc8da77b349842a4e6c483.webp )
 
 这就是从 jsx 到 render function 这一步，由 babel、tsc 等编译器来做：
 
-![](./images/46ee6408e3e544db4ad62c78dcc72c89.png )
+![](./images/46ee6408e3e544db4ad62c78dcc72c89.webp )
 
 我们只要实现这些 render function，然后返回对应的 React Element 即可。
 
@@ -118,7 +118,7 @@ MiniReact.createElement 就是我们实现的 render function。
 
 为什么文本节点要单独处理呢？
 
-![](./images/82c1010f948b5a897e72a95477a8af59.png )
+![](./images/82c1010f948b5a897e72a95477a8af59.webp )
 
 因为 div 的话，它的 type 是 div，可以有 props 和 children。
 
@@ -145,7 +145,7 @@ npx tsc -w
 ```
 在 dist 下生成了目标代码：
 
-![](./images/ce2fc577770e049e97765e7f1248c9c3.png )
+![](./images/ce2fc577770e049e97765e7f1248c9c3.webp )
 加一个 index.html 引入下 dist 的代码：
 
 ```html
@@ -169,17 +169,17 @@ npx tsc -w
 npx http-server .
 ```
 
-![](./images/288caba7bf5d93593188d26eed0470e5.png )
+![](./images/288caba7bf5d93593188d26eed0470e5.webp )
 
 浏览器访问下：
 
-![](./images/592ab915e4e022fba0e95af219f827ae.png )
+![](./images/592ab915e4e022fba0e95af219f827ae.webp )
 
 这个就是 React Element 的树，也就是我们常说的 vdom。
 
 接下来要把它转成 fiber 结构。
 
-![](./images/ad576f2b5d1f43e8cbf04f10dfac6d21.png )
+![](./images/ad576f2b5d1f43e8cbf04f10dfac6d21.webp )
 
 这个过程叫做 reconcile。
 
@@ -230,7 +230,7 @@ function performUnitOfWork(fiber) {
 ```
 我们用 reqeustIdleCallback 来代替 React 的时间分片，把 React Element 树转 fiber 的 reconcile 过程放到不同的任务里跑。
 
-![](./images/b7dd500fde90148bc6c9816dd5fe2aff.png )
+![](./images/b7dd500fde90148bc6c9816dd5fe2aff.webp )
 
 用 nextUnitOfWork 指向下一个要处理的 fiber 节点。
 
@@ -242,23 +242,23 @@ render 方法里设置初始 nextUnitOfWork。
 
 这里有两个 root，一个是当前正在处理的 fiber 链表的根 wipRoot，一个是之前的历史 fiber 链表的根 currentRoot。
 
-![](./images/55148d8bf40f05f3c33826476b55873c.png )
+![](./images/55148d8bf40f05f3c33826476b55873c.webp )
 
 为什么有两个 root 呢？
 
 因为初始渲染会生成一个 fiber 链表，然后后面 setState 更新会再生成一个新的 fiber 链表，两个 fiber 链表要做一些对比里决定对 dom 节点的增删改，所以都要保存。
 
-![](./images/d329bf6f2953b8adaef46b9cf50c9f7d.png )
+![](./images/d329bf6f2953b8adaef46b9cf50c9f7d.webp )
 
 而 performUnitOfWork 处理每个 fiber 节点之后，会按照 child、sibling、return 的顺序返回下一个要处理的 fiber 节点：
 
-![](./images/524db1cf16351d0223f177fa6346dca5.png )
+![](./images/524db1cf16351d0223f177fa6346dca5.webp )
 
 就是通过这种顺序来把 fiber 树变为链表的：
 
-![](./images/02d9cce310fe74eeaced19ba8cf65f2c.png )
+![](./images/02d9cce310fe74eeaced19ba8cf65f2c.webp )
 
-![](./images/11ebf4bcbf1808924b81df7b2e2b5a09.png )
+![](./images/11ebf4bcbf1808924b81df7b2e2b5a09.webp )
 
 处理每个 fiber 节点的时候，要根据类型做不同的处理：
 
@@ -434,27 +434,27 @@ function reconcileChildren(wipFiber, elements) {
 ```
 当时 wipRoot 我们就制定了 alternate，也就是之前的 fiber 树，这样当 reconcile 创建新的 fiber 树的时候，就可以和之前的做 diff，判断是新增、修改、删除，打上对应的标记。
 
-![](./images/4c0992f7456394143884be018d8dfad4.png )
+![](./images/4c0992f7456394143884be018d8dfad4.webp )
 
 首先，拿到 alternate 的 child，依次取 sibling，逐一和新的 fiber 节点对比。
 
-![](./images/bba334b92dfdb525876601e48aaac5cb.png )
+![](./images/bba334b92dfdb525876601e48aaac5cb.webp )
 
 然后根据对比结果来创建新的 fiber 节点，也是先 child 后 sibling 的方式：
 
-![](./images/8f1451a69a5057798a4206a5b9c7abcb.png )
+![](./images/8f1451a69a5057798a4206a5b9c7abcb.webp )
 
 这样遍历之前的 fiber 链表和生成新的 fiber 链表的原因，看图很容易搞懂：
 
-![](./images/138d3eb13daac4b5724ba0e8468b9e54.png )
+![](./images/138d3eb13daac4b5724ba0e8468b9e54.webp )
 
-![](./images/dd9bc6352054b3e581947edd554db2fa.png )
+![](./images/dd9bc6352054b3e581947edd554db2fa.webp )
 
 然后 diff 两个 fiber 链表，就是判断节点 type 是不是一样。
 
 如果一样，就是修改，不一样，那就是删除或者新增，搭上对应的标记：
 
-![](./images/b70af7f3aec4f0be579f0a7ce842991f.png )
+![](./images/b70af7f3aec4f0be579f0a7ce842991f.webp )
 
 fiber 节点的 type、props 就是类型和参数。
 
@@ -466,7 +466,7 @@ effectTag 是增删改的标记。
 
 这里的 delections 数组，也就是要删除的节点，在 render 的时候初始化：
 
-![](./images/a5c1d97ab489c187f589e79427fefa63.png )
+![](./images/a5c1d97ab489c187f589e79427fefa63.webp )
 
 ```javascript
 let nextUnitOfWork = null
@@ -494,7 +494,7 @@ reconcile 结束，新的 fiber 链表就创建好了。
 
 其中，函数组件可能会调用 useState 或者 useEffect 的 api，我们也要实现一下：
 
-![](./images/165089878c484912e5cede1b624b2d7c.png )
+![](./images/165089878c484912e5cede1b624b2d7c.webp )
 
 首先，useState 的 state 和 useEffect 的 effect 存在哪里呢？
 
@@ -502,7 +502,7 @@ reconcile 结束，新的 fiber 链表就创建好了。
 
 比如用两个数组 stateHooks 和 effectHooks 分别来存储：
 
-![](./images/344cc5f57c88e6480b8a3e709a57b749.png )
+![](./images/344cc5f57c88e6480b8a3e709a57b749.webp )
 
 先实现 useState：
 
@@ -545,31 +545,31 @@ function useState(initialState) {
 
 比如这样：
 
-![](./images/6b804d32ac85b6d8022fba11b552b026.png )
+![](./images/6b804d32ac85b6d8022fba11b552b026.webp )
 
 那 state 就是 0，然后 queue 里存了三个修改 state 的函数。
 
 每次调用 useState 时会在 stateHooks 添加一个元素来保存 state：
 
-![](./images/f5ec1fb5346c6c3c159c95ac059337b6.png )
+![](./images/f5ec1fb5346c6c3c159c95ac059337b6.webp )
 
 state 的初始值是前面一次渲染的 state 值，也就是取 alternate 的同一位置的 state：
 
-![](./images/7208f9e5dacf1ed00d76dbdb88e7e2ec.png )
+![](./images/7208f9e5dacf1ed00d76dbdb88e7e2ec.webp )
 
 这样对初始 state 执行多个 action（也就是 setState） 之后，就拿到了最终的 state 值。
 
-![](./images/986c9721de5272fd689dd1109bdfa9f3.png )
+![](./images/986c9721de5272fd689dd1109bdfa9f3.webp )
 
 修改完 state 之后清空 queue。
 
 比如这里初始 state 是 0，调用三次 action 之后，state 变为 3：
 
-![](./images/b861d7aa39d1759deb4b66e8140bc57d.png )
+![](./images/b861d7aa39d1759deb4b66e8140bc57d.webp )
 
 然后 setState 就是在 action 数组里添加新的 action，并且让 nextUnitOfWork 指向新的 wipRoot，从而开始新的一轮渲染：
 
-![](./images/ee76f9a4fe22f51d7bc12782b7b9a267.png )
+![](./images/ee76f9a4fe22f51d7bc12782b7b9a267.webp )
 
 然后是 useEffect：
 
@@ -595,7 +595,7 @@ function useEffect(callback, deps) {
 
 我们只要在 reconcile 结束，也就是没有 nextUnitOfWork 的时候执行 commit 就行了：
 
-![](./images/2dca10d0ef63bbf631a48fb42bc63d8a.png )
+![](./images/2dca10d0ef63bbf631a48fb42bc63d8a.webp )
 
 ```javascript
 if (!nextUnitOfWork && wipRoot) {
@@ -674,11 +674,11 @@ function commitDeletion(fiber, domParent) {
 
 此外，我们还需要处理 effect。
 
-![](./images/a78bfcdcf680aacdd8bc55aa81c0dc81.png )
+![](./images/a78bfcdcf680aacdd8bc55aa81c0dc81.webp )
 
 它同样要遍历 fiber 链表：
 
-![](./images/0d370a1a55580f6761380df3ebdd2568.png )
+![](./images/0d370a1a55580f6761380df3ebdd2568.webp )
 
 先遍历一遍执行所有的 cleanup 函数，然后再次遍历执行 effect 函数。
 
@@ -745,11 +745,11 @@ function isDepsEqual(deps, newDeps) {
 ```
 这里遍历 fiber 链表也是递归处理每个节点，每个节点递归处理 child、sibling。
 
-![](./images/30c824a0509210d2b3405b07246deed8.png )
+![](./images/30c824a0509210d2b3405b07246deed8.webp )
 
 当没有传入 deps 数组，或者 deps 数组和上次不一致时，就执行 cleanup 函数。
 
-![](./images/fcb18a8f454ec4889a2d3dfd0ff8538a.png )
+![](./images/fcb18a8f454ec4889a2d3dfd0ff8538a.webp )
 
 比如这样：
 ```javascript
@@ -764,13 +764,13 @@ useEffect(() => {
 
 之后才会重新执行 effect：
 
-![](./images/550dfee404412718c8d83dd6390522ec.png )
+![](./images/550dfee404412718c8d83dd6390522ec.webp )
 
 当没有 alternate 的时候，就是首次渲染，直接执行所有的 effect。
 
 否则，如果没传入 deps 或者 deps 数组变化的时候再执行 effect 函数：
 
-![](./images/4b147233ebd041442d758215a29f9920.png )
+![](./images/4b147233ebd041442d758215a29f9920.webp )
 
 这样，commit 阶段，我们遍历 fiber 链表做的 dom 的增删改，执行了 effect 函数。
 
@@ -778,11 +778,11 @@ useEffect(() => {
 
 导出 render、useState、useEffect 的 api：
 
-![](./images/8391294c8b4fc4424565b15b604a6c8f.png )
+![](./images/8391294c8b4fc4424565b15b604a6c8f.webp )
 
 然后外面包一层函数，避免污染全局变量：
 
-![](./images/e5c7f9268ecce3ed370057e9b5f3b945.png )
+![](./images/e5c7f9268ecce3ed370057e9b5f3b945.webp )
 
 我们整体测试下：
 

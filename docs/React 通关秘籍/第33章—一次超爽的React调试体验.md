@@ -6,11 +6,11 @@
 
 比如我们要调试这个页面，理清这个输入框的内容是哪里来的：
 
-![](./images/7b0e0c4847ff36ce1b5cd326cb08baeb.png )
+![](./images/7b0e0c4847ff36ce1b5cd326cb08baeb.webp )
 
 我们先在项目里引入 click-to-react-component
 
-![](./images/0b78203f45b9d99c42b80a9d4400dd14.png )
+![](./images/0b78203f45b9d99c42b80a9d4400dd14.webp )
 
 用它来定位这个输入框的源码在哪，按住 option + 点击元素即可：
 
@@ -18,11 +18,11 @@
 
 添加调试配置后启动 debug：
 
-![](./images/13467a70e33575f7e43a14ce4c55466d.png )
+![](./images/13467a70e33575f7e43a14ce4c55466d.webp )
 
 然后在刚定位到的组件 return 的地方打个断点：
 
-![](./images/faa0305c933114a9b8aec79415dc0316.png )
+![](./images/faa0305c933114a9b8aec79415dc0316.webp )
 
 发现这个 value 是从父组件通过 props 传进来的。
 
@@ -30,7 +30,7 @@
 
 但是 React 组件渲染的时候调用栈里都是 react 源码，找不到父组件在哪。
 
-![](./images/c4fc05185a0991b638ab75c1aa6d4e61.png )
+![](./images/c4fc05185a0991b638ab75c1aa6d4e61.webp )
 
 那怎么办呢？
 
@@ -44,7 +44,7 @@
 
 这样就定位到了父组件里渲染这个子组件的源码位置：
 
-![](./images/be51619cf3bc685fd4876e8ccdc40a3c.png )
+![](./images/be51619cf3bc685fd4876e8ccdc40a3c.webp )
 
 这时候发现这个值依然是通过 props 传进来的。
 

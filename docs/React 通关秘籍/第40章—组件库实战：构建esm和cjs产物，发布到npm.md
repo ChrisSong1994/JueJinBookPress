@@ -6,7 +6,7 @@
 
 组件库的构建我们上节分析过，就是构建出 esm、commonjs、umd 3 种格式的代码，再加上 css 的构建就好了。
 
-![](./images/5762a6b65d84dfeaceaba93de020db95.png )
+![](./images/5762a6b65d84dfeaceaba93de020db95.webp )
 
 ant design、arco design、semi design 都是这样。
 
@@ -17,7 +17,7 @@ mkdir tmp
 cd tmp
 npm init -y
 ```
-![](./images/dfee7795076e4a765d377a65521a7557.png )
+![](./images/dfee7795076e4a765d377a65521a7557.webp )
 
 安装 react-bootstrap：
 
@@ -28,7 +28,7 @@ pnpm install react-bootstrap
 
 看下 node_modules/react-bootstrap 的 package.json
 
-![](./images/37dd2864d9a6c2cae10d79b5b93be1c2.png )
+![](./images/37dd2864d9a6c2cae10d79b5b93be1c2.webp )
 
 可以看到，它也有 main 和 module，也就是 commonjs 和 es module 两种入口。
 
@@ -38,27 +38,27 @@ pnpm install react-bootstrap
 
 看一下 esm 和 cjs 下的代码：
 
-![](./images/c093c996f280cb366f3ed4d24d948a97.png )
+![](./images/c093c996f280cb366f3ed4d24d948a97.webp )
 
-![](./images/7ae9f3ece836a552e92920737fcb1a8f.png )
+![](./images/7ae9f3ece836a552e92920737fcb1a8f.webp )
 
 当然，它也是支持 umd 的：
 
-![](./images/4377b3356ea63cf273ca017cd2ea50b8.png )
+![](./images/4377b3356ea63cf273ca017cd2ea50b8.webp )
  
 看下 [build 脚本](https://github.com/react-bootstrap/react-bootstrap/blob/master/tools/build.js#L101-L103)：
 
-![](./images/2832e100151e6d87a2dfb12ccdddc0bf.png )
+![](./images/2832e100151e6d87a2dfb12ccdddc0bf.webp )
 
 就是分别用 babel 编译出 commonjs 和 esm 的代码就可以了：
 
-![](./images/dd2e97574899c771e1d4d6ccdaefc554.png )
+![](./images/dd2e97574899c771e1d4d6ccdaefc554.webp )
 
 用 tsc 也行。
 
 umd 格式代码也同样是 [webpack 打包的](https://github.com/react-bootstrap/react-bootstrap/blob/master/tools/build.js#L64)：
 
-![](./images/c8f51b83d258ef70ff0540eac5538252.png )
+![](./images/c8f51b83d258ef70ff0540eac5538252.webp )
 
 不同于 antd、arco design 和 semi design，它就没有用 gulp 来组织流程。
 
@@ -68,11 +68,11 @@ gulp 本来就不是必须的，可用可不用。
 
 比如这个 [blueprint 组件库](https://github.com/palantir/blueprint/blob/develop/packages/table/package.json#L22-L25)：
 
-![](./images/39d24ce84a4291525625bee0480b9d90.png )
+![](./images/39d24ce84a4291525625bee0480b9d90.webp )
 
 之前总结的组件库的构建流程是没问题的：
 
-![](./images/5762a6b65d84dfeaceaba93de020db95.png )
+![](./images/5762a6b65d84dfeaceaba93de020db95.webp )
 
 然后我们新建一个项目来试一下：
 
@@ -80,19 +80,19 @@ gulp 本来就不是必须的，可用可不用。
 npx create-vite guang-components
 ```
 
-![](./images/d09a7a4afb986f749f8a4b06309bd51b.png )
+![](./images/d09a7a4afb986f749f8a4b06309bd51b.webp )
 
 进入项目，复制几个之前的组件过来：
 
-![](./images/90195adeb724e562615fc59e22d9267b.png )
+![](./images/90195adeb724e562615fc59e22d9267b.webp )
 
-![](./images/5e0b7679b8d307ac528522e41dde7c48.png )
+![](./images/5e0b7679b8d307ac528522e41dde7c48.webp )
 
-![](./images/00596a79f7359277c25fa0313655a292.png )
+![](./images/00596a79f7359277c25fa0313655a292.webp )
 
 复制 Calendar、Watermark、Message 这三个组件：
 
-![](./images/ad70b283c9d83367790c83bb41e55f13.png )
+![](./images/ad70b283c9d83367790c83bb41e55f13.webp )
 
 然后安装下依赖：
 
@@ -105,17 +105,17 @@ npm i --save-dev @types/react-transition-group
 ```
 然后去掉 Calendar 和 Message 组件里样式的引入，css 和 js 是分开编译的：
 
-![](./images/4a6721c1612144b5b92bfed64ab020fa.png )
+![](./images/4a6721c1612144b5b92bfed64ab020fa.webp )
 
-![](./images/e5706cd66998a452954fb0100caa48a7.png )
+![](./images/e5706cd66998a452954fb0100caa48a7.webp )
 
 把这些没用的文件删掉：
 
-![](./images/8e79dc6dde0c6328069dbefe4b8da315.png )
+![](./images/8e79dc6dde0c6328069dbefe4b8da315.webp )
 
 加一个 index.ts 来导出组件：
 
-![](./images/aef9da2a048087461e09e91f1fa64e82.png )
+![](./images/aef9da2a048087461e09e91f1fa64e82.webp )
 
 ```javascript
 import Calendar, { CalendarProps } from './Calendar';
@@ -176,15 +176,15 @@ npx tsc -p tsconfig.build.json --module ESNext --outDir dist/esm
 npx tsc -p tsconfig.build.json --module commonjs --outDir dist/cjs
 ```
 
-![](./images/15dcb6c9bc57e8e236db6ad221b991c3.png )
+![](./images/15dcb6c9bc57e8e236db6ad221b991c3.webp )
 
 看下 dist 的产物：
 
-![](./images/282d85d944fc6b83fcc6af7fa5d81ff9.png )
+![](./images/282d85d944fc6b83fcc6af7fa5d81ff9.webp )
 
-![](./images/d1055e4e0c9b57583f23f67a5757d679.png )
+![](./images/d1055e4e0c9b57583f23f67a5757d679.webp )
 
-![](./images/b5491406fb78ce16864fe891e71cd87b.png )
+![](./images/b5491406fb78ce16864fe891e71cd87b.webp )
 
 没啥问题，esm 和 commonjs 格式的代码都生成了。
 
@@ -199,13 +199,13 @@ npx sass ./src/Message/index.scss ./dist/esm/Message/index.css
 
 npx sass ./src/Message/index.scss ./dist/cjs/Message/index.css
 ```
-![](./images/68cc26acd7e2a99420a6a12f1446eee5.png )
+![](./images/68cc26acd7e2a99420a6a12f1446eee5.webp )
 
 看下产物：
 
-![](./images/897d96002a555a2f0bc42a629d4a9796.png )
+![](./images/897d96002a555a2f0bc42a629d4a9796.webp )
 
-![](./images/25f4da8ca4077d8b21bbfceeefd37a73.png )
+![](./images/25f4da8ca4077d8b21bbfceeefd37a73.webp )
 
 没问题。
 
@@ -213,7 +213,7 @@ npx sass ./src/Message/index.scss ./dist/cjs/Message/index.css
 
 接下来只要把这个 dist 目录发到 npm 仓库就可以了。
 
-![](./images/021b21537d21cc88df13000bafdf9850.png )
+![](./images/021b21537d21cc88df13000bafdf9850.webp )
 
 ```javascript
 "main": "dist/cjs/index.js",
@@ -240,7 +240,7 @@ npm adduser
 ```
 执行 npm adduser 命令，会打印一个链接让你登录或者注册：
 
-![](./images/08bed2e6a737143af873282e325f5201.png )
+![](./images/08bed2e6a737143af873282e325f5201.webp )
 
 登录后就可以 npm publish 了：
 
@@ -248,11 +248,11 @@ npm adduser
 npm publish
 ```
 
-![](./images/27c066050cd3a1b62899a0c6351be69e.png )
+![](./images/27c066050cd3a1b62899a0c6351be69e.webp )
 
 发布完之后，在 https://www.npmjs.com 就可以搜索到：
 
-![](./images/97be0b0b62a757cfa64d9c89d9c8eae1.png )
+![](./images/97be0b0b62a757cfa64d9c89d9c8eae1.webp )
 
 我们新建个项目来用用看：
 
@@ -260,7 +260,7 @@ npm publish
 npx create-vite guang-test
 ```
 
-![](./images/6af67f6505952728e8559e43af7b2b0e.png )
+![](./images/6af67f6505952728e8559e43af7b2b0e.webp )
 
 安装依赖：
 
@@ -297,11 +297,11 @@ export default App;
 ```
 npm run dev
 ```
-![](./images/dbabf8732878c67213dec131d1a89929.png )
+![](./images/dbabf8732878c67213dec131d1a89929.webp )
 
 浏览器访问下：
 
-![](./images/431a3a53b71f7bc519ff8b41cd6a40f3.png )
+![](./images/431a3a53b71f7bc519ff8b41cd6a40f3.webp )
 
 再试下另外两个组件：
 
@@ -326,13 +326,13 @@ export default App;
 pnpm install dayjs
 ```
 
-![](./images/3ab88d440fec73d47bafb7bccf2487ac.png )
+![](./images/3ab88d440fec73d47bafb7bccf2487ac.webp )
 
 这里样式受 index.css 影响了，去掉就好了：
 
-![](./images/f37eabd6e34187d280c6fb574ebd026a.png )
+![](./images/f37eabd6e34187d280c6fb574ebd026a.webp )
 
-![](./images/26d7b40cc20dea79354218000143aeeb.png )
+![](./images/26d7b40cc20dea79354218000143aeeb.webp )
 
 再来试下 Message 组件：
 
@@ -372,11 +372,11 @@ export default App;
 
 其实用到 guang-components 的项目都会安装 react 和 react-dom 包，不需要把它放在 dependencies 里。
 
-![](./images/4019a6553c449afeff7ebe615b44ee4f.png )
+![](./images/4019a6553c449afeff7ebe615b44ee4f.webp )
 
 而是放在 peerDependencies 里：
 
-![](./images/028b3585052b5b9acdd2775508a6852a.png )
+![](./images/028b3585052b5b9acdd2775508a6852a.webp )
 
 它和 dependencies 一样，都是依赖，但是 dependencies 是子级，而 peerDependencies 是平级。
 
@@ -384,7 +384,7 @@ export default App;
 
 改下版本号，重新 npm publish：
 
-![](./images/da535134a1aed7433de49f98675feb2b.png )
+![](./images/da535134a1aed7433de49f98675feb2b.webp )
 
 这样，我们的组件库的 npm 包就发布成功了！
 
@@ -396,7 +396,7 @@ export default App;
 npx create-react-app --template=typescript tmp4
 ```
 
-![](./images/7023ca1745dfaec7a83f24d266983c0d.png )
+![](./images/7023ca1745dfaec7a83f24d266983c0d.webp )
 
 进入项目，安装组件库：
 
@@ -436,7 +436,7 @@ npm run start
 ```
 浏览器里看一下：
 
-![](./images/df5cebcead8de190c812280d262c92ae.png )
+![](./images/df5cebcead8de190c812280d262c92ae.webp )
 
 没啥问题。
 

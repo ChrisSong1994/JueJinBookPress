@@ -11,7 +11,7 @@
 ```
 npm run dev
 ```
-![](./images/3010173b4f9bb65aecc9d909460d1ea3.png )
+![](./images/3010173b4f9bb65aecc9d909460d1ea3.webp )
 
 浏览器访问下：
 
@@ -21,21 +21,21 @@ npm run dev
 
 css 和 ts 代码都有提示：
 
-![](./images/98b151a9b1531117f4082c9d0bd4003b.png )
+![](./images/98b151a9b1531117f4082c9d0bd4003b.webp )
 
-![](./images/37ed2e9ce2bc24961597df2cfa365990.png )
+![](./images/37ed2e9ce2bc24961597df2cfa365990.webp )
 
 并且我们后面引入的 npm 包也会有类型提示：
 
-![](./images/005c9b647f8883f2cff6cd5e60943309.png )
+![](./images/005c9b647f8883f2cff6cd5e60943309.webp )
 
 但额外引入的 npm 包不能直接用：
 
-![](./images/20d3e2b710a5ff68b0fd96ce4f37fd0a.png )
+![](./images/20d3e2b710a5ff68b0fd96ce4f37fd0a.webp )
 
 需要在 import-map.json 里配置下才行：
 
-![](./images/fce17d5b6d6a73b181f2c645a5c13712.png )
+![](./images/fce17d5b6d6a73b181f2c645a5c13712.webp )
 
 文件可以新增、删除、修改：
 
@@ -43,15 +43,15 @@ css 和 ts 代码都有提示：
 
 比如我们新增一个 Aaa.tsx 组件
 
-![](./images/62b7b576efff6ffac37e63c99a4ccae8.png )
+![](./images/62b7b576efff6ffac37e63c99a4ccae8.webp )
 
 还有它的样式 Aaa.css
 
-![](./images/30a506f84493827fc6fd3ddc10079486.png )
+![](./images/30a506f84493827fc6fd3ddc10079486.webp )
 
 在 App.tsx 里引入后就可以使用：
 
-![](./images/e63c8ccbc9d47ab68da29219325da596.png )
+![](./images/e63c8ccbc9d47ab68da29219325da596.webp )
 
 你可以直接打开[这个 url](http://localhost:5173/#eNqNVV9v2zYQ/yqcgsI2ZsmyEreZlgTtugHrwzage9jDtAdapCQ2FCmQlGPX8HffkdQ/O97QKLapu9/9P94dgxozERm9D9JjIHBNg3QkLQOORdni0lLNoaE6V6wxQN9h3loiqxupDPpMcW5QoWSNZsqeZ5mYsn7+47cpNySyXuWcUWGBA/RD03SoaAVnx+rFoxwkDf0spZkTmbc1yEYlNb9wao8/HT6R+UwBd7b4bhEpKghV80wg+HuweldPmVhkIjgtA3i9CLinfHO8R9Rq+qcBh5b2hE7XY/dxRLnWI41LgnXV4f1LSPXsxzELGI9ZwNhyMlG0IjdMCpuj+QIdbWS5FNqgv3PZCrNEmpqP9vQPehycm8cQMkL2o6hplUB9SiAb9tcmB2Obm+6tWj/9SjmX6C+pODl6/yJMyPz29naJkiRZnB5WgBokCNuhnGOtf4dcPs5yrMhs4AJ/2xoDfkvxkbP8+fEI3j8+Dd7O5859R3Mn9D1aL05P/sw0OroT2PR6RrsrMNy9PfgAINaTzRXduzwSWuCWu64a6w6luKi7pZzV3RP6gqe2p3y+CylMWOCa8UOKPglDFWT9oA2tw5Yt0YcdFQxIkL8dNSzHQFIMcwBhoUNNFSuglgiFL3T7zECV1adr0F8xUaYICwNwhjUlHlfLr6HU+1fAUuGDzjGnDua4L5SVlUnRXRw7ImeChlVHXEcbR8wllypFqtzOk80G9Z8Vun/3ZuEQhu5N6C+PsyQbw2r2lXJasi3jzBxGmAZ6iMmXVlsTcfzGsbY4fy4V1IyEnbmb5M4+owehziu4tCk4Ce4hgtXzGIg+CFNRzXSKhBQ2QlfTm7EMNd6HL4yYCqwm93Gzd8IN9KhzOVG0dpQaq5KJFMUIt0aOfkOKSyDnMDWo6vVvJTl49YTphmOocMGpV10z0Ru8TXp7ljjkN4531blN7xPHOQ0ZNAhEc26vWk96ymYSdEdJ5/lF8daDk/4qOcEh3jh6S2tA9cJnXcpEBZU0k/Q6U+sptm+dTdc6eau0rVsjWefx1aqusX08VypoGFDb7JGWnBFkFLR8g6GTvG2PCBUmrIVc3HdJdDBm51raQ5x6CCrZ6POw00ruqPLBT7Hgytu7t3lh79YUXsCS0Mvz13DHNNty6rXI1thMw6UBv22PTG6mBdsr4G30qt/XlDCM5o2iBVXaM8/buZvNk7Ex3LubZH27uXvnIr+a0sIFgZCzBYhJua/jf7BPLwL/dsr5LRLWuIm+aCkm0+6Sczb1Oko/9pzRrBPRWZD2bmSB23GWkgWVMY1OVyuq60hXK8d5v76PkijOAsj9RGCy8v9b1oJeyw9L8qrghHueCFhsl2u+o3zzmvcb2O3viy2Msd3CZ6vVbUJGHrMAY5wFT/DdL6mrawlAg58Xa6mj/M9augHtfUkmF3vTj6eh6baAf9VxMNjh5pVuugan0796w1lP) 试试
 
@@ -83,13 +83,13 @@ css 和 ts 代码都有提示：
 
 然后集成 @monaco-editor/react 实现的编辑器。
 
-![](./images/67e6a7e05698409afbce92ce5a62fe77.png )
+![](./images/67e6a7e05698409afbce92ce5a62fe77.webp )
 
 还用 @typescript/ata 包实现了代码改变时自动下载 dts 类型包的功能。
 
 这样，在编辑器里写代码就有 ts 类型提示了。
 
-![](./images/f9a3dd1dbd273787edd6992e9687a900.png )
+![](./images/f9a3dd1dbd273787edd6992e9687a900.webp )
 
 然后我们实现了多文件的切换：
 
@@ -107,11 +107,11 @@ css 和 ts 代码都有提示：
 
 使用 @babel/standalone 做的 tsx 代码的编译，编译过程中需要对 .tsx、.css、.json 等模块的 import 做处理，变成 blob url 的方式。
 
-![](./images/1cef5a7be09cc113c1acd2e1886ac620.png )
+![](./images/1cef5a7be09cc113c1acd2e1886ac620.webp )
 
 通过 babel 插件实现了对 import 语句的修改：
 
-![](./images/6b2af0da96d8f01f1fa53e86f72ba9c3.png )
+![](./images/6b2af0da96d8f01f1fa53e86f72ba9c3.webp )
 
 css 模块包一层代码加到 head 的 style 标签里，json 包一层代码直接 export，而 tsx 模块直接 babel 编译即可。
 
@@ -119,18 +119,18 @@ css 模块包一层代码加到 head 的 style 标签里，json 包一层代码�
 
 然后通过 iframe 实现了预览：
 
-![](./images/533ce56f189c1a64a8b497e96d151b6f.png )
+![](./images/533ce56f189c1a64a8b497e96d151b6f.webp )
 
 替换 html 模版里 import maps 和 src 部分的 script 标签后，同样用 blob url 设置为 iframe 的 src 就可以了。
 
 这样就可以预览了：
 
-![](./images/0feef6a10c1589d0eef46c32345ad739.png )
+![](./images/0feef6a10c1589d0eef46c32345ad739.webp )
 iframe 的代码如下：
 
-![](./images/c5defc9b9231f722d368a2425ad6b866.png )
+![](./images/c5defc9b9231f722d368a2425ad6b866.webp )
 
-![](./images/0feef6a10c1589d0eef46c32345ad739.png )
+![](./images/0feef6a10c1589d0eef46c32345ad739.webp )
 
 正是替换了 importmap 和 src 部分的 html，并且 css 也被添加到了 head 里的 style 标签下。
 
@@ -168,17 +168,17 @@ main.tsx、App.tsx、import-map.json 设置为 readonly，不可编辑和删除�
 
 用 Performance 分析了页面的 Event Loop，发现有 long task，性能优化的目标就是消除 long task。
 
-![](./images/b0bb8d15a0f0cda2c0bb51d7be0d26d9.png )
+![](./images/b0bb8d15a0f0cda2c0bb51d7be0d26d9.webp )
 
 分析发现是 babel 编译的逻辑导致的。
 
-![](./images/bc2862ddc1150c4bf5903d6a741d6f22.png )
+![](./images/bc2862ddc1150c4bf5903d6a741d6f22.webp )
 
 我们通过 Web Worker 把 babel 编译的逻辑放到了 worker 线程跑，通过 message 事件和 postMessage 和主线程通信。
 
 拆分后功能正常，再用 Performance 分析，发现耗时逻辑被转移到了 worker 线程，主线程这个 long task 没有了。
 
-![](./images/0dc471f4fefa10174049eb92de24abd1.png )
+![](./images/0dc471f4fefa10174049eb92de24abd1.webp )
 
 这就是我们开发这个 playground 的全过程。
 

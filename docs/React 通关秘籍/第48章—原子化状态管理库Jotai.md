@@ -44,9 +44,9 @@
 
 jotai 也是这个思想：
 
-![](./images/00fa4e769a3b9f40cdc36d520e244729.png )
+![](./images/00fa4e769a3b9f40cdc36d520e244729.webp )
 
-![](./images/04d3f0fc8eebe21573d7803064401bb0.png )
+![](./images/04d3f0fc8eebe21573d7803064401bb0.webp )
 
 通过 atom 定义一个原子状态，可以把它组合起来成为新的状态。
 
@@ -233,7 +233,7 @@ export default App;
 
 但是 jotai 在介绍原子化思想时提到了这个：
 
-![](./images/6d7f441ff48d70def66aef12b8267f77.png )
+![](./images/6d7f441ff48d70def66aef12b8267f77.webp )
 
 可能你用过 redux、zustand 这些状态管理库，jotai 和它们是完全两种思路。
 
@@ -285,13 +285,13 @@ store 里定义全部的 state，然后在组件里选出一部分来用。
 
 这个叫做 selector：
 
-![](./images/22d081f7133a53a9abb5760a9f746fac.png )
+![](./images/22d081f7133a53a9abb5760a9f746fac.webp )
 
 状态变了之后，zustand 会对比 selector 出的状态的新旧值，变了才会触发组件重新渲染。
 
 此外，这个 selector 还可以起到派生状态的作用，对原始状态做一些修改：
 
-![](./images/c153c56fa46591152b4c8fd5ab06cae6.png )
+![](./images/c153c56fa46591152b4c8fd5ab06cae6.webp )
 
 而在 jotai 里，每个状态都是独立的原子：
 
@@ -334,13 +334,13 @@ export default function App() {
 
 状态可以组合，产生派生状态：
 
-![](./images/6542963b7cbf288acaac4205ebba8894.png )
+![](./images/6542963b7cbf288acaac4205ebba8894.webp )
 
 ![](./images/9a86a38254700a73b7351d6849edb753.gif )
 
 而在 zustand 里是通过 selector 来做：
 
-![](./images/978e908599de68625f167b7681d314b4.png )
+![](./images/978e908599de68625f167b7681d314b4.webp )
 
 ![](./images/e6ac1e9b8fde00caa377b3c407e5422e.gif )
 
@@ -448,29 +448,29 @@ atom 除了可以直接传值外，也可以分别传入 get、set 函数。
 
 之前的派生状态就是只传入了 get 函数：
 
-![](./images/9c35f72aa5126d20c1caccb28e5aaa14.png )
+![](./images/9c35f72aa5126d20c1caccb28e5aaa14.webp )
 
 这样，状态是只读的。
 
 这里我们只传入了 set 函数：
 
-![](./images/89fd9b6ee8682f69db2cc8008c7b0249.png )
+![](./images/89fd9b6ee8682f69db2cc8008c7b0249.webp )
 
 所以状态是只能写。
 
 用的时候要取第二个参数：
 
-![](./images/e2f2c096779cfe07806ee511d3ea3779.png )
+![](./images/e2f2c096779cfe07806ee511d3ea3779.webp )
 
 当然，这么写有点费劲，所以 atom 对于只读只写的状态多了两个 hook：
 
-![](./images/72f79cade265a99f247ca7908854b7fb.png )
+![](./images/72f79cade265a99f247ca7908854b7fb.webp )
 
 useAtomValue 是读取值，useSetAtom 是拿到写入函数。
 
 而常用的 useAtom 就是拿到这两者返回值的数组。
 
-![](./images/305519e948a0f656605e1c59b6225771.png )
+![](./images/305519e948a0f656605e1c59b6225771.webp )
 
 效果一样：
 
@@ -478,7 +478,7 @@ useAtomValue 是读取值，useSetAtom 是拿到写入函数。
 
 当然，这里没必要用两个 atom，合并成一个就行：
 
-![](./images/95601aef8ab52c90ea593039bf2280a6.png )
+![](./images/95601aef8ab52c90ea593039bf2280a6.webp )
 
 ```javascript
 import { atom, useAtom, useAtomValue, useSetAtom } from 'jotai'; 
@@ -566,7 +566,7 @@ export default function App() {
 
 这时候可以改一下：
 
-![](./images/34a86669a2905530f602484af40f3972.png )
+![](./images/34a86669a2905530f602484af40f3972.webp )
 
 换成 useSetAtom，也就是不需要读取状态值。
 
@@ -621,13 +621,13 @@ export default function App() {
 
 zustand 支持通过中间件来修改 get、set 函数：
 
-![](./images/89665eeceef801428231ab09c9a8b0d4.png )
+![](./images/89665eeceef801428231ab09c9a8b0d4.webp )
 
 比如在 set 的时候打印日志。
 
 或者用 persist 中间件把状态存储到 localStorage 中：
 
-![](./images/920a9a187b0fe8b0cdedcc078df4466b.png )
+![](./images/920a9a187b0fe8b0cdedcc078df4466b.webp )
 
 zustand 中间件的原理很简单，就是修改了 get、set 函数，做一些额外的事情。
 
@@ -658,7 +658,7 @@ export default function App() {
 
 jotai 里是用 utils 包的 atomWithStorage：
 
-![](./images/eac51cffe5561b5e24db6bbf60ff9e93.png )
+![](./images/eac51cffe5561b5e24db6bbf60ff9e93.webp )
 
 试一下：
 
@@ -684,7 +684,7 @@ export default function App() {
 
 看下源码：
 
-![](./images/dc3e21ab013c9668e8425537c6c9824c.png )
+![](./images/dc3e21ab013c9668e8425537c6c9824c.webp )
 
 声明一个 atom 来存储状态值，然后又声明了一个 atom 来 get、set 它。
 

@@ -4,21 +4,21 @@
 
 它用起来非常简单，只要复制图标的组件名，直接渲染即可：
 
-![](./images/71d2e6e945c7984279f4fc862bfa523e.png )
+![](./images/71d2e6e945c7984279f4fc862bfa523e.webp )
 
 它也有一些 props：
 
 spin 是让图标不断转圈：
 
-![](./images/5b3e0affdd425218472749ab5252a74a.png )
+![](./images/5b3e0affdd425218472749ab5252a74a.webp )
 
 ![](./images/42037173bb80fb3bc937d178b66e25ee.gif )
 
 rotate 是指定图标旋转角度：
 
-![](./images/5f0ae1ac0979e1dadc5b3bb0ea24637b.png )
+![](./images/5f0ae1ac0979e1dadc5b3bb0ea24637b.webp )
 
-![](./images/fdc94e9e575acf2ce1bd8c71724df93c.png )
+![](./images/fdc94e9e575acf2ce1bd8c71724df93c.webp )
 
 antd 内置了很多图标组件，如果觉得不够用，还可以自己扩展：
 
@@ -43,7 +43,7 @@ export default App;
 ```
 只要对 Icon 组件包一层，component 参数传入图标的 svg，那就是一个新的图标组件。
 
-![](./images/6ba7fd30f415f224155f17cec2b10f50.png )
+![](./images/6ba7fd30f415f224155f17cec2b10f50.webp )
 
 而且如果你的项目用了 iconfont，你也可以把 iconfont 图标封装成 Icon 组件：
 
@@ -66,7 +66,7 @@ const App: React.FC = () => (
 
 export default App;
 ```
-![](./images/32691e64f73f73505942904b3e70bdee.png )
+![](./images/32691e64f73f73505942904b3e70bdee.webp )
 
 用 createFromIconfontCN 的方法，传入 scriptUrl，就可以直接用 IconFont 的组建了。
 
@@ -77,7 +77,7 @@ Icon 组件就这么多用法，还是挺简单的。
 ```shell
 npx create-react-app --template=typescript icon-component
 ```
-![](./images/9126c27199276cc612816be741ee1f54.png )
+![](./images/9126c27199276cc612816be741ee1f54.webp )
 
 用 cra 创建个项目。
 
@@ -118,25 +118,25 @@ export const Icon = forwardRef<SVGSVGElement, PropsWithChildren<IconProps>>((pro
 
 此外，因为 Icon 就是对 svg 的封装，所以我们也接受所有 svg 的属性，透传给内部的 svg。
 
-![](./images/71b27ec09dcb31b30ca38ceb28ced572.png )
+![](./images/71b27ec09dcb31b30ca38ceb28ced572.webp )
 
 这里还用了 forwardRef 来把 svg 的 ref 转发出去：
 
-![](./images/69b148c50039b9b918ba87187624430b.png )
+![](./images/69b148c50039b9b918ba87187624430b.webp )
 
 还有，size 默认为 1em 也就是用 font-size 的大小：
 
-![](./images/17d8ca35edd456c1373c4913106ef31a.png )
+![](./images/17d8ca35edd456c1373c4913106ef31a.webp )
 
 填充颜色用 currentColor，也就是 color 的值：
 
-![](./images/2b331dc1fffbaff5561318848791e44c.png )
+![](./images/2b331dc1fffbaff5561318848791e44c.webp )
 
 这就是为什么我们能通过 font-size 和 color 来修改 Icon 组件的大小和颜色。
 
 然后处理下 size 参数：
 
-![](./images/31fcd29d39dbe544d150c061dfdeddb0.png )
+![](./images/31fcd29d39dbe544d150c061dfdeddb0.webp )
 
 size 可以传 [10px, 10px] 分别指定宽高，也可以传 10px 来同时指定宽高，所以要做下处理。
 
@@ -190,7 +190,7 @@ export const Icon = forwardRef<SVGSVGElement, PropsWithChildren<IconProps>>((pro
 ```bash
 npm install --save classnames
 ```
-![](./images/c162e27f122a54a560f798e3a06dc10f.png )
+![](./images/c162e27f122a54a560f798e3a06dc10f.webp )
 
 ```javascript
 const cn = cs(
@@ -234,7 +234,7 @@ icon-spin 执行无限旋转动画。
 
 在 Icon/index.tsx 里引入：
 
-![](./images/0051400833c516bb91c0f738bb5b9622.png )
+![](./images/0051400833c516bb91c0f738bb5b9622.webp )
 
 至此，Icon 组件就封装完了。
 
@@ -318,7 +318,7 @@ npm run start
 ```
 可以看到，Icon 渲染出来了：
 
-![](./images/94f6eef5aeb866292f8c31efa86a93cd.png )
+![](./images/94f6eef5aeb866292f8c31efa86a93cd.webp )
 
 然后试下 props：
 
@@ -388,9 +388,9 @@ createFromIconfont 会传入 scriptUrl，我们在 document.body 上添加 \<scr
 
 antd 的就是这么做的：
 
-![](./images/3e159b47e8cd36db76daf88d0bf0a0c9.png )
+![](./images/3e159b47e8cd36db76daf88d0bf0a0c9.webp )
 
-![](./images/eed3feef052a332b4df418a57f5f68b1.png )
+![](./images/eed3feef052a332b4df418a57f5f68b1.webp )
 
 我们测试下：
 
@@ -398,17 +398,17 @@ antd 的就是这么做的：
 
 选几个图标:
 
-![](./images/ac5328139d44c23acc33bc69ab540a69.png )
+![](./images/ac5328139d44c23acc33bc69ab540a69.webp )
 
 添加到购物车，创建个项目：
 
-![](./images/0ff4c151fecd588bb1c32aba5900bc4b.png )
+![](./images/0ff4c151fecd588bb1c32aba5900bc4b.webp )
 
-![](./images/4a562fc15d7b6bdcbadb4afdf6b8a2fe.png )
+![](./images/4a562fc15d7b6bdcbadb4afdf6b8a2fe.webp )
 
 然后就可以看到在线 js 链接：
 
-![](./images/a783b5771f509098064274fdb67b6769.png )
+![](./images/a783b5771f509098064274fdb67b6769.webp )
 
 我们在项目里引入下试试：
 
@@ -433,7 +433,7 @@ function App() {
 export default App;
 
 ```
-![](./images/3c9462a24e19ed8f393a3b394fd55bae.png )
+![](./images/3c9462a24e19ed8f393a3b394fd55bae.webp )
 
 引入成功！
 

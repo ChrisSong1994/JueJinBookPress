@@ -14,7 +14,7 @@ umd 的打包做不做都行。
 
 这节我们就来做下 umd 的打包：
 
-![](./images/2fc6002bb3af53a0ad8723cbcd860521.png )
+![](./images/2fc6002bb3af53a0ad8723cbcd860521.webp )
 
 前面分析过，大多数组件库都用 webpack 来打包的。
 
@@ -26,7 +26,7 @@ cd antd-umd-test
 npm init -y
 ```
 
-![](./images/eb501eb620fe8fc168da076eb392ee00.png )
+![](./images/eb501eb620fe8fc168da076eb392ee00.webp )
 
 新建 index.html
 
@@ -54,11 +54,11 @@ antd 依赖的 react、react-dom、dayjs 包也得用 umd 引入。
 ```
 npx http-server .
 ```
-![](./images/be8f2124b4f79a0729b9daecbb085f63.png )
+![](./images/be8f2124b4f79a0729b9daecbb085f63.webp )
 
 浏览器访问下：
 
-![](./images/479b668c01a00663b33b7da6b96e5d64.png )
+![](./images/479b668c01a00663b33b7da6b96e5d64.webp )
 
 通过全局变量 antd 来访问各种组件。
 
@@ -122,11 +122,11 @@ npx http-server .
 
 这里不能直接写 jsx，需要用 babel 或者 tsc 之类的[编译一下](https://www.typescriptlang.org/play/?#code/DwFQhgRgNgpgBAEzAFzAZQPYFcBOBjGAXgG8lVNcCBfOPDKLAWwDsBnEuhl1mgegD4gA)：
 
-![](./images/46883e9f96843e8950e6335cee2bc139.png )
+![](./images/46883e9f96843e8950e6335cee2bc139.webp )
 
 浏览器看一下：
 
-![](./images/3846abaecae732349ff4a2682a78a915.png )
+![](./images/3846abaecae732349ff4a2682a78a915.webp )
 
 渲染成功！
 
@@ -134,7 +134,7 @@ npx http-server .
 
 我们的组件库也支持下 umd：
 
-![](./images/2fc6002bb3af53a0ad8723cbcd860521.png )
+![](./images/2fc6002bb3af53a0ad8723cbcd860521.webp )
 
 加一下 webpack.config.js
 
@@ -191,7 +191,7 @@ npm install --save-dev webpack-cli webpack ts-loader
 
 这里的 jsdoc 注释是为了引入 ts 类型的，可以让 webpack.config.js 有类型提示：
 
-![js.png](./images/3aaf913b4f12ab86314b85abc16af67a.png )
+![js.png](./images/3aaf913b4f12ab86314b85abc16af67a.webp )
 
 对 jsdoc 感兴趣的话可以看我这篇文章：[JSDoc 真能取代 TypeScript？](https://juejin.cn/post/7292437487011856394)
 
@@ -200,33 +200,33 @@ npm install --save-dev webpack-cli webpack ts-loader
 ```
 npx webpack
 ```
-![](./images/f890b0087bd7554ae163d025883c2c0f.png )
+![](./images/f890b0087bd7554ae163d025883c2c0f.webp )
 
 然后看下产物：
 
-![](./images/4d89d57acdfe170608c307f293b71337.png )
+![](./images/4d89d57acdfe170608c307f293b71337.webp )
 
 看起来没啥问题。
 
 这三个模块也都是通过直接读取全局变量的方式引入，没有打包进去：
 
-![](./images/6a45a7bbe071bc943d235f8b9e761340.png )
+![](./images/6a45a7bbe071bc943d235f8b9e761340.webp )
 
 在 package.json 改下版本号，添加 unpkg 的入口，然后发布到 npm：
 ```
 npm publish
 ```
-![](./images/b9a6568c626f6ea8a0af9352ade6a83d.png )
+![](./images/b9a6568c626f6ea8a0af9352ade6a83d.webp )
 
 在 unpkg 访问下：
 
-![](./images/ac1e311ac72382330b5fd9866da76445.png )
+![](./images/ac1e311ac72382330b5fd9866da76445.webp )
 
 访问 https://unpkg.com/guang-components 会自动重定向到最新版本的 umd 代码。
 
 回到刚才的 antd-umd-test 项目，添加一个 index2.html，引入 guang-components
 
-![](./images/0f79e49048c77659b6193fdb51431690.png )
+![](./images/0f79e49048c77659b6193fdb51431690.webp )
 
 ```html
 <!DOCTYPE html>
@@ -250,13 +250,13 @@ npm publish
 ```
 浏览器访问下：
 
-![](./images/bede5fc4dc564caa3262a3d201e978a1.png )
+![](./images/bede5fc4dc564caa3262a3d201e978a1.webp )
 
 可以通过全局变量 Guang 来拿到组件。
 
 css 也是通过 [unpkg 来拿到](https://unpkg.com/guang-components@0.0.8/dist/esm/Calendar/index.css)：
 
-![](./images/f9849919351eceace6b40845c0b00065.png )
+![](./images/f9849919351eceace6b40845c0b00065.webp )
 
 然后我们渲染下：
 
@@ -287,7 +287,7 @@ css 也是通过 [unpkg 来拿到](https://unpkg.com/guang-components@0.0.8/dist
 ```
 jsx 在 [ts playground](https://www.typescriptlang.org/play/?#code/DwYQhgNgpgdgJmATgAgG6QK5QLwG8ECeAVgM4AUA5AEwAMVALALQ0DszAjBQJQC+AfMAD04aPCR8AUEA) 编译：
 
-![](./images/b842237359970631af98746cc669b12b.png )
+![](./images/b842237359970631af98746cc669b12b.webp )
 
 浏览器访问下：
 
@@ -297,13 +297,13 @@ jsx 在 [ts playground](https://www.typescriptlang.org/play/?#code/DwYQhgNgpgdgJ
 
 但是控制台有个报错：
 
-![](./images/6149e7ca4e82e3de4eb726248b6e31f2.png )
+![](./images/6149e7ca4e82e3de4eb726248b6e31f2.webp )
 
 点进去可以看到是 \_jsx 这个函数的问题：
 
-![](./images/ccfc873f9bad7b6ec0651ed82e6c6dd2.png )
+![](./images/ccfc873f9bad7b6ec0651ed82e6c6dd2.webp )
 
-![](./images/a06df27fbd64f9960401f2c179d82f9a.png )
+![](./images/a06df27fbd64f9960401f2c179d82f9a.webp )
 
 react 我们通过 externals 的方式，从全局变量引入。
 
@@ -313,13 +313,13 @@ react 我们通过 externals 的方式，从全局变量引入。
 
 同一份 [jsx 代码](https://www.typescriptlang.org/play/?jsx=4#code/DwFQhgRgNgpgBAEzAFzAZQPYFcBOBjGAXgG8lVNcCBfOPDKLAWwDsBnEuhl1mgegD4gA)：
 
-![](./images/bc567d52fa8389ccbeb3bcba98c63302.png )
+![](./images/bc567d52fa8389ccbeb3bcba98c63302.webp )
 
 你在 [typescript playground](https://www.typescriptlang.org/play/?jsx=4#code/DwFQhgRgNgpgBAEzAFzAZQPYFcBOBjGAXgG8lVNcCBfOPDKLAWwDsBnEuhl1mgegD4gA) 里把 jsx 编译选项切换为 react：
 
-![](./images/55c8291df9662e86caeed6cea19d76cc.png )
+![](./images/55c8291df9662e86caeed6cea19d76cc.webp )
 
-![](./images/bfbcc23e4745a359f9692c1a25436b7d.png )
+![](./images/bfbcc23e4745a359f9692c1a25436b7d.webp )
 
 可以看到是不同的编译结果。
 
@@ -329,7 +329,7 @@ React 17 之后就加了下面的方式，直接编译为用 react/jsx-runtime �
 
 我们组件库也是用的这种：
 
-![](./images/7b01cba9c8244cf90998dec98b41c2d3.png )
+![](./images/7b01cba9c8244cf90998dec98b41c2d3.webp )
 
 但现在打包 umd 代码的时候，这样有问题。
 
@@ -337,15 +337,15 @@ React 17 之后就加了下面的方式，直接编译为用 react/jsx-runtime �
 
 修改 jsx 为 react 之后，会有一些报错：
 
-![](./images/0fa48cb390446a31a3b6e8bbabeeee57.png )
+![](./images/0fa48cb390446a31a3b6e8bbabeeee57.webp )
 
 在每个报错的组件加一下 React 全局变量：
 
-![](./images/9abe0251ed187d8cb5295027be096f76.png )
+![](./images/9abe0251ed187d8cb5295027be096f76.webp )
 
 再次打包就好了：
 
-![](./images/1cba0be598214304a14ff4f9d1c30934.png )
+![](./images/1cba0be598214304a14ff4f9d1c30934.webp )
 
 改下版本号，重新发布一下：
 
@@ -353,15 +353,15 @@ React 17 之后就加了下面的方式，直接编译为用 react/jsx-runtime �
 npm publish
 ```
 
-![](./images/d5481b5c91d37bf29d6b892264713de0.png )
+![](./images/d5481b5c91d37bf29d6b892264713de0.webp )
 
 改下 index2.html 里用的组件库的版本号：
 
-![](./images/292a06e099eed9db53cef8847fc4ccfa.png )
+![](./images/292a06e099eed9db53cef8847fc4ccfa.webp )
 
 现在就没报错了：
 
-![](./images/0f7a344d6804c9aab97a49a3f18f7c28.png )
+![](./images/0f7a344d6804c9aab97a49a3f18f7c28.webp )
 
 这样，我们的组件库就支持了 umd。
 

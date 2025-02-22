@@ -41,7 +41,7 @@ npx create-vite
 ```
 用 vite 创建个 react 项目。
 
-![](./images/e56fd4b0950d7cab0b24324c19f902af.png )
+![](./images/e56fd4b0950d7cab0b24324c19f902af.webp )
 
 进入项目，安装依赖，把开发服务跑起来：
 
@@ -50,7 +50,7 @@ npm install
 npm run dev
 ```
 
-![](./images/4db16a1ce086599db0f104e7eed3b006.png )
+![](./images/4db16a1ce086599db0f104e7eed3b006.webp )
 
 添加两个组件 Button1、Button2
 
@@ -97,19 +97,19 @@ Button2.css
 ```
 在 App.tsx 引入下：
 
-![](./images/904b8c56bced2ead3d6f680819965a7e.png )
+![](./images/904b8c56bced2ead3d6f680819965a7e.webp )
 
 渲染出来是这样的：
 
-![](./images/6c6a083f83acdd8312dda40ca992fa2a.png )
+![](./images/6c6a083f83acdd8312dda40ca992fa2a.webp )
 
 很明显，是样式冲突了：
 
-![](./images/99699941fc7fdc3a6a37b2ff36e74ca5.png )
+![](./images/99699941fc7fdc3a6a37b2ff36e74ca5.webp )
 
 这时候可以改下名字，把 Button1.css 该为 Button1.module.css
 
-![](./images/c541c2e1529d37add494909598bd7d6a.png )
+![](./images/c541c2e1529d37add494909598bd7d6a.webp )
 
 并且改下写 className 的方式。
 
@@ -125,13 +125,13 @@ export default function() {
 
 在浏览器看下：
 
-![](./images/6e0543fc71371652a99c46dbae4f8117.png )
+![](./images/6e0543fc71371652a99c46dbae4f8117.webp )
 
 现在就不会样式冲突了。
 
 为什么呢？
 
-![](./images/4240dac8a40740a2951d77cd043de9cb.png )
+![](./images/4240dac8a40740a2951d77cd043de9cb.webp )
 
 可以看到，button1 的 className 变成了带 hash 的形式，全局唯一的，自然就不会冲突了。
 
@@ -141,21 +141,21 @@ export default function() {
 
 看下编译后的代码就明白了：
 
-![](./images/021a3dce34e6292dcf3468fe12263710.png )
+![](./images/021a3dce34e6292dcf3468fe12263710.webp )
 
 它通过编译给 className 加上了 hash，然后导出了这个唯一的 className。
 
 所以在对象里用的，就是编译后的 className：
 
-![](./images/55ca3be6045910de26459b313f4baa06.png )
+![](./images/55ca3be6045910de26459b313f4baa06.webp )
 
 在 vscode 里安装 css modules 插件：
 
-![](./images/57e1eede0db36933c913807ee310ab6e.png )
+![](./images/57e1eede0db36933c913807ee310ab6e.webp )
 
 就可以提示出 css 模块下的 className 了：
 
-![](./images/b715252ebcf0da7a9838b7cb7098c9f2.png )
+![](./images/b715252ebcf0da7a9838b7cb7098c9f2.webp )
 
 其实 vue 里也有类似的机制，叫做 scoped css
 
@@ -189,13 +189,13 @@ export default function() {
 
 它和 css modules 还不大一样，css modules 是整个 clasName 都变了，所以要把 className 改成从 css modules 导入的方式：
 
-![](./images/9ee096be31e3e1ce4dabd2be4be76ef5.png )
+![](./images/9ee096be31e3e1ce4dabd2be4be76ef5.webp )
 
 而 scoped css 这种并不需要修改 css 代码，只是编译后会加一个选择器
 
-![](./images/00ab2eb5567854a8e5b0d6e2d01304ee.png )
+![](./images/00ab2eb5567854a8e5b0d6e2d01304ee.webp )
 
-![](./images/52b82a007dc0765258ec0b1d7554d3ae.png )
+![](./images/52b82a007dc0765258ec0b1d7554d3ae.webp )
 
 两者的使用体验有一些差别。
 
@@ -222,7 +222,7 @@ export default defineConfig({
 ```
 比如通过 generateScopedName 来修改生成的 className 的格式：
 
-![](./images/f57d347d1657e3a450b207025a0ae1b1.png )
+![](./images/f57d347d1657e3a450b207025a0ae1b1.webp )
 
 generateScopedName 也可以是个函数，自己处理：
 
@@ -248,7 +248,7 @@ export default defineConfig({
 ```
 传入了 className、filename 还有 css 文件的内容：
 
-![](./images/39b930f6e80417c9bb6e867fb0a72d1d.png )
+![](./images/39b930f6e80417c9bb6e867fb0a72d1d.webp )
 
 你可以通过 getJSON 来拿到编译后的 className：
 
@@ -270,29 +270,29 @@ export default defineConfig({
 ```
 第二个参数就是 css 模块导出的对象：
 
-![](./images/4d960958e41ba2e6016d6e5a054e7456.png )
+![](./images/4d960958e41ba2e6016d6e5a054e7456.webp )
 
 那如果在 Button1.module.css 里想把 .btn-wrapper 作为全局样式呢？
 
 这样写：
 
-![](./images/eebe3a03b6468140a94c09c86ec47827.png )
+![](./images/eebe3a03b6468140a94c09c86ec47827.webp )
 
 可以看到，现在编译后的 css 里就没有对 .btn-wrapper 做处理了：
 
-![](./images/51a3263433482eef32083eedb4d25fd1.png )
+![](./images/51a3263433482eef32083eedb4d25fd1.webp )
 
 只不过，因为 global 的 className 默认不导出，而我们用 styles.xxx 引入的：
 
-![](./images/748814ca7fa4ef15f9230b4040254dcb.png )
+![](./images/748814ca7fa4ef15f9230b4040254dcb.webp )
 
 所以 className 为空：
 
-![](./images/9139733f674d07e8f2baf9258fcbd4ae.png )
+![](./images/9139733f674d07e8f2baf9258fcbd4ae.webp )
 
 这时候，或者把 className 改为这样：
 
-![](./images/231902101fef8a96770e164fe1b05ee8.png )
+![](./images/231902101fef8a96770e164fe1b05ee8.webp )
 
 或者在配置里加一个 exportsGlobals:true
 
@@ -317,19 +317,19 @@ export default defineConfig({
 
 可以看到，现在 global 样式也导出了：
 
-![](./images/0452702ddbac3dfb3e2f62e085900441.png )
+![](./images/0452702ddbac3dfb3e2f62e085900441.webp )
 
-![](./images/9ffe65b7d93cabf06b01c67c879ceac1.png )
+![](./images/9ffe65b7d93cabf06b01c67c879ceac1.webp )
 
 相对的，模块化的 className 就用 :local() 来声明：
 
-![](./images/e0b6812bcfdaf2fc1060a88237552d1a.png )
+![](./images/e0b6812bcfdaf2fc1060a88237552d1a.webp )
 
 默认是 local。
 
 如果你想默认 global，那也可以配置：
 
-![](./images/dd6423039677138e298c4d86be0f19b7.png )
+![](./images/dd6423039677138e298c4d86be0f19b7.webp )
 
 ```javascript
 import { defineConfig } from 'vite'
@@ -353,7 +353,7 @@ export default defineConfig({
 
 可以看到，现在就正好反过来了：
 
-![](./images/b1b8f694ec56fc5e0a25b55b59d27301.png )
+![](./images/b1b8f694ec56fc5e0a25b55b59d27301.webp )
 
 默认是 global，如果是 local 的要单独用 :local() 声明。
 
@@ -378,19 +378,19 @@ export default defineConfig({
 })
 ```
 
-![](./images/c35e5266c7ee16eaad5f6bd43de0c071.png )
+![](./images/c35e5266c7ee16eaad5f6bd43de0c071.webp )
 
 还有一个配置比较常用，就是 localsConvention：
 
-![](./images/dadec1783e66307b382e8e7ee33faa11.png )
+![](./images/dadec1783e66307b382e8e7ee33faa11.webp )
 
 当 localsConvention 改为 camelCase 的时候，导出对象的 key 会变成驼峰的：
 
-![](./images/8420f48be780a84833d426852a9caa75.png )
+![](./images/8420f48be780a84833d426852a9caa75.webp )
 
 那在组件里就可以这样写：
 
-![](./images/751e83df0c7d6316d406c084620cca51.png )
+![](./images/751e83df0c7d6316d406c084620cca51.webp )
 
 这些就是 css modules 相关的配置了。
 
@@ -408,7 +408,7 @@ export default defineConfig({
 
 每一层的 className 都会编译：
 
-![](./images/60fbf033c8b17aa20315a9a847207a72.png )
+![](./images/60fbf033c8b17aa20315a9a847207a72.webp )
 
 有时候只要最外层 className 变了就好了，内层不用变，就可以用 :global() 声明下：
 
@@ -422,11 +422,11 @@ export default defineConfig({
 }
 ```
 
-![](./images/e0fdedb6fdf4cd5c1180035b121837a6.png )
+![](./images/e0fdedb6fdf4cd5c1180035b121837a6.webp )
 
 用 scss 之类的预处理时也是一样。
 
-![](./images/83bd466abd811c1274fc5890c1ef02ed.png )
+![](./images/83bd466abd811c1274fc5890c1ef02ed.webp )
 
 用 :global 包裹一层，内层的 className 不会被编译：
 
@@ -443,7 +443,7 @@ export default defineConfig({
 }
 
 ```
-![](./images/35f30b18561c07ee91c116c5862142fa.png )
+![](./images/35f30b18561c07ee91c116c5862142fa.webp )
 
 在 vite 里用 css modules 是这么用，在 cra 里也是一样。
 
@@ -453,7 +453,7 @@ export default defineConfig({
 npx create-react-app --template=typescript css-modules-cra
 ```
 
-![](./images/7e6d7f1c15faab745fc96d0fa234d6d1.png )
+![](./images/7e6d7f1c15faab745fc96d0fa234d6d1.webp )
 
 把服务跑起来：
 
@@ -462,15 +462,15 @@ npm run start
 ```
 把 App.css 改为 App.module.css
 
-![](./images/457bbfc9992114982641286fe8dce026.png )
+![](./images/457bbfc9992114982641286fe8dce026.webp )
 
 在 App.tsx 引入下：
 
-![](./images/322a32bc8a6c383491b6b003df767ca6.png )
+![](./images/322a32bc8a6c383491b6b003df767ca6.webp )
 
 这样就开启了 css modules：
 
-![](./images/5a9019080143c7ccfdafc674c4ee821e.png )
+![](./images/5a9019080143c7ccfdafc674c4ee821e.webp )
 
 用法是一样的。
 
@@ -492,7 +492,7 @@ npm run eject
 ```
 项目下会多一个 config 目录这下面就是 webpack 配置：
 
-![](./images/efc8ff075202ad984650d282b90d537c.png )
+![](./images/efc8ff075202ad984650d282b90d537c.webp )
 改一下配置：
 ```javascript
 modules: {
@@ -507,7 +507,7 @@ npm run start
 ```
 现在的 className 就变了：
 
-![](./images/340a13d7da245be1b77674f33e297d0d.png )
+![](./images/340a13d7da245be1b77674f33e297d0d.webp )
 更多配置可以看 [css-loader 的文档](https://github.com/webpack-contrib/css-loader?tab=readme-ov-file#object-2)
 
 和 vite 的 css modules 配置都差不多，虽然配置项名字不一样。

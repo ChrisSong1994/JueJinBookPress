@@ -38,7 +38,7 @@
 
 在渲染的时候加一下这个：
 
-![](./images/c3afbd8dc671eccbca8c3fa42f9b05db.png )
+![](./images/c3afbd8dc671eccbca8c3fa42f9b05db.webp )
 
 ```javascript
 import { Button as AntdButton } from 'antd';
@@ -52,9 +52,9 @@ const Button = ({id, type, text}: CommonComponentProps) => {
 
 export default Button;
 ```
-![](./images/bf50a1253d905a8da306d4a8270aef0a.png )
+![](./images/bf50a1253d905a8da306d4a8270aef0a.webp )
 
-![](./images/28394c1449bf55c1b41730e794468b62.png )
+![](./images/28394c1449bf55c1b41730e794468b62.webp )
 
 试一下：
 
@@ -62,13 +62,13 @@ export default Button;
 
 拖拽两个组件过来。
 
-![](./images/11e4f4a836717ada6363d282623066ed.png )
+![](./images/11e4f4a836717ada6363d282623066ed.webp )
 
 可以看到，id 加在了组件元素的 data-component-id 属性上。
 
 然后在 EditArea 里处理下 hover
 
-![](./images/f31e2febc8513572c0adfc0e220cf602.png )
+![](./images/f31e2febc8513572c0adfc0e220cf602.webp )
 
 ```javascript
 const [hoverComponentId, setHoverComponentId] = useState<number>();
@@ -92,11 +92,11 @@ mouseover 的时候做下处理，找到元素的 data-component-id 设置为 ho
 
 加个 debugger
 
-![](./images/b055272e52b6e0c6d06249dfb6fdba42.png )
+![](./images/b055272e52b6e0c6d06249dfb6fdba42.webp )
 
 浏览器里打开 devtools，鼠标划到画布区：
 
-![](./images/b74446de0086dac0a740c74495562153.png )
+![](./images/b74446de0086dac0a740c74495562153.webp )
 
 可以看到 composedPath 是从触发事件的元素到 html 根元素的路径。
 
@@ -106,11 +106,11 @@ mouseover 的时候做下处理，找到元素的 data-component-id 设置为 ho
 
 因为 react 里的 event 是合成事件，有的原生事件的属性它没有：
 
-![](./images/fc3cb9c72582bc5a4836e07d3d589103.png )
+![](./images/fc3cb9c72582bc5a4836e07d3d589103.webp )
 
 这时候就可以通过 e.nativeEvent 取它的原生事件：
 
-![](./images/d10a9af692607d762ff8efa66c220e2c.png )
+![](./images/d10a9af692607d762ff8efa66c220e2c.webp )
 
 然后我们在整个路径从底向上找，找到第一个有 data-component-id 的元素。
 
@@ -118,13 +118,13 @@ mouseover 的时候做下处理，找到元素的 data-component-id 设置为 ho
 
 还有这个 ele.dataset，它是一个 dom 的属性，包含所有 data-xx 的属性的值：
 
-![](./images/6bc03f69d8938994a90d032b21f81390.png )
+![](./images/6bc03f69d8938994a90d032b21f81390.webp )
 
 这样，在 hover 到不同 component 的时候，就能拿到对应的 componentId
 
 我们渲染下这个 hoverComponentId：
 
-![](./images/99f27c58d96195cbd7f614fa35827409.png )
+![](./images/99f27c58d96195cbd7f614fa35827409.webp )
 
 ![](./images/8b3449b9ea9af982272fa9ade62d487c.gif )
 
@@ -216,23 +216,23 @@ export default HoverMask;
 
 首先，需要传入 containerClassName 和 componentId 参数：
 
-![](./images/ba20440f92d8ca0c7cf4d2aeae333e0d.png )
+![](./images/ba20440f92d8ca0c7cf4d2aeae333e0d.webp )
 
 componentId 就是 hover 的组件 id，而 containerClassName 就是画布区的根元素的 className。
 
-![](./images/25abe63225f718cf5bc33ab2085a06e2.png )
+![](./images/25abe63225f718cf5bc33ab2085a06e2.webp )
 
 比如上图，我们计算按钮和画布区顶部的距离，就需要按钮的 boundingClientRect 还有画布区的 boundingClientRect。
 
 所以需要传入 containerClassName 和 componentId。
 
-![](./images/00d84ef74d6872061f63c80dc6e33a8e.png )
+![](./images/00d84ef74d6872061f63c80dc6e33a8e.webp )
 
 我们声明 left、top、width、height 的 state，调用 updatePosition 来计算这些位置。
 
 计算方式如下：
 
-![](./images/728fd5c57209a2723d99d1d310254ec9.png )
+![](./images/728fd5c57209a2723d99d1d310254ec9.webp )
 
 获取两个元素的 boundingClientRect，计算 top、left 的差值，加上 scrollTop、scrollLeft。
 
@@ -240,17 +240,17 @@ componentId 就是 hover 的组件 id，而 containerClassName 就是画布区�
 
 然后创建一个 div 挂载在容器下，用于存放 portal：
 
-![](./images/b1dbc0a478d99c55d3b34a3da11c0626.png )
+![](./images/b1dbc0a478d99c55d3b34a3da11c0626.webp )
 
 具体的样式比较简单，就是设置下 top、left、width、height，然后设置下 border、background 就好了：
 
-![](./images/4c34eef949658dc456fa26c2e52ca418.png )
+![](./images/4c34eef949658dc456fa26c2e52ca418.webp )
 
 注意还要设置 pointer-event 为 none，不响应鼠标事件。
 
 HoverMask 组件写完了，我们用一下：
 
-![](./images/acc3ee5b364df82d78213e24db3b5df3.png )
+![](./images/acc3ee5b364df82d78213e24db3b5df3.webp )
 
 ```javascript
 {hoverComponentId && (
@@ -268,7 +268,7 @@ HoverMask 组件写完了，我们用一下：
 
 处理下 mouseleave 的时候：
 
-![](./images/158c563f911207005eda993da1901cd7.png )
+![](./images/158c563f911207005eda993da1901cd7.webp )
 
 ```javascript
 onMouseLeave={() => {
@@ -281,11 +281,11 @@ onMouseLeave={() => {
 
 但只是高亮下意义不大，我们把组件名也显示下：
 
-![](./images/ff7a8130d17124b98b6bfb807d2d49c8.png )
+![](./images/ff7a8130d17124b98b6bfb807d2d49c8.webp )
 
-![](./images/ed53290729a12e452b2e97c77cd3bba4.png )
+![](./images/ed53290729a12e452b2e97c77cd3bba4.webp )
 
-![](./images/b657c49896a9da37e311e1dfe9a26360.png )
+![](./images/b657c49896a9da37e311e1dfe9a26360.webp )
 
 就是在加一个右上角 label 的位置计算，然后根据 id 找到对应 component 的 name 显示。
 
@@ -407,11 +407,11 @@ export default HoverMask;
 ```
 测试下：
 
-![](./images/8c10a9bdc1e702af06b4d30fc517e40e.png )
+![](./images/8c10a9bdc1e702af06b4d30fc517e40e.webp )
 
 这里的位置是这样算的：
 
-![](./images/2250af83b6b9ca4e2793572afb4dc3a7.png )
+![](./images/2250af83b6b9ca4e2793572afb4dc3a7.webp )
 
 labelTop 和高亮框一样，齐平。
 
@@ -419,7 +419,7 @@ labelLeft 是高亮框的 left，加上高亮框宽度。
 
 然后 translate 回去：
 
-![](./images/edbf719030ef165c285e0955e8fc8f4e.png )
+![](./images/edbf719030ef165c285e0955e8fc8f4e.webp )
 
 如果不 tanslate 回去是这样的：
 
@@ -429,7 +429,7 @@ labelLeft 是高亮框的 left，加上高亮框宽度。
 
 ![](./images/cdef2bcf94ed0b7725ea7c338af44375.gif )
 
-![](./images/60146ddd30efe750b6915994b2b8af78.png )
+![](./images/60146ddd30efe750b6915994b2b8af78.webp )
 
 ```javascript
 if (labelTop <= 0) {
@@ -438,7 +438,7 @@ if (labelTop <= 0) {
 ```
 现在就能显示出来了：
 
-![](./images/44b4027ce3fc8396b911b3aea3a4eb37.png )
+![](./images/44b4027ce3fc8396b911b3aea3a4eb37.webp )
 
 其实还有个问题：
 
@@ -448,17 +448,17 @@ if (labelTop <= 0) {
 
 这是因为 hoverComponentId 只要一变，就会卸载之前的 HoverMask 创建新的：
 
-![](./images/4eb193329814cc3fc221b08f1e47d41c.png )
+![](./images/4eb193329814cc3fc221b08f1e47d41c.webp )
 
 所以这段逻辑会执行多次，创建多个 .wrapper 元素：
 
-![](./images/cc800bdc2f34df77f96a8d45fd096a2c.png )
+![](./images/cc800bdc2f34df77f96a8d45fd096a2c.webp )
 
 这样性能不好。
 
 我们改一下：
 
-![](./images/a6828824ec1f9a511db08e8bf1570ee6.png )
+![](./images/a6828824ec1f9a511db08e8bf1570ee6.webp )
 
 直接在 EditArea 里创建个元素用来挂载 portal，把 className 传入 HoverMask 组件。
 
@@ -479,9 +479,9 @@ return <div className="h-[100%] edit-area" onMouseOver={handleMouseOver} onMouse
 ```
 HoverMask 直接把 portal 挂载到这个 className 的元素下就好了：
 
-![](./images/95dfe9b173039577739881feb7abd7ce.png )
+![](./images/95dfe9b173039577739881feb7abd7ce.webp )
 
-![](./images/45b4d2e9c65e59093f990e42abba4c22.png )
+![](./images/45b4d2e9c65e59093f990e42abba4c22.webp )
 
 ```javascript
 import {

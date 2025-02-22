@@ -8,7 +8,7 @@
 npx create-vite
 ```
 
-![](./images/3e25409674bfc0f50f1ff50c23fada20.png )
+![](./images/3e25409674bfc0f50f1ff50c23fada20.webp )
 
 进入项目，安装依赖，然后把服务跑起来：
 
@@ -17,11 +17,11 @@ npm install
 npm run dev
 ```
 
-![](./images/8a6c50553a2c279193b29099590933a5.png )
+![](./images/8a6c50553a2c279193b29099590933a5.webp )
 
 去掉 index.css 和 StrictMode：
 
-![](./images/5c7f86b886f6a0cddb37cb1508060c88.png )
+![](./images/5c7f86b886f6a0cddb37cb1508060c88.webp )
 
 安装 ahooks：
 
@@ -102,7 +102,7 @@ export default useSize;
 
 然后用 ResizeObserver 监听元素尺寸的变化，改变的时候 setState 触发重新渲染。
 
-![](./images/09750547fefe763702a45b0516c67247.png )
+![](./images/09750547fefe763702a45b0516c67247.webp )
 
 这里为了兼容，用了 resize-observer-polyfill
 
@@ -112,7 +112,7 @@ npm i --save resize-observer-polyfill
 
 换成我们实现的试一下：
 
-![](./images/d5d2a67a26ab001db572fc393bd0c2c8.png )
+![](./images/d5d2a67a26ab001db572fc393bd0c2c8.webp )
 
 没啥问题：
 
@@ -198,11 +198,11 @@ export default (ref: RefObject<HTMLElement>, options?: Options): boolean => {
 
 上节讲过事件绑定类的 hook 有三种写法，之前用传入 React Element + cloneElement 的方式实现过，这次用 ref + addEventListener 实现的。
 
-![](./images/1de5255eade5b9e2f3d5d40dd30136e5.png )
+![](./images/1de5255eade5b9e2f3d5d40dd30136e5.webp )
 
 测试下：
 
-![](./images/a308d7ad1f83f7eb31688906f9560c62.png )
+![](./images/a308d7ad1f83f7eb31688906f9560c62.webp )
 
 ![](./images/4a10ce3d58666bed47f918ec43c5e622.gif )
 
@@ -261,25 +261,25 @@ export default useTimeout;
 ```
 首先 useRef 保存回调函数，每次调用都会更新这个函数，避免闭包陷阱（函数里引用之前的 state）：
 
-![](./images/a1c5bb8b28a11ba69d4c92005043be8e.png )
+![](./images/a1c5bb8b28a11ba69d4c92005043be8e.webp )
 
 setTimeout 执行从 fnRef.current 取的最新的函数。
 
 要不要在渲染函数里直接改 ref.current，其实都可以，[闭包陷阱那节](https://juejin.cn/book/7294082310658326565/section/7298292751051784230)也讲过。文档里不建议，但是很多库都是直接改的。
 
-![](./images/21c31597f47a41109b62c76c5e96f8d2.png )
+![](./images/21c31597f47a41109b62c76c5e96f8d2.webp )
 
-![](./images/17c7ee9bbc6784bad248770856050ed4.png )
+![](./images/17c7ee9bbc6784bad248770856050ed4.webp )
 
 可以包一层 useLayoutEffect 或者 useEffect，这里我们就可以改了。
 
 然后用 useRef 保存 timer 引用，方便 clear 函数里拿到它来 clearTimeout：
 
-![](./images/6695abb1b7843a2241efbd1524c90fc8.png )
+![](./images/6695abb1b7843a2241efbd1524c90fc8.webp )
 
 测试下：
 
-![](./images/60c423319f684089031c9f6c3973875a.png )
+![](./images/60c423319f684089031c9f6c3973875a.webp )
 
 ![](./images/1ac119580de68b50510c1cba5393e785.gif )
 
@@ -378,11 +378,11 @@ Record<string, any> 是任意的对象的 ts 类型。
 
 核心就是 useRef 保存 props 或者其他值，当下次渲染的时候，拿到新的值和上次的对比下，打印值的变化：
 
-![](./images/7dfe598af89f2af6e7bac1f5f2610f1f.png )
+![](./images/7dfe598af89f2af6e7bac1f5f2610f1f.webp )
 
 props 可以传入任意 props、state 或者其他值：
 
-![](./images/12e73b1954c27d880b25a2d354cdb1da.png )
+![](./images/12e73b1954c27d880b25a2d354cdb1da.webp )
 
 实现很简单，但是比较有用的一个 hook。
 
@@ -496,7 +496,7 @@ export default useCountdown;
 ```
 代码比较多，一部分一部分来看。
 
-![](./images/9a49e58a55226c2dc11cc8a6bdd9e05d.png )
+![](./images/9a49e58a55226c2dc11cc8a6bdd9e05d.webp )
 
 Options 是参数的类型，可以传入 leftTime 剩余时间，也可以传入目标日期值 targetDate。
 
@@ -512,25 +512,25 @@ TDate 是 dayjs 允许的传入的日期类型。
 
 如果是 leftTime 那 Date.now() 加上 targetDate 就是目标日期。否则，就用传入的 targetDate。
 
-![](./images/d666a2642e06a80b5bc0a4c668c9c6f0.png )
+![](./images/d666a2642e06a80b5bc0a4c668c9c6f0.webp )
 
 onEnd 的函数也是要用 useRef 保存，然后每次更新 ref.current，取的时候取 ref.current。
 
 这也是为了避免闭包陷阱的。
 
-![](./images/481aa75fe897efa509cc3e773a1138d7.png )
+![](./images/481aa75fe897efa509cc3e773a1138d7.webp )
 
 核心部分是 useState 创建一个 state，在初始和每次定时器都计算一次剩余时间：
 
-![](./images/44803cb3ad04fcb223c8c721f5c35bef.png )
+![](./images/44803cb3ad04fcb223c8c721f5c35bef.webp )
 
 这个就是当前日期到目标日期的差值：
 
-![](./images/a6b754ae271cd3e59aa76ebb182acdde.png )
+![](./images/a6b754ae271cd3e59aa76ebb182acdde.webp )
 
 然后把它格式化一下就好了：
 
-![](./images/6318ed8b1b3bbd5abe35247358563ea9.png )
+![](./images/6318ed8b1b3bbd5abe35247358563ea9.webp )
 
 倒计时的逻辑很简单，就是通过定时器，每次计算下当前日期和目标日期的差值，返回格式化以后的结果。
 
@@ -538,7 +538,7 @@ onEnd 的函数也是要用 useRef 保存，然后每次更新 ref.current，取
 
 测试下：
 
-![](./images/08f30159c95f3423460b958d63732f54.png )
+![](./images/08f30159c95f3423460b958d63732f54.webp )
 
 ![](./images/f444ae9d1a3a0c8866c65e2b1efe6289.gif )
 

@@ -20,7 +20,7 @@
 
 创建个项目：
 
-![](./images/4f03ce3941661f1a09b88c173810c165.png )
+![](./images/4f03ce3941661f1a09b88c173810c165.webp )
 
 安装 react-spring 的包：
 
@@ -73,37 +73,37 @@ pages 是一个数组，接收 style 作为参数，返回 ReactElement。
 
 这个 style 是被 react-spring 处理过后的 style，所以是 AnimatedProps 类型：
 
-![](./images/23e63cef1a5667f69666c82154e74f43.png )
+![](./images/23e63cef1a5667f69666c82154e74f43.webp )
 
 不是都用 ReactNode 来表示 JSX 么，为什么这里用 ReactElement？
 
 讲 react 的 ts 类型的时候，讲过 ReactNode 包括 ReactElement 类型还包括 string、number 等类型：
 
-![](./images/e87bf27dce7d99dcbf453f574a7b4e94.png )
+![](./images/e87bf27dce7d99dcbf453f574a7b4e94.webp )
 
 但是这里要把 pages 的元素作为 ReactElement 来用，而 string、number 等都是不可以的，所以不能写 ReactNode：
 
-![](./images/d7f0edcf73e5f9ab266af5318a60fb32.png )
+![](./images/d7f0edcf73e5f9ab266af5318a60fb32.webp )
 
 然后我们声明了一个 index 的 state，在点击的时候修改了它：
 
-![](./images/5ef72be4f7ed62a484f187a7971e87bf.png )
+![](./images/5ef72be4f7ed62a484f187a7971e87bf.webp )
 
 而渲染的时候只渲染这一个，之前渲染的组件就会被销毁，从而触发过渡动画：
 
-![](./images/ffdd2203de1531a5bcf67ce38a90da0c.png )
+![](./images/ffdd2203de1531a5bcf67ce38a90da0c.webp )
 
 这是和上节那个类似效果的区别，上节那个并不是同时只保留一个，所以不是过渡动画。
 
 然后这里用到了 useTransition，它的第一个参数就是会变化的状态，当状态变化的时候就会触发进入、离开动画：
 
-![](./images/91c8e83c954b6ea86625a9d34e518182.png )
+![](./images/91c8e83c954b6ea86625a9d34e518182.webp )
 
 分别指定了初始状态（from），进入的时候（enter），离开的时候（leave）会变化的 style。
 
 这样，当 index 变化的时候，这些 style 就会变，从而触发动画：
 
-![](./images/bcad0e6f3e286ba13aa2f857344855fc.png )
+![](./images/bcad0e6f3e286ba13aa2f857344855fc.webp )
 
 在 App.css 写下样式：
 
@@ -216,26 +216,26 @@ export default function App() {
 ```
 引入这个组件跑一下：
 
-![](./images/322d9522b5803da790428b0b78fa2b75.png )
+![](./images/322d9522b5803da790428b0b78fa2b75.webp )
 
 ![](./images/ac074c7277d122dce78523c5e013eba5.gif )
 可以看到，每个元素都加上了过渡动画。
 
 回过头来看下代码：
 
-![](./images/27f9e3571bf1959dc52e11f6cda4e9e6.png )
+![](./images/27f9e3571bf1959dc52e11f6cda4e9e6.webp )
 
-![](./images/5a5f989f7f5ca99a2478f1642c6cd2d1.png )
+![](./images/5a5f989f7f5ca99a2478f1642c6cd2d1.webp )
 
-![](./images/47d6aa8f0a3fc2fedaf80ff4fd827b92.png )
+![](./images/47d6aa8f0a3fc2fedaf80ff4fd827b92.webp )
 
 列表项的增删就不详述了。
 
 useTransition 多个元素的时候，你会发现和之前一模一样：
 
-![](./images/3c552190106469302e56822e0fb1a881.png )
+![](./images/3c552190106469302e56822e0fb1a881.webp )
 
-![](./images/9197bcf4fca2188aa444893298c09181.png )
+![](./images/9197bcf4fca2188aa444893298c09181.webp )
 
 useTransition 传单个数据就是单个元素的过渡动画、传数组就是多个元素的过渡动画，写法一样。
 
@@ -247,7 +247,7 @@ useTransition 传单个数据就是单个元素的过渡动画、传数组就是
 
 设置下 initial 时的样式就可以了：
 
-![](./images/d03ed0330530035bf493a6c190904339.png )
+![](./images/d03ed0330530035bf493a6c190904339.webp )
 
 ```javascript
 const transitions = useTransition(items, {
@@ -265,7 +265,7 @@ const transitions = useTransition(items, {
 
 此外，最好加上 keys，react-spring 会根据这个来添加 key，从而识别出元素的增删：
 
-![](./images/a981f5a7ddd6bbe7265b12754a5d5188.png )
+![](./images/a981f5a7ddd6bbe7265b12754a5d5188.webp )
 
 其实提到过渡动画，还有一个老牌的库 react-transition-group。
 
@@ -275,11 +275,11 @@ const transitions = useTransition(items, {
 
 [react-transition-group](https://www.npmjs.com/package/react-transition-group) 的周下载量：
 
-![](./images/82f89d80d118f57a04d2b53e9deb6692.png )
+![](./images/82f89d80d118f57a04d2b53e9deb6692.webp )
 
 [@react-spring/web](https://www.npmjs.com/package/@react-spring/web) 的周下载量：
 
-![](./images/f87d61ee5511a5009032bcd5ba341b36.png )
+![](./images/f87d61ee5511a5009032bcd5ba341b36.webp )
 
 好家伙，10 倍的差距。
 
@@ -356,7 +356,7 @@ App3.css
 
 跑一下：
 
-![](./images/394275fd25fd141663d99be6393700ba.png )
+![](./images/394275fd25fd141663d99be6393700ba.webp )
 
 ![](./images/d7537534e745ce141f97d88a3d2586d1.gif )
 
@@ -364,7 +364,7 @@ App3.css
 
 这样，我们就把过渡的样式加到这三个 className 里就可以了。
 
-![](./images/24dad8afcb5767ac24ccf172dce255a5.png )
+![](./images/24dad8afcb5767ac24ccf172dce255a5.webp )
 
 而且不同于 react-spring 会自己控制动画效果，react-transition-group 只是加上 className 不负责动画效果，需要添加 transition 来实现动画。
 
@@ -456,7 +456,7 @@ button {
 
 这就需要设置 appear 的 props 了：
 
-![](./images/ef881f222002ee6e89b5b989df7a0942.png )
+![](./images/ef881f222002ee6e89b5b989df7a0942.webp )
 ```css
 .appear {
   transform: scale(0);
@@ -485,7 +485,7 @@ button {
 
 我们当时是设置了 initial 时的样式，然后就没有 apear 动画了：
 
-![](./images/d03ed0330530035bf493a6c190904339.png )
+![](./images/d03ed0330530035bf493a6c190904339.webp )
 
 ![](./images/0add5b8a33475d44ab82b639ec8e6873.gif )
 
@@ -605,11 +605,11 @@ export default function App() {
 
 用 CSSTransition 的时候，我们需要自己设置 in 的 props 来触发进入和离开动画。
 
-![](./images/836827936c8d58ee60d27eea026add5a.png )
+![](./images/836827936c8d58ee60d27eea026add5a.webp )
 
 而现在只需要设置 key，TransitionGroup 会在 children 变化的时候对比新旧 item，来自动设置 in，触发动画。
 
-![](./images/9139207682d9907d5bd742966f7cbb33.png )
+![](./images/9139207682d9907d5bd742966f7cbb33.webp )
 
 这就是 react-transition-group 的常用功能。
 
@@ -617,7 +617,7 @@ export default function App() {
 
 把 CSSTransition 换成 Transition，然后打印下 status：
 
-![](./images/94d8dfe516acc1b68468ad405c2471d9.png )
+![](./images/94d8dfe516acc1b68468ad405c2471d9.webp )
 
 可以看到，status 最开始是从 entering 到 entered，从 exiting 到 exited 变化，但是不会设置 className：
 
@@ -631,7 +631,7 @@ export default function App() {
 
 再就是 SwithTransition，先看下效果：
 
-![](./images/74b61da1cd767b31f6d0a1ced4919560.png )
+![](./images/74b61da1cd767b31f6d0a1ced4919560.webp )
 
 包裹一层 SwitchTransition，然后设置下 key。
 

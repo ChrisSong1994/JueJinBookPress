@@ -14,15 +14,15 @@
 
 或者 Defi 的：
 
-![image.png](./images/4502b4b1d44319f4c13f60702394532b.png )
+![image.png](./images/4502b4b1d44319f4c13f60702394532b.webp )
 
 在 Defi 的[前端代码](https://github.com/langgenius/dify/blob/main/web/package.json#L86)可以看到用的 reactflow
 
-![image.png](./images/025224984c5acd9ac4f4e0a9a79302a2.png )
+![image.png](./images/025224984c5acd9ac4f4e0a9a79302a2.webp )
 
 工作流是 AI 工具的一个卖点，并不是所有的 AI 工具都支持：
 
-![image.png](./images/10aba2dac3b71ba76dccf00b536e5cfa.png )
+![image.png](./images/10aba2dac3b71ba76dccf00b536e5cfa.webp )
 
 能作为业务卖点的功能，这技术就很有价值了。
 
@@ -43,7 +43,7 @@
 ```
 npx create-vite react-flow-test
 ```
-![image.png](./images/13726d5256023dc3d46d3670fc87bdac.png )
+![image.png](./images/13726d5256023dc3d46d3670fc87bdac.webp )
 
 进入项目，安装 reactflow 的包：
 
@@ -53,7 +53,7 @@ npm install --save @xyflow/react
 ```
 把 main.tsx 里的样式和 StrictMode 去掉。
 
-![image.png](./images/762a33606157616a067e012d47115964.png )
+![image.png](./images/762a33606157616a067e012d47115964.webp )
 
 然后改一下 App.tsx
 
@@ -80,17 +80,17 @@ export default function App() {
 
 比如我们指定了 2 个节点：
 
-![](./images/a2f3bcce8f8a670d8e3714fab073585f.png )
+![](./images/a2f3bcce8f8a670d8e3714fab073585f.webp )
 
 id 是节点 id、position 是在画布中的坐标，data 是传递给节点组件的参数。
 
 指定了一条边来连接 id 为 1 和 id 为 2 的节点。
 
-![image.png](./images/68996a3a15c909d1dbbf63e19feb6aca.png )
+![image.png](./images/68996a3a15c909d1dbbf63e19feb6aca.webp )
 
 指定了这两部分，就是一个流程图了：
 
-![image.png](./images/8ff4f6f5a2cf301f2acaa0a55dbb2455.png )
+![image.png](./images/8ff4f6f5a2cf301f2acaa0a55dbb2455.webp )
 
 跑起来看下效果：
 
@@ -98,7 +98,7 @@ id 是节点 id、position 是在画布中的坐标，data 是传递给节点组
 npm run dev
 ```
 
-![image.png](./images/13d734d89c6ecedc7bf90697a0b2b9a9.png )
+![image.png](./images/13d734d89c6ecedc7bf90697a0b2b9a9.webp )
 
 
 ![2024-08-29 00.45.41.gif](./images/e9d78187510a79c3b851123be94734fa.gif )
@@ -107,7 +107,7 @@ npm run dev
 
 这是因为没处理拖动的事件，加一下就好了：
 
-![image.png](./images/c0ea52ceb301b6b31c713bebc039963e.png )
+![image.png](./images/c0ea52ceb301b6b31c713bebc039963e.webp )
 
 因为只有 node 和 edge，所以也就只有三种事件： node 变化、edge 变化、node 和 node 连接，也就是 onNodesChange、onEdgesChange、onConnect
 
@@ -154,21 +154,21 @@ export default function App() {
 
 ractflow 还内置了一些工具。
 
-![image.png](./images/1cc1c87fc4c1362ff05f6cfc5d13eb46.png )
+![image.png](./images/1cc1c87fc4c1362ff05f6cfc5d13eb46.webp )
 
 分别是控制条、缩略图、背景：
 
-![image.png](./images/f5ffd5420b9cd19154e280a43732bce5.png )
+![image.png](./images/f5ffd5420b9cd19154e280a43732bce5.webp )
 
 当然，用点做背景不太明显，你可以换成线：
 
-![image.png](./images/67a19181278db23fc52e15526b01e4f9.png )
+![image.png](./images/67a19181278db23fc52e15526b01e4f9.webp )
 
 ```javascript
 <Background variant={BackgroundVariant.Lines}/>
 ```
 
-![image.png](./images/0a75a87ef0f58a140001a2c1c70674d0.png )
+![image.png](./images/0a75a87ef0f58a140001a2c1c70674d0.webp )
 
 你可以用鼠标滚轮放缩画布，也可以用控制条来控制：
 
@@ -176,7 +176,7 @@ ractflow 还内置了一些工具。
 
 或者可以在 MiniMap 上加上 zoomable 参数：
 
-![image.png](./images/c59779d30dec75b2af18c9f3ba7def68.png )
+![image.png](./images/c59779d30dec75b2af18c9f3ba7def68.webp )
 
 这样就可以通过缩略图放缩画布了：
 
@@ -186,7 +186,7 @@ ractflow 还内置了一些工具。
 
 像这些节点明显都是自己绘制的：
 
-![image.png](./images/f1ef71eeb0a3d60f0445ff30561f9d15.png )
+![image.png](./images/f1ef71eeb0a3d60f0445ff30561f9d15.webp )
 
 我们也实现下：
 
@@ -255,7 +255,7 @@ export default function App() {
 ```
 我们增加了两个组件 RedNode 和 BlueNode：
 
-![image.png](./images/f322c57829057e6a8ffc95429b59c914.png )
+![image.png](./images/f322c57829057e6a8ffc95429b59c914.webp )
 
 它的 props 里的 data 就是 node 里的 data 属性。
 
@@ -263,20 +263,20 @@ export default function App() {
 
 根据 nodeTypes 的映射：
 
-![image.png](./images/b727193d31728a73dd581b0f2237267a.png )
+![image.png](./images/b727193d31728a73dd581b0f2237267a.webp )
 
 我们指定了 type 为 red 就渲染 RedNode，这样渲染流程图的时候就会用对应的组件来渲染。
 
 看下效果：
 
 
-![image.png](./images/1d95cdf73205e70abe030b5d2a05e2a3.png )
+![image.png](./images/1d95cdf73205e70abe030b5d2a05e2a3.webp )
 
 可以看到，渲染的节点变成了我们自己的组件。
 
 你可以绘制更多东西，比如这种：
 
-![image.png](./images/f1ef71eeb0a3d60f0445ff30561f9d15.png )
+![image.png](./images/f1ef71eeb0a3d60f0445ff30561f9d15.webp )
 
 而且节点上有一个黑点可以用来连接别的节点：
 
@@ -284,7 +284,7 @@ export default function App() {
 
 这个黑点叫做 Handle：
 
-![image.png](./images/f22b74ca65ef4cce9bdd593aea166720.png )
+![image.png](./images/f22b74ca65ef4cce9bdd593aea166720.webp )
 
 在自定义节点里，用 Handle 来指定黑点出现的位置。
 
@@ -408,11 +408,11 @@ export default function App() {
 ```
 和 nodeTypes 自定义节点类似，在 edgeTypes 里配置自定义边就可以了：
 
-![image.png](./images/9d39f0de5bf49b0ea5c567e1366c4724.png )
+![image.png](./images/9d39f0de5bf49b0ea5c567e1366c4724.webp )
 
 绘制边稍微复杂一些：
 
-![image.png](./images/9b5c9bb537059548a267fb7251dc6378.png )
+![image.png](./images/9b5c9bb537059548a267fb7251dc6378.webp )
 
 主要是要根据传入的起始位置和目标位置，计算一条贝塞尔曲线，拿到 path 之后传入 BaseEdge 就可以绘制边了。
 
@@ -433,7 +433,7 @@ export default function App() {
 
 那更简单，只需要起始、结束点的坐标就能计算出路径：
 
-![image.png](./images/d376c7d84619b9bb84eaa58fc8d486d2.png )
+![image.png](./images/d376c7d84619b9bb84eaa58fc8d486d2.webp )
 
 ```javascript
 const [edgePath, labelX, labelY] = getStraightPath({
@@ -445,12 +445,12 @@ const [edgePath, labelX, labelY] = getStraightPath({
 ```
 现在绘制的就是直线了：
 
-![image.png](./images/6053aa731b26b053f1b0e9597d7d0a35.png )
+![image.png](./images/6053aa731b26b053f1b0e9597d7d0a35.webp )
 
 最后我们在右上角加一个按钮：
 
 
-![image.png](./images/ea2ade7bbf561d77e0eb3e94defe5097.png )
+![image.png](./images/ea2ade7bbf561d77e0eb3e94defe5097.webp )
 
 点击的时候添加一个节点：
 

@@ -6,17 +6,17 @@
 
 ![](./images/f375418608f6c820714c5a768674f816.gif )
 
-![](./images/82d25ef4ab3a4edfb72f1dac673f87f2.png )
+![](./images/82d25ef4ab3a4edfb72f1dac673f87f2.webp )
 
 这节我们来实现下拖拽操作。
 
 首先，我们把 json 渲染到中间的画布区：
 
-![](./images/318c12fc22ccb2004f5efbbd0a07792b.png )
+![](./images/318c12fc22ccb2004f5efbbd0a07792b.webp )
 
 现在的 json 里只有组件名，没有具体的组件：
 
-![](./images/98f41c8e9dbfebf510239fe5ac00d4ef.png )
+![](./images/98f41c8e9dbfebf510239fe5ac00d4ef.webp )
 
 我们写两个组件：
 
@@ -39,7 +39,7 @@ export default Container;
 
 因为布局放在 components 目录下，那物料组件就放 materials 目录下吧：
 
-![](./images/6c76e03785f24942a67ab668569ee791.png )
+![](./images/6c76e03785f24942a67ab668569ee791.webp )
 
 加了一个黑色的 border，设置了最小高度为 100px，padding 为 20px。
 
@@ -124,7 +124,7 @@ export const useComponentConfigStore = create<State & Action>((set) => ({
 ```
 声明 state 和 action 的类型。
 
-![](./images/84bfa90c1c836d9f3c40311bf63a231b.png )
+![](./images/84bfa90c1c836d9f3c40311bf63a231b.webp )
 
 state 就是 componentConfig 的映射。
 
@@ -132,7 +132,7 @@ key 是组件名，value 是组件配置（包括 component 组件实例、defau
 
 action 就是往 componentConfig 里加配置。
 
-![](./images/93a6c08c2a907e5af38d87f3a60fc400.png )
+![](./images/93a6c08c2a907e5af38d87f3a60fc400.webp )
 
 componentConfig 现在有 Container、Button 两个组件。
 
@@ -198,7 +198,7 @@ export function EditArea() {
 ```
 components 是一个树形结构，我们 render 的时候也要递归渲染：
 
-![](./images/2afd053cc3aabba818bc53a18db3ba9d.png )
+![](./images/2afd053cc3aabba818bc53a18db3ba9d.webp )
 
 从组件配置中拿到 name 对应的组件实例，然后用 React.cloneElement 来创建组件。
 
@@ -210,7 +210,7 @@ React.cloneElement 的第三个参数是 children，递归调用 renderComponent
 
 看下效果：
 
-![](./images/e5a3fecf1cd998f2e4687538abbca619.png )
+![](./images/e5a3fecf1cd998f2e4687538abbca619.webp )
 
 json 下面并没有渲染出组件来。
 
@@ -238,7 +238,7 @@ export default Page;
 ```
 在 componentConfig 里配置下：
 
-![](./images/c74da6a8ab833905e1139bdff85c63b6.png )
+![](./images/c74da6a8ab833905e1139bdff85c63b6.webp )
 
 ```javascript
 Page: {
@@ -250,17 +250,17 @@ Page: {
 
 把 json 注释掉：
 
-![](./images/c4586c3c546617b9165975e8a1279a03.png )
+![](./images/c4586c3c546617b9165975e8a1279a03.webp )
 
 看下渲染效果：
 
-![](./images/7fd5f72a011edb3fecb40fce1fc01aef.png )
+![](./images/7fd5f72a011edb3fecb40fce1fc01aef.webp )
 
 components 里的 Page、Container、Button 组件都渲染出来了。
 
 用 react devtools 看下：
 
-![](./images/5adc01f6551da51dc8df8b8041dcdf25.png )
+![](./images/5adc01f6551da51dc8df8b8041dcdf25.webp )
 
 没啥问题。
 
@@ -268,7 +268,7 @@ components 里的 Page、Container、Button 组件都渲染出来了。
 
 把 addComponent 去掉，我们用拖拽的方式来添加组件：
 
-![](./images/093f52eb3dbecbb502901979cf546177.png )
+![](./images/093f52eb3dbecbb502901979cf546177.webp )
 
 拖拽用 react-dnd 来做。
 
@@ -280,7 +280,7 @@ npm install react-dnd react-dnd-html5-backend
 
 在 main.tsx 里引入 DndProvider：
 
-![](./images/5640af07544cb06c89341576b022596b.png )
+![](./images/5640af07544cb06c89341576b022596b.webp )
 
 这个是 react-dnd 用来跨组件传递数据的
 
@@ -302,7 +302,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 我们先写一下物料区：
 
-![](./images/a0efeffac3db64715c174e90dfa7a2a5.png )
+![](./images/a0efeffac3db64715c174e90dfa7a2a5.webp )
 
 components/Material/index.tsx
 
@@ -382,7 +382,7 @@ export function MaterialItem(props: MaterialItemProps) {
 ```
 这样组件渲染的时候就可以用
 
-![](./images/96ef4a3abb620da055141853a813c99d.png )
+![](./images/96ef4a3abb620da055141853a813c99d.webp )
 
 ```javascript
 components.map((item, index) => {
@@ -395,7 +395,7 @@ components.map((item, index) => {
 
 然后加一下 useDrag：
 
-![](./images/c8a9553bebe54e7eff1f6079e74bb52c.png )
+![](./images/c8a9553bebe54e7eff1f6079e74bb52c.webp )
 ```javascript
 import { useEffect, useRef } from "react";
 import { useDrag } from "react-dnd";
@@ -449,7 +449,7 @@ item 是传递的数据。
 
 我们在 Page 组件加一下 useDrop 的处理逻辑：
 
-![](./images/a84a7c389aea94c72a4ca571c2843adc.png )
+![](./images/a84a7c389aea94c72a4ca571c2843adc.webp )
 
 ```javascript
 import { message } from "antd";
@@ -497,7 +497,7 @@ canDrop 的话加一个 border 的高亮。
 
 这需要把 id 传进来：
 
-![](./images/8833b1ffecb32c89545a208e79763044.png )
+![](./images/8833b1ffecb32c89545a208e79763044.webp )
 
 我们在 renderComponents 的时候传一下 component 的 id、name。
 
@@ -517,7 +517,7 @@ export interface CommonComponentProps extends PropsWithChildren{
 
 然后调用下 addComponent：
 
-![](./images/d863ef1cef3bc268a499558cafc43c8d.png )
+![](./images/d863ef1cef3bc268a499558cafc43c8d.webp )
 
 ```javascript
 import { useDrop } from "react-dnd";
@@ -571,7 +571,7 @@ export default Page;
 
 我们加一下：
 
-![](./images/e1f0afb097ab2932834b0a7e21b6c48a.png )
+![](./images/e1f0afb097ab2932834b0a7e21b6c48a.webp )
 
 ```javascript
 import { useComponetsStore } from '../../stores/components';
@@ -618,9 +618,9 @@ export default Container;
 
 我们要加一下判断，处理过 drop 就不再处理。
 
-![](./images/dd006417d1e5f8cb4da8d165dd681dc5.png )
+![](./images/dd006417d1e5f8cb4da8d165dd681dc5.webp )
 
-![](./images/7ec70f9d07e1c14ddfe87617dbd8f7ab.png )
+![](./images/7ec70f9d07e1c14ddfe87617dbd8f7ab.webp )
 
 ```javascript
 const didDrop = monitor.didDrop()

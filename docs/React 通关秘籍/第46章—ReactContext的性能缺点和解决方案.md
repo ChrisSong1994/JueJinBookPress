@@ -12,7 +12,7 @@
 npx create-vite
 ```
 
-![](./images/7294644a8a34cffbee65db420b75bbbe.png )
+![](./images/7294644a8a34cffbee65db420b75bbbe.webp )
 
 改下 App.tsx
 
@@ -89,7 +89,7 @@ export default App;
 
 去掉 main.tsx 里的 index.css 和 StrictMode：
 
-![](./images/16fb7a636a1c44ab39ec0a45291188a6.png )
+![](./images/16fb7a636a1c44ab39ec0a45291188a6.webp )
 
 把服务跑起来：
 
@@ -98,7 +98,7 @@ npm install
 npm run dev
 ```
 
-![](./images/b13ef28fe031eb39ab49531c06958b92.png )
+![](./images/b13ef28fe031eb39ab49531c06958b92.webp )
 
 浏览器访问下：
 
@@ -205,7 +205,7 @@ export default App;
 
 在 antd 里，也是不同的数据放到不同的 context 里：
 
-![](./images/b4b8cd415bd7bcea202c7566c1c20880.png )
+![](./images/b4b8cd415bd7bcea202c7566c1c20880.webp )
 
 但这样也会导致 Provider 嵌套过深：
 
@@ -295,7 +295,7 @@ zustand 虽然也是集中存放的数据，但是内部做了处理，更新某
 
 此外，不用状态管理库，不拆分 context，也可以解决，比如用 memo：
 
-![](./images/5f2025ee8954cd9630a03fd77dc264ed.png )
+![](./images/5f2025ee8954cd9630a03fd77dc264ed.webp )
 
 memo 会对新旧 props 做对比，只有 props 变化了才会渲染。
 

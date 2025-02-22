@@ -18,7 +18,7 @@ cd component-lib-test
 npm init -y
 ```
 
-![](./images/14ffc7745658d8063a32f61bd42f4b2e.png )
+![](./images/14ffc7745658d8063a32f61bd42f4b2e.webp )
 
 分别安装 ant-design、arco-design、semi-design
 
@@ -31,29 +31,29 @@ pnpm install @arco-design/web-react
 ```
 npm、yarn 会把所有依赖铺平，看着比较乱。而 pnpm 不会，node_modules 下很清晰：
 
-![](./images/91f4cb51a19cbf9605cbd94ba9db5842.png )
+![](./images/91f4cb51a19cbf9605cbd94ba9db5842.webp )
 
 首先看下 antd，分为了 lib、es、dist 3 个目录：
 
-![](./images/4ae534d130505ef359b681c7275ad532.png )
+![](./images/4ae534d130505ef359b681c7275ad532.webp )
 
 分别看下这三个目录的组件代码：
 
 lib 下的组件是 commonjs 的：
 
-![](./images/24026fc5e10cf431b23b399df6d6f5fe.png )
+![](./images/24026fc5e10cf431b23b399df6d6f5fe.webp )
 
 es 下的组件是 es module 的：
 
-![](./images/dcfb104ec0b64bc81c4a49a1acd41cd0.png )
+![](./images/dcfb104ec0b64bc81c4a49a1acd41cd0.webp )
 
 dist 下的组件是 umd 的：
 
-![](./images/8b213b1e133eaf094626f206fd4b4dc4.png )
+![](./images/8b213b1e133eaf094626f206fd4b4dc4.webp )
 
 然后在 package.json 里分别声明了 commonjs、esm、umd 还有类型的入口：
 
-![](./images/fd4e8428ae8e88a3758ffc5ad4e499ab.png )
+![](./images/fd4e8428ae8e88a3758ffc5ad4e499ab.webp )
 
 这样，当你用 require 引入的就是 lib 下的组件，用 import 引入的就是 es 下的组件。
 
@@ -61,11 +61,11 @@ dist 下的组件是 umd 的：
 
 再来看看 semi-design 的：
 
-![](./images/0ef0c0e3a548930d462bc26c34590713.png )
+![](./images/0ef0c0e3a548930d462bc26c34590713.webp )
 
 也是一样：
 
-![](./images/993fb3d5c4bd4529b3675ffb0d890c5e.png )
+![](./images/993fb3d5c4bd4529b3675ffb0d890c5e.webp )
 
 只不过多了个 css 目录。
 
@@ -73,11 +73,11 @@ antd 没有这个目录是因为它已经换成 css in js 的方案了，不需�
 
 然后是 arco-design 的：
 
-![](./images/b0575ed497d26f5be60b5d09289c78aa.png )
+![](./images/b0575ed497d26f5be60b5d09289c78aa.webp )
 
 也是一样：
 
-![](./images/dbbfbf602c2234ef3bdf7ecdb3d9f958.png )
+![](./images/dbbfbf602c2234ef3bdf7ecdb3d9f958.webp )
 
 同样是 lib、es、dist 3 个目录，同样是分别声明了 esm、commonjs、umd 的入口。
 
@@ -97,49 +97,49 @@ esm 和 commonjs 的不用打包，只需要用 tsc 或者 babel 编译下就好
 
 它的构建逻辑在 arco-cli 的 arco-scripts 下：
 
-![](./images/f89bcd7ce25079a1d5cf53b4e7a94082.png )
+![](./images/f89bcd7ce25079a1d5cf53b4e7a94082.webp )
 
 看下这个 index.ts
 
-![](./images/8c0c3f6c3decee70d2adb742f2a3c69b.png )
+![](./images/8c0c3f6c3decee70d2adb742f2a3c69b.webp )
 
 分别有 build 3 种代码加上 build css 的方法。
 
 我们分别看下：
 
-![](./images/dbe7e42725239980d65e9dadb7bc0c6b.png )
+![](./images/dbe7e42725239980d65e9dadb7bc0c6b.webp )
 
 esm 和 cjs 的编译它封装了一个 compileTS 的方法，然后传入不同的 type。
 
 compileTS 里可以用 tsc 或者 babel 编译：
 
-![](./images/0d19fd8903e1625abc527e864e49c9f9.png )
+![](./images/0d19fd8903e1625abc527e864e49c9f9.webp )
 
 tsc 编译就是读取项目下的 tsconfig.json，然后 compile：
 
-![](./images/46f274e8125800d76f48e52dcf4a6e24.png )
+![](./images/46f274e8125800d76f48e52dcf4a6e24.webp )
 
 babel 编译是基于内置配置，修改了下产物 modules 规范，然后编译：
 
-![](./images/bcb145bbbc8ccbb6428a572764d11e92.png )
+![](./images/bcb145bbbc8ccbb6428a572764d11e92.webp )
 
 babelConfig 里配置了 typescript 和 jsx 的编译：
 
-![](./images/0fd318447a2334001b466843c81b6e75.png )
+![](./images/0fd318447a2334001b466843c81b6e75.webp )
 
 再就是 umd：
 
 和我们分析的一样，确实是用 webpack 来打包：
 
-![](./images/10ec6d198aba02dcf14579eb48037803.png )
+![](./images/10ec6d198aba02dcf14579eb48037803.webp )
 
 webpack 配置里可以看到，确实是为了 unpkg 准备的，用了 ts-loader 和 babel-loader：
 
-![](./images/34952635a9dc0cb1dd41ee76076c73cc.png )
+![](./images/34952635a9dc0cb1dd41ee76076c73cc.webp )
 
 而 css 部分则是用了 less 编译：
 
-![](./images/11a051b3f80659ec56ec4731e63cb02b.png )
+![](./images/11a051b3f80659ec56ec4731e63cb02b.webp )
 
 gulp 是用来组织编译任务的，可以让任务串行、并行的执行。
 
@@ -147,61 +147,61 @@ gulp 是用来组织编译任务的，可以让任务串行、并行的执行。
 
 所以说，那 3 种代码加上 css 文件是怎么打包的就很清晰了：
 
-![](./images/760ada34ed302b98d7d7825c108778d7.png )
+![](./images/760ada34ed302b98d7d7825c108778d7.webp )
 
 其中用到 gulp 只是用来组织编译任务的，可用可不用。
 
 再来看下 semi-design 的：
 
-![](./images/10374ee0e68598df639312ce82e046c6.png )
+![](./images/10374ee0e68598df639312ce82e046c6.webp )
 
 它就没有单独分一个 xx-scripts 包了，直接在 semi-ui 的 scripts 目录下。
 
 它也是用到了 gulp 来组织任务。
 
-![](./images/ef9b74cd722d98e83917765f3e76b80c.png )
+![](./images/ef9b74cd722d98e83917765f3e76b80c.webp )
 
 看下这个 compileLib 的 gulp task：
 
-![](./images/dce19a916d446a02374c4aae9cc613ff.png )
+![](./images/dce19a916d446a02374c4aae9cc613ff.webp )
 
 这里的 compileTSXForESM 和 ForCJS 很明显就是编译组件到 esm 和 cjs 两种代码的。
 
 先用了 tsc 编译再用了 babel 编译：
 
-![](./images/19bc2882ae01f989845658a7bcf6bbe1.png )
+![](./images/19bc2882ae01f989845658a7bcf6bbe1.webp )
 
 然后是 umd，也是用了 webpack：
 
-![](./images/6c703011c4717828e8da255b6c7ffee1.png )
+![](./images/6c703011c4717828e8da255b6c7ffee1.webp )
 
 用了 babel-loader 和 ts-loader：
 
-![](./images/eae74dbd9b48230ad5635ae9c546ccd1.png )
+![](./images/eae74dbd9b48230ad5635ae9c546ccd1.webp )
 
 最后是 scss 的编译：
 
 semi-design 把所有组件的 scss 都放在了 semi-foundation 这个目录下来维护：
 
-![](./images/b6b6fcfbe2258a1d1841db866c4dc8bf.png )
+![](./images/b6b6fcfbe2258a1d1841db866c4dc8bf.webp )
 
 所以编译的时候就是这样的：
 
-![](./images/c9b6f6e379041e45a539c0962d08185f.png )
+![](./images/c9b6f6e379041e45a539c0962d08185f.webp )
 
 就是把 semi-foundation 这个目录下的所有 scss 编译后合并成了一个文件
 
-![](./images/00f9031eb5adbf2c1e589422f8632204.png )
+![](./images/00f9031eb5adbf2c1e589422f8632204.webp )
 
 而 arco-design 的样式是在组件目录下维护的：
 
-![](./images/84d8dfb65da4535e4a390627b54d57ec.png )
+![](./images/84d8dfb65da4535e4a390627b54d57ec.webp )
 
 这个倒是没啥大的区别，只是编译的时候改下源码目录就好了。
 
 这就是 semi-design 的 esm、cjs、umd、scss 是如何编译打包的。
 
-![](./images/ec60dfa517219deff9eab97cd63f207d.png )
+![](./images/ec60dfa517219deff9eab97cd63f207d.webp )
 
 和 arco-design 的 scripts 区别大么？
 
@@ -215,7 +215,7 @@ semi-design 把所有组件的 scss 都放在了 semi-foundation 这个目录下
 
 比如 compile 的 task 是编译出 es 和 cjs 代码的：
 
-![](./images/fd942e752f38516a319e949ef10a5168.png )
+![](./images/fd942e752f38516a319e949ef10a5168.webp )
 
 是不是很熟悉的感觉？
 
@@ -223,11 +223,11 @@ semi-design 把所有组件的 scss 都放在了 semi-foundation 这个目录下
 
 它也是先用了 tsc 再用 babel 编译，最后输出到 es 或者 lib 目录：
 
-![](./images/076bb631a1947200bfc9a4f55596a78e.png )
+![](./images/076bb631a1947200bfc9a4f55596a78e.webp )
 
 打包 umd 代码的时候也是用了 webpack：
 
-![](./images/b239f79f719376884192d0a693d67118.png )
+![](./images/b239f79f719376884192d0a693d67118.webp )
 
 只不过它这个 webpack 配置文件是读取的组件库项目目录下的，而不像 arco-design 那样是内置的。
 

@@ -4,11 +4,11 @@
 
 有多流行呢？
 
-![](./images/63a4fed902513b90630219eedb179e42.png )
+![](./images/63a4fed902513b90630219eedb179e42.webp )
 
 它现在有 76k star 了，npm 包的周下载量也很高：
 
-![](./images/b1f6a6416b64de6fd0dc7a7e8f4073df.png )
+![](./images/b1f6a6416b64de6fd0dc7a7e8f4073df.webp )
 
 那什么是原子化 css？
 
@@ -29,7 +29,7 @@
 
 也就是 class 里包含多个样式：
 
-![](./images/f3a3e2833b94debf5451c090c18cecc1.png )
+![](./images/f3a3e2833b94debf5451c090c18cecc1.webp )
 
 而原子化 css 是这样的写法：
 
@@ -55,7 +55,7 @@
 }
 ```
 
-![](./images/5c367a77f849d6c0a04c335f022a2190.png )
+![](./images/5c367a77f849d6c0a04c335f022a2190.webp )
 
 定义一些细粒度的 class，叫做原子 class，然后在 html 里直接引入这些原子化的 class。
 
@@ -77,15 +77,15 @@ npx tailwindcss init
 ```
 安装 tailwindcss 依赖，创建 tailwindcss 配置文件。
 
-![](./images/37282af2ed5a19210157415cc2f90d83.png )
+![](./images/37282af2ed5a19210157415cc2f90d83.webp )
 
 tailwind 实际上是一个 postcss 插件，因为 cra 内部已经做了 postcss 集成 tailwind 插件的配置，这一步就不用做了：
 
-![](./images/25888e86190abbc94e4fb5fc84f613f4.png )
+![](./images/25888e86190abbc94e4fb5fc84f613f4.webp )
 
 然后在入口 css 里加上这三行代码：
 
-![](./images/886ee78938f925aae59a6e432a751cd8.png )
+![](./images/886ee78938f925aae59a6e432a751cd8.webp )
 
 这三行分别是引入 tailwind 的基础样式、组件样式、工具样式的。
 
@@ -110,27 +110,27 @@ npm run start
 
 可以看到，它正确的加上了样式：
 
-![](./images/5e543ca1378dd6680e6a3af0da84d155.png )
+![](./images/5e543ca1378dd6680e6a3af0da84d155.webp )
 
 用到的这些原子 class 就是 tailwind 提供的：
 
-![](./images/d347270f8730731fd4d9d1ac95c9b348.png )
+![](./images/d347270f8730731fd4d9d1ac95c9b348.webp )
 
 这里的 p-1 是 padding:0.25rem，你也可以在配置文件里修改它的值：
 
-![](./images/59854f3d212c6f52294fad82a9749999.png )
+![](./images/59854f3d212c6f52294fad82a9749999.webp )
 
 在 tailwind.config.js 的 theme.extend 修改 p-1 的值，设置为 30px。
 
 刷新页面，就可以看到 p-1 的样式变了：
 
-![](./images/f3ab87383db7e9cd7cd704598da126e3.png )
+![](./images/f3ab87383db7e9cd7cd704598da126e3.webp )
 
 .text-base 是 font-size、line-height 两个样式，这种通过数组配置：
 
-![](./images/dd985cae9e41e15a28d61a8da025a1c1.png )
+![](./images/dd985cae9e41e15a28d61a8da025a1c1.webp )
 
-![](./images/239f987a1207d7290523356a018ebdb4.png )
+![](./images/239f987a1207d7290523356a018ebdb4.webp )
 
 也就是说所有 tailwind 提供的所有内置原子 class 都可以配置。
 
@@ -138,45 +138,45 @@ npm run start
 
 比如 text-[14px]，它就会生成 font-size:14px 的样式：
 
-![](./images/7705cdf151a94e6b46c90ab6f67119f1.png )
+![](./images/7705cdf151a94e6b46c90ab6f67119f1.webp )
 
 比如 aspect-[4/3]，就是这样的样式：
 
-![](./images/7af687c171d4e00e3925cc1d7c86bc18.png )
+![](./images/7af687c171d4e00e3925cc1d7c86bc18.webp )
 
 我们平时经常指定 hover 时的样式，在 tailwind 里怎么指定呢？
 
 很简单，这样写：
 
-![](./images/8c5f8d3c689aff78c0bf9c7fc4fcc8d5.png )
+![](./images/8c5f8d3c689aff78c0bf9c7fc4fcc8d5.webp )
 
 生成的就是带状态的 class：
 
-![](./images/bf2c6bacf1bb02129e546add8cb09258.png )
+![](./images/bf2c6bacf1bb02129e546add8cb09258.webp )
 
-![](./images/e3c96bba2a9aeb44fbfd731aa6af7d3d.png )
+![](./images/e3c96bba2a9aeb44fbfd731aa6af7d3d.webp )
 
 此外，写响应式的页面的时候，我们要指定什么宽度的时候用什么样式，这个用 tailwind 怎么写呢？
 
 也是一样的写法：
 
-![](./images/1434b0e39e469e4ad90d9e7781699f37.png )
+![](./images/1434b0e39e469e4ad90d9e7781699f37.webp )
 
-![](./images/fbf18c057092acd79e29b6899ec451ff.png )
+![](./images/fbf18c057092acd79e29b6899ec451ff.webp )
 
 生成的是这样的代码：
 
-![](./images/89ca0c3d9de79a45d305d5bb2b1927ef.png )
+![](./images/89ca0c3d9de79a45d305d5bb2b1927ef.webp )
 
 这个断点位置自然也是可以配置的：
 
-![](./images/b68487e2ab968ae832eb30465bc0012a.png )
+![](./images/b68487e2ab968ae832eb30465bc0012a.webp )
 
 可以看到 md 断点对应的宽度变了：
 
-![](./images/d86e4b60a2af8914b2e01237e346d764.png )
+![](./images/d86e4b60a2af8914b2e01237e346d764.webp )
 
-![](./images/5b7f21058a15fee3f217523d245602f7.png )
+![](./images/5b7f21058a15fee3f217523d245602f7.webp )
 
 光这些就很方便了。
 
@@ -216,13 +216,13 @@ npm run start
 
 tailwind 文档提到了 3 个好处：
 
-![](./images/12743e29bae804b2e7a49ce95216db73.png )
+![](./images/12743e29bae804b2e7a49ce95216db73.webp )
 
 不用起 class 名字，这点简直太爽了，我就经常被起 class 名字折磨。
 
 css 不会一直增长，因为如果你用之前的写法可能是这样的：
 
-![](./images/195182ea9eb84b1e3baf3f513446978e.png )
+![](./images/195182ea9eb84b1e3baf3f513446978e.webp )
 
 多个 class 里都包含了类似的样式，但你需要写多次，而如果用了原子 class，就只需要定义一次就好了。
 
@@ -250,11 +250,11 @@ css 没有模块作用域，所以可能你在这里加了一个样式，结果�
 
 这个可以用 tailwind css 提供的 vscode 插件来解决：
 
-![](./images/0f12718388a62d918036d7da6a647146.png )
+![](./images/0f12718388a62d918036d7da6a647146.webp )
 
 安装这个 Tailwind CSS IntelliSense 之后的体验是这样的：
 
-![](./images/fb1c0b4d27aea6a6e56c366c2f458486.png )
+![](./images/fb1c0b4d27aea6a6e56c366c2f458486.webp )
 
 有智能提示，可以查看它对应的样式。
 
@@ -268,27 +268,27 @@ css 没有模块作用域，所以可能你在这里加了一个样式，结果�
 
 在 chrome devtools 里可以直接看到有啥样式，而且样式之间基本没有交叉，很容易调试：
 
-![](./images/1f714f218fcd8d6f013447235baab2d4.png )
+![](./images/1f714f218fcd8d6f013447235baab2d4.webp )
 
 相反，我倒是觉得之前那种写法容易多个 class 的样式相互覆盖，还要确定优先级和顺序，那个更难调试才对：
 
-![](./images/e40661092f0b08202acd65aee6106670.png )
+![](./images/e40661092f0b08202acd65aee6106670.webp )
 
 **类型太长了而且重复多次**
 
-![](./images/30e7b2361ff7d997fc133bf013515f04.png )
+![](./images/30e7b2361ff7d997fc133bf013515f04.webp )
 
 这种问题可以用 @layer @apply 指令来扩展：
 
-![](./images/42ae8600235ceebb7998fcfb420227e9.png )
+![](./images/42ae8600235ceebb7998fcfb420227e9.webp )
 
 前面讲过 @tailwind 是引入不同的样式的，而 @layer 就是在某一层样式做修改和扩充，里面可以用 @apply 应用其他样式。
 
 效果是这样的：
 
-![](./images/4578058a75c0ee1a826184ee1e2054a4.png )
+![](./images/4578058a75c0ee1a826184ee1e2054a4.webp )
 
-![](./images/96bf5954d5404a2fa894f6185c9881cb.png )
+![](./images/96bf5954d5404a2fa894f6185c9881cb.webp )
 
 **内置 class 不能满足我的需求**
 
@@ -314,13 +314,13 @@ module.exports = plugin(function({ addUtilities }) {
 
 在 tailwind.config.js 里引入：
 
-![](./images/e28ba309f6b10ee1db77fcd19a053fba.png )
+![](./images/e28ba309f6b10ee1db77fcd19a053fba.webp )
 
 这样就可以用这个新加的原子 class 了：
 
-![](./images/35ae75fe82cda180b8ed4ef6c0d05a24.png )
+![](./images/35ae75fe82cda180b8ed4ef6c0d05a24.webp )
 
-![](./images/f4a934b2b9b1bf32db60402bbba32cea.png )
+![](./images/f4a934b2b9b1bf32db60402bbba32cea.webp )
 
 插件的方式或者 @layer 的方式都可以扩展。
 
@@ -328,25 +328,25 @@ module.exports = plugin(function({ addUtilities }) {
 
 比如我本来有个 border 的 class：
 
-![](./images/6fd9dba89d4baa72e648b05e3fd6986d.png )
+![](./images/6fd9dba89d4baa72e648b05e3fd6986d.webp )
 
 而 tailwind 也有，不就冲突了么？
 
 这个可以通过加 prefix 解决：
 
-![](./images/18357dd12075995c2739e7dc6460caf6.png )
+![](./images/18357dd12075995c2739e7dc6460caf6.webp )
 
 不过这样所有的原子 class 都得加 prefix 了：
 
-![](./images/b4b7f790fc3b02019edbb2f6cc10d331.png )
+![](./images/b4b7f790fc3b02019edbb2f6cc10d331.webp )
 
-![](./images/a14252c1dfd6978021a977c8163c3b0e.png )
+![](./images/a14252c1dfd6978021a977c8163c3b0e.webp )
 
 知道了什么是原子 css 以及 tailwind 的用法之后，我们再来看看它的实现原理。
 
 tailwind 可以单独跑，也可以作为 postcss 插件来跑。这是因为如果单独跑的话，它也会跑起 postcss，然后应用 tailwind 的插件：
 
-![](./images/9ff6a0c1d51e5dffe276a465bf15c614.png )
+![](./images/9ff6a0c1d51e5dffe276a465bf15c614.webp )
 
 所以说，**tailwind 本质上就是个 postcss 插件**。
 
@@ -354,7 +354,7 @@ postcss 是一个 css 编译器，它是 parse、transform、generate 的流程�
 
 在 [astexplorer.net](https://astexplorer.net/#/gist/6fe6d6027cbfdd64359fb203d9df378b/68583ac053782c87e3b85c1c56553985c410b02e) 可以看到 postcss 的 AST：
 
-![](./images/d4b05b71afcbe0fe207fa1351ae5a7ed.png )
+![](./images/d4b05b71afcbe0fe207fa1351ae5a7ed.webp )
 
 而 postcss 就是通过 AST 来拿到 @tailwind、@layer、@apply 这些它扩展的指令，分别作相应的处理，也就是对 AST 的增删改查。
 
@@ -364,7 +364,7 @@ postcss 是一个 css 编译器，它是 parse、transform、generate 的流程�
 
 extractor 的功能看下测试用例就明白了：
 
-![](./images/05074bf0a4d342f9d6e279828421f0c5.png )
+![](./images/05074bf0a4d342f9d6e279828421f0c5.webp )
 
 所以说，**tailwind 就是基于 postcss 的 AST 实现的 css 代码生成工具，并且做了通过 extractor 提取 js、html 中 class 的功能。**
 
@@ -376,7 +376,7 @@ tailwind 还有种叫 JIT 的编译方式，这个原理也容易理解，本来
 
 就是这样的，一个风筝，一个冲浪板：
 
-![](./images/511f35046513bb78d91f61afc369ab3a.png )
+![](./images/511f35046513bb78d91f61afc369ab3a.webp )
 
 这种运动在顺风 tailwind 和逆风 headwind 下有不同的技巧。而 tailwind 的时候明显更加省力。
 

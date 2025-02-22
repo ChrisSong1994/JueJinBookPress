@@ -58,7 +58,7 @@ intersectionObserver.observe( document.querySelector('#box2'));
 
 浏览器跑一下：
 
-![](./images/5071f3ca4750ac1caae56a234ff8441f.png )
+![](./images/5071f3ca4750ac1caae56a234ff8441f.webp )
 
 可以看到元素 box1 和 box2 在可视范围达到一半（0.5）和全部（1）的时候分别触发了回调。
 
@@ -71,7 +71,7 @@ intersectionObserver.observe( document.querySelector('#box2'));
 
 监听一个普通 JS 对象的变化，我们会用 Object.defineProperty 或者 Proxy：
 
-![](./images/250980afaa6388ac4b551d121a641941.png )
+![](./images/250980afaa6388ac4b551d121a641941.webp )
 
 而监听元素的属性和子节点的变化，我们可以用 MutationObserver：
 
@@ -93,7 +93,7 @@ intersectionObserver.observe( document.querySelector('#box2'));
 ```
 就是这样的：
 
-![](./images/1063a7a1116a6c15d58b7f1dbe004d75.png )
+![](./images/1063a7a1116a6c15d58b7f1dbe004d75.webp )
 
 我们定时对它做下修改：
 
@@ -131,21 +131,21 @@ mutationObserver.observe(box, {
 
 浏览器跑一下：
 
-![](./images/73c03d42674891849e66c64f20e314a0.png )
+![](./images/73c03d42674891849e66c64f20e314a0.webp )
 
 可以看到在三次变化的时候都监听到了并打印了一些信息：
 
 第一次改变的是 attributes，属性是 style：
 
-![](./images/f6d9852d32a4d7ed1353a46e6b012c22.png )
+![](./images/f6d9852d32a4d7ed1353a46e6b012c22.webp )
 
 第二次改变的是 childList，添加了一个节点：
 
-![](./images/4bd5644d7506ef47a4149b02d15a947b.png )
+![](./images/4bd5644d7506ef47a4149b02d15a947b.webp )
 
 第三次也是改变的 childList，删除了一个节点：
 
-![](./images/457e87ae3d93ebfbd06fb768781787b7.png )
+![](./images/457e87ae3d93ebfbd06fb768781787b7.webp )
 
 都监听到了！
 
@@ -153,11 +153,11 @@ mutationObserver.observe(box, {
 
 比如 antd 的 Watermark 组件：
 
-![](./images/0e5571907546ecbd1473d674acbedd12.png )
+![](./images/0e5571907546ecbd1473d674acbedd12.webp )
 
 当删除了水印节点，或者修改了水印节点的属性，就会重新渲染水印：
 
-![](./images/b574539f5f6563f23181a2c3c29ca467.png )
+![](./images/b574539f5f6563f23181a2c3c29ca467.webp )
 
 当然，还有很多别的用途，这里只是介绍功能。
 
@@ -201,11 +201,11 @@ resizeObserver.observe(box);
 ```
 在浏览器跑一下：
 
-![](./images/801b375fae669bc700cf4edf61e33630.png )
+![](./images/801b375fae669bc700cf4edf61e33630.webp )
 
 大小变化被监听到了，看下打印的信息：
 
-![](./images/acdbd82d6dbbe11d32b5e410643551e7.png )
+![](./images/acdbd82d6dbbe11d32b5e410643551e7.webp )
 
 可以拿到元素和它的位置、尺寸。
 
@@ -270,22 +270,22 @@ performance.measure('button clicked', 'from', 'to');
 
 我们在浏览器跑一下试试：
 
-![](./images/be839bc7f15e09b685516626ee7509e1.png )
+![](./images/be839bc7f15e09b685516626ee7509e1.webp )
 
 可以看到 mark 的时间点记录、资源加载的耗时、点击按钮的 measure 时间段记录都监听到了。
 
 分别打印了这三种记录行为的数据：
 
 mark：
-![](./images/c21256fa6af3b2836dfe98275b2292f8.png )
+![](./images/c21256fa6af3b2836dfe98275b2292f8.webp )
 
 图片加载：
 
-![](./images/e5efbd310181afc59502c6abff3dbde7.png )
+![](./images/e5efbd310181afc59502c6abff3dbde7.webp )
 
 measure：
 
-![](./images/c15cfeb58a59818c92192dc436d4dece.png )
+![](./images/c15cfeb58a59818c92192dc436d4dece.webp )
 
 有了这些数据，就可以上报上去做性能分析了。
 
@@ -295,19 +295,19 @@ measure：
 
 当浏览器运行到过时（deprecation）的 api 的时候，会在控制台打印一个过时的报告:
 
-![](./images/8beb58d305287032c1d31bdf316feaa4.png )
+![](./images/8beb58d305287032c1d31bdf316feaa4.webp )
 
 浏览器还会在一些情况下对网页行为做一些干预（intervention），比如会把占用 cpu 太多的广告的 iframe 删掉：
 
-![](./images/16a57025cf18e9fd994cca091793a6ba.png )
+![](./images/16a57025cf18e9fd994cca091793a6ba.webp )
 
 会在网络比较慢的时候把图片替换为占位图片，点击才会加载：
 
-![](./images/1c4e18bfeee31db328c01c7886372f97.png )
+![](./images/1c4e18bfeee31db328c01c7886372f97.webp )
 
 这些干预都是浏览器做的，会在控制台打印一个报告：
 
-![](./images/ae8be3f63191a69305b8f2b6fa1f8488.png )
+![](./images/ae8be3f63191a69305b8f2b6fa1f8488.webp )
 
 这些干预或者过时的 api 并不是报错，所以不能用错误监听的方式来拿到，但这些情况对网页 app 来说可能也是很重要的：
 

@@ -2,21 +2,21 @@
 
 ﻿JSX 的标签体部分会通过 children 的 props 传给组件：
 
-![](./images/d23705131196f3ba9441884bb062ccbe.png )
+![](./images/d23705131196f3ba9441884bb062ccbe.webp )
 
 在组件里取出 props.children 渲染：
 
-![](./images/93f66beb771966016de36ca37039596e.png )
+![](./images/93f66beb771966016de36ca37039596e.webp )
 
 但有的时候，我们要对 children 做一些修改。
 
 比如 Space 组件，传入的是 3 个 .box 的 div：
 
-![](./images/d23705131196f3ba9441884bb062ccbe.png )
+![](./images/d23705131196f3ba9441884bb062ccbe.webp )
 
 但渲染出来的 .box 外面包了一层：
 
-![](./images/4ca8c412ec1239f8d46950a9f1ad0bc1.png )
+![](./images/4ca8c412ec1239f8d46950a9f1ad0bc1.webp )
 
 这种就需要用 React.Children 的 api 实现。
 
@@ -35,7 +35,7 @@
 ```shell
 npx create-react-app --template=typescript children-test
 ```
-![](./images/df15408490cc164788969020b8677912.png )
+![](./images/df15408490cc164788969020b8677912.webp )
 
 进入项目，改下 index.tsx
 
@@ -88,13 +88,13 @@ npm run start
 ```
 可以看到，渲染出的 children 是修改后的：
 
-![](./images/032c095f3cb0ee9fab0b20705bcce413.png )
+![](./images/032c095f3cb0ee9fab0b20705bcce413.webp )
 
 有的同学说，直接用数组的 api 可以么？
 
 我们试试：
 
-![](./images/f0247a6dec1108b5176c31f098e09bfd.png )
+![](./images/f0247a6dec1108b5176c31f098e09bfd.webp )
 
 ```javascript
 interface AaaProps {
@@ -117,7 +117,7 @@ const Aaa: FC<AaaProps> = (props) => {
 要用数组的 api 需要把 children 类型声明为 ReactNode[]，然后再用数组的 map 方法：
 
 
-![](./images/da5c0a93491a2a8cea83f21f900a5655.png )
+![](./images/da5c0a93491a2a8cea83f21f900a5655.webp )
 
 看起来结果貌似一样？
 
@@ -125,11 +125,11 @@ const Aaa: FC<AaaProps> = (props) => {
 
 首先，因为要用数组方法，所以声明了 children 为 ReactNode[]，这就导致了如果 children 只有一个元素会报错：
 
-![](./images/24ba4054b37927d63e66cfc67dabdc76.png )
+![](./images/24ba4054b37927d63e66cfc67dabdc76.webp )
 
 更重要的是当 children 传数组的时候：
 
-![](./images/b8750d007d63dd756e9eaf583325cf14.png )
+![](./images/b8750d007d63dd756e9eaf583325cf14.webp )
 
 ```javascript
 function App() {
@@ -146,13 +146,13 @@ function App() {
 ```
 数组的 map 处理后是这样的：
 
-![](./images/5bdab58c029701e8114784ee2a7199b7.png )
+![](./images/5bdab58c029701e8114784ee2a7199b7.webp )
 
 换成 React.Children.map 是这样的：
 
-![](./images/b36a55b37c1c77a4d667ae386392c5bb.png )
+![](./images/b36a55b37c1c77a4d667ae386392c5bb.webp )
 
-![](./images/0d3d1a007eee39ffb723a41f8765d409.png )
+![](./images/0d3d1a007eee39ffb723a41f8765d409.webp )
 
 React.Children.map 会把 children 拍平，而数组的方法不会。
 
@@ -187,13 +187,13 @@ export default App;
 
 ```
 
-![](./images/73882e364ffa267d927a29abe24eff44.png )
+![](./images/73882e364ffa267d927a29abe24eff44.webp )
 
 因为 props.children 的元素是只读的，不能重新赋值，所以也就不能排序。
 
 这时候只要用 React.Children.toArray 转成数组就好了：
 
-![](./images/b91f4b14b9515a6ad862511b010b42e3.png )
+![](./images/b91f4b14b9515a6ad862511b010b42e3.webp )
 
 （这里不用 children 数组方法了，就直接声明为 ReactNode 类型了）
 
@@ -214,7 +214,7 @@ const Aaa: FC<AaaProps> = (props) => {
 }
 ```
 
-![](./images/2efbcf2b977556eb77b0805324c93f5d.png )
+![](./images/2efbcf2b977556eb77b0805324c93f5d.webp )
 
 综上，直接用数组方法操作 children 有 3 个问题：
 
@@ -265,7 +265,7 @@ function App() {
 export default App;
 ```
 
-![](./images/5b38daae6639f853baab1057bd1db251.png )
+![](./images/5b38daae6639f853baab1057bd1db251.webp )
 
 React.Children.count 是计数，forEach 是遍历、only 是如果 children 不是一个元素就报错。
 
@@ -273,7 +273,7 @@ React.Children.count 是计数，forEach 是遍历、only 是如果 children 不
 
 有的同学可能会注意到，Children 的 api 也被放到了 Legacy 目录下，并提示用 Children 的 api 会导致代码脆弱，建议用别的方式替代：
 
-![](./images/825314493ebb3788f46199d795a3b1db.png )
+![](./images/825314493ebb3788f46199d795a3b1db.webp )
 
 我们先看看这些替代方式：
 
@@ -314,7 +314,7 @@ export default App;
 
 结果如下：
 
-![](./images/a694a861b1f1d81a3202623f090308f7.png )
+![](./images/a694a861b1f1d81a3202623f090308f7.webp )
 
 第一种替代方案是这样的：
 
@@ -364,13 +364,13 @@ export default App;
 
 跑一下：
 
-![](./images/672718ee2f8327e80e58865ca11df463.png )
+![](./images/672718ee2f8327e80e58865ca11df463.webp )
 
 这样是可以的。
 
 当然，这里的 RowListProps 和 RowProps 都是只有 children，我们直接用内置类型 PropsWithChildren 来简化下：
 
-![](./images/ba114e53ac645499e9a060888f2a77f7.png )
+![](./images/ba114e53ac645499e9a060888f2a77f7.webp )
 
 ```javascript
 import React, { FC, PropsWithChildren } from 'react';
@@ -456,11 +456,11 @@ export default App;
 
 效果是一样的：
 
-![](./images/63890d1978c98d0c41e53de3a1cae52d.png )
+![](./images/63890d1978c98d0c41e53de3a1cae52d.webp )
 
 而且还可以通过 render props 来定制渲染逻辑：
 
-![](./images/4a971e87ab5df35774e2d19126bad26a.png )
+![](./images/4a971e87ab5df35774e2d19126bad26a.webp )
 
 ```javascript
 import { FC, PropsWithChildren, ReactNode } from 'react';
@@ -515,7 +515,7 @@ function App() {
 
 export default App;
 ```
-![](./images/34f897b94b15a39914f29293eb6639e9.png )
+![](./images/34f897b94b15a39914f29293eb6639e9.webp )
 
 综上，替代 props.children 有两种方案：
 
@@ -526,16 +526,16 @@ export default App;
 
 React.Children 使用起来是无感的：
 
-![](./images/f5c59131d30bd9d712c1d13fb10fd14e.png )
+![](./images/f5c59131d30bd9d712c1d13fb10fd14e.webp )
 
 而这两种替代方案使用起来是这样的：
 
-![](./images/c50a7f3d5a17c0d6bcb570b3aff912d2.png )
+![](./images/c50a7f3d5a17c0d6bcb570b3aff912d2.webp )
 
-![](./images/9cbc5baf67e2d699a442fb78f2a59282.png )
+![](./images/9cbc5baf67e2d699a442fb78f2a59282.webp )
 
 
-![](./images/51a528c795118ab1308d094f08a80175.png )
+![](./images/51a528c795118ab1308d094f08a80175.webp )
 
 虽然能达到同样的效果，但是还是用 React.Children 内部修改 children 的方式更易用一些。
 
@@ -543,19 +543,19 @@ React.Children 使用起来是无感的：
 
 比如 semi design 的代码：
 
-![](./images/2a76061ec22247e943b801a1ee2c8312.png )
+![](./images/2a76061ec22247e943b801a1ee2c8312.webp )
 
 arco design 的代码：
 
-![](./images/15deea2488a0de537d0da1b1e538e6e2.png )
+![](./images/15deea2488a0de537d0da1b1e538e6e2.webp )
 
 ant design 的代码：
 
-![](./images/269f8d550a84f585741186e31318798c.png )
+![](./images/269f8d550a84f585741186e31318798c.webp )
 
 比如我们上节写过的 Space 组件：
 
-![](./images/7b81fa12e2fd254f3fe1a3333893ebf5.png )
+![](./images/7b81fa12e2fd254f3fe1a3333893ebf5.webp )
 
 所以 React.Children 还是可以继续用的，因为这些替代方案和 React.Children 还是有差距。
 
@@ -568,11 +568,11 @@ ant design 的代码：
 
 原因有三个：
 
-![](./images/1cf920a945547f9ef142129496b1239a.png )
+![](./images/1cf920a945547f9ef142129496b1239a.webp )
 
 当然，Children 的 api 被放到了 legacy 目录，可以用这两种方案来替代：
 
-![](./images/21e9e2d7f29b03b55515e91e17d0f12b.png )
+![](./images/21e9e2d7f29b03b55515e91e17d0f12b.webp )
 
 不过，这两种替代方案易用性都不如 React.Children，各大组件库也依然大量使用 React.Children 的 api。
 

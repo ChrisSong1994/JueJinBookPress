@@ -10,7 +10,7 @@
 
 这时候在 devtools 可以看到错误信息：
 
-![](./images/eca437f1f4dbfca3c6cb0535d1a60e3e.png )
+![](./images/eca437f1f4dbfca3c6cb0535d1a60e3e.webp )
 
 但总不能让开发者自己打开 devtools 看，我们要在页面做一下错误的显示。
 
@@ -123,11 +123,11 @@ pre {
 
 css 变量可以在它元素和子元素 css 里生效，所以切换了 .error 和 .warn 就切换了整体的颜色：
 
-![](./images/3009ddaa06b8a15cda5c74915c165057.png )
+![](./images/3009ddaa06b8a15cda5c74915c165057.webp )
 
 在 Preview 组件引入下试试：
 
-![](./images/dc9839fbad12640fba3d2d946955f0f8.png )
+![](./images/dc9839fbad12640fba3d2d946955f0f8.webp )
 
 ```javascript
 <Message type='warn' content={new Error().stack!.toString()} />
@@ -146,7 +146,7 @@ css 变量可以在它元素和子元素 css 里生效，所以切换了 .error 
 
 从 iframe 里传出来。
 
-![](./images/0d5839e0c31deef9084202961f42cb7b.png )
+![](./images/0d5839e0c31deef9084202961f42cb7b.webp )
 
 ```html
 <script>
@@ -159,7 +159,7 @@ css 变量可以在它元素和子元素 css 里生效，所以切换了 .error 
 
 然后在 Preview 组件里监听下：
 
-![](./images/4281358aca99f2deb3aa98135783dfce.png )
+![](./images/4281358aca99f2deb3aa98135783dfce.webp )
 
 ```javascript
 import { useContext, useEffect, useState } from "react"
@@ -248,7 +248,7 @@ export default function Preview() {
 
 错误展示出来了，这就是控制台那个报错：
 
-![](./images/c0ceda39928566ceb0dae9ed0f03ae3b.png )
+![](./images/c0ceda39928566ceb0dae9ed0f03ae3b.webp )
 
 这里暂时用不到 warn，后面用到 warn 再切换 type。
 
@@ -258,11 +258,11 @@ export default function Preview() {
 
 这个同样要在 context 里保存配置：
 
-![](./images/f7613ea6235eedfb861ff6a43d43b4cc.png )
+![](./images/f7613ea6235eedfb861ff6a43d43b4cc.webp )
 
 然后加一个 theme 对应的 className：
 
-![](./images/ebc39fb7577f81ff5443c9bd61bfcfd3.png )
+![](./images/ebc39fb7577f81ff5443c9bd61bfcfd3.webp )
 
 写下用到的样式：
 
@@ -286,19 +286,19 @@ export default function Preview() {
 
 比如我们在 Header 组件里用下：
 
-![](./images/1255cd3d57e13d0348b67b90893b5b9c.png )
+![](./images/1255cd3d57e13d0348b67b90893b5b9c.webp )
 
 然后把 theme 初始值改为 dark
 
-![](./images/a4f8ee0a50c506b5edbf63ef54fab7c9.png )
+![](./images/a4f8ee0a50c506b5edbf63ef54fab7c9.webp )
 
 这时候 Header 就切换为暗色主题了：
 
-![](./images/28851c47fbf3288e58093aca5eb8868d.png )
+![](./images/28851c47fbf3288e58093aca5eb8868d.webp )
 
 改为 light 就会变回来：
 
-![](./images/86c41b749aa249d000f5c1b7dd907436.png )
+![](./images/86c41b749aa249d000f5c1b7dd907436.webp )
 
 这就是主题切换的原理：
 
@@ -306,11 +306,11 @@ export default function Preview() {
 
 切成暗色主题后可以看到周边有点间距，加下重置样式：
 
-![](./images/ccd9961f4c9053c3a4cae52b38e42ff7.png )
+![](./images/ccd9961f4c9053c3a4cae52b38e42ff7.webp )
 
 然后我们在 Header 加一个切换主题的按钮：
 
-![](./images/0f3dfb235e898430fdaef0c47dc493ad.png )
+![](./images/0f3dfb235e898430fdaef0c47dc493ad.webp )
 
 ```javascript
 import styles from './index.module.scss'
@@ -361,7 +361,7 @@ npm install @ant-design/icons --save
 
 确实能切换了，不过我们要完善下暗色主题的样式。
 
-![](./images/672ea762c47ae74c7b18c129ba5327dc.png )
+![](./images/672ea762c47ae74c7b18c129ba5327dc.webp )
 
 ![](./images/e03d4edf42c958afe362a1201fe60c6a.gif )
 
@@ -369,13 +369,13 @@ npm install @ant-design/icons --save
 
 再改下 FileNameList 的样式：
 
-![](./images/7883a9bba9e965cc2c73a3cfd3c3ef96.png )
+![](./images/7883a9bba9e965cc2c73a3cfd3c3ef96.webp )
 
 ![](./images/4cfb550162368fc1552f1ecc7b614216.gif )
 
 编辑器同样也可以切换主题，这个是 monaco editor 自带的。
 
-![](./images/0d6049c2d3c329a05a36de2faef59954.png )
+![](./images/0d6049c2d3c329a05a36de2faef59954.webp )
 
 ![](./images/b70b46e9cfa4968253f2eeb008b4ea85.gif )
 

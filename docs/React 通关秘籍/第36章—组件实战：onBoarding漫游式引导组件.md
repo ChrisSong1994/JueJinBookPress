@@ -22,7 +22,7 @@
 
 其实还可以进一步简化一下：
 
-![](./images/9d2bce855610897d8b870a1d629aa46d.png )
+![](./images/9d2bce855610897d8b870a1d629aa46d.webp )
 
 ![](./images/ed4f44c27f27cbb1798c661fd1a53fb6.gif )
 
@@ -40,13 +40,13 @@
 npx create-vite
 ```
 
-![](./images/5b76e0d89441f9c85463593ca60a470e.png )
+![](./images/5b76e0d89441f9c85463593ca60a470e.webp )
 
 创建个 vite + react 的项目。
 
 进入项目，把 index.css 的样式去掉：
 
-![](./images/6ce5badfca2e08c8d3c501552ef3458d.png )
+![](./images/6ce5badfca2e08c8d3c501552ef3458d.webp )
 
 然后新建 OnBoarding/Mask.tsx 
 
@@ -109,7 +109,7 @@ export const Mask: React.FC<MaskProps> = (props) => {
 
 而 getMaskContent 是用来定制这部分内容的：
 
-![](./images/69dbef56de4c766b05b64c94e5a837b7.png )
+![](./images/69dbef56de4c766b05b64c94e5a837b7.webp )
 
 可以是 Popover 也可以是别的。
 
@@ -121,19 +121,19 @@ export const Mask: React.FC<MaskProps> = (props) => {
 
 这个用 scrollIntoView 方法实现：
 
-![](./images/c7967720b832d6dd499cfe81f2a05637.png )
+![](./images/c7967720b832d6dd499cfe81f2a05637.webp )
 
 在 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView) 上可以看到它的介绍：
 
-![](./images/e32f69f92d62855fd6c721f98e94d25c.png )
+![](./images/e32f69f92d62855fd6c721f98e94d25c.webp )
 
 设置  block、inline 为 center 是把元素中心滚动到可视区域中心的意思：
 
-![](./images/47302486159fb46dda204414d1e3163f.png )
+![](./images/47302486159fb46dda204414d1e3163f.webp )
 
 滚动完成后，就可以拿到元素的位置，计算 width、height、border-width 的样式了：
 
-![](./images/647ac54aff707b075f45a14571720866.png )
+![](./images/647ac54aff707b075f45a14571720866.webp )
 
 新建 OnBoarding/getMaskStyle.ts
 
@@ -162,7 +162,7 @@ width、height 就是容器的包含滚动区域的宽高。
 
 然后 border-width  分为上下左右 4 个方向：
 
-![](./images/9737cbf8d6bf028baffe892a78f2b7ed.png )
+![](./images/9737cbf8d6bf028baffe892a78f2b7ed.webp )
 
 top 和 left 的分别用 scrollTop、scrollLeft 和元素在可视区域里的 left、top 相加计算出来。
 
@@ -170,9 +170,9 @@ bottom 和 right 的就用容器的包含滚动区域的高度宽度 scrollHeigh
 
 然后我们在内部又加了一个宽高为 100% 的 div，把它暴露出去，外部就可以用它来加 Popover 或者其他内容：
 
-![](./images/53445001eb65299831d02ada80b6e6bf.png )
+![](./images/53445001eb65299831d02ada80b6e6bf.webp )
 
-![](./images/a95dd3f998c6e1433bdf157bd08c3cde.png )
+![](./images/a95dd3f998c6e1433bdf157bd08c3cde.webp )
 
 然后在 OnBoarding/index.scss 里写下样式：
 
@@ -202,13 +202,13 @@ npm install
 npm run dev
 ```
 
-![](./images/f7988cdfa724ad533bc4df18b353ae45.png )
+![](./images/f7988cdfa724ad533bc4df18b353ae45.webp )
 
-![](./images/2969466e335aedc21c4d302d042b4e93.png )
+![](./images/2969466e335aedc21c4d302d042b4e93.webp )
 
 我们就在 logo 上试一下吧：
 
-![](./images/a7685acb3a2fa2792e3921a0c2e6b848.png )
+![](./images/a7685acb3a2fa2792e3921a0c2e6b848.webp )
 ```javascript
 <Mask
     element={document.getElementById('xxx')!}
@@ -223,7 +223,7 @@ container 就是默认的根元素。
 
 看一下效果:
 
-![](./images/8f0534dd12fd11de67bff801df9e6c01.png )
+![](./images/8f0534dd12fd11de67bff801df9e6c01.webp )
 
 没啥问题。
 
@@ -236,7 +236,7 @@ npm install --save antd
 ```
 然后引入下：
 
-![](./images/5d226177ae3ed5201f52f9cbbf8d7997.png )
+![](./images/5d226177ae3ed5201f52f9cbbf8d7997.webp )
 
 ```javascript
 <Mask
@@ -255,7 +255,7 @@ npm install --save antd
 ></Mask>
 ```
 
-![](./images/2353189136298a50154347ac1eebe2d1.png )
+![](./images/2353189136298a50154347ac1eebe2d1.webp )
 
 没啥问题。
 
@@ -263,13 +263,13 @@ npm install --save antd
 
 我们希望 OnBoarding 组件可以这么用：
 
-![](./images/5c784e9b86a38d4673dc3ca81a871cd7.png )
+![](./images/5c784e9b86a38d4673dc3ca81a871cd7.webp )
 
 传入 steps，包含每一步在哪个元素（selector），显示什么内容（renderConent），在什么方位（placement）。
 
 所以类型这样写：
 
-![](./images/95e7fcb5d8d456c1f9bded1d8534f7d7.png )
+![](./images/95e7fcb5d8d456c1f9bded1d8534f7d7.webp )
 
 并且还有 beforeForward、beforeBack 也就是点上一步、下一步的回调。
 
@@ -279,33 +279,33 @@ onStepsEnd 是在全部完成后的回调。
 
 内部有一个 state 来记录 currentStep，点击上一步、下一步会切换：
 
-![](./images/e92bca1bac2ffcbdd26741c33dbba189.png )
+![](./images/e92bca1bac2ffcbdd26741c33dbba189.webp )
 
 在切换前也会调用 beforeBack、beforeForward 的回调。
 
 然后准备下 Popover 的内容：
 
-![](./images/fcc3e38bc36fa75989e2e852dc6916c7.png )
+![](./images/fcc3e38bc36fa75989e2e852dc6916c7.webp )
 
 渲染下：
 
-![](./images/71c7c2c5a4582434d38113f2bfb3e123.png )
+![](./images/71c7c2c5a4582434d38113f2bfb3e123.webp )
 
 这里用 createPortal 把 mask 渲染到容器元素下，比如 document.body。
 
 注意，我们要给元素加上引导，那得元素渲染完才行。
 
-![](./images/0f688cb775814b9b764d2ae0980276ba.png )
+![](./images/0f688cb775814b9b764d2ae0980276ba.webp )
 
 所以这里加个 setState，在 useEffect 里执行。
 
 效果就是在 dom 渲染完之后，触发重新渲染，从而渲染这个 OnBoarding 组件：
 
-![](./images/51a7f01f4170f4a14e87ca2a2d1aceb3.png )
+![](./images/51a7f01f4170f4a14e87ca2a2d1aceb3.webp )
 
 第一次渲染的时候，元素是 null，触发重新渲染之后，就会渲染下面的 Mask 了：
 
-![](./images/71b0a13334037d85b9b284f159a0bc79.png )
+![](./images/71b0a13334037d85b9b284f159a0bc79.webp )
 
 Onboarding/index.tsx 的全部代码如下：
 
@@ -553,11 +553,11 @@ export default App
 ```
 我用 id 选中了三个元素：
 
-![](./images/ddbf435de78e01df92d0b8bb7b351eab.png )
+![](./images/ddbf435de78e01df92d0b8bb7b351eab.webp )
 
 指定三步的元素和渲染的内容：
 
-![](./images/c61a125bab158ed669bfa4f5ab2bf9db.png )
+![](./images/c61a125bab158ed669bfa4f5ab2bf9db.webp )
 
 跑一下：
 
@@ -571,9 +571,9 @@ export default App
 
 这个加个状态标识就好了：
 
-![](./images/6f83df5de1dc678c1e0b7673764d52d3.png )
+![](./images/6f83df5de1dc678c1e0b7673764d52d3.webp )
 
-![](./images/05877e32e19a30d2dd09f07846760b8e.png )
+![](./images/05877e32e19a30d2dd09f07846760b8e.webp )
 
 ![](./images/4597cbc8cc6824aa150e16ecf879c424.gif )
 
@@ -585,7 +585,7 @@ export default App
 
 这个在 Mask 组件里用 ResizeObserver 监听下 container 大小改变就好了：
 
-![](./images/ca0382ebbf57d0e2cd909fc44e58683d.png )
+![](./images/ca0382ebbf57d0e2cd909fc44e58683d.webp )
 
 ```javascript
 useEffect(() => {
@@ -607,7 +607,7 @@ useEffect(() => {
 
 所以给 Mask 组件加一个动画开始和结束的回调：
 
-![](./images/c8743f23caaf02afe398e4cc8d8e1b0b.png )
+![](./images/c8743f23caaf02afe398e4cc8d8e1b0b.webp )
 ```javascript
 import React, { CSSProperties, useEffect, useState } from 'react';
 import { getMaskStyle } from './getMaskStyle'
@@ -694,15 +694,15 @@ export const Mask: React.FC<MaskProps> = (props) => {
 
 然后在 OnBoarding 组件加一个 state：
 
-![](./images/dbfae3bb069cc5a0d216c69c99d574ce.png )
+![](./images/dbfae3bb069cc5a0d216c69c99d574ce.webp )
 
 动画开始和结束修改这个 state：
 
-![](./images/6db404bcf42e0dbfe2ac163cbb24fcf2.png )
+![](./images/6db404bcf42e0dbfe2ac163cbb24fcf2.webp )
 
 动画结束才会渲染 Popover：
 
-![](./images/770affa71b950b2dc404c8c010eb2e0f.png )
+![](./images/770affa71b950b2dc404c8c010eb2e0f.webp )
 
 这样 Popover 位置就不会闪了：
 

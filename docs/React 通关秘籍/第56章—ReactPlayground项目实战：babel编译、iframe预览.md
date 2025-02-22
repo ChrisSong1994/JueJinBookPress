@@ -96,7 +96,7 @@ export default function Preview() {
 
 我们来写下这个插件：
 
-![](./images/5c438b9e457e1d8dc54606618baf7940.png )
+![](./images/5c438b9e457e1d8dc54606618baf7940.webp )
 
 ```javascript
 function customResolver(files: Files): PluginObj {
@@ -111,15 +111,15 @@ function customResolver(files: Files): PluginObj {
 ```
 babel 的编译流程分为 parse、transform、generate 三个阶段：
 
-![](./images/5d54ec371415f2cdfad0e3f3fa1914d4.png )
+![](./images/5d54ec371415f2cdfad0e3f3fa1914d4.webp )
 
 通过 [astexplorer.net](https://astexplorer.net/#/gist/6f01ee950445813f623214fb2c7abba9/b45fffd5a735f829d15098efa4f860438c3a070e) 看下对应的 AST：
 
-![](./images/b16f959e3b546c63c0fcef13d400c788.png )
+![](./images/b16f959e3b546c63c0fcef13d400c788.webp )
 
 我们要改的就是 ImportDeclaration 节点的 source.value 的内容。
 
-![](./images/9f566e6b95c3493dfbc9254edb7e3ec4.png )
+![](./images/9f566e6b95c3493dfbc9254edb7e3ec4.webp )
 
 可以看到，确实被替换了。
 
@@ -127,13 +127,13 @@ babel 的编译流程分为 parse、transform、generate 三个阶段：
 
 我们分别对 css、json 还有 tsx、ts 等后缀名的 import 做下替换：
 
-![](./images/6b2af0da96d8f01f1fa53e86f72ba9c3.png )
+![](./images/6b2af0da96d8f01f1fa53e86f72ba9c3.webp )
 
 首先，我们要对路径做下处理，比如 ./App.css 这种路径提取出 App.css 部分
 
 万一输入的是 ./App 这种路径，也要能查找到对应的 App.tsx 模块：
 
-![](./images/31ad6267b960d98c8f9d128d5495249e.png )
+![](./images/31ad6267b960d98c8f9d128d5495249e.webp )
 
 如果去掉 ./ 之后，剩下的不包含 . 比如 ./App 这种，那就要补全 App 为 App.tsx 等。
 
@@ -141,7 +141,7 @@ babel 的编译流程分为 parse、transform、generate 三个阶段：
 
 之后把 file.value 也就是文件内容转成对应的 blob url：
 
-![](./images/9cc1efbc21348a2c7a687b4f107b7604.png )
+![](./images/9cc1efbc21348a2c7a687b4f107b7604.webp )
 
 ts 文件的处理就是用 babel 编译下，然后用 URL.createObjectURL 把编译后的文件内容作为 url。
 
@@ -149,11 +149,11 @@ ts 文件的处理就是用 babel 编译下，然后用 URL.createObjectURL 把�
 
 json 文件的处理比较简单，就是把 export 一下这个 json，然后作为 blob url 即可：
 
-![](./images/223be6ba4a2808ff1f2c4dc35249e95c.png )
+![](./images/223be6ba4a2808ff1f2c4dc35249e95c.webp )
 
 而 css 文件，则是要通过 js 代码把它添加到 head 里的 style 标签里：
 
-![](./images/4827e4601dab40c6f9c388329d0ab235.png )
+![](./images/4827e4601dab40c6f9c388329d0ab235.webp )
 
 全部代码如下：
 
@@ -251,13 +251,13 @@ export const compile = (files: Files) => {
 ```
 看下效果：
 
-![](./images/fc87ca92cac4ebda2f5101ff47ca41a8.png )
+![](./images/fc87ca92cac4ebda2f5101ff47ca41a8.webp )
 
 可以看到，./App 的模块内容编译之后变为了 blob url。
 
 我们引入 ./App.css 试下：
 
-![](./images/1cef5a7be09cc113c1acd2e1886ac620.png )
+![](./images/1cef5a7be09cc113c1acd2e1886ac620.webp )
 
 可以看到，css 模块也变为了 blob url。
 
@@ -270,9 +270,9 @@ fetch("blob:http://localhost:5173/xxxx")
     console.log(text);
   });
 ```
-![](./images/4cdc15e0723f6883324d4f869251b4b7.png )
+![](./images/4cdc15e0723f6883324d4f869251b4b7.webp )
 
-![](./images/d18cb8d8d36913d80916e00cd621d1b0.png )
+![](./images/d18cb8d8d36913d80916e00cd621d1b0.webp )
 
 可以看到，./App.tsx 的内容是 babel 编译过后的。
 
@@ -280,17 +280,17 @@ fetch("blob:http://localhost:5173/xxxx")
 
 而上面的 react、react-dom/client 的包是通过 import maps 引入：
 
-![](./images/0aca50d82c60df180d5e28f62b073450.png )
+![](./images/0aca50d82c60df180d5e28f62b073450.webp )
 
 其实还有一个问题要处理：
 
-![](./images/28a966e76615ecfcd2ca8806e56a5c67.png )
+![](./images/28a966e76615ecfcd2ca8806e56a5c67.webp )
 
 比如 App.tsx 的 jsx 内容编译后变成了 React.createElement，但是我们并没有引入 React，这样运行会报错。
 
 处理下：
 
-![](./images/da7857413bbb50b8138903e30ea0669a.png )
+![](./images/da7857413bbb50b8138903e30ea0669a.webp )
 
 babel 编译之前，判断下文件内容有没有 import React，没有就 import 一下：
 
@@ -324,7 +324,7 @@ export const babelTransform = (filename: string, code: string, files: Files) => 
 
 现在，如果没引入 React 就会自动引入：
 
-![](./images/9da13b6aeaef1572e833ca21a4f53ac8.png )
+![](./images/9da13b6aeaef1572e833ca21a4f53ac8.webp )
 
 至此， main.tsx 的所有依赖都引入了：
 
@@ -333,11 +333,11 @@ export const babelTransform = (filename: string, code: string, files: Files) => 
 
 这样，编译过后的这段代码就可以直接在浏览器里跑了：
 
-![](./images/ae890b949f74122832cf12e719e9e44d.png )
+![](./images/ae890b949f74122832cf12e719e9e44d.webp )
 
 我们加个 iframe 来跑下：
 
-![](./images/533ce56f189c1a64a8b497e96d151b6f.png )
+![](./images/533ce56f189c1a64a8b497e96d151b6f.webp )
 
 加一个 iframe 标签，src url 同样是用 blob url 的方式。
 
@@ -427,9 +427,9 @@ export default function Preview() {
 
 看下 iframe 的内容：
 
-![](./images/c5defc9b9231f722d368a2425ad6b866.png )
+![](./images/c5defc9b9231f722d368a2425ad6b866.webp )
 
-![](./images/0feef6a10c1589d0eef46c32345ad739.png )
+![](./images/0feef6a10c1589d0eef46c32345ad739.webp )
 
 没啥问题。
 

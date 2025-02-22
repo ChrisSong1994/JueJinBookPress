@@ -6,11 +6,11 @@
 
 和一般组件写在 JSX 里不同：
 
-![](./images/7d90067aa24269fce52a158cdefb1eef.png )
+![](./images/7d90067aa24269fce52a158cdefb1eef.webp )
 
 它是通过 api 的方式用的：
 
-![](./images/c132127fb3a211f262d0501ec6cdc45a.png )
+![](./images/c132127fb3a211f262d0501ec6cdc45a.webp )
 
 那它是怎么实现的呢？
 
@@ -18,7 +18,7 @@
 
 其实单纯就这个列表来说，很简单：
 
-![](./images/98774daeb91ac1e947294c9384838e40.png )
+![](./images/98774daeb91ac1e947294c9384838e40.webp )
 
 我们学习过渡动画的时候，写过这种列表：
 
@@ -30,7 +30,7 @@
 
 先看看其他组件库是怎么做的，比如 arco design：
 
-![](./images/06cda0bb3424b313e48e61ed43dfe060.png )
+![](./images/06cda0bb3424b313e48e61ed43dfe060.webp )
 
 它是在组件渲染的过程中再重新渲染一个 root。
 
@@ -40,7 +40,7 @@
 
 acro design 是这么解决的：
 
-![](./images/604e4a00ddd0457cfd71b96a5058f4cb.png )
+![](./images/604e4a00ddd0457cfd71b96a5058f4cb.webp )
 
 通过修改了内部的一个 waring 的开关来去掉了这个警告。
 
@@ -54,7 +54,7 @@ acro design 是这么解决的：
 
 这样 useMessage 里用 useContext 拿到这个 ref，是不是就可以调用 add、remove 等方法来添加删除 Message 了呢？
 
-![](./images/29325d94b9eaf220f43073c51e2ac39b.png )
+![](./images/29325d94b9eaf220f43073c51e2ac39b.webp )
 
 回过头来看下这个 Message 组件：
 
@@ -70,7 +70,7 @@ acro design 是这么解决的：
 npx create-react-app --template=typescript message-component
 ```
 
-![](./images/eeca335b5ab1d804bdbcd1f29842d2a9.png )
+![](./images/eeca335b5ab1d804bdbcd1f29842d2a9.webp )
 
 用 cra 创建个 react 项目。
 
@@ -271,39 +271,39 @@ export default useStore;
 ```
 首先是 add：
 
-![](./images/926d5ed2c0bf32de023e4c7427c2e7e9.png )
+![](./images/926d5ed2c0bf32de023e4c7427c2e7e9.webp )
 
 add 核心就是 setMessageList 添加一个元素。
 
 用 getId 方法生成一个新的 id：
 
-![](./images/9ce264bdcb8b4574365dc6f0018598ce.png )
+![](./images/9ce264bdcb8b4574365dc6f0018598ce.webp )
 
 如果传入了 id 就直接用传入的，否则返回递增的 id。
 
 然后先根据 id 查找有没有已有的 message，如果有就不添加，直接返回之前的：
 
-![](./images/e98b70cebc42adc9cec9686947b16409.png )
+![](./images/e98b70cebc42adc9cec9686947b16409.webp )
 
 否则，top 的在前面插入一个元素，bottom 的在后面插入一个元素：
 
-![](./images/1d05f8319477d15ca09a421e6951a679.png )
+![](./images/1d05f8319477d15ca09a421e6951a679.webp )
 
 这个 getMessagePosition 方法就是遍历 top 和 bottom 数组，查找下有没有对应的 Message：
 
-![](./images/1522460ce2aa2598e21fd68ec65a2036.png )
+![](./images/1522460ce2aa2598e21fd68ec65a2036.webp )
 
 update 就是找到对应的 message 修改信息：
 
-![](./images/70c81b0171707e03d936cf87239d35db.png )
+![](./images/70c81b0171707e03d936cf87239d35db.webp )
 
 查找的方式就是先找到它在哪个数组里，然后返回对应数组中的下标：
 
-![](./images/077f59d724cd235bec747c97467b46cd.png )
+![](./images/077f59d724cd235bec747c97467b46cd.webp )
 
 remove 是找到对应的数组，从中删除这个元素，clear 是重置数组：
 
-![](./images/ada0259dbf898ec1a32e4559b3e70dc9.png )
+![](./images/ada0259dbf898ec1a32e4559b3e70dc9.webp )
 
 实现了列表的增删改查之后，加上过渡动画就能实现这种效果：
 
@@ -311,7 +311,7 @@ remove 是找到对应的数组，从中删除这个元素，clear 是重置数�
 
 我们在 MessageProvider 里用 useStore 创建 message 列表，然后把它渲染出来：
 
-![](./images/a9313d3374cd974bc2a6671e482468a5.png )
+![](./images/a9313d3374cd974bc2a6671e482468a5.webp )
 
 ```javascript
 import { CSSProperties, FC, ReactNode } from "react";
@@ -364,11 +364,11 @@ npm run start
 
 因为我们还没调用 add、remove 等方法添加 message，所以啥也没有：
 
-![](./images/51684c15d18517e407b83cc4cb54ab4a.png )
+![](./images/51684c15d18517e407b83cc4cb54ab4a.webp )
 
 我们调用下：
 
-![](./images/5831f0daeee29f9e32351f999fae43f1.png )
+![](./images/5831f0daeee29f9e32351f999fae43f1.webp )
 
 ```javascript
 useEffect(() => {
@@ -394,7 +394,7 @@ npm install --save react-transition-group
 
 npm install --save-dev @types/react-transition-group
 ```
-![](./images/e6e61970416cfd4b1f4081e292a6c1be.png )
+![](./images/e6e61970416cfd4b1f4081e292a6c1be.webp )
 
 ```javascript
 return <div>
@@ -441,13 +441,13 @@ npm install --save sass
 ```
 在 Message/index.tsx 引入下：
 
-![](./images/ed9d1c4bbd8a4de483fc874f35877164.png )
+![](./images/ed9d1c4bbd8a4de483fc874f35877164.webp )
 
 ![](./images/155bbe33956997f3fc874de20e2eb4f1.gif )
 
 当然，现在的 message 比较丑，我们写一下样式：
 
-![](./images/b4cc3a33d0c697a514e1957983d08845.png )
+![](./images/b4cc3a33d0c697a514e1957983d08845.webp )
 
 首先分为 .message-wrapper、.message-wrapper-top、.message-item 这三层。
 
@@ -552,11 +552,11 @@ wrapper 不响应鼠标事件，但是 message 还是要响应的，所以加上
 
 只是现在的 message 都是在 root 下渲染的：
 
-![](./images/2c745b63a0ada645a5b5bf2e14ba7c68.png )
+![](./images/2c745b63a0ada645a5b5bf2e14ba7c68.webp )
 
 我们通过 createPortal 把它渲染到 body 下。
 
-![](./images/0cf31fe6e978f3e495021b8615bf2bac.png )
+![](./images/0cf31fe6e978f3e495021b8615bf2bac.webp )
 
 在 useMemo 里创建 div，因为依赖数组为空，所以只会创建一次。
 
@@ -628,7 +628,7 @@ export const MessageProvider: FC<{}> = (props) => {
 
 可以看到，现在就是直接渲染在 body 下的 .wrapper 里了：
 
-![](./images/12a8027881304e9f7497f9ff9ef8ce60.png )
+![](./images/12a8027881304e9f7497f9ff9ef8ce60.webp )
 
 此外，我们还要处理下 hover 的事件，当 hover 的时候，这个提示会一直存在不会消失，直到鼠标移开才消失。
 
@@ -696,7 +696,7 @@ export function useTimer(props: UseTimerProps) {
 
 调用下：
 
-![](./images/221fd7f275e2fbd9c797ba7b108ad31b.png )
+![](./images/221fd7f275e2fbd9c797ba7b108ad31b.webp )
 
 ```javascript
 import { CSSProperties, FC, ReactNode, useEffect, useMemo, useRef } from "react";
@@ -781,11 +781,11 @@ export const MessageProvider: FC<{}> = (props) => {
 
 用的时候我们是通过 message.info 的方式用，前面分析过，需要通过 forwardRef 把 api 转发出去。
 
-![](./images/29325d94b9eaf220f43073c51e2ac39b.png )
+![](./images/29325d94b9eaf220f43073c51e2ac39b.webp )
 
 使用 forwardRef + useImperative 转发 ref。
 
-![](./images/f7cae802e31b8935c697b3a2020b8250.png )
+![](./images/f7cae802e31b8935c697b3a2020b8250.webp )
 
 ```javascript
 import { CSSProperties, FC, ReactNode, forwardRef, useEffect, useImperativeHandle, useMemo, useRef } from "react";
@@ -999,9 +999,9 @@ export default App;
 
 这个是时机的问题，我们在 useImperativeHandle 的回调函数，还有 useMessage 方法里加个 debugger： 
 
-![](./images/62a0e5fa86c949acf03ad758563e4c1f.png )
+![](./images/62a0e5fa86c949acf03ad758563e4c1f.webp )
 
-![](./images/62e01e8f7c336d0e7b73e70fe368c21b.png )
+![](./images/62e01e8f7c336d0e7b73e70fe368c21b.webp )
 
 你会发现先执行的 useMessage 取了 messageRef.current 的值，然后我们才设置了 messageRef.current。
 
@@ -1013,7 +1013,7 @@ export default App;
 
 所以这里我们要改成直接修改 ref.current 的方式。
 
-![](./images/e5d728a91ffe60797392ebe84f798b68.png )
+![](./images/e5d728a91ffe60797392ebe84f798b68.webp )
 
 ```javascript
 if('current' in ref!) {
@@ -1045,7 +1045,7 @@ acro desigin 等都是用重新渲染一个 root 的方式来做的，但是这�
 
 我们是通过 forwardRef + context 转发来实现的：
 
-![](./images/8bc48d2ae136d5ab63b6541d9970ee97.png )
+![](./images/8bc48d2ae136d5ab63b6541d9970ee97.webp )
 
 唯一要注意的问题就是需要直接修改 ref.current，而不是用 useImperativeHandle 来修改。
 

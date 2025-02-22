@@ -6,7 +6,7 @@
 
 用 Performace 跑下就知道了：
 
-![](./images/b775c97f7fa8fd738a480521444cdad6.png )
+![](./images/b775c97f7fa8fd738a480521444cdad6.webp )
 
 用无痕模式打开这个页面，无痕模式下不会跑浏览器插件，比较准确。
 
@@ -22,13 +22,13 @@
 
 这里的 main 就是主线程：
 
-![](./images/b0bb8d15a0f0cda2c0bb51d7be0d26d9.png )
+![](./images/b0bb8d15a0f0cda2c0bb51d7be0d26d9.webp )
 
 主线程会通过 event loop 的方式跑一个个宏任务，也就是这里的 task。
 
 超过 50ms 的被称为长任务 long task：
 
-![](./images/5e86e41860824b356ef9828c1bb6c68d.png )
+![](./images/5e86e41860824b356ef9828c1bb6c68d.webp )
 
 long task 会导致主线程一直被占据，阻塞渲染，表现出来的就是页面卡顿。
 
@@ -36,7 +36,7 @@ long task 会导致主线程一直被占据，阻塞渲染，表现出来的就�
 
 图中的宽度代表耗时，可以看到是 babelTransform 这个方法耗费了 24 ms
 
-![](./images/bc2862ddc1150c4bf5903d6a741d6f22.png )
+![](./images/bc2862ddc1150c4bf5903d6a741d6f22.webp )
 
 点击火焰图中的 babelTransform，下面会展示它的代码位置，点击可以跳到 Sources 面板的代码：
 
@@ -44,7 +44,7 @@ long task 会导致主线程一直被占据，阻塞渲染，表现出来的就�
 
 这就是我们要优化性能的代码。
 
-![](./images/f927992319a293a74acae87be0c4bbb9.png )
+![](./images/f927992319a293a74acae87be0c4bbb9.webp )
 
 这是 babel 内部代码，怎么优化呢？
 
@@ -52,11 +52,11 @@ long task 会导致主线程一直被占据，阻塞渲染，表现出来的就�
 
 vite 项目用 web worker 可以这样用：
 
-![](./images/d821277c444533c6c712fedba8775b53.png )
+![](./images/d821277c444533c6c712fedba8775b53.webp )
 
 我们用一下：
 
-![](./images/97091289f0595b2916e97b771791b24c.png )
+![](./images/97091289f0595b2916e97b771791b24c.webp )
 
 把 compiler.ts 改名为 compiler.worker.ts
 
@@ -71,7 +71,7 @@ self.postMessage({
 
 主线程里创建这个 worker 线程，监听 message 消息：
 
-![](./images/d5858d16535983f3c74a4c65c6b0e4ce.png )
+![](./images/d5858d16535983f3c74a4c65c6b0e4ce.webp )
 
 ```javascript
 import CompilerWorker from './compiler.worker?worker'
@@ -91,7 +91,7 @@ useEffect(() => {
 ```
 跑一下：
 
-![](./images/4fff73fcae8f07e0e6d2657d2e66d243.png )
+![](./images/4fff73fcae8f07e0e6d2657d2e66d243.webp )
 
 可以看到，主线程接收到了 worker 线程传过来的消息。
 
@@ -99,7 +99,7 @@ useEffect(() => {
 
 主线程这边给 worker 线程传递 files，然后拿到 woker 线程传回来的编译后的代码：
 
-![](./images/b9f8833fb0e2a91372d776848346bc38.png )
+![](./images/b9f8833fb0e2a91372d776848346bc38.webp )
 
 ```javascript
 import { useContext, useEffect, useRef, useState } from "react"
@@ -198,7 +198,7 @@ export default function Preview() {
 ```
 而 worker 线程这边则是监听主线程的 message，传递 files 编译后的代码给主线程：
 
-![](./images/5f1894c2cd32a8f50d9d2a6adeb786a5.png )
+![](./images/5f1894c2cd32a8f50d9d2a6adeb786a5.webp )
 
 ```javascript
 self.addEventListener('message', async ({ data }) => {
@@ -214,11 +214,11 @@ self.addEventListener('message', async ({ data }) => {
 ```
 可以看到，拿到了 worker 线程传过来的编译后的代码：
 
-![](./images/38a7bf7e6f877e16132e6e4ac34d75c1.png )
+![](./images/38a7bf7e6f877e16132e6e4ac34d75c1.webp )
 
 预览也正常。
 
-![](./images/a849c0f2e51d86eb6669f40fcecb4e9e.png )
+![](./images/a849c0f2e51d86eb6669f40fcecb4e9e.webp )
 
 其实 files 变化没必要那么频繁触发编译，我们加个防抖：
 
@@ -230,13 +230,13 @@ useEffect(debounce(() => {
 
 我们再用 performance 看下优化后的效果：
 
-![](./images/9857377398ec3dafe68001814d5af94f.png )
+![](./images/9857377398ec3dafe68001814d5af94f.webp )
 
 ![](./images/b1f76a2fa1d696d3b0f9b37a7596562f.gif )
 
 之前的编译代码的耗时没有了，现在被转移到了 worker 线程：
 
-![](./images/0dc471f4fefa10174049eb92de24abd1.png )
+![](./images/0dc471f4fefa10174049eb92de24abd1.webp )
 
 还是 24ms，但是不占据主线程了。
 
@@ -246,11 +246,11 @@ useEffect(debounce(() => {
 
 然后再优化两处代码：
 
-![](./images/f85696060fc0c4a10a081a06e78c4ef5.png )
+![](./images/f85696060fc0c4a10a081a06e78c4ef5.webp )
 
 main.tsx 有个编辑器错误说 StrictMode 不是一个 jsx，这种不用解决，也不影响运行，改下模版把它去掉就行了：
 
-![](./images/ef20a4b1125dcab2472e50747e750e23.png )
+![](./images/ef20a4b1125dcab2472e50747e750e23.webp )
 
 上面那个只要编辑下文件就会触发类型下载，也不用解决：
 
@@ -262,7 +262,7 @@ main.tsx 有个编辑器错误说 StrictMode 不是一个 jsx，这种不用解�
 
 改为 4 位正好：
 
-![](./images/c07855cc3060e6f272062c513614e9cb.png )
+![](./images/c07855cc3060e6f272062c513614e9cb.webp )
 
 ![](./images/a3fa0f8561636d67d37b10aa5b947f96.gif )
 

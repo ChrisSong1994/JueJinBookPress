@@ -12,7 +12,7 @@
 
 改下 FileNameItem：
 
-![](./images/a25dfe762f9f06f72bffab71800d05c2.png )
+![](./images/a25dfe762f9f06f72bffab71800d05c2.webp )
 
 创建一个 editing 的 state 来记录编辑状态，然后用 ref 来保存 input 的引用。
 
@@ -75,7 +75,7 @@ export const FileNameItem: React.FC<FileNameItemProps> = (props) => {
 
 然后 blur 的时候，切换为非编辑状态：
 
-![](./images/92f1e266de208166a38f21767d1bc1db.png )
+![](./images/92f1e266de208166a38f21767d1bc1db.webp )
 
 ```javascript
 const hanldeInputBlur = () => {
@@ -89,11 +89,11 @@ const hanldeInputBlur = () => {
 
 我们在 FileNameList 组件里做这个，这里加一个回调函数：
 
-![](./images/f8bacb43064bd3ac881107334a32d049.png )
+![](./images/f8bacb43064bd3ac881107334a32d049.webp )
 
 然后在 FileNameList 组件传入：
 
-![](./images/cd256a28ff548e2ad75f5d05fa04cf16.png )
+![](./images/cd256a28ff548e2ad75f5d05fa04cf16.webp )
 
 修改文件名，并切换 selectedFileName 为新的文件名。
 
@@ -143,7 +143,7 @@ export default function FileNameList() {
 ```
 之前我们在 context.Provider 里注入了这个方法：
 
-![](./images/842d3e714cd28fabe008a3526f0ab8c1.png )
+![](./images/842d3e714cd28fabe008a3526f0ab8c1.webp )
 
 它会在 files 里查找旧的 file 信息，去掉后换成新的。
 
@@ -153,7 +153,7 @@ export default function FileNameList() {
 
 然后修改完右面白屏了，打开 devtools 可以看到报错：
 
-![](./images/d1ef85c33f3671d59c9521a9c697f5e6.png )
+![](./images/d1ef85c33f3671d59c9521a9c697f5e6.webp )
 
 因为 App.tsx 文件改名了，那 main.tsx 里引用的路径也得改下：
 
@@ -163,7 +163,7 @@ export default function FileNameList() {
 
 我们再来写下样式:
 
-![](./images/045ca048c916dfb6c5c85638d6a3c898.png )
+![](./images/045ca048c916dfb6c5c85638d6a3c898.webp )
 
 ```css
 .tabs-item-input {
@@ -190,7 +190,7 @@ export default function FileNameList() {
 
 我们加一个 creating 参数：
 
-![](./images/418eb51c606c82d0c7c2e32d23f2b1e8.png )
+![](./images/418eb51c606c82d0c7c2e32d23f2b1e8.webp )
 
 这样就可以由父组件来控制哪个 tab 是编辑状态。
 
@@ -206,7 +206,7 @@ useEffect(() => {
 
 比如我们让最后一个 tab 是编辑状态：
 
-![](./images/02a162f8f9f9a955f9b35f47108126a7.png )
+![](./images/02a162f8f9f9a955f9b35f47108126a7.webp )
 
 可以看到，现在不用双击也是编辑文件名的状态：
 
@@ -214,7 +214,7 @@ useEffect(() => {
 
 我们添加一个 + 按钮
 
-![](./images/0d7dbc9f0bf5919cc8d97f324b7875ae.png )
+![](./images/0d7dbc9f0bf5919cc8d97f324b7875ae.webp )
 
 创建一个 creating 的 state 来保存创建状态。
 
@@ -294,13 +294,13 @@ export default function FileNameList() {
 
 因为我们 addFile 的时候已经做了处理：
 
-![](./images/90de17dc0bb0db8a07222f5d33a989c3.png )
+![](./images/90de17dc0bb0db8a07222f5d33a989c3.webp )
 
 最后还剩下个删除，这个比较简单。
 
 在 FileNameItem 组件，文件名的右边用 svg 画一个 x
 
-![](./images/af4e6fd112d7969f160cbaa987cc40bc.png )
+![](./images/af4e6fd112d7969f160cbaa987cc40bc.webp )
 
 点击的时候回调 onRemove 参数
 
@@ -383,7 +383,7 @@ export const FileNameItem: React.FC<FileNameItemProps> = (props) => {
 ```
 在 FileNameList 组件里处理下：
 
-![](./images/c5f20190fa2446fb4dc3f55de14d48f9.png )
+![](./images/c5f20190fa2446fb4dc3f55de14d48f9.webp )
 
 删除文件，并且把选中的文件名换成 main.tsx
 
@@ -413,15 +413,15 @@ import-map.json 也是不能删除。
 
 我们加一个 readonly 参数：
 
-![](./images/674c3f7e86488d14700bd68fc9816a8c.png )
+![](./images/674c3f7e86488d14700bd68fc9816a8c.webp )
 
-![](./images/25a8f0b9cb97350509bbdf247c8bd9fb.png )
+![](./images/25a8f0b9cb97350509bbdf247c8bd9fb.webp )
 
 非 readonly 状态才展示删除按钮。
 
 同理，也是非 readonly 状态才可以双击编辑：
 
-![](./images/0cd9822683c491ea45f7519c68c93856.png )
+![](./images/0cd9822683c491ea45f7519c68c93856.webp )
 
 ```javascript
 import classnames from 'classnames'
@@ -506,7 +506,7 @@ export const FileNameItem: React.FC<FileNameItemProps> = (props) => {
 ```
 然后 main.tsx、App.tsx、import-map.json 我们就都设为 readonly 了：
 
-![](./images/c07cc33d2110cdc65909607e10720ae6.png )
+![](./images/c07cc33d2110cdc65909607e10720ae6.webp )
 
 ```javascript
 const readonlyFileNames = [ENTRY_FILE_NAME, IMPORT_MAP_FILE_NAME, APP_COMPONENT_FILE_NAME];
@@ -525,7 +525,7 @@ const readonlyFileNames = [ENTRY_FILE_NAME, IMPORT_MAP_FILE_NAME, APP_COMPONENT_
 npm install --save antd
 ```
 
-![](./images/0af4d18ec09e2e8de2047799db636f24.png )
+![](./images/0af4d18ec09e2e8de2047799db636f24.webp )
 
 ```javascript
 {
@@ -551,9 +551,9 @@ npm install --save antd
 ```
 e.stopPropagation 在这里调用，父组件那里就不需要了。
 
-![](./images/783e3cc7d8706a5ddfbda36a36718301.png )
+![](./images/783e3cc7d8706a5ddfbda36a36718301.webp )
 
-![](./images/201e010b199c61e6c4866885ca842bd5.png )
+![](./images/201e010b199c61e6c4866885ca842bd5.webp )
 
 （其实之前我们调用 e.stopPropagation 的位置就不对，应该是组件内处理完 stopPropagation 后再调用回调函数，而不是在父组件里 stopPropagation）
 
@@ -569,7 +569,7 @@ e.stopPropagation 在这里调用，父组件那里就不需要了。
 
 新建一个 Aaa.tsx 组件：
 
-![](./images/b9680adaac5653dd9f3d077ee5ca28f9.png )
+![](./images/b9680adaac5653dd9f3d077ee5ca28f9.webp )
 
 ```javascript
 import './Aaa.css';
@@ -587,7 +587,7 @@ export default Aaa
 ```
 然后创建用到的 Aaa.css
 
-![](./images/893eca0c030b4603d0e3aa1b06af47e6.png )
+![](./images/893eca0c030b4603d0e3aa1b06af47e6.webp )
 
 ```css
 #guang {
@@ -597,7 +597,7 @@ export default Aaa
 ```
 在 App.tsx 里引入下：
 
-![](./images/13eb56c31b136b33603880fa167e7272.png )
+![](./images/13eb56c31b136b33603880fa167e7272.webp )
 
 看下效果：
 

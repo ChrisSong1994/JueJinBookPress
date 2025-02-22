@@ -45,13 +45,13 @@ console.log(renderToString(<App/>));
 ```
 结果如下：
 
-![](./images/1b093e0bb71c437132ab16a54998c907.png )
+![](./images/1b093e0bb71c437132ab16a54998c907.webp )
 
 当然，这里应该有个 http 的 server，把组件 renderToString 的结果拼接成 html 返回。这里省略了。
 
 假设下面就是服务端返回的 SSR 出的 html：
 
-![](./images/bd5ad8df4ceb95fcc2ff6c3f26290099.png )
+![](./images/bd5ad8df4ceb95fcc2ff6c3f26290099.webp )
 
 现在浏览器接收到它后，要再次渲染：
 
@@ -68,7 +68,7 @@ hydrateRoot(document.getElementById('root'), <App/>);
 
 因为浏览器接收到 html 就会把它渲染出来，这时候已经有标签了，只需要把它和组件关联之后，就可以更新和绑定事件了。
 
-![](./images/5b83b97c16e1f681ea4df1336535babd.png )
+![](./images/5b83b97c16e1f681ea4df1336535babd.webp )
 
 hydrate 会在渲染的过程中，不创建 html 标签，而是直接关联已有的。这样就避免了没必要的渲染。
 
@@ -82,20 +82,20 @@ hydrate 会在渲染的过程中，不创建 html 标签，而是直接关联已
 
 其实服务端渲染就是拼接 html 的过程，组件和元素分别有不同的渲染逻辑：
 
-![](./images/e718786a772dd61a4c2597e5e05e7691.png )
+![](./images/e718786a772dd61a4c2597e5e05e7691.webp )
 
 组件的话就传入参数执行：
 
-![](./images/e777890e8d0c31d61e6cb2b956385ec7.png )
+![](./images/e777890e8d0c31d61e6cb2b956385ec7.webp )
 
 元素的话就拼接字符串：
 
-![](./images/1041b50f99e33ec092a857a697f8eab9.png )
-![](./images/41b3ac727ac2e281f6f6f5b7ac0823a8.png )
+![](./images/1041b50f99e33ec092a857a697f8eab9.webp )
+![](./images/41b3ac727ac2e281f6f6f5b7ac0823a8.webp )
 
 这样递归渲染一遍，结果就是字符串了：
 
-![](./images/e1e2097de25c52a5f85709d5b047fbe7.png )
+![](./images/e1e2097de25c52a5f85709d5b047fbe7.webp )
 
 服务端渲染的部分还是挺简单的，再来看客户端渲染的 hydrate 部分：
 
@@ -103,7 +103,7 @@ hydrate 会在渲染的过程中，不创建 html 标签，而是直接关联已
 
 我们组件里写的这些是 jsx 代码：
 
-![](./images/e3dbbc13be342e0bbd6a787db9726294.png )
+![](./images/e3dbbc13be342e0bbd6a787db9726294.webp )
 
 它们编译后会变成类似 React.createElement 这种代码，叫做 render function。
 
@@ -111,27 +111,27 @@ render function 执行的结果是 React Element。
 
 类似这样：
 
-![](./images/a386ae093967f69599a3d62b2401a7c2.png )
+![](./images/a386ae093967f69599a3d62b2401a7c2.webp )
 
 我们也经常把 React Element 叫做 vdom。
 
 react 会把 vdom 转成 fiber 的结构，这个过程叫做 reconcile：
 
-![](./images/2c5e2c0a08d4f94a123453d25757837b.png )
+![](./images/2c5e2c0a08d4f94a123453d25757837b.webp )
 
 在这样的循环里，依次处理 vdom 转 fiber：
 
-![](./images/85900159dd987c6d8f608f3a1ec5d640.png )
+![](./images/85900159dd987c6d8f608f3a1ec5d640.webp )
 
 根据不同的类型，会做不同的处理：
 
 这个处理分为两个阶段： beginWork 和 completeWork
 
-![](./images/f2a6df7d8a5e02b53f873d7856f026c8.png )
+![](./images/f2a6df7d8a5e02b53f873d7856f026c8.webp )
 
 beginWork 里根据不同的 React Element（vdom）类型，做不同的处理：
 
-![](./images/e6289393e0eed9131ba862a81b1e3866.png )
+![](./images/e6289393e0eed9131ba862a81b1e3866.webp )
 
 常见的几个，比如 FunctionComponent 是函数组件、ClassComponent 是类组件，而 HostComponent 是原生标签、HostText 是原生文本节点，HostRoot 是 fiber 树的根，是 reconcile 的处理入口。
 
@@ -141,10 +141,10 @@ beginWork 里根据不同的 React Element（vdom）类型，做不同的处理�
 
 这个阶段也是按照不同 React Element 类型做的不同处理：
 
-![](./images/5f66dd3726ae9fcabf770d677d42e111.png )
+![](./images/5f66dd3726ae9fcabf770d677d42e111.webp )
 
 我们主要看 HostComponent 原生标签部分：
-![](./images/40086ec5a1841ef463527df145e94312.png )
+![](./images/40086ec5a1841ef463527df145e94312.webp )
 
 在这里做的事情就是创建元素、添加子元素、更新属性、然后把这个元素放到 fiber.stateNode 属性上。
 
@@ -158,7 +158,7 @@ beginWork 里根据不同的 React Element（vdom）类型，做不同的处理�
 
 这里创建的元素是挂载在 fiber.stateNode 上的，并且 dom 元素上也记录着它关联的 fiber 节点：
 
-![](./images/ce25e5aff7ab023313085beb8453aa5e.png )
+![](./images/ce25e5aff7ab023313085beb8453aa5e.webp )
 
 那如果是 hydrate 呢？还需要创建新元素么？
 
@@ -166,57 +166,57 @@ beginWork 里根据不同的 React Element（vdom）类型，做不同的处理�
 
 首先，beginWork 会从 HostRoot （fiber 的根节点）开始处理：
 
-![](./images/522f17e61db664be5a4cfa6fbaed50f0.png )
+![](./images/522f17e61db664be5a4cfa6fbaed50f0.webp )
 
 hydrate 的时候会执行 enterHydrationState 函数：
 
-![](./images/18f07c035b423ed53d0343f96fc5d807.png )
+![](./images/18f07c035b423ed53d0343f96fc5d807.webp )
 
 在这里会开启 isHydrating 标记，并记录当前的 dom 节点，也就是 nextHydratableInstance。
 
 找的顺序是先找到 firstChild，然后依次找 nextSibling，很明显，这是一个深度优先搜索的过程，一层层往下遍历：
 
-![](./images/0254ab7ea166eb628e4301a291a949d2.png )
+![](./images/0254ab7ea166eb628e4301a291a949d2.webp )
 
-![](./images/a94f7162514d7b9f09dbc5b011a19f2d.png )
+![](./images/a94f7162514d7b9f09dbc5b011a19f2d.webp )
 
 所以在我们这个案例里，最先找到的是 h1：
 
-![](./images/6a4f36f8c51225c13c8bf29c94276afb.png )
+![](./images/6a4f36f8c51225c13c8bf29c94276afb.webp )
 
-![](./images/e3d91f5718edeb1185375fe1ccd40bf9.png )
+![](./images/e3d91f5718edeb1185375fe1ccd40bf9.webp )
 
 然后 reconcile 的过程中会处理到这个标签，也就是 HostComponent 类型：
 
-![](./images/7643c2081880d11f9ae32ebecbbb2bf8.png )
+![](./images/7643c2081880d11f9ae32ebecbbb2bf8.webp )
 
 这里因为 isHydrating 设置为 true 了，所以会进入 hydrate 逻辑：
 
-![](./images/d6fa47e1b8936543b3ce000dde18b1ba.png )
+![](./images/d6fa47e1b8936543b3ce000dde18b1ba.webp )
 
 这是 nextInstance 就是 h1 标签。
 
-![](./images/043b54991c9c7ce0a447edf9ffee0a48.png )
+![](./images/043b54991c9c7ce0a447edf9ffee0a48.webp )
 
 这里是否可以 hydrate 的逻辑很简单：
 
-![](./images/ec9f87eb729f8745c60d301f5fd39818.png )
+![](./images/ec9f87eb729f8745c60d301f5fd39818.webp )
 
 如果标签名一样就可以 hydrate，也就是直接复用。
 
 把它设置到 fiber.stateNode 上：
 
-![](./images/ef24e5a0306073fe66c1b4d33eac776a.png )
+![](./images/ef24e5a0306073fe66c1b4d33eac776a.webp )
 
 然后找下一个可以 hydrate 的 dom 节点，就找到了文本节点：
 
-![](./images/1f6b7edda424bb2d82f3fcec592be92f.png )
+![](./images/1f6b7edda424bb2d82f3fcec592be92f.webp )
 
 这样在 beginWork 的过程中依次 hydrate，就把 dom 和对应的 fiber 关联了起来。
 
 然后在 completeWork 的时候，就不用再走创建标签的逻辑，因为 dom 已经有了，就可以跳过这部分。
 
-![](./images/41fcb43a84fca2e897736a85eaf991e3.png )
+![](./images/41fcb43a84fca2e897736a85eaf991e3.webp )
 
 这就是 hydrate 的原理。
 

@@ -2,7 +2,7 @@
 
 ﻿基本的布局完成了，我们来添加一些参数：
 
-![](./images/c65e20f3f2d058446c97b0139fc171d3.png )
+![](./images/c65e20f3f2d058446c97b0139fc171d3.webp )
 
 ```javascript
 export interface CalendarProps {
@@ -27,9 +27,9 @@ dateRender 是用来定制日期单元格显示的内容的。
 
 比如加一些日程安排，加一些农历或者节日信息：
 
-![](./images/6e2082e7659642a4885e53ce8bcfaafd.png )
+![](./images/6e2082e7659642a4885e53ce8bcfaafd.webp )
 
-![](./images/048cd10e6316e32a0cadf61da1655f0d.png )
+![](./images/048cd10e6316e32a0cadf61da1655f0d.webp )
 
 dateRender 是整个覆盖，连带日期的数字一起，而 dateInnerContent 只会在日期的数字下添加一些内容。
 
@@ -43,7 +43,7 @@ onChange 是当选择了日期之后会触发的回调。
 
 首先是 className 和 style：
 
-![](./images/64a0541427340b461f1ce1eeb0027412.png )
+![](./images/64a0541427340b461f1ce1eeb0027412.webp )
 
 ```javascript
 function Calendar(props: CalendarProps) {
@@ -69,15 +69,15 @@ npm install classnames
 ```
 它可以传入对象或者数组，会自动合并，返回最终的 className：
 
-![](./images/4d4e72168b50f5b7429365fcd02c8d3d.png )
+![](./images/4d4e72168b50f5b7429365fcd02c8d3d.webp )
 
-![](./images/149debaa0bcd9af14520a1c6b7843248.png )
+![](./images/149debaa0bcd9af14520a1c6b7843248.webp )
 
 当 className 的确定需要一段复杂计算逻辑的时候，就用 classname 这个包。
 
 测试下：
 
-![](./images/57672471e79d6db99336f29604d68987.png )
+![](./images/57672471e79d6db99336f29604d68987.webp )
 
 ```javascript
 import dayjs from 'dayjs';
@@ -95,9 +95,9 @@ export default App;
 
 ```
 
-![](./images/7fdca22cd7f608b4cca84c6e0e50779f.png )
+![](./images/7fdca22cd7f608b4cca84c6e0e50779f.webp )
 
-![](./images/b0b1c6e5f5126f6abf8507bab06c9929.png )
+![](./images/b0b1c6e5f5126f6abf8507bab06c9929.webp )
 
 className 和 style 的处理没问题。
 
@@ -105,7 +105,7 @@ className 和 style 的处理没问题。
 
 在 MonthCalendar 里把它取出来，传入到 renderDays 方法里：
 
-![](./images/d4e6e9b40cdc619f010db3c5da564ad9.png )
+![](./images/d4e6e9b40cdc619f010db3c5da564ad9.webp )
 
 ```javascript
 const {
@@ -118,11 +118,11 @@ renderDays(allDays, dateRender, dateInnerContent)
 ```
 dateRender 的处理也很简单，就是把渲染日期的逻辑换一下：
 
-![](./images/30e93816e5d28e432c4e37266f4fc7f6.png )
+![](./images/30e93816e5d28e432c4e37266f4fc7f6.webp )
 
 在 App.tsx 里传入 dateRender 参数：
 
-![](./images/72ef36ed4b9092ca86fca1fed3f49a76.png )
+![](./images/72ef36ed4b9092ca86fca1fed3f49a76.webp )
 
 ```javascript
 import dayjs from 'dayjs';
@@ -144,24 +144,24 @@ export default App;
 ```
 这样，渲染的内容就换成自定义的了：
 
-![](./images/3fb6badff7e4b1a7785ddadf08b434b1.png )
+![](./images/3fb6badff7e4b1a7785ddadf08b434b1.webp )
 
 不过现在我们没有做内容溢出时的处理：
 
-![](./images/cd5e2e3f1aa5107ff3664f57e137863f.png )
+![](./images/cd5e2e3f1aa5107ff3664f57e137863f.webp )
 
-![](./images/f271430dda8b4aa6e6b6a1855bb99999.png )
+![](./images/f271430dda8b4aa6e6b6a1855bb99999.webp )
 
 加个 overflow: hidden 就好了：
 
-![](./images/61a1586f45ab705007035e6a6593036d.png )
+![](./images/61a1586f45ab705007035e6a6593036d.webp )
 
-![](./images/1983332f1c06ee5814ae4512e2a3c6d1.png )
+![](./images/1983332f1c06ee5814ae4512e2a3c6d1.webp )
 而且之前加 padding 的位置也不对。
 
 改一下渲染日期的逻辑，如果传了 dateRender 那就整个覆盖日期单元格，否则就是只在下面渲染 dateInnerContent 的内容：
 
-![](./images/961ec0e6f2fc68f5c988eb1508a69585.png )
+![](./images/961ec0e6f2fc68f5c988eb1508a69585.webp )
 
 ```javascript
 function renderDays(
@@ -194,13 +194,13 @@ function renderDays(
 ```
 改下对应的样式：
 
-![](./images/822c4970d5b520b41979a7f1b0a4f406.png )
+![](./images/822c4970d5b520b41979a7f1b0a4f406.webp )
 
 把加 padding 的位置改为内部的元素。
 
 测试下：
 
-![](./images/995287f6ce2ca0511807dff040c4a5ad.png )
+![](./images/995287f6ce2ca0511807dff040c4a5ad.webp )
 
 ```javascript
 import dayjs from 'dayjs';
@@ -221,7 +221,7 @@ function App() {
 export default App;
 ```
 
-![](./images/5605d5519c3c799b409a5c37d54b75f9.png )
+![](./images/5605d5519c3c799b409a5c37d54b75f9.webp )
 
 这样，dateRender 和 dateInnerContent 的逻辑就完成了。
 
@@ -345,15 +345,15 @@ export default CalendarLocale;
 
 我们先把上面的周一到周日的文案替换了：
 
-![](./images/0507ef1e4db2a28d048ee68903745bd6.png )
+![](./images/0507ef1e4db2a28d048ee68903745bd6.webp )
 
 在 MonthCalendar 引入中文的资源包：
 
-![](./images/e588594aa3010cc7623acc0fe40300d4.png )
+![](./images/e588594aa3010cc7623acc0fe40300d4.webp )
 
 然后把之前写死的文案，改成按照 key 从资源包中取值的方式：
 
-![](./images/be8e09c88f06f1ebceb709de19086509.png )
+![](./images/be8e09c88f06f1ebceb709de19086509.webp )
 
 ```javascript
 function MonthCalendar(props: MonthCalendarProps) {
@@ -386,15 +386,15 @@ function MonthCalendar(props: MonthCalendarProps) {
 
 现在渲染出来的是这样的：
 
-![](./images/38bb161b9157d7928a4801f0c88e5856.png )
+![](./images/38bb161b9157d7928a4801f0c88e5856.webp )
 
 只要改一下用的资源包：
 
-![](./images/2bf357d7bd762efdd88c9ef56bf841bf.png )
+![](./images/2bf357d7bd762efdd88c9ef56bf841bf.webp )
 
 文案就变了：
 
-![](./images/afb3e1a21896e3e9fc527744e1bbd43c.png )
+![](./images/afb3e1a21896e3e9fc527744e1bbd43c.webp )
 
 这就是国际化。
 
@@ -419,11 +419,11 @@ export default LocaleContext;
 ```
 然后在 Calendar 组件里用 provider 修改 context 的值：
 
-![](./images/ef1966adf2e5a4c60366fed9c05a265a.png )
+![](./images/ef1966adf2e5a4c60366fed9c05a265a.webp )
 
 如果传入了参数，就用指定的 locale，否则，就从浏览器取当前语言：
 
-![](./images/0140d1edf1a2edba87646f2c65854fea.png )
+![](./images/0140d1edf1a2edba87646f2c65854fea.webp )
 
 加一个国际化资源包的入口：
 
@@ -443,7 +443,7 @@ export default allLocales;
 ```
 把 MonthCalendar 组件的 locale 改成从 context 获取的：
 
-![](./images/d153936f2d0a510b62ea3111d7260b36.png )
+![](./images/d153936f2d0a510b62ea3111d7260b36.webp )
 
 ```javascript
 const localeContext = useContext(LocaleContext);
@@ -453,23 +453,23 @@ const CalendarLocale = allLocales[localeContext.locale];
 
 这样，当不指定 locale 时，就会按照浏览器的语言来设置：
 
-![](./images/40eca7af45e914a48d5b05d10d7b6527.png )
+![](./images/40eca7af45e914a48d5b05d10d7b6527.webp )
 
 当指定 locale 时，就会切换为指定语言的资源包：
 
-![](./images/f5661d104bd3e81d110e02eb5fef4344.png )
+![](./images/f5661d104bd3e81d110e02eb5fef4344.webp )
 
-![](./images/14bd6648e44b50a285844e648f04c8ea.png )
+![](./images/14bd6648e44b50a285844e648f04c8ea.webp )
 
 接下来，我们实现 value 和 onChange 参数的逻辑。
 
 在 MonthCalendar 里取出 value 参数，传入 renderDays 方法：
 
-![](./images/79a46a46a40efeff094c2ac0e2f3e177.png )
+![](./images/79a46a46a40efeff094c2ac0e2f3e177.webp )
 
 用 classnames 的 api 来拼接 className，如果是当前日期，就加一个 xxx-selected 的 className：
 
-![](./images/fad5b22cff8003bdb5a21f6049b41e77.png )
+![](./images/fad5b22cff8003bdb5a21f6049b41e77.webp )
 
 ```javascript
 function renderDays(
@@ -510,7 +510,7 @@ function renderDays(
 ```
 添加对应的样式：
 
-![](./images/7cf248e5f998a3b58353dc657dec5d80.png )
+![](./images/7cf248e5f998a3b58353dc657dec5d80.webp )
 
 ```css
 &-selected {
@@ -526,11 +526,11 @@ function renderDays(
 ```
 现在渲染出来是这样的：
 
-![](./images/02692c9280c3a8c6cd6364a64d76219b.png )
+![](./images/02692c9280c3a8c6cd6364a64d76219b.webp )
 
 然后我们加上点击的处理：
 
-![](./images/c256cf5c5f3f9083fa941894c2da16e0.png )
+![](./images/c256cf5c5f3f9083fa941894c2da16e0.webp )
 
 ```javascript
 interface MonthCalendarProps extends CalendarProps {
@@ -539,11 +539,11 @@ interface MonthCalendarProps extends CalendarProps {
 ```
 添加一个 selectHandler 的参数，传给 renderDays 方法。
 
-![](./images/99f733eb7d7e67ef07b20e295b4a4625.png )
+![](./images/99f733eb7d7e67ef07b20e295b4a4625.webp )
 
 renderDays 方法里取出来，给日期添加上点击事件：
 
-![](./images/d40bddd31e6930cd3bba54693bba0bf7.png )
+![](./images/d40bddd31e6930cd3bba54693bba0bf7.webp )
 
 ```javascript
 function renderDays(
@@ -586,7 +586,7 @@ function renderDays(
 ```
 然后这个参数是在 Calendar 组件传进来的：
 
-![](./images/04cceefc5ea57ae7120e438126936a9f.png )
+![](./images/04cceefc5ea57ae7120e438126936a9f.webp )
 
 我们添加一个 state 来存储当前日期，selectHandler 里调用 onChange 的参数，并且修改当前日期。
 
@@ -645,7 +645,7 @@ export default App;
 
 然后实现下 Header 组件里的日期切换：
 
-![](./images/8f71f3e8009bce3b97a041a0cf8cb374.png )
+![](./images/8f71f3e8009bce3b97a041a0cf8cb374.webp )
 
 根据传入的 value 来展示日期，点击上下按钮的时候会调用传进来的回调函数：
 
@@ -679,7 +679,7 @@ export default Header;
 
 然后在 Calendar 组件创建 curMonth 的 state，点击上下按钮的时候，修改月份：
 
-![](./images/52c4a03cbead725649346a0d33d488f9.png )
+![](./images/52c4a03cbead725649346a0d33d488f9.webp )
 
 ```javascript
 function Calendar(props: CalendarProps) {
@@ -732,9 +732,9 @@ function Calendar(props: CalendarProps) {
 
 因为我们之前是拿到 value 所在月份来计算的日历，现在要改成 curMonth 所在的月份。
 
-![](./images/17a72f12c53e480840658d530e784dcd.png )
+![](./images/17a72f12c53e480840658d530e784dcd.webp )
 
-![](./images/2320235024430213af9e4119c9fb9250.png )
+![](./images/2320235024430213af9e4119c9fb9250.webp )
 
 这样，月份切换时，就会显示那个月的日历了：
 
@@ -742,7 +742,7 @@ function Calendar(props: CalendarProps) {
 
 然后我们加上今天按钮的处理：
 
-![](./images/ffc2de4a6a1ac372b833bc58c37621fe.png )
+![](./images/ffc2de4a6a1ac372b833bc58c37621fe.webp )
 
 ```javascript
 import { Dayjs } from "dayjs";
@@ -776,7 +776,7 @@ export default Header;
 
 在 Calendar 里传入 todayHandler：
 
-![](./images/d4f37023f8c6216f67e7cbabc2d41827.png )
+![](./images/d4f37023f8c6216f67e7cbabc2d41827.webp )
 
 ```javascript
 function todayHandler() {
@@ -799,7 +799,7 @@ function todayHandler() {
 
 这个也简单，切换日期的时候顺便修改下 curMonth 就好了：
 
-![](./images/962d36dd3ed2d0f5d1923eaa245b9540.png )
+![](./images/962d36dd3ed2d0f5d1923eaa245b9540.webp )
 
 测试下：
 
@@ -807,7 +807,7 @@ function todayHandler() {
 
 最后，还要加上 Header 的国际化：
 
-![](./images/041564cd9554f9500cb466db40cd4a41.png )
+![](./images/041564cd9554f9500cb466db40cd4a41.webp )
 
 就是把写死的文案，改成丛资源包取值的方式就好了。
 
@@ -836,11 +836,11 @@ function Header(props: HeaderProps) {
 ```
 试试看：
 
-![](./images/704b7222cf2ccceac5d12d4d410038b9.png )
+![](./images/704b7222cf2ccceac5d12d4d410038b9.webp )
 
-![](./images/370e8f12d04f6a7d5bf8910c626f2bd5.png )
+![](./images/370e8f12d04f6a7d5bf8910c626f2bd5.webp )
 
-![](./images/9faee108ffc9af82cab03bf6a35f927f.png )
+![](./images/9faee108ffc9af82cab03bf6a35f927f.webp )
 
 没啥问题。
 
@@ -848,11 +848,11 @@ function Header(props: HeaderProps) {
 
 最后我们再来优化下代码：
 
-![](./images/958549e17c977f3da28f24800ea68943.png )
+![](./images/958549e17c977f3da28f24800ea68943.webp )
 
 重复逻辑可以抽离出个方法：
 
-![](./images/ad34264cce02300835002499f019de9e.png )
+![](./images/ad34264cce02300835002499f019de9e.webp )
 
 ```javascript
 function changeDate(date: Dayjs) {
@@ -863,15 +863,15 @@ function changeDate(date: Dayjs) {
 ```
 渲染逻辑抽离出来的函数，放在组件外需要传很多参数，而这个函数只有这里用，可以移到组件内：
 
-![](./images/b338af785d1c62309f349c9146d30d48.png )
+![](./images/b338af785d1c62309f349c9146d30d48.webp )
 
 这样就不用传那些参数了：
 
-![](./images/6940e866dbf771e29a052ca93d016b6f.png )
+![](./images/6940e866dbf771e29a052ca93d016b6f.webp )
 
 此外，我们的 Calendar 的 value 其实是 defaultValue：
 
-![image.png](./images/c92223c8e13fbefd4900b7f5bfc0dc6b.png )
+![image.png](./images/c92223c8e13fbefd4900b7f5bfc0dc6b.webp )
 
 和迷你 Calendar 一样，我们也用 ahooks 的 useControllableValue 来做。
 
@@ -883,7 +883,7 @@ npm install --save ahooks
 
 把 useState 换成 ahooks 的 useControllableValue：
 
-![image.png](./images/e36011e1ea01384aeee10789bf2e3a49.png )
+![image.png](./images/e36011e1ea01384aeee10789bf2e3a49.webp )
 
 ```javascript
 export interface CalendarProps {
@@ -909,7 +909,7 @@ const [curMonth, setCurMonth] = useState<Dayjs>(curValue);
 ```
 用到 value 的地方加一下 ?：
 
-![image.png](./images/534df3b084804d4cf2c7826f9fe24d3e.png )
+![image.png](./images/534df3b084804d4cf2c7826f9fe24d3e.webp )
 
 这样就同时支持受控非受控，也就是 value 和 defaultValue 了。
 

@@ -12,7 +12,7 @@
 
 在 antd 文档里有专门一个分类：
 
-![](./images/d0e5ea092bd35834320feee246d7ac2a.png )
+![](./images/d0e5ea092bd35834320feee246d7ac2a.webp )
 
 今天我们来写下其中的 Space 组件。
 
@@ -22,7 +22,7 @@
 npx create-react-app --template=typescript space-component
 ```
 
-![](./images/b149423c91a394110fde33d9c34cbfc1.png )
+![](./images/b149423c91a394110fde33d9c34cbfc1.webp )
 
 安装 antd：
 
@@ -62,7 +62,7 @@ npm run start
 
 渲染出来是这样的：
 
-![](./images/af8d2fd8a8a59f879f5768b498a9ca7a.png )
+![](./images/af8d2fd8a8a59f879f5768b498a9ca7a.webp )
 
 然后我们用 antd 的 Space 组件包一下：
 
@@ -81,23 +81,23 @@ export default function App() {
 }
 ```
 
-![](./images/efe8eea360ad04fc0599b7e6dfd25870.png )
+![](./images/efe8eea360ad04fc0599b7e6dfd25870.webp )
 
 方向变为水平了，并且有个默认间距。
 
 改为竖直试一下：
 
-![](./images/5ef47fc521db7695f7e69830e39404da.png )
+![](./images/5ef47fc521db7695f7e69830e39404da.webp )
 
 水平和竖直的间距都可以通过 size 来设置：
 
-![](./images/13b3804024256654413af62c308cbc82.png )
+![](./images/13b3804024256654413af62c308cbc82.webp )
 
 可以设置 large、middle、small 或者任意数值。
 
 多个子节点可以设置对齐方式，比如 start、end、center 或者 baseline：
 
-![](./images/77ba890e28d12a6693e39c317ea0f37a.png )
+![](./images/77ba890e28d12a6693e39c317ea0f37a.webp )
 
 ```javascript
 import { Space } from 'antd';
@@ -120,11 +120,11 @@ export default function App() {
 
 此外子节点过多可以设置换行：
 
-![](./images/1d5a7cd31f0e5783776283d8dba84eda.png )
+![](./images/1d5a7cd31f0e5783776283d8dba84eda.webp )
 
 也可以用数组分别设置行、列的间距：
 
-![](./images/50180af9b29ec28adfff02a52a23d08a.png )
+![](./images/50180af9b29ec28adfff02a52a23d08a.webp )
 
 最后，它还可以设置 split 分割线部分：
 
@@ -148,7 +148,7 @@ export default function App() {
 }
 ```
 
-![](./images/93200a19e3961f8ca74d6ea3389ea83f.png )
+![](./images/93200a19e3961f8ca74d6ea3389ea83f.webp )
 
 此外，你也可以不直接设置 size，而是通过 ConfigProvider 修改 context 中的默认值：
 
@@ -169,7 +169,7 @@ export default function App() {
 }
 ```
 
-![](./images/2981f11000cbe6bc559baae9adaac3ab.png )
+![](./images/2981f11000cbe6bc559baae9adaac3ab.webp )
 
 很明显，Space 内部会读取 context 中的 size 值。
 
@@ -199,7 +199,7 @@ export default function App() {
 
 可以看到，两个 Space 的间距设置都生效了。
 
-![](./images/cf8fbc823b33ddb6b826f222563be15e.png )
+![](./images/cf8fbc823b33ddb6b826f222563be15e.webp )
 
 这就是 antd 的 Space 组件的全部用法，回顾下这几个参数和用法：
 
@@ -220,7 +220,7 @@ export default function App() {
 
 打开 devtools 看下它的 dom：
 
-![](./images/a6d8509fcfb7f9865b5c6359c0b7b9a5.png )
+![](./images/a6d8509fcfb7f9865b5c6359c0b7b9a5.webp )
 
 就是对每个 child 包一层 div，然后加上不同的 className 就好了。
 
@@ -267,13 +267,13 @@ export default function App() {
   </div>
 }
 ```
-![](./images/01e035317dbfac536df64e3efd9831e5.png )
+![](./images/01e035317dbfac536df64e3efd9831e5.webp )
 
 这样，组件用起来就和 div 一模一样。
 
 我们只要把其他参数透传给 Space 组件里的 div 即可：
 
-![](./images/23fec5a8cd24dd82fef41cafe14a68d0.png )
+![](./images/23fec5a8cd24dd82fef41cafe14a68d0.webp )
 
 然后把其他 props 也声明了：
 
@@ -302,11 +302,11 @@ size 可以传单个值代表横竖间距，或者传一个数组，分别设置
 
 我们传入的是这样的 children：
 
-![](./images/1e2263e7d7e2608a5670a26c3d0ce6e4.png )
+![](./images/1e2263e7d7e2608a5670a26c3d0ce6e4.webp )
 
 但是渲染出来的包了一层 div：
 
-![](./images/7ee41828de14496b28392f10dd63baf9.png )
+![](./images/7ee41828de14496b28392f10dd63baf9.webp )
 
 这是怎么做到的呢？
 
@@ -314,7 +314,7 @@ size 可以传单个值代表横竖间距，或者传一个数组，分别设置
 
 [文档里](https://react.dev/reference/react/Children)可以看到这些 api：
 
-![](./images/dce10d4465d3c8f1369f7f7452f91287.png )
+![](./images/dce10d4465d3c8f1369f7f7452f91287.webp )
 
 很明显，就是用于 children 的遍历、修改、计数等操作的。
 
@@ -353,7 +353,7 @@ export default function App() {
 ```
 分别打印 props.children 和  Children.toArray 处理之后的 children：
 
-![](./images/7339315a652a48e94a9401afb40a5307.png )
+![](./images/7339315a652a48e94a9401afb40a5307.webp )
 
 可以看到，React.Children.toArray 对 children 做扁平化。
 
@@ -381,7 +381,7 @@ export default function App() {
 }
 ```
 
-![](./images/8c37c8a09230750e5b94a804d5b48d15.png )
+![](./images/8c37c8a09230750e5b94a804d5b48d15.webp )
 
 toArray 之后就不会了：
 ```javascript
@@ -407,7 +407,7 @@ export default function App() {
   </Test>
 }
 ```
-![](./images/51f8325dcb77aad0504d822920ed12a9.png )
+![](./images/51f8325dcb77aad0504d822920ed12a9.webp )
 
 可以看到，可以排序了。
 
@@ -425,7 +425,7 @@ root.render(<App />);
 
 我们遍历下 Children：
 
-![](./images/43243cc9e74c65bb99595eaeb845152e.png )
+![](./images/43243cc9e74c65bb99595eaeb845152e.webp )
 
 ```javascript
 import React from 'react';
@@ -488,7 +488,7 @@ export default function App() {
 ```
 可以看到，children 修改成功了：
 
-![](./images/454e34e900f5682d64b418073dcc2d2e.png )
+![](./images/454e34e900f5682d64b418073dcc2d2e.webp )
 
 然后我们引入 classnames 包处理下其它 className：
 
@@ -496,7 +496,7 @@ export default function App() {
 npm install --save classnames
 ```
 
-![](./images/f85600495e125ff1c05e39eaa5612a08.png )
+![](./images/f85600495e125ff1c05e39eaa5612a08.webp )
 
 根据 direction、align 的 props 来生成 className：
 
@@ -579,7 +579,7 @@ export default function App() {
 ```
 也生效了：
 
-![](./images/d7e357ae3d220a5db9a3cb3014b56800.png )
+![](./images/d7e357ae3d220a5db9a3cb3014b56800.webp )
 
 那接下来的事情不就很简单了么，只要实现这些 className 的样式就好了。
 
@@ -623,7 +623,7 @@ Space/index.scss：
 
 在 Space 组件引入：
 
-![](./images/d7209e819d68f06731a9e6efd665a73d.png )
+![](./images/d7209e819d68f06731a9e6efd665a73d.webp )
 
 测试下：
 
@@ -640,16 +640,16 @@ export default function App() {
 }
 ```
 
-![](./images/4bf3c543cd4c032c2899ef63cd217540.png )
+![](./images/4bf3c543cd4c032c2899ef63cd217540.webp )
 
 没啥问题。
 
 接下来是根据传入的 size 来计算间距。
 
 
-![image.png](./images/63d065f0959917c6448315f309cb4d8e.png )
+![image.png](./images/63d065f0959917c6448315f309cb4d8e.webp )
 
-![](./images/2958462e32f4b9a798019006308b40a2.png )
+![](./images/2958462e32f4b9a798019006308b40a2.webp )
 
 如果 size 不是数组，就要扩展成数组，然后再判断是不是 small、middle、large 这些，是的话就变成具体的值。
 
@@ -782,13 +782,13 @@ export default function App() {
   background: green;
 }
 ```
-![](./images/45e217095910409f1c757df04e6ef8b3.png )
+![](./images/45e217095910409f1c757df04e6ef8b3.webp )
 
 可以看到，gap、flex-wrap 的设置都是对的。
 
 接下来，处理下 split 参数：
 
-![](./images/c6981fa8f7985379cbcf670c79c49954.png )
+![](./images/c6981fa8f7985379cbcf670c79c49954.webp )
 
 ```javascript
 const nodes = childNodes.map((child: any, i) => {
@@ -810,7 +810,7 @@ const nodes = childNodes.map((child: any, i) => {
 
 此外，这个组件还会从 ConfigProvider 中取值：
 
-![](./images/c29f4289c1a1a97e67f255fc1adf394f.png )
+![](./images/c29f4289c1a1a97e67f255fc1adf394f.webp )
 
 前面测试过，当有 ConfigProvider 包裹的时候，就不用单独设置 size 了，会直接用那里的配置。
 
@@ -832,7 +832,7 @@ export const ConfigContext = React.createContext<ConfigContextType>({});
 
 在 Space 组件里用 useContext 读取它：
 
-![](./images/b0d707e1ffc1a441b64db5b86e1c4ce4.png )
+![](./images/b0d707e1ffc1a441b64db5b86e1c4ce4.webp )
 
 这样，size 默认值会优先用 context 里的值。
 
@@ -879,7 +879,7 @@ export default function App() {
 }
 ```
 
-![](./images/ba84994621fdcb692649d38763a604d6.png )
+![](./images/ba84994621fdcb692649d38763a604d6.webp )
 
 没啥问题。
 
@@ -887,15 +887,15 @@ export default function App() {
 
 antd 的是这样的：
 
-![](./images/aa917c46a23502c2ca96f5981f912cfb.png )
+![](./images/aa917c46a23502c2ca96f5981f912cfb.webp )
 
 我们的是这样的：
 
-![](./images/42544210fdae0eb1d81705d17cd3eb58.png )
+![](./images/42544210fdae0eb1d81705d17cd3eb58.webp )
 
 很明显需要再包一层：
 
-![](./images/abb2684f22610f73635a2de51969775d.png )
+![](./images/abb2684f22610f73635a2de51969775d.webp )
 
 ```javascript
 interface ConfigProviderProps extends PropsWithChildren<ConfigContextType>{

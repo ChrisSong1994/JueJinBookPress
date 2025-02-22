@@ -7,7 +7,7 @@
 ```
 npx create-vite audio-flow
 ```
-![image.png](./images/3443501fe665f3092268d99964314e53.png )
+![image.png](./images/3443501fe665f3092268d99964314e53.webp )
 
 进入项目，安装下 reactflow
 
@@ -18,7 +18,7 @@ npm install --save @xyflow/react
 去掉 index.css
 
 
-![image.png](./images/d6f1c33ad1de0dee1c03e042098a71ad.png )
+![image.png](./images/d6f1c33ad1de0dee1c03e042098a71ad.webp )
 
 然后改下 App.tsx
 
@@ -64,7 +64,7 @@ export default function App() {
 ```
 npm run dev
 ```
-![image.png](./images/a05eafb355ed09edbbfb299557f1fa75.png )
+![image.png](./images/a05eafb355ed09edbbfb299557f1fa75.webp )
 
 
 ![2024-08-29 14.42.48.gif](./images/9e8802681541b8b1ff7d97f9091442c7.gif )
@@ -73,13 +73,13 @@ npm run dev
 
 加个 fitView 就好了：
 
-![image.png](./images/a81fb07e84e57352f4e970e00b75fc74.png )
+![image.png](./images/a81fb07e84e57352f4e970e00b75fc74.webp )
 
-![image.png](./images/45f94ac0416c5f2e10df9c7020d2f8bb.png )
+![image.png](./images/45f94ac0416c5f2e10df9c7020d2f8bb.webp )
 
 接下来分别实现这三种自定义节点：
 
-![image.png](./images/1fe54e8df6b51005bdf09a303294f76e.png )
+![image.png](./images/1fe54e8df6b51005bdf09a303294f76e.webp )
 
 我们用 tailwind 来写样式。
 
@@ -93,7 +93,7 @@ npx tailwindcss init -p
 
 会生成 tailwind 和 postcss 配置文件：
 
-![](./images/c8d394b151bb664295c8a4b03eccc1f5.png )
+![](./images/c8d394b151bb664295c8a4b03eccc1f5.webp )
 
 修改下 content 配置，也就是从哪里提取 className：
 
@@ -121,19 +121,19 @@ tailwind 会提取 className 之后按需生成最终的 css。
 ```
 在 main.tsx 里引入：
 
-![image.png](./images/41d7800b5970276cbd7a409792d2d25e.png )
+![image.png](./images/41d7800b5970276cbd7a409792d2d25e.webp )
 
 如果你没安装 tailwind 插件，需要安装一下：
 
-![](./images/c59ffea76ccbff5cb7b305d3ff0baaf1.png )
+![](./images/c59ffea76ccbff5cb7b305d3ff0baaf1.webp )
 
 这样在写代码的时候就会提示 className 和对应的样式值：
 
-![](./images/cc0cd0111d5090efe200a0cc230d3b12.png )
+![](./images/cc0cd0111d5090efe200a0cc230d3b12.webp )
 
 不知道 className 叫啥的样式，还可以在 [tailwind 文档](https://www.tailwindcss.cn/docs/border-width)里搜：
 
-![](./images/c69e7e6253a5c8ba4175e88a30a6f63b.png )
+![](./images/c69e7e6253a5c8ba4175e88a30a6f63b.webp )
 
 接下来创建振荡器的自定义节点：
 
@@ -185,7 +185,7 @@ export function OscillatorNode({ id, data }: OscillatorNodeProps) {
 
 用一下：
 
-![image.png](./images/5756d556905e10544b8f09f3bdbdbeae.png )
+![image.png](./images/5756d556905e10544b8f09f3bdbdbeae.webp )
 
 ```javascript
 import { addEdge, Background, BackgroundVariant, Connection, Controls, MiniMap, OnConnect, ReactFlow, useEdgesState, useNodesState } from '@xyflow/react';
@@ -230,7 +230,7 @@ export default function App() {
 }
 ```
 看下效果：
-![image.png](./images/f9d845fd7b662cbfe7a371b22e113577.png )
+![image.png](./images/f9d845fd7b662cbfe7a371b22e113577.webp )
 
 可以看到，节点替换为了我们自定义的节点，并且根据传入的 data 做了表单回显。
 
@@ -276,7 +276,7 @@ export function VolumeNode({ id, data }: VolumeNodeProps) {
 
 用一下：
 
-![](./images/973e777b75688e8764713b28981b4773.png )
+![](./images/973e777b75688e8764713b28981b4773.webp )
 
 ```javascript
 const initialNodes = [
@@ -292,13 +292,13 @@ const nodeTypes = {
 ```
 看下效果：
 
-![image.png](./images/91dee195ce3e9788992fc03a4f987bb1.png )
+![image.png](./images/91dee195ce3e9788992fc03a4f987bb1.webp )
 
 可以看到，音量节点也渲染出来了。
 
 然后来写最后一个节点：输出节点
 
-![image.png](./images/1fe54e8df6b51005bdf09a303294f76e.png )
+![image.png](./images/1fe54e8df6b51005bdf09a303294f76e.webp )
 
 components/OutputNode.tsx
 
@@ -335,7 +335,7 @@ export function OutputNode() {
 ```
 用一下：
 
-![image.png](./images/813119abffa893173f2f9ddffc910821.png )
+![image.png](./images/813119abffa893173f2f9ddffc910821.webp )
 
 加一个节点类型，然后加一个节点、一条边。
 
@@ -359,7 +359,7 @@ const nodeTypes = {
 
 看下效果：
 
-![image.png](./images/3d2cf0b7577a08ea1cf7d4bf41fb5864.png )
+![image.png](./images/3d2cf0b7577a08ea1cf7d4bf41fb5864.webp )
 
 这样，三种自定义节点就都画出来了。
 

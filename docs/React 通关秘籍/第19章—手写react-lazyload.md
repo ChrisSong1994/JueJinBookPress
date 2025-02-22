@@ -12,7 +12,7 @@
 npx create-vite
 ```
 
-![](./images/e8242875dce9a1ecaf58250761c9d79c.png )
+![](./images/e8242875dce9a1ecaf58250761c9d79c.webp )
 
 进入项目，安装 react-lazyload
 
@@ -29,7 +29,7 @@ prop-types 是 react-lazyload 用到的包。
 
 去掉 index.css 和 StrictMode：
 
-![](./images/0b9d10cc207b90ddf43e6088098be98a.png )
+![](./images/0b9d10cc207b90ddf43e6088098be98a.webp )
 
 然后改下 App.tsx
 
@@ -82,7 +82,7 @@ export default function App() {
 ```
 在超出一屏的位置加载两张图片，用 LazyLoad 包裹。
 
-![](./images/983503b1533f378f7d7416e9eab4b0b5.png )
+![](./images/983503b1533f378f7d7416e9eab4b0b5.webp )
 
 可以看到，最开始展示 placeholder 的内容。
 
@@ -109,7 +109,7 @@ export default function Guang() {
 ```
 然后在 App.tsx 里异步引入：
 
-![](./images/31aec32f295ce3a559aa9f58403ae181.png )
+![](./images/31aec32f295ce3a559aa9f58403ae181.webp )
 
 ```javascript
 const LazyGuang = React.lazy(() => import('./Guang'));
@@ -119,16 +119,16 @@ import() 包裹的模块会单独打包，然后 React.lazy 是用到这个组�
 
 试下效果：
 
-![](./images/cd725b8b55c10f1d65f37cc8d33ca725.png )
+![](./images/cd725b8b55c10f1d65f37cc8d33ca725.webp )
 
 可以看到，确实是异步下载了这个组件并渲染出来。
 
 那如果我们想组件进入可视区域再加载呢？
 
 这样：
-![](./images/cf573a7d5605d9b04b86f92a412b9bac.png )
+![](./images/cf573a7d5605d9b04b86f92a412b9bac.webp )
 
-![](./images/895ecce501baec318ffc0f336417b85c.png )
+![](./images/895ecce501baec318ffc0f336417b85c.webp )
 
 react-lazyload 是进入可视区域才会把内容替换为 LazyGuang，而这时候才会去下载组件对应的代码。
 
@@ -140,7 +140,7 @@ react-lazyload 是进入可视区域才会把内容替换为 LazyGuang，而这�
 
 你还可以设置 offset，也就是不用到可视区域，如果 offset 设置 200，那就是距离 200px 到可视区域就触发加载：
 
-![](./images/728a290e4dbc06e6dd90ae9a66480e49.png )
+![](./images/728a290e4dbc06e6dd90ae9a66480e49.webp )
 
 ![](./images/877dc0fe45f7d4f5af7b4fb9a3983097.gif )
 
@@ -217,7 +217,7 @@ visible 的时候展示 children，否则展示 placeholder。
 
 然后补充下 IntersectionObserver 监听 div 进入可视区域的情况：
 
-![](./images/4bb1b80da51dec27674e33c87895d7ee.png )
+![](./images/4bb1b80da51dec27674e33c87895d7ee.webp )
 ```javascript
 const elementObserver = useRef<IntersectionObserver>();
 
@@ -271,9 +271,9 @@ function lazyLoadHandler (entries: IntersectionObserverEntry[]) {
 
 测试下：
 
-![](./images/647fe2c2ea70f09fbc29a1847f40b202.png )
+![](./images/647fe2c2ea70f09fbc29a1847f40b202.webp )
 
-![](./images/1037550d72d0af73bc941f30f2650a03.png )
+![](./images/1037550d72d0af73bc941f30f2650a03.webp )
 
 可以看到，首先是图片加载，然后是组件加载，这说明 offset 生效了：
 

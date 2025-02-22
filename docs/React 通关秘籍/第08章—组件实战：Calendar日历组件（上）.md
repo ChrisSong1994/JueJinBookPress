@@ -14,7 +14,7 @@
 npx create-react-app --template typescript calendar-component
 ```
 
-![](./images/8765146ed2a1de65d08490661341d7cc.png )
+![](./images/8765146ed2a1de65d08490661341d7cc.webp )
 
 先不着急写，我们先理一下思路：
 
@@ -24,7 +24,7 @@ npx create-react-app --template typescript calendar-component
 
 比如这个月：
 
-![](./images/e77dc90af6e6440b5805db26c3ddb58a.png )
+![](./images/e77dc90af6e6440b5805db26c3ddb58a.webp )
 
 我们知道这个月有 30 天，第一天是周三，那就知道如何显示这个月的日历了。
 
@@ -56,7 +56,7 @@ console.log(dayjs('2023-11-1').endOf('month').format('YYYY-MM-DD'));
 
 跑一下：
 
-![](./images/f20450650effd4ac67d90974fab3c648.png )
+![](./images/f20450650effd4ac67d90974fab3c648.webp )
 
 这次 Calendar 组件我们用 dayjs 的 api 来实现。
 
@@ -64,7 +64,7 @@ console.log(dayjs('2023-11-1').endOf('month').format('YYYY-MM-DD'));
 
 比如 antd 的：
 
-![](./images/6e8958a1a8f23865f68bb63210cc3bd2.png )
+![](./images/6e8958a1a8f23865f68bb63210cc3bd2.webp )
 
 下面正式来写 Calendar 组件。
 
@@ -119,11 +119,11 @@ export default App;
 npm run start
 ```
 
-![](./images/75d0e65492f27e9a73dbbf3ffa79d765.png )
+![](./images/75d0e65492f27e9a73dbbf3ffa79d765.webp )
 
 这样，sass 就引入成功了。
 
-![](./images/1a2faa3bd2b5d770d70c769b55d5fb93.png )
+![](./images/1a2faa3bd2b5d770d70c769b55d5fb93.webp )
 
 这个组件可以分为 Header 和 MonthCalendar 两个组件。
 
@@ -194,17 +194,17 @@ export default Calendar;
 ```
 这样，上面的 week list 就完成了：
 
-![](./images/d1b48ffc21fb99daaab1be2adb8c43e0.png )
+![](./images/d1b48ffc21fb99daaab1be2adb8c43e0.webp )
 
 然后是下面部分：
 
-![](./images/96d520095c4bfbc1acff8f7d4fa775f4.png )
+![](./images/96d520095c4bfbc1acff8f7d4fa775f4.webp )
 
 思路前面分析过了，就是拿到当前月份的天数和第一天是星期几，前后用上个月和下个月的日期填充。
 
 我们给 Calendar 组件加一个 value 的 props，也就是当前日期。
 
-![](./images/80f0c77b7742a3432ecd5487eca59396.png )
+![](./images/80f0c77b7742a3432ecd5487eca59396.webp )
 
 value 我们选择用 Dayjs 类型，当然，用 Date 也可以。
 
@@ -228,7 +228,7 @@ export default Calendar;
 ```
 在 MonthCalendar 也加上 props：
 
-![](./images/5e1c85d1638cc08f18f4cdc15107faa9.png )
+![](./images/5e1c85d1638cc08f18f4cdc15107faa9.webp )
 
 ```javascript
 interface MonthCalendarProps extends CalendarProps {
@@ -238,13 +238,13 @@ interface MonthCalendarProps extends CalendarProps {
 
 在 App.tsx 传入参数：
 
-![](./images/5b3fcc274a9acd40c8a8fa938793a9c3.png )
+![](./images/5b3fcc274a9acd40c8a8fa938793a9c3.webp )
 
 这样，MonthCalendar 就可以根据传入的 value 拿到当前的月份信息了。
 
 我们加一个 getAllDays 方法，打个断点：
 
-![](./images/f4674409c4da92bd3487e60f24c843bb.png )
+![](./images/f4674409c4da92bd3487e60f24c843bb.webp )
 
 ```javascript
 function getAllDays(date: Dayjs) {
@@ -260,13 +260,13 @@ const allDays = getAllDays(props.value);
 ```
 然后创建个调试配置：
 
-![](./images/bef57801cc7d56d8f9bc92c3a562d34d.png )
+![](./images/bef57801cc7d56d8f9bc92c3a562d34d.webp )
 
-![](./images/26a990f0d6cd6417a8e76990ec430bff.png )
+![](./images/26a990f0d6cd6417a8e76990ec430bff.webp )
 
 点击调试启动：
 
-![](./images/a8261d2753ff24ccff2219886f0cea9a.png )
+![](./images/a8261d2753ff24ccff2219886f0cea9a.webp )
 
 可以看到，拿到了这个月的天数，是 30 天。
 
@@ -274,7 +274,7 @@ const allDays = getAllDays(props.value);
 
 不管这个月有多少天，我们日历都是固定 6 * 7 个日期：
 
-![](./images/f841454a9bcddcd79cdd6e80d1ec3a35.png )
+![](./images/f841454a9bcddcd79cdd6e80d1ec3a35.webp )
 
 所以创建一个 6 * 7 个元素的数组，这个月第一天之前的用第一天的日期 -1、-2、-3 这样计算出来：
 
@@ -299,17 +299,17 @@ function getAllDays(date: Dayjs) {
 
 11 月 1 日是星期三：
 
-![](./images/92bf0891f987a8ffd324c2c0440f4b17.png )
+![](./images/92bf0891f987a8ffd324c2c0440f4b17.webp )
 
 那也就是要在之前填充星期日、星期一、星期二，这 3 天的日期：
 
-![](./images/bb7e399cdbe074abde64c2589f0d124b.png )
+![](./images/bb7e399cdbe074abde64c2589f0d124b.webp )
 
 这里用 dayjs 的 subtract 方法就可以计算当前日期 -1、-2、-3 的日期。
 
 再写一段逻辑，点击刷新：
 
-![](./images/9642dec8fb229f49b6286999de711838.png )
+![](./images/9642dec8fb229f49b6286999de711838.webp )
 
 ```javascript
 function getAllDays(date: Dayjs) {
@@ -339,13 +339,13 @@ function getAllDays(date: Dayjs) {
 
 hover 上去可以看到，计算的结果是对的：
 
-![](./images/d19eba92deab24bc89141aa3029a3de3.png )
+![](./images/d19eba92deab24bc89141aa3029a3de3.webp )
 
-![](./images/e5d1ceae9d73ae3a19e118368d7b487e.png )
+![](./images/e5d1ceae9d73ae3a19e118368d7b487e.webp )
 
 然后把 format 删掉，这里不需要格式化。再添加一个属性标识是否是当前月份的。
 
-![](./images/034be3ade330b7596ebf6b78b5d9d7f8.png )
+![](./images/034be3ade330b7596ebf6b78b5d9d7f8.webp )
 
 ```javascript
 function getAllDays(date: Dayjs) {
@@ -378,9 +378,9 @@ function getAllDays(date: Dayjs) {
 
 返回值处打个断点，刷新下：
 
-![](./images/f7bcd1245f486e117016b14acd831f84.png )
+![](./images/f7bcd1245f486e117016b14acd831f84.webp )
 
-![](./images/9164c6ecd508a350b19971c28291a89d.png )
+![](./images/9164c6ecd508a350b19971c28291a89d.webp )
 
 当前月份的日期、之前几天的日期、之后几天的日期都有了。
 
@@ -390,14 +390,14 @@ function getAllDays(date: Dayjs) {
 
 再声明下返回的数组的类型：
 
-![](./images/bcac31702423ca8a5ef933ac7a33e581.png )
+![](./images/bcac31702423ca8a5ef933ac7a33e581.webp )
 
 ```javascript
 const daysInfo: Array<{date: Dayjs, currentMonth: boolean}> = new Array(6 * 7);
 ```
 数据准备好了，接下来就可以渲染了：
 
-![](./images/3b3b07f94e82c111aa26a9d97eaffb01.png )
+![](./images/3b3b07f94e82c111aa26a9d97eaffb01.webp )
 
 ```javascript
 <div className="calendar-month-body">
@@ -424,7 +424,7 @@ function renderDays(days: Array<{ date: Dayjs, currentMonth: boolean}>) {
 
 scss 部分如下：
 
-![image.png](./images/bae3fda052f3afe608349c8c5dcffc9d.png )
+![image.png](./images/bae3fda052f3afe608349c8c5dcffc9d.webp )
 
 ```scss
 &-body {
@@ -444,11 +444,11 @@ scss 部分如下：
 
 渲染出来是这样的：
 
-![](./images/c0f4b624bccafd372ef17edf586b9685.png )
+![](./images/c0f4b624bccafd372ef17edf586b9685.webp )
 
 然后当前月和其他月份的日期加上个不同颜色区分：
 
-![](./images/0ea3f277d7000677feb8c08021b10fd4.png )
+![](./images/0ea3f277d7000677feb8c08021b10fd4.webp )
 
 ```javascript
 function renderDays(days: Array<{ date: Dayjs, currentMonth: boolean}>) {
@@ -466,7 +466,7 @@ function renderDays(days: Array<{ date: Dayjs, currentMonth: boolean}>) {
     return rows.map(row => <div className="calendar-month-body-row">{row}</div>)
 }
 ```
-![](./images/546458d65e7de73f92f7d5c20334edb8.png )
+![](./images/546458d65e7de73f92f7d5c20334edb8.webp )
 
 ```scss
 color: #ccc;
@@ -477,11 +477,11 @@ color: #ccc;
 
 这样，我们的日历就基本完成了：
 
-![](./images/50fc048e6c17034413aec8856e2a02d3.png )
+![](./images/50fc048e6c17034413aec8856e2a02d3.webp )
 
 切换日期是在 Header 部分做的，接下来写下这部分：
 
-![](./images/d9006cca8af2af30dbcbe00893b48793.png )
+![](./images/d9006cca8af2af30dbcbe00893b48793.webp )
 
 写下 src/Calendar/Header.tsx：
 
@@ -556,7 +556,7 @@ export default Header;
 
 渲染出来是这样的：
 
-![](./images/9d80dbeab99e68c4b93d112823850878.png )
+![](./images/9d80dbeab99e68c4b93d112823850878.webp )
 
 这样我们就完成了布局部分。
 

@@ -8,7 +8,7 @@ Storybook 是非常流行的用来构建组件文档的工具。
 
 现在有 80k 的 star 了：
 
-![](./images/3b7b345cbbbea2638f9be0ac0675c196.png )
+![](./images/3b7b345cbbbea2638f9be0ac0675c196.webp )
 
 那 Storybook 都提供了啥功能呢？
 
@@ -18,7 +18,7 @@ Storybook 是非常流行的用来构建组件文档的工具。
 npx create-react-app --template typescript sb-test
 ```
 
-![](./images/5a9c057ec4c7b277cd0b5ffc751154ab.png )
+![](./images/5a9c057ec4c7b277cd0b5ffc751154ab.webp )
 
 用 cra 创建个 react 项目。
 
@@ -27,13 +27,13 @@ npx create-react-app --template typescript sb-test
 ```
 npx storybook@latest init
 ```
-![](./images/a33e3848111fda7dc624d678aed67bcf.png )
+![](./images/a33e3848111fda7dc624d678aed67bcf.webp )
 
 打印的日志告诉你 storybook init 是在你的项目里添加 storybook 的最简单方式。
 
 它会在你的 package.json 添加一个 storybook 命令：
 
-![](./images/4cb050447a0ae887217569d5f1c61530.png )
+![](./images/4cb050447a0ae887217569d5f1c61530.webp )
 
 执行 npm run storybook，就可以看到这样文档：
 
@@ -41,7 +41,7 @@ npx storybook@latest init
 npm run storybook
 ```
 
-![](./images/a96bef330f6233a5fc9e86053fb1c7e4.png )
+![](./images/a96bef330f6233a5fc9e86053fb1c7e4.webp )
 
 这就是 storybook 生成的组件文档。
 
@@ -49,7 +49,7 @@ npm run storybook
 
 我们可以用它来了解下 storybook 的功能。
 
-![](./images/d90365d1a9b30fb810f0cef8d9ee2017.png )
+![](./images/d90365d1a9b30fb810f0cef8d9ee2017.webp )
 
 storybook init 在项目里加了 2 个目录： .storybook 和 src/stories
 
@@ -57,11 +57,11 @@ storybook init 在项目里加了 2 个目录： .storybook 和 src/stories
 
 Button.tsx 就是传入几个参数，渲染出一个 button：
 
-![](./images/9b49a9d95f5c8c5c4b08b7aa4f3386fa.png )
+![](./images/9b49a9d95f5c8c5c4b08b7aa4f3386fa.webp )
 
 然后 Button.stories.tsx 里导出了几种 Button 的 props：
 
-![](./images/d66cfadaef02d838f1ac72046500302e.png )
+![](./images/d66cfadaef02d838f1ac72046500302e.webp )
 
 导出的这几个 Story 类型的对象是啥呢？
 
@@ -73,7 +73,7 @@ Button.tsx 就是传入几个参数，渲染出一个 button：
 
 我们加一个 Story 试试：
 
-![](./images/f6b778545c87b5fb3ec9d4a856089265.png )
+![](./images/f6b778545c87b5fb3ec9d4a856089265.webp )
 
 ```javascript
 export const Guang: Story = {
@@ -87,7 +87,7 @@ export const Guang: Story = {
 
 页面多了一个 Button 的类型：
 
-![](./images/989caeccf45fdcd006bc091da78bdaa5.png )
+![](./images/989caeccf45fdcd006bc091da78bdaa5.webp )
 
 也就是说，Storybook 把同一个组件传入不同 props 的情况，叫做一个 Story。
 
@@ -99,17 +99,17 @@ export const Guang: Story = {
 
 除了 story 外，上面还有生成的组件文档：
 
-![](./images/0b59ffa91d75c82f90095ccfb50cd393.png )
+![](./images/0b59ffa91d75c82f90095ccfb50cd393.webp )
 
 可以看到，列出了每个 props 和描述。
 
 是从注释里拿到的：
 
-![](./images/0e55c0b9815c7523b143a32056a60650.png )
+![](./images/0e55c0b9815c7523b143a32056a60650.webp )
 
 我们改了一下注释，刷新下，可以看到文档变了：
 
-![](./images/d264cdc275cb58bcec487d039406cb65.png )
+![](./images/d264cdc275cb58bcec487d039406cb65.webp )
 
 这样就可以方便的生成组件文档了。
 
@@ -121,11 +121,11 @@ export const Guang: Story = {
 
 而且你还可以直接复制它的 jsx 代码：
 
-![](./images/6efdf60c7599fccd7d5691dcf815ff16.png )
+![](./images/6efdf60c7599fccd7d5691dcf815ff16.webp )
 
 之前我们是 args 传入参数渲染，你还可以用 render 函数的方式自己渲染：
 
-![](./images/e19a0c7e29fefb30ec3df5cd00937e81.png )
+![](./images/e19a0c7e29fefb30ec3df5cd00937e81.webp )
 
 ```javascript
 export const Guang: Story = {
@@ -148,13 +148,13 @@ render 函数的参数就是 args，你可以自己返回 jsx（这时要把文�
 
 这样，渲染内容就是自己控制的：
 
-![](./images/7d483e6273ff5ce115648bd7cc7dfdca.png )
+![](./images/7d483e6273ff5ce115648bd7cc7dfdca.webp )
 
 而且有的组件不只是传入 props 就可以了，还需要一些点击、输入等事件。
 
 storybook 支持写这类脚本：
 
-![](./images/3004fd257f87e282332b9e298d687e09.png )
+![](./images/3004fd257f87e282332b9e298d687e09.webp )
 ```javascript
 export const Guang: Story = {
   args: {
@@ -193,7 +193,7 @@ export const Guang: Story = {
 
 此外，你还可以在渲染组件之前请求数据，然后把数据传入 render 函数再渲染：
 
-![](./images/8f73f645f54869d4352d5532f402c108.png )
+![](./images/8f73f645f54869d4352d5532f402c108.webp )
 
 ```javascript
 
@@ -228,7 +228,7 @@ export const Guang: Story = {
 
 渲染出来是这样的：
 
-![](./images/6fce44e19543859801caa8ec441dfe2b.png )
+![](./images/6fce44e19543859801caa8ec441dfe2b.webp )
 
 感受到 Storybook 的强大了么？
 
@@ -246,9 +246,9 @@ npm install @storybook/jest
 
 使用 expect 来断言：
 
-![](./images/05e7d335975c5e0e9a65e1c0973f8d58.png )
+![](./images/05e7d335975c5e0e9a65e1c0973f8d58.webp )
 
-![](./images/cc1485aa049aa62f0871d47442ea6b1a.png )
+![](./images/cc1485aa049aa62f0871d47442ea6b1a.webp )
 
 ```javascript
 await expect(btn.textContent).toEqual('光光光');
@@ -258,13 +258,13 @@ await expect(btn.style.backgroundColor).toEqual('green');
 
 这样一打开组件会自动跑 play 函数，也就会自动执行断言：
 
-![](./images/90e4216d53205c23964758cc22600ff8.png )
+![](./images/90e4216d53205c23964758cc22600ff8.webp )
 
 改下 expect，断言失败就是这样：
 
-![](./images/b6678e2ce23c2f81ab021b4f30f38100.png )
+![](./images/b6678e2ce23c2f81ab021b4f30f38100.webp )
 
-![](./images/63dadae9b9b39c8bd4198beb78ea0906.png )
+![](./images/63dadae9b9b39c8bd4198beb78ea0906.webp )
 
 这样，组件有没有通过测试用例，打开一看就知道了。
 
@@ -281,48 +281,48 @@ npm install @storybook/testing-library
 ```
 npx test-storybook
 ```
-![](./images/9cb7ecc8fccf2c7a337d98bf18fb2e83.png )
+![](./images/9cb7ecc8fccf2c7a337d98bf18fb2e83.webp )
 
 xx.stories.tsx 文件里除了 Story 外，还会导出 meta 信息：
 
-![](./images/16268e57345d8b2bd16b9534d27421da.png )
+![](./images/16268e57345d8b2bd16b9534d27421da.webp )
 
 这些都很简单，改一下就知道了：
 
-![](./images/08c7af9d540f87414e970ccc47df0d44.png )
+![](./images/08c7af9d540f87414e970ccc47df0d44.webp )
 
 title 是这个：
 
-![](./images/8bf90de6d44f175719da22362971080c.png )
+![](./images/8bf90de6d44f175719da22362971080c.webp )
 
 paremeters 的 layout 是这个：
 
-![](./images/3ae42143c55982f3816011839b5a7de9.png )
+![](./images/3ae42143c55982f3816011839b5a7de9.webp )
 
-![](./images/16a60ed9f59cf50a6fc17cb9cc7c4498.png )
+![](./images/16a60ed9f59cf50a6fc17cb9cc7c4498.webp )
 
-![](./images/077a55fc6708c60965097031e0d0a3c8.png )
+![](./images/077a55fc6708c60965097031e0d0a3c8.webp )
 
 这里还可以配置背景色：
 
-![](./images/0a44fd59e0fada3f63b4dbf924c92df3.png )
+![](./images/0a44fd59e0fada3f63b4dbf924c92df3.webp )
 
 ![](./images/04c2c7c87fef864879949fb1dd689b7c.gif )
 
 然后 argTypes 是这个：
-![](./images/62d8c3e3dd6ad61ffe99c3cc22b366e4.png )
+![](./images/62d8c3e3dd6ad61ffe99c3cc22b366e4.webp )
 
 
-![](./images/3cc67f9859ea277678ee3802950861ca.png )
+![](./images/3cc67f9859ea277678ee3802950861ca.webp )
 
 
-![](./images/09a634997b6f38cc768a1a1fff7fe99e.png )
+![](./images/09a634997b6f38cc768a1a1fff7fe99e.webp )
 
-![](./images/5c33705fc1245bac5f020a60985c0547.png )
+![](./images/5c33705fc1245bac5f020a60985c0547.webp )
 
 具体什么类型的参数用什么控件，可以用到的时候查一下[文档](https://storybook.js.org/docs/essentials/controls#annotation)。
 
-![](./images/23908317498e7e1951eb9a10205c44fd.png )
+![](./images/23908317498e7e1951eb9a10205c44fd.webp )
 
 这些都是与 Story 无关的一些东西，所以放在 Meta 里。
 
@@ -332,17 +332,17 @@ mdx 是 markdown + jsx 的混合语法，用来写文档很不错。
 
 在这个目录下的文档：
 
-![](./images/b89f9be35c10fde1dfcb6eaa4100914a.png )
+![](./images/b89f9be35c10fde1dfcb6eaa4100914a.webp )
 
 都会被放到这里：
 
-![](./images/7091eb484bd3e45777c49aa7f56ba975.png )
+![](./images/7091eb484bd3e45777c49aa7f56ba975.webp )
 
 我们加一个试试：
 
-![](./images/9d3663f9f4a4a6e359027d294c65003a.png )
+![](./images/9d3663f9f4a4a6e359027d294c65003a.webp )
 
-![](./images/d030fec3e16a43d43bacc1fbd40c1038.png )
+![](./images/d030fec3e16a43d43bacc1fbd40c1038.webp )
 
 这样，当你想在组件文档里加一些别的说明文档，就可以这样加。
 
@@ -350,19 +350,19 @@ mdx 是 markdown + jsx 的混合语法，用来写文档很不错。
 
 可以在 .storybook 下的 preview.tsx 里配置这个：
 
-![](./images/e038983cd9c0a0e3deb46888fb519ebb.png )
+![](./images/e038983cd9c0a0e3deb46888fb519ebb.webp )
 
-![](./images/fec240e2062180f31273cde870a7718d.png )
+![](./images/fec240e2062180f31273cde870a7718d.webp )
 
-![](./images/b34b46ea4ce7c22d7ffaaf83eb3bc3d9.png )
+![](./images/b34b46ea4ce7c22d7ffaaf83eb3bc3d9.webp )
 
-![](./images/98d7ce97c84cae40bd955bc72847862c.png )
+![](./images/98d7ce97c84cae40bd955bc72847862c.webp )
 
 大概过了一遍 Storybook 的功能之后，我们把上节的 Calendar 组件拿过来试一下。
 
 把那个项目的 Calendar 目录复制过来：
 
-![](./images/e2ff2b19670fd9d5461b17f0e45b4825.png )
+![](./images/e2ff2b19670fd9d5461b17f0e45b4825.webp )
 
 然后在 stories 目录下添加一个 Calendar.stories.tsx
 
@@ -436,25 +436,25 @@ npm install --save-dev node-sass
 ```
 npm run storybook
 ```
-![](./images/3f02ac06fa9b0cead4262a4f340d73ba.png )
+![](./images/3f02ac06fa9b0cead4262a4f340d73ba.webp )
 
-![](./images/3e9db5120230963906a9f70bd173ca79.png )
+![](./images/3e9db5120230963906a9f70bd173ca79.webp )
 
-![](./images/426c83fe4eb2b9f92e10a5420286c59c.png )
+![](./images/426c83fe4eb2b9f92e10a5420286c59c.webp )
 
-![](./images/5f04e883694f29b3cd0a1560524332ef.png )
+![](./images/5f04e883694f29b3cd0a1560524332ef.webp )
 
 都没啥问题。
 
 不过 value 的控件类型不对：
 
-![](./images/e6350c474bff798a6859ef42edb545fb.png )
+![](./images/e6350c474bff798a6859ef42edb545fb.webp )
 
 但是现在我们要传入的是 dayjs 对象，就算是用了 date 的控件也不行。
 
 先改成 date 类型试试：
 
-![](./images/da40cd2432f0c793dd1201bef24fe4bd.png )
+![](./images/da40cd2432f0c793dd1201bef24fe4bd.webp )
 
 控件确实对了，但是修改日期点击刷新后，会报错：
 
@@ -466,7 +466,7 @@ npm run storybook
 
 这时候就要把 story 改成 render 的方式了：
 
-![](./images/a8965106c3eed8c424f05847020a1864.png )
+![](./images/a8965106c3eed8c424f05847020a1864.webp )
 
 ```javascript
 
@@ -495,7 +495,7 @@ export const Value: Story = {
 
 我们基本每个项目都集成了 storybook：
 
-![](./images/648bf273507e5b7dda2ecc38b3d2f216.png )
+![](./images/648bf273507e5b7dda2ecc38b3d2f216.webp )
 
 跑起来是这样的：
 

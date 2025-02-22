@@ -14,9 +14,9 @@
 
 我们说的转场动画、过渡动画是一个东西，你看下英文翻译就知道了：
 
-![](./images/9c03b464bd7e3d348088ae28c88fcfb7.png )
+![](./images/9c03b464bd7e3d348088ae28c88fcfb7.webp )
 
-![](./images/6481707fa8c686d9be80a51e8f8b8c33.png )
+![](./images/6481707fa8c686d9be80a51e8f8b8c33.webp )
 
 这里的过渡动画很明显可以用我们学过的 react-transition-group 或者 react-spring 来做。
 
@@ -28,7 +28,7 @@
 npx create-vite slide-in-out-transition
 ```
 
-![](./images/99e6115c4e8a5562632a3ab4b035b73f.png )
+![](./images/99e6115c4e8a5562632a3ab4b035b73f.webp )
 
 安装用到的包：
 
@@ -137,7 +137,7 @@ export { SlideInOverlay, DURATION };
 
 首先，这个 SlideInOverlay 组件有 3 个 props：
 
-![](./images/9c89b286834301bae573e96f9e8b188c.png )
+![](./images/9c89b286834301bae573e96f9e8b188c.webp )
 
 isVisible 是是否展示。
 
@@ -145,7 +145,7 @@ from 是从右向左还是从下向上来运动，取值为 right 或 bottom。
 
 children 传入具体的内容。
 
-![](./images/978c87e6af658b8ac99d13acf26996d1.png )
+![](./images/978c87e6af658b8ac99d13acf26996d1.webp )
 
 
 用 react-spring 的 useTransition 来做动画，改变 x、opcity 属性。
@@ -156,7 +156,7 @@ children 传入具体的内容。
 
 然后下面的 div 使用 react-spring 传入的 x、opcity 来设置样式就好了。
 
-![](./images/2571f00b51432c308c75987497d8835d.png )
+![](./images/2571f00b51432c308c75987497d8835d.webp )
 
 Overlay 是样式组件，用 as 转为用 animated.div 渲染。
 
@@ -173,11 +173,11 @@ Overlay 是样式组件，用 as 转为用 animated.div 渲染。
 
 去掉 main.tsx 的 StrictMode 和 index.css。
 
-![](./images/3612a7f9207ce12fbaed301a427bdce8.png )
+![](./images/3612a7f9207ce12fbaed301a427bdce8.webp )
 
 在 App.tsx 里用一下：
 
-![](./images/b9ef9382d113b7d9956078e80824e281.png )
+![](./images/b9ef9382d113b7d9956078e80824e281.webp )
 
 ```javascript
 import { useState } from "react";
@@ -250,7 +250,7 @@ export default App;
 npm run dev
 ```
 
-![](./images/d78504d6fd9b7d297955158766eaf7ee.png )
+![](./images/d78504d6fd9b7d297955158766eaf7ee.webp )
 
 ![](./images/0eda34ad0d0a54176399eb4ecd22e277.gif )
 
@@ -272,7 +272,7 @@ npm run dev
 
 加上 className 和 style 两个 props。
 
-![](./images/6307c8290dd2f602e5cc4d4de85ff104.png )
+![](./images/6307c8290dd2f602e5cc4d4de85ff104.webp )
 
 ```javascript
 interface SlideInOverlayProps extends PropsWithChildren {
@@ -285,7 +285,7 @@ interface SlideInOverlayProps extends PropsWithChildren {
 
 传入样式组件：
 
-![](./images/51f77f1f663ee096edbf2551893ec193.png )
+![](./images/51f77f1f663ee096edbf2551893ec193.webp )
 
 安装用到的 classnames 包
 
@@ -295,7 +295,7 @@ npm install --save classnames
 
 测试下：
 
-![d-14.png](./images/5dbe601fd9abd7529f29d75d7f086b95.png )
+![d-14.png](./images/5dbe601fd9abd7529f29d75d7f086b95.webp )
 
 ![](./images/75ce3ad9e78942fb870d09ce9b22bc2c.gif )
 
@@ -303,11 +303,11 @@ npm install --save classnames
 
 我们继续完善，添加 onEnter 参数：
 
-![](./images/6207aa9a011a0e6048079e31593bd391.png )
+![](./images/6207aa9a011a0e6048079e31593bd391.webp )
 
 然后加一下处理逻辑：
 
-![](./images/76e604ec04df64cf13bf57505c34a503.png )
+![](./images/76e604ec04df64cf13bf57505c34a503.webp )
 
 ```javascript
 useEffect(() => {
@@ -333,7 +333,7 @@ useEffect(() => {
 
 测试下：
 
-![](./images/4f5105aa119d2f7d13e96f01cb21800a.png )
+![](./images/4f5105aa119d2f7d13e96f01cb21800a.webp )
 
 ![](./images/966b1f3f36bc4cc09947f656b9761f8a.gif )
 
@@ -341,11 +341,11 @@ useEffect(() => {
 
 接下来继续实现 onExit。
 
-![](./images/6ba4ee140e96f8c3c31405bd9c153418.png )
+![](./images/6ba4ee140e96f8c3c31405bd9c153418.webp )
 
 添加参数，然后加上 useEffect 通过 setTimeout 触发：
 
-![](./images/97b9c72771d6e286fd86b272a5d1f18a.png )
+![](./images/97b9c72771d6e286fd86b272a5d1f18a.webp )
 
 ```javascript
 useEffect(() => {
@@ -365,7 +365,7 @@ useEffect(() => {
 
 跑一下：
 
-![](./images/4e081ca45d2e739bf8d057b9211f6975.png )
+![](./images/4e081ca45d2e739bf8d057b9211f6975.webp )
 
 ![](./images/4f0f20a571f29125068358075dc8e461.gif )
 
@@ -377,7 +377,7 @@ useEffect(() => {
 
 用 useRef 保存上次的 isVisible 参数的值，如果上次的是 true 而当前 isVisible 是 false 就触发。
 
-![](./images/cda87f03a4de38718ab77e9d3c3ad5bc.png )
+![](./images/cda87f03a4de38718ab77e9d3c3ad5bc.webp )
 
 ```javascript
 const visibleRef = useRef(isVisible);
@@ -408,7 +408,7 @@ useEffect(() => {
 
 当然，你还可以做更多的扩展，比如点击商品的时候从下面滑入商品详情：
 
-![](./images/d04907d54b78168b10833826eb0c40ef.png )
+![](./images/d04907d54b78168b10833826eb0c40ef.webp )
 
 ![](./images/b980478e271e3e104e9ac9d99d0bc52b.gif )
 
@@ -416,7 +416,7 @@ useEffect(() => {
 
 如果想实现这种和手势结合的动画呢？
 
-![](./images/af42a933c83e24520a87758e2b1631db.png )
+![](./images/af42a933c83e24520a87758e2b1631db.webp )
 
 这个我们做过了呀，可以回去看看手势库那节。
 

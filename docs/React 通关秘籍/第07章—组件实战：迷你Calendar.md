@@ -4,7 +4,7 @@
 
 比如 antd 的 Calendar 组件（或者 DatePicker 组件）：
 
-![](./images/bd422695e8b049a39f6a36dc1f492c1f.png )
+![](./images/bd422695e8b049a39f6a36dc1f492c1f.webp )
 
 那这种日历组件是怎么实现的呢？
 
@@ -22,37 +22,37 @@ new Date(2023, 6, 30);
 
 可以调用 toLocaleString 来转成当地日期格式的字符串显示：
 
-![](./images/0deaae0c60468fe7fa4f084bf9fd1a97.png )
+![](./images/0deaae0c60468fe7fa4f084bf9fd1a97.webp )
 
 有人说 7 月为啥第二个参数传 6 呢？
 
 因为 Date 的 month 是从 0 开始计数的，取值是 0 到 11：
 
-![](./images/0f3f3643580d4fc413260a346fda9937.png )
+![](./images/0f3f3643580d4fc413260a346fda9937.webp )
 
 而日期 date 是从 1 到 31。
 
 而且有个小技巧，当你 date 传 0 的时候，取到的是上个月的最后一天：
 
-![](./images/33ea0e9d336c2fae898d2c6119041f92.png )
+![](./images/33ea0e9d336c2fae898d2c6119041f92.webp )
 
 -1 就是上个月的倒数第二天，-2 就是倒数第三天这样。
 
 这个小技巧有很大的用处，可以用这个来拿到每个月有多少天：
 
-![](./images/bc999725177451d337e68cbd2994bc2e.png )
+![](./images/bc999725177451d337e68cbd2994bc2e.webp )
 
 今年一月 31 天、二月 28 天、三月 31 天。。。
 
 除了日期外，也能通过 getFullYear、getMonth 拿到年份和月份：
 
-![](./images/2405bd04d683749945eb23a7c4cca765.png )
+![](./images/2405bd04d683749945eb23a7c4cca765.webp )
 
 还可以通过 getDay 拿到星期几。
 
 比如今天（2023-7-19）是星期三：
 
-![](./images/27afa17159a34aeb43c3c44993f1ec57.png )
+![](./images/27afa17159a34aeb43c3c44993f1ec57.webp )
 
 就这么几个 api 就已经可以实现日历组件了。
 
@@ -63,7 +63,7 @@ new Date(2023, 6, 30);
 ```
 npx create-react-app --template=typescript calendar-test
 ```
-![](./images/03ad8813d7638d6a9b2d0307b9576202.png )
+![](./images/03ad8813d7638d6a9b2d0307b9576202.webp )
 
 我们先来写下静态的布局：
 
@@ -138,19 +138,19 @@ export default Calendar;
 npm run start
 ```
 
-![](./images/f1ef89ebd696db6413b25f8fb2da7d3b.png )
+![](./images/f1ef89ebd696db6413b25f8fb2da7d3b.webp )
 
 这种布局还是挺简单的：
 
 header 就是一个 space-between 的 flex 容器：
 
-![](./images/52db9ea99bbe963a68eed69f43c42bea.png )
+![](./images/52db9ea99bbe963a68eed69f43c42bea.webp )
 
 下面是一个 flex-wrap 为 wrap，每个格子宽度为 100% / 7 的容器：
 
-![](./images/62cd042fee022ef0f5725cc894cfb093.png )
+![](./images/62cd042fee022ef0f5725cc894cfb093.webp )
 
-![](./images/d39125ce92c21bea27b76d288330a1bd.png )
+![](./images/d39125ce92c21bea27b76d288330a1bd.webp )
 
 全部样式如下：
 
@@ -187,7 +187,7 @@ header 就是一个 space-between 的 flex 容器：
 ```
 然后我们再来写逻辑：
 
-![](./images/8d094dc9377316d2b58f1df95b8f8cf6.png )
+![](./images/8d094dc9377316d2b58f1df95b8f8cf6.webp )
 
 首先，我们肯定要有一个 state 来保存当前的日期，默认值是今天。
 
@@ -207,11 +207,11 @@ const handleNextMonth = () => {
 
 然后渲染的年月要改为当前 date 对应的年月：
 
-![](./images/87d63835d4d8f49f30d572290f756b43.png )
+![](./images/87d63835d4d8f49f30d572290f756b43.webp )
 
 我们试试看：
 
-![](./images/78ad4d0b4d55caf725d4bb7ceb39e9ca.png )
+![](./images/78ad4d0b4d55caf725d4bb7ceb39e9ca.webp )
 
 年月部分没问题了。
 
@@ -259,11 +259,11 @@ const renderDates = () => {
 
 这样就完成了日期渲染：
 
-![](./images/46728fba2b3d95fb6e07ed3ab22b8ef9.png )
+![](./images/46728fba2b3d95fb6e07ed3ab22b8ef9.webp )
 
 我们来试试看：
 
-![](./images/030aa9be384a14972c637cb2fc6ed032.png )
+![](./images/030aa9be384a14972c637cb2fc6ed032.webp )
 
 没啥问题。
 
@@ -281,11 +281,11 @@ const renderDates = () => {
 
 defaultValue 参数设置为 date 的初始值：
 
-![](./images/a82a18e3883bf164c687e83c87b3378b.png )
+![](./images/a82a18e3883bf164c687e83c87b3378b.webp )
 
 试试看：
 
-![](./images/dfd1747797a8cf38447178f3996b6ae4.png )
+![](./images/dfd1747797a8cf38447178f3996b6ae4.webp )
 
 ```javascript
 function Test() {
@@ -296,11 +296,11 @@ function Test() {
 }
 ```
 
-![](./images/a84d260c5875e376a6fa26201b8f9bb5.png )
+![](./images/a84d260c5875e376a6fa26201b8f9bb5.webp )
 
 年月是对了，但是日期对不对我们也看不出来，所以还得加点选中样式：
 
-![](./images/0eafda48f4941011c7ab7231cb4a4a08.png )
+![](./images/0eafda48f4941011c7ab7231cb4a4a08.webp )
 
 ```css
 .day:hover, .selected {
@@ -310,13 +310,13 @@ function Test() {
 ```
 现在就可以看到选中的日期了：
 
-![](./images/9411214cee05caab8130798c031d092d.png )
+![](./images/9411214cee05caab8130798c031d092d.webp )
 
 没啥问题。
 
 然后我们再加上 onChange 的回调函数：
 
-![](./images/efeb23116a6b9996250a0b9c10a92a01.png )
+![](./images/efeb23116a6b9996250a0b9c10a92a01.webp )
 
 就是在点击 day 的时候，setDate 修改内部状态，然后回调 onChange 方法。
 
@@ -374,13 +374,13 @@ function Test() {
 
 但其实你还可以再做一步，提供 ref 来暴露一些 Canlendar 组件的 api。
 
-![](./images/06ee0eb00126235af872198958563472.png )
+![](./images/06ee0eb00126235af872198958563472.webp )
 
-![](./images/42c68a688d32f7260a410269791752ef.png )
+![](./images/42c68a688d32f7260a410269791752ef.webp )
 
 用的时候这样用：
 
-![](./images/a0ec772fd72de831bbedc3a569d9e0bb.png )
+![](./images/a0ec772fd72de831bbedc3a569d9e0bb.webp )
 
 ```javascript
 import React, { useEffect, useImperativeHandle, useRef, useState } from 'react';
@@ -526,7 +526,7 @@ ref 的 api 也都生效了。
 
 你经常用的 Canlendar 或者 DatePicker 组件就是这么实现的，
 
-![](./images/401f574f7fd683b2d16dd332567789ae.png )
+![](./images/401f574f7fd683b2d16dd332567789ae.webp )
 
 当然，这些组件除了本月的日期外，其余的地方不是用空白填充的，而是上个月、下个月的日期。
 
@@ -546,7 +546,7 @@ npm install --save ahooks
 
 把 useState 换成 ahooks 的 useControllableValue：
 
-![](./images/b867880ce8f7fcd93d72a6b42a75955c.png )
+![](./images/b867880ce8f7fcd93d72a6b42a75955c.webp )
 
 ```javascript
 const [date, setDate] =  useControllableValue(props,{
@@ -557,7 +557,7 @@ const [date, setDate] =  useControllableValue(props,{
 
 clickHanlder 这里就只需要调用 setDate 不用调用 onChange 了：
 
-![](./images/a23358d2057e059f4b540bff2cce7ad2.png )
+![](./images/a23358d2057e059f4b540bff2cce7ad2.webp )
 
 如果对 useControllable 这个 hook 有疑问，可以看下上节我们自己实现的那个 hook。
 

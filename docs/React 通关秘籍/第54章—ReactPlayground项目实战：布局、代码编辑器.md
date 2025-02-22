@@ -6,7 +6,7 @@
 
 布局和 [vue playground](https://play.vuejs.org/#eNp9kUFLwzAUx7/KM5cqzBXR0+gGKgP1oKKCl1xG99ZlpklIXuag9Lv7krK5w9it7//7v/SXthP3zo23EcVEVKH2yhEEpOhm0qjWWU/QgccV9LDytoWCq4U00tTWBII2NDBN/LJ4Qq0tfFuvlxfFlTRVORzHB/FA2Dq9IOQJoFrfzLouL/d9VfKUU2VcJNhet3aJeioFcymgZFiVR/tiJCjw61eqGW+CNWzepX0pats6pdG/OVKsJ8UEMklswXa/LzkjH3G0z+s11j8n8k3YpUyKd48B/RalODBa+AZpwPPPV9zx8wGyfdTcPgM/MFgdk+NQe4hmydpHvWz7nL+/Ms1XmO8ITdhfKommZp/7UvA/eTxz9X/d2/Fd3pOmF/0fEx+nNQ==) 一样：
 
-![](./images/43b211342672817947efd05513e5be6e.png )
+![](./images/43b211342672817947efd05513e5be6e.webp )
 
 左边 Editor 右边 Preview，上面还有 Header。
 
@@ -15,7 +15,7 @@
 ```
 npx create-vite
 ```
-![](./images/915a90986255e0b3e9570802857fe27b.png )
+![](./images/915a90986255e0b3e9570802857fe27b.webp )
 
 改下 main.tsx：
 
@@ -57,7 +57,7 @@ npm install
 npm run dev
 ```
 
-![](./images/a378ba25f68710fbfbfb664c38415106.png )
+![](./images/a378ba25f68710fbfbfb664c38415106.webp )
 
 然后来写布局。
 
@@ -122,7 +122,7 @@ minSize 是最小宽度。
 
 然后我们补上 Header、CodeEditor、Preview 这三个组件：
 
-![](./images/d484fb781448fa56c5364cbb2e94ec82.png )
+![](./images/d484fb781448fa56c5364cbb2e94ec82.webp )
 
 ```javascript
 import { Allotment } from "allotment";
@@ -185,7 +185,7 @@ npm install -D sass
 
 在 App.tsx 引入下：
 
-![](./images/23b8993986fe865b8c7ba94a1632814b.png )
+![](./images/23b8993986fe865b8c7ba94a1632814b.webp )
 
 先来写写 Header 部分：
 
@@ -256,7 +256,7 @@ export default function Header() {
 ```
 看下效果：
 
-![](./images/b5bd4484a43d65b9678b2aabeb03a9b2.png )
+![](./images/b5bd4484a43d65b9678b2aabeb03a9b2.webp )
 
 没啥问题。
 
@@ -280,7 +280,7 @@ export default function CodeEditor() {
 
 这部分可以细分为 FileNameList 和 Editor 两个组件：
 
-![](./images/e8ba7c80dcdb3b0ea07aad09fb746dce.png )
+![](./images/e8ba7c80dcdb3b0ea07aad09fb746dce.webp )
 
 创建 ./Editor/index.tsx
 
@@ -325,7 +325,7 @@ export default function Editor() {
 ```
 看下效果：
 
-![](./images/e2150c33c43ecb1a2c9728c4920447e4.png )
+![](./images/e2150c33c43ecb1a2c9728c4920447e4.webp )
 
 代码渲染没问题，但是提示 jsx 不知道怎么处理。
 
@@ -386,7 +386,7 @@ import fs from 'fs';
 
 再看下：
 
-![](./images/45445faeb87abead22e3239b150c6ee5.png )
+![](./images/45445faeb87abead22e3239b150c6ee5.webp )
 
 错误消失了。
 
@@ -398,7 +398,7 @@ import fs from 'fs';
 
 我们可以 cmd + j 的时候格式化代码。
 
-![](./images/e83cc55ca86e42b050bb1da496664535.png )
+![](./images/e83cc55ca86e42b050bb1da496664535.webp )
 ```javascript
 editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyJ, () => {
     editor.getAction('editor.action.formatDocument')?.run()
@@ -421,13 +421,13 @@ editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyJ, () => {
 ```
 有 131 个：
 
-![](./images/2e84a0e01e8dce7d3bb58019f609d29c.png )
+![](./images/2e84a0e01e8dce7d3bb58019f609d29c.webp )
 
 用到再搜吧。
 
 现在还一个比较大的问题：
 
-![](./images/61a010af6c446e9ffc961a92ab77b586.png )
+![](./images/61a010af6c446e9ffc961a92ab77b586.webp )
 
 这个缩略图用不到。
 
@@ -437,7 +437,7 @@ editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyJ, () => {
 
 这些都可以通过修改 options 来解决：
 
-![](./images/dcf24a43229546e9509de0fa1aa6f9db.png )
+![](./images/dcf24a43229546e9509de0fa1aa6f9db.webp )
 
 ```javascript
 return <MonacoEditor
@@ -468,7 +468,7 @@ minimap 就是缩略图，关掉就没了。
 
 scrollbar 是设置横向纵向滚动条宽度的。
 
-![](./images/67e6a7e05698409afbce92ce5a62fe77.png )
+![](./images/67e6a7e05698409afbce92ce5a62fe77.webp )
 
 设置都生效了。
 
@@ -484,7 +484,7 @@ scrollbar 是设置横向纵向滚动条宽度的。
 
 这里用到 @typescript/ata 这个包：
 
-![](./images/dbf4d2dda58df6961da0e4d113196fd1.png )
+![](./images/dbf4d2dda58df6961da0e4d113196fd1.webp )
 
 ata 是 automatic type acquisition 自动类型获取。
 
@@ -522,7 +522,7 @@ npm install --save @typescript/ata -f
 
 然后在 mount 的时候调用下：
 
-![](./images/1d037630c8903fa6db84be10f7fc5ccd.png )
+![](./images/1d037630c8903fa6db84be10f7fc5ccd.webp )
 
 ```javascript
 const ata = createATA((code, path) => {
@@ -539,17 +539,17 @@ ata(editor.getValue());
 
 看下效果：
 
-![](./images/99a8a964bc70777b6e35f57422562e5a.png )
+![](./images/99a8a964bc70777b6e35f57422562e5a.webp )
 
-![](./images/0e888d9660fc801a4b0d8888a57aae2e.png )
+![](./images/0e888d9660fc801a4b0d8888a57aae2e.webp )
 
 有类型了！
 
 最后，现在很多部分是写死的，我们抽离一下 Editor 组件的参数，：
 
-![](./images/5372cb68a5df58120d06958ecaa6b49c.png )
+![](./images/5372cb68a5df58120d06958ecaa6b49c.webp )
 
-![](./images/437a41b118cda18563b457689746c178.png )
+![](./images/437a41b118cda18563b457689746c178.webp )
 
 把文件的信息封装到 file 里，然后加上 onChange 的回调，支持传入编辑器的 options。
 
@@ -660,7 +660,7 @@ export default function CodeEditor() {
 onChange 可以拿到 content 和变化事件，里面包含具体改变的内容：
 
 
-![](./images/c3b19fc2e0b32dfc133f3658dd25219c.png )
+![](./images/c3b19fc2e0b32dfc133f3658dd25219c.webp )
 
 这样，代码编辑器部分就完成了。
 

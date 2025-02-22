@@ -2,25 +2,25 @@
 
 ﻿组件库一般都有 Popover 和 Tooltip 这两个组件，它们非常相似。
 
-![](./images/f14239b10eddd9c0914c00bd541f5cdd.png )
+![](./images/f14239b10eddd9c0914c00bd541f5cdd.webp )
 
-![](./images/a4791ac6183fc112564e6657618460ce.png )
+![](./images/a4791ac6183fc112564e6657618460ce.webp )
 
 不过应用场景是有区别的：
 
-![](./images/1e1ec31cb644e9c5895de1f719d38cba.png )
+![](./images/1e1ec31cb644e9c5895de1f719d38cba.webp )
 
 Tooltip（文字提示） 是用来代替 title 的，做一个文案解释。
 
 而 Popover（气泡卡片）可以放更多的内容，可以交互：
 
-![](./images/362181309ca02b0ec58e55a50bfd1d35.png )
+![](./images/362181309ca02b0ec58e55a50bfd1d35.webp )
 
 所以说，这俩虽然长得差不多，但确实要分为两个组件来写。
 
 这个组件看起来比较简单，但实现起来很麻烦。
 
-![](./images/beecfb9a471356a15d505f9330986b4b.png )
+![](./images/beecfb9a471356a15d505f9330986b4b.webp )
 
 你可能会说，不就是写好样式，然后绝对定位到元素上面么？
 
@@ -28,19 +28,19 @@ Tooltip（文字提示） 是用来代替 title 的，做一个文案解释。
 
 首先，placement 参数可以指定 12 个方向，top、topleft、topright、bottom 等：
 
-![](./images/f2329d30f67ccaffe828a15fc136fdc9.png )
+![](./images/f2329d30f67ccaffe828a15fc136fdc9.webp )
 
 这些不同方向的位置计算都要实现。
 
 而且，就算你指定了 left，当左边空间不够的时候，也得做下处理，展示在右边：
 
-![](./images/c9bc3b842d252fcab2eda8c9f57bf6eb.png )
+![](./images/c9bc3b842d252fcab2eda8c9f57bf6eb.webp )
 
 而且当方向不同时，箭头的显示位置也不一样：
 
-![](./images/71e9c0914c1bc1e5e20bae4b8f3dfe99.png )
+![](./images/71e9c0914c1bc1e5e20bae4b8f3dfe99.webp )
 
-![](./images/3a662cb5c80a2075d61e66caddfcbb24.png )
+![](./images/3a662cb5c80a2075d61e66caddfcbb24.webp )
 
 所以要实现这样一个 Popover 组件，光计算浮层的显示位置就是不小的工作量。
 
@@ -48,13 +48,13 @@ Tooltip（文字提示） 是用来代替 title 的，做一个文案解释。
 
 它就是 [floating-ui](https://floating-ui.com/)。
 
-![](./images/9314b4c0d49816944f211869720c1a98.png )
+![](./images/9314b4c0d49816944f211869720c1a98.webp )
 
 看介绍就可以知道，它是专门用来创建 tooltip、popover、dropdown 这类浮动的元素的。
 
 它的 logo 也很形象：
 
-![](./images/7885a5b84c162cbf52a816b00f35baa8.png )
+![](./images/7885a5b84c162cbf52a816b00f35baa8.webp )
 
 那它怎么用呢？
 
@@ -63,7 +63,7 @@ Tooltip（文字提示） 是用来代替 title 的，做一个文案解释。
 ```
 npx create-vite
 ```
-![](./images/5ce670a26467077f72b20f14a15950c1.png )
+![](./images/5ce670a26467077f72b20f14a15950c1.webp )
 
 用 create-vite 创建个 react 项目。
 
@@ -74,15 +74,15 @@ npm install
 npm run dev
 ```
 
-![](./images/c9da1c1114ff1ec986dc4403bfe39cb1.png )
+![](./images/c9da1c1114ff1ec986dc4403bfe39cb1.webp )
 
-![](./images/bfaa803c0c7e17ece2c4fcdf04ab2d54.png )
+![](./images/bfaa803c0c7e17ece2c4fcdf04ab2d54.webp )
 
 没啥问题。
 
 改下 main.tsx，去掉 index.css，并且把 StrictMode 去掉，它会导致重复渲染：
 
-![](./images/325feac158468a681ab9341068169a0e.png )
+![](./images/325feac158468a681ab9341068169a0e.webp )
 
 然后安装下 floating-ui 的包：
 
@@ -139,7 +139,7 @@ export default function App() {
 
 看下代码：
 
-![](./images/c6c91a8d7cfbb27d4fe008e15afb31e4.png )
+![](./images/c6c91a8d7cfbb27d4fe008e15afb31e4.webp )
 
 首先，用到了 useFloating 这个 hook，它的作用就是计算浮层位置的。
 
@@ -147,7 +147,7 @@ export default function App() {
 
 它可以指定浮层出现的方向：
 
-![](./images/3e3e9792ecd9834d6e541b88189ef1a0.png )
+![](./images/3e3e9792ecd9834d6e541b88189ef1a0.webp )
 
 比如当 placement 指定为 right 时，效果就是这样的：
 
@@ -155,13 +155,13 @@ export default function App() {
 
 再就是 useInteractions 这个 hook：
 
-![](./images/a9967bb842ef0d56f3dce372fc9d75a4.png )
+![](./images/a9967bb842ef0d56f3dce372fc9d75a4.webp )
 
 你可以传入 click、hover 等交互方式，然后把它返回的 props 设置到元素上，就可以绑定对应的交互事件。
 
 比如把交互事件换成 click：
 
-![](./images/f65075a84b490bca44e7110d59d3eb0c.png )
+![](./images/f65075a84b490bca44e7110d59d3eb0c.webp )
 
 现在就是点击的时候浮层出现和消失了：
 
@@ -175,7 +175,7 @@ export default function App() {
 
 这时候可以加上 dismiss 的处理：
 
-![](./images/9f815eb4cf7d8d6420e2324a14e420eb.png )
+![](./images/9f815eb4cf7d8d6420e2324a14e420eb.webp )
 
 现在点击其它位置，浮层就会消失，并且按 ESC 键也会消失：
 
@@ -187,7 +187,7 @@ export default function App() {
 
 我们加一下样式就好了：
 
-![](./images/ea0fcd4debaf04cb861a83045c2ca696.png )
+![](./images/ea0fcd4debaf04cb861a83045c2ca696.webp )
 
 加上 className，然后在 App.css 里写下样式：
 
@@ -200,7 +200,7 @@ export default function App() {
 ```
 引入看下：
 
-![](./images/fc97951529817d5637dfe9845bb157cb.png )
+![](./images/fc97951529817d5637dfe9845bb157cb.webp )
 
 ![](./images/ce05f536f67af67a22bc3483e673bc27.gif )
 
@@ -210,17 +210,17 @@ export default function App() {
 
 加一个 offset 的 middleware 就好了：
 
-![](./images/b1711e434a30cec9241a9575a9cfbb8c.png )
+![](./images/b1711e434a30cec9241a9575a9cfbb8c.webp )
 
 它的效果就是修改两者距离的：
 
-![](./images/12fc90b9492b3a769a9442f8ec31f261.png )
+![](./images/12fc90b9492b3a769a9442f8ec31f261.webp )
 
 ![](./images/f8832b34c1771f92feb087f43d0dfbe1.gif )
 
 箭头也不用自己写，有对应的中间件：
 
-![](./images/c060c8d74025a57f71e9c7992444456e.png )
+![](./images/c060c8d74025a57f71e9c7992444456e.webp )
 
 ```javascript
 import {
@@ -297,23 +297,23 @@ export default function App() {
 
 给 button 加一些 margin，我们试试其它位置的 popover 对不对：
 
-![](./images/3b0103696c1190819013517a2f3a7f77.png )
+![](./images/3b0103696c1190819013517a2f3a7f77.webp )
 
 分别设置不同 placement：
 
-![](./images/0b2d8f6f6eaacb8579566f13f0d13bfa.png )
+![](./images/0b2d8f6f6eaacb8579566f13f0d13bfa.webp )
 
 top-end
 
-![](./images/b733badea19e28c5290f9459a4798d97.png )
+![](./images/b733badea19e28c5290f9459a4798d97.webp )
 
 left-start
 
-![](./images/6f7704e8c263ce214d41adeccb4aee15.png )
+![](./images/6f7704e8c263ce214d41adeccb4aee15.webp )
 
 left
 
-![](./images/d51816286bd789a834efcaf5c536e1e2.png )
+![](./images/d51816286bd789a834efcaf5c536e1e2.webp )
 
 都没问题。
 
@@ -325,7 +325,7 @@ left
 
 加上 flip 中间件就好了：
 
-![](./images/f1377706315251f53ca1b65e550ff03e.png )
+![](./images/f1377706315251f53ca1b65e550ff03e.webp )
 
 ![](./images/881157006f889f36f745665ff1495745.gif )
 
@@ -439,7 +439,7 @@ Popover/index.css
 ```
 整体代码和之前差不多，有几处不同：
 
-![](./images/5496ed023bd51df646a2ccc4f3e72d1e.png )
+![](./images/5496ed023bd51df646a2ccc4f3e72d1e.webp )
 
 参数继承 PropsWithChildren，可以传入 children 参数。
 
@@ -453,7 +453,7 @@ placement 就是 12 个方向。
 
 className 和 style 设置到内层的 span 元素上：
 
-![](./images/1a8bd3941b3c93d8058cc4cd8f32816b.png )
+![](./images/1a8bd3941b3c93d8058cc4cd8f32816b.webp )
 
 在 App.tsx 里引入下：
 
@@ -483,13 +483,13 @@ export default function App() {
 
 但现在 Popover 组件还有个问题：
 
-![](./images/1038e77a8c61eeec5bc927b97ea011bf.png )
+![](./images/1038e77a8c61eeec5bc927b97ea011bf.webp )
 
 浮层使用 position：absolute 定位的，应该是相对于 body 定位，但如果中间有个元素也设置了 position: relative 或者 absolute，那样定位就是相对于那个元素了。
 
 所以，要把浮层用 createPortal 渲染到 body 之下。
 
-![](./images/eb2395feb315a0766c4a693a0f30c5ea.png )
+![](./images/eb2395feb315a0766c4a693a0f30c5ea.webp )
 
 ```javascript
 const el = useMemo(() => {
@@ -524,13 +524,13 @@ return (
 
 这样，Popover 浮层就渲染到了 body 下：
 
-![](./images/b270c21c7f896b172c843bfe2b727a1a.png )
+![](./images/b270c21c7f896b172c843bfe2b727a1a.webp )
 
 至此，Popover 组件就封装完了。
 
 其实 floating-ui 用的非常多，比如下一节会讲的 click-to-react-component，它就用到了 floating-ui 来实现的：
 
-![](./images/9e98b4261f621387888376d900b5efaa.png )
+![](./images/9e98b4261f621387888376d900b5efaa.webp )
 
 案例代码上传了[小册仓库](https://github.com/QuarkGluonPlasma/react-course-code/tree/main/popover-component)
 

@@ -4,7 +4,7 @@
 
 [官方文档](https://react.dev/reference/react/Component)也已经把 class 组件的语法划到了 legacy（遗产）的目录下：
 
-![](./images/b970a70246213999c2a708d71cf21e72.png )
+![](./images/b970a70246213999c2a708d71cf21e72.webp )
 
 所以说，除非你维护的代码里有历史代码用了 class 组件，否则就没必要看那些用法了。
 
@@ -18,11 +18,11 @@
 npx create-react-app --template typescript hook-test
 ```
 
-![](./images/3a0da90daa7860c0f114314d20f2d202.png )
+![](./images/3a0da90daa7860c0f114314d20f2d202.webp )
 
 在 index.tsx 里把这三行代码注释掉：
 
-![](./images/0f67edc713fa13269a96578591373b94.png )
+![](./images/0f67edc713fa13269a96578591373b94.webp )
 
 React.StrictMode 会导致额外的渲染，下面那个上报性能数据的，cra 自带的，我们也用不到。
 
@@ -57,7 +57,7 @@ export default App;
 
 点击、拖拽等交互事件会改变状态，而状态改变会触发重新渲染。
 
-![](./images/8f6cf75e9a97d7917060af0a46bc4701.png )
+![](./images/8f6cf75e9a97d7917060af0a46bc4701.webp )
 
 组件内的状态是 useState 创建的，整个应用还可以加一个全局状态管理的库来管理 state。
 
@@ -71,7 +71,7 @@ state 初始值是 1，点击改变状态，这个很简单。
 
 如果初始状态需要经过复杂计算得到，可以传个函数来计算初始值：
 
-![](./images/8011df21caaf697c689e25484296a255.png )
+![](./images/8011df21caaf697c689e25484296a255.webp )
 
 ```javascript
 const [num, setNum] = useState(() => {
@@ -86,7 +86,7 @@ useState 返回一个数组，包含 state 和 setXxx 的 api，一般我们都�
 
 这个 setXxx 的 api 也有两种参数：
 
-![](./images/677b5465e68df31b1ecbd4d38a4aaf58.png )
+![](./images/677b5465e68df31b1ecbd4d38a4aaf58.webp )
 
 可以直接传新的值，或者传一个函数，返回新的值，这个函数的参数是上一次的 state。
 
@@ -110,7 +110,7 @@ effect 被翻译为副作用。
 
 我们写个 App2.tsx：
 
-![](./images/c68d0e2dd936437c9904c42caa490044.png )
+![](./images/c68d0e2dd936437c9904c42caa490044.webp )
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -145,7 +145,7 @@ export default App;
 
 把 index.tsx 渲染的组件改为 App2
 
-![](./images/a9df2991015911f15f034e03cd54ef72.png )
+![](./images/a9df2991015911f15f034e03cd54ef72.webp )
 
 浏览器访问下，可以看到 2s 后，state 变为了 666:
 
@@ -155,7 +155,7 @@ export default App;
 
 回过头来看下 useEffect：
 
-![](./images/2b38155c774b3350b53bee5bf859ad82.png )
+![](./images/2b38155c774b3350b53bee5bf859ad82.webp )
 
 第二个参数为什么传空数组呢？
 
@@ -163,43 +163,43 @@ export default App;
 
 我们加个打印：
 
-![](./images/00d0140b067cc1992ca4410248a84e01.png )
+![](./images/00d0140b067cc1992ca4410248a84e01.webp )
 
 现在这个组件会渲染两次，初始渲染和 2s 后 setNum 触发的渲染，也就是 function 会执行 2 次。
 
 打开 devtools 看一下：
 
-![](./images/8febade757ce433f0f02c231527d821b.png )
+![](./images/8febade757ce433f0f02c231527d821b.webp )
 
 xxx 只执行了一次，因为 [] 每次都不变。
 
 我也可以写任意的常量，因为它们都不变，所以不会触发 effect 的重新执行：
 
-![](./images/1dcac7ecb693e6ef0cb17c20946439f7.png )
+![](./images/1dcac7ecb693e6ef0cb17c20946439f7.webp )
 
-![](./images/b2244dd49dcd12ad8aaf4df9555a99ce.png )
+![](./images/b2244dd49dcd12ad8aaf4df9555a99ce.webp )
 
 但如果其中有个变化的值，那就会触发重新执行了：
 
-![](./images/6abeedfebf9b8e6ce2f5787b29498c66.png )
+![](./images/6abeedfebf9b8e6ce2f5787b29498c66.webp )
 
 可以看到，现在每次渲染，effect 都会执行：
 
-![](./images/2a2c03ede5719a8093ec9a281916f8fd.png )
+![](./images/2a2c03ede5719a8093ec9a281916f8fd.webp )
 
 这个数组我们一般写依赖的 state，这样在 state 变了之后就会触发重新执行了。
 
 不传 deps 数组的时候也是每次都会重新执行 effect 函数：
 
-![](./images/2f5e8e6a8042ed0d79066adcd8e0290a.png )
+![](./images/2f5e8e6a8042ed0d79066adcd8e0290a.webp )
 
-![](./images/2d577b9b561bbec483c370113f9f6a34.png )
+![](./images/2d577b9b561bbec483c370113f9f6a34.webp )
 
 那 useEffect 里如果跑了一个定时器，依赖变了之后，再次执行 useEffect，又跑了一个，怎么清理上一个定时器呢？
 
 这样写：
 
-![](./images/55f032444ee20aeee95de9b54364135a.png )
+![](./images/55f032444ee20aeee95de9b54364135a.webp )
 
 ```javascript
 import { useEffect, useState } from "react";
@@ -240,19 +240,19 @@ export default App;
 
 绝大多数情况下，你把 useEffect 换成 useLayoutEffect 也一样：
 
-![](./images/f6603d56c0a97b2225ec5d00747ad701.png )
+![](./images/f6603d56c0a97b2225ec5d00747ad701.webp )
 
-![](./images/708a69b2fba75b8b9898d22d52a41c91.png )
+![](./images/708a69b2fba75b8b9898d22d52a41c91.webp )
 
 那为啥还要有这两个 hook 呢？
 
 我们知道，js 执行和渲染是阻塞的：
 
-![](./images/d247547942c069ec7e6268b83ef34482.png )
+![](./images/d247547942c069ec7e6268b83ef34482.webp )
 
 useEffect 的 effect 函数会在操作 dom 之后异步执行：
 
-![](./images/7b00104ae8af5274a8af123e3f5626f7.png )
+![](./images/7b00104ae8af5274a8af123e3f5626f7.webp )
 
 异步执行就是用 setTimeout、Promise.then 等 api 包裹执行的逻辑。
 
@@ -260,15 +260,15 @@ useEffect 的 effect 函数会在操作 dom 之后异步执行：
 
 打开 Permormance 工具，可以看到 Event Loop 的详情：
 
-![](./images/744fc6983986dbc555b68603169fabb8.png )
+![](./images/744fc6983986dbc555b68603169fabb8.webp )
 
 可以看到，渲染的间隔是固定的，而 js 的任务在这些渲染的间隔中执行。
 
 所以异步执行的 effect 逻辑就有两种可能：
 
-![](./images/7b21b30edda9c8da5b112894fbc23a48.png )
+![](./images/7b21b30edda9c8da5b112894fbc23a48.webp )
 
-![](./images/1d762158295e1190dc343892cb469b13.png )
+![](./images/1d762158295e1190dc343892cb469b13.webp )
 
 灰色的部分是单独的任务。
 
@@ -282,7 +282,7 @@ useEffect 的 effect 函数会在操作 dom 之后异步执行：
 
 它和 useEffect 的区别是它的 effect 执行是同步的，也就是在同一个任务里：
 
-![](./images/b0474e5a9fdd34c12f706b5450e583a3.png )
+![](./images/b0474e5a9fdd34c12f706b5450e583a3.webp )
 
 这样浏览器会等 effect 逻辑执行完再渲染。
 
@@ -294,7 +294,7 @@ useEffect 的 effect 函数会在操作 dom 之后异步执行：
 
 超过 50ms 的任务就被称作长任务，会阻塞渲染，导致掉帧：
 
-![](./images/85f67822d6a16eed22cf847bbf2f799f.png )
+![](./images/85f67822d6a16eed22cf847bbf2f799f.webp )
 
 所以说，一般情况下，还是让 effect 逻辑异步执行的好。
 
@@ -360,7 +360,7 @@ useReducer 的类型参数传入 Reducer\<数据的类型，action 的类型>
 
 在 index.tsx 里引入：
 
-![](./images/5f73da7d2ce73e741cbb5eacd759042f.png )
+![](./images/5f73da7d2ce73e741cbb5eacd759042f.webp )
 
 ![](./images/ccdcfee5257a0884dcb5ffcabc6548d6.gif )
 
@@ -395,7 +395,7 @@ export default App;
 
 回过头来继续看 useReducer：
 
-![](./images/812253c3850bce29efd4f5e2c1795909.png )
+![](./images/812253c3850bce29efd4f5e2c1795909.webp )
 
 ```javascript
 const [res, dispatch] = useReducer<Reducer<Data, Action>, string>(reducer, 'zero', (param) => {
@@ -414,7 +414,7 @@ const [res, dispatch] = useReducer<Reducer<Data, Action>, string>(reducer, 'zero
 
 此外，使用 reducer 有一个特别要注意的地方：
 
-![](./images/d8b51f0528c0faab86ffebc0ee59d8b4.png )
+![](./images/d8b51f0528c0faab86ffebc0ee59d8b4.webp )
 
 如果你直接修改原始的 state 返回，是触发不了重新渲染的：
 
@@ -504,7 +504,7 @@ npm install --save immer
 ```
 用法相当简单，只有一个 produce 的 api：
 
-![](./images/254cd954471d825df75e408be4b733d7.png )
+![](./images/254cd954471d825df75e408be4b733d7.webp )
 
 ```javascript
 return produce(state, (state) => {
@@ -561,7 +561,7 @@ export default App;
 
 也可以用 immer：
 
-![](./images/f47a600c0d6bc992119d37aa09ddcd7a.png )
+![](./images/f47a600c0d6bc992119d37aa09ddcd7a.webp )
 
 ```javascript
 setObj(produce(obj, (obj) => {
@@ -613,7 +613,7 @@ ref 的内容是保存在 current 属性上的。
 
 在 index.tsx 引入：
 
-![](./images/ad97811fc4d5ab1e725c7d5972ad456a.png )
+![](./images/ad97811fc4d5ab1e725c7d5972ad456a.webp )
 
 可以看到，focus 生效了：
 
@@ -644,7 +644,7 @@ export default App;
 
 想触发渲染，还是得配合 state：
 
-![](./images/3f9edbd39d684524ea0c3c73a0a51ded.png )
+![](./images/3f9edbd39d684524ea0c3c73a0a51ded.webp )
 
 ```javascript
 import { useRef, useState } from "react";
@@ -680,7 +680,7 @@ useRef 一般是用来存一些不是用于渲染的内容的。
 
 之前拿到标签的 dom 元素是这样写的：
 
-![](./images/29c14ddbd2ca24a9d998427cc36a8525.png )
+![](./images/29c14ddbd2ca24a9d998427cc36a8525.webp )
 
 通过 useRef 创建个 ref 对象，然后把 input 标签设置到 ref。
 
@@ -723,17 +723,17 @@ export default App;
 
 就是把 ref 转发到组件内部来设置：
 
-![](./images/013d31e25a70287a5fb807b472d860f4.png )
+![](./images/013d31e25a70287a5fb807b472d860f4.webp )
 
 这样就把子组件的 input 的 ref 传递到了父组件。
 
 效果如下：
 
-![](./images/d1890a1e35231c30a4cc72b946db3788.png )
+![](./images/d1890a1e35231c30a4cc72b946db3788.webp )
 
 不过被 forwardRef 包裹的组件的类型就要用 React.forwardRefRenderFunction 了：
 
-![](./images/3722d203e4f5865d49c70dac431e1c4a.png )
+![](./images/3722d203e4f5865d49c70dac431e1c4a.webp )
 
 第一个类型参数是 ref 的 content 的类型，第二个类型参数是 props 的类型。
 
@@ -793,23 +793,23 @@ export default App;
 
 也就是用 useImperativeHanlde 自定义了 ref 对象：
 
-![](./images/90ce9be263a6dc1076cea70f98230e04.png )
+![](./images/90ce9be263a6dc1076cea70f98230e04.webp )
 
 这样，父组件里拿到的 ref 就是 useImperativeHandle 第二个参数的返回值了。
 
 效果是一样的：
 
-![](./images/b7fe98251d74bff62fad39002900e963.png )
+![](./images/b7fe98251d74bff62fad39002900e963.webp )
 
 ## useContext
 
 跨任意层组件传递数据，我们一般用 Context。
 
-![](./images/bf7f29bf3d97123f365ea7ae329db71a.png )
+![](./images/bf7f29bf3d97123f365ea7ae329db71a.webp )
 
 创建 App5.tsx
 
-![](./images/e25a618af11550ca3e0026b579bf3f23.png )
+![](./images/e25a618af11550ca3e0026b579bf3f23.webp )
 
 
 ```javascript
@@ -841,11 +841,11 @@ export default Aaa;
 
 在 index.tsx 里引入：
 
-![](./images/e5f819330b2c08678dff021d6038c4c3.png )
+![](./images/e5f819330b2c08678dff021d6038c4c3.webp )
 
 访问下：
 
-![](./images/caf717203681320c9fc81d2e3457b2ce.png )
+![](./images/caf717203681320c9fc81d2e3457b2ce.webp )
 
 可以看到，拿到的值是被 Provider 修改过的 222。
 
@@ -880,7 +880,7 @@ function Bbb() {
 
 组件库里用 Context 很多，比如 antd 里就有大量 Context 的使用：
 
-![](./images/1f6c21b7803646aee34dd73645d60c15.png )
+![](./images/1f6c21b7803646aee34dd73645d60c15.webp )
 
 配置数据基本都是用 Context 传递。
 
@@ -922,7 +922,7 @@ export default Aaa;
 
 bbb render 打印几次？
 
-![](./images/e74d0a5c3d1dead68514ddff5cb82a96.png )
+![](./images/e74d0a5c3d1dead68514ddff5cb82a96.webp )
 
 答案是每 2s 都会打印。
 
@@ -932,7 +932,7 @@ bbb render 打印几次？
 
 这时可以加上 memo：
 
-![](./images/98943247788388612cee012d46a13655.png )
+![](./images/98943247788388612cee012d46a13655.webp )
 
 ```javascript
 import { memo, useEffect, useState } from "react";
@@ -970,11 +970,11 @@ memo 的作用是只有 props 变的时候，才会重新渲染被包裹的组�
 
 这样就只会打印一次了：
 
-![](./images/e78c5406b0075a1f2cb5c2fd352a3838.png )
+![](./images/e78c5406b0075a1f2cb5c2fd352a3838.webp )
 
 我们让 2s 后 props 变了呢？
 
-![](./images/a6e9488497c0ffa0d17183b3899be64f.png )
+![](./images/a6e9488497c0ffa0d17183b3899be64f.webp )
 
 ```javascript
 import { memo, useEffect, useState } from "react";
@@ -1018,7 +1018,7 @@ export default Aaa;
 ```
 props 变了会触发 memo 的重新渲染：
 
-![](./images/06e0f24c8daaf868863dbee42a4c50b6.png )
+![](./images/06e0f24c8daaf868863dbee42a4c50b6.webp )
 
 用 memo 的话，一般还会结合两个 hook：useMemo 和 useCallback。
 
@@ -1026,17 +1026,17 @@ props 变了会触发 memo 的重新渲染：
 
 给 Bbb 加一个 callback 的参数：
 
-![](./images/2388b8ae2f9516e9941a0c54c399129a.png )
+![](./images/2388b8ae2f9516e9941a0c54c399129a.webp )
 
 参数传了一个 function，你会发现 memo 失效了：
 
-![](./images/aa1f3ed00cfcf6e6340663a6ed4dd4f9.png )
+![](./images/aa1f3ed00cfcf6e6340663a6ed4dd4f9.webp )
 
 因为每次 function 都是新创建的，也就是每次 props 都会变，这样 memo 就没用了。
 
 这时候就需要 useCallback：
 
-![](./images/bd5e5ca38684b4029c1b302315f1660e.png )
+![](./images/bd5e5ca38684b4029c1b302315f1660e.webp )
 
 ```javascript
 const bbbCallback = useCallback(function () {
@@ -1048,11 +1048,11 @@ const bbbCallback = useCallback(function () {
 
 这时候你会发现，memo 又生效了：
 
-![](./images/dbe998563fe1950de437e772fc215fb5.png )
+![](./images/dbe998563fe1950de437e772fc215fb5.webp )
 
 同理，useMemo 也是和 memo 打配合的，只不过它保存的不是函数，而是值：
 
-![](./images/035d16ed9cbd37dd893422383ab1fa7c.png )
+![](./images/035d16ed9cbd37dd893422383ab1fa7c.webp )
 
 ```javascript
 const count2 = useMemo(() => {

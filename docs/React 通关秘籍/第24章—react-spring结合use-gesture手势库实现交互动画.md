@@ -14,7 +14,7 @@
 
 可能很多同学都没用过手势库，其实手势库里就是对 drag、hover、scroll 这些事件的封装：
 
-![](./images/3776e91803aaf2ff9d7689bd9aab7803.png )
+![](./images/3776e91803aaf2ff9d7689bd9aab7803.webp )
 
 直接给元素绑定事件不行么，为啥还要加一个手势库呢？
 
@@ -27,7 +27,7 @@
 ```shell
 npx create-react-app --template=typescript use-gesture-test
 ```
-![](./images/2484360c6d66cbdaca5fe5e962dc9dac.png )
+![](./images/2484360c6d66cbdaca5fe5e962dc9dac.webp )
 
 我们来实现这样一个案例：
 
@@ -121,23 +121,23 @@ html,body,#root {
 
 这里图片要充满屏幕，从 html、body、#root 到 .wrapper、.page 都要设置宽高 100%：
 
-![](./images/03a498340b40a1e85e6690108763c647.png )
+![](./images/03a498340b40a1e85e6690108763c647.webp )
 
 touch-action 设置为 none 是禁止移动端的默认 touch 处理。
 
 不然默认会导致页面的缩放和滑动：
 
-![](./images/ecd781d9328a1306c84d642b60040294.png )
+![](./images/ecd781d9328a1306c84d642b60040294.webp )
 
 可以看到，渲染的结果是对的：
 
-![](./images/3054df17c1d1edc428cdc637318144b4.png )
+![](./images/3054df17c1d1edc428cdc637318144b4.webp )
 
 这里我们设置的 x，但是 react-spring 用 translate3d 来实现的，这是它内部做的性能优化。
 
 接下来用 use-gesture 来加上手势的处理：
 
-![](./images/7f3a6f4f2f9880ea56d8dff89adf163e.png )
+![](./images/7f3a6f4f2f9880ea56d8dff89adf163e.webp )
 
 ```javascript
 import { useRef } from 'react'
@@ -184,17 +184,17 @@ export default Viewpager;
 
 用 use-gesture 也很简单，绑定啥事件就用 useXxx，比如 useDrag、useHover、useScroll 等。
 
-![](./images/6a63ff334e1dd3fed445482f6b9d9de4.png )
+![](./images/6a63ff334e1dd3fed445482f6b9d9de4.webp )
 
 或者用 useGesture 同时绑定多种事件：
 
-![](./images/7f31d8e7a62a9d92ade0829d78230e44.png )
+![](./images/7f31d8e7a62a9d92ade0829d78230e44.webp )
 
 手势库最大的好处是可以拿到移动的方向、速率、距离等信息。
 
 这里我们拿到的这几个参数：
 
-![](./images/b34f7447e4447385b5c26961d21a2d40.png )
+![](./images/b34f7447e4447385b5c26961d21a2d40.webp )
 
 movement 是拖动距离 [x, y] 
 
@@ -251,7 +251,7 @@ x 根据和当前 index 的差值 * width 计算，然后加上拖动的距离�
 
 可以调整下：
 
-![](./images/a616045bfe3f96de206f66f94fc782ab.png )
+![](./images/a616045bfe3f96de206f66f94fc782ab.webp )
 
 计算出来的比值除以 2  或者除以 3 就好了
 
@@ -268,7 +268,7 @@ use-gesture 文档里还有个案例也很有意思：
 
 它的实现就是用了 velocity 速率，也就是每 ms 移动的距离，如果大于 0.2 就算移到一边，设置对应的 x，否则就设置 0：
 
-![](./images/444f69dad3ce631ee62ee9fba596048d.png )
+![](./images/444f69dad3ce631ee62ee9fba596048d.webp )
 
 具体流程都差不多，也是 use-gesture 和 react-spring 的结合使用，感兴趣可以[看看](https://codesandbox.io/p/sandbox/cards-stack-to6uf?file=%2Fsrc%2FApp.tsx%3A36%2C83-36%2C91)。
 

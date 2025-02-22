@@ -14,7 +14,7 @@
 
 比如给 Button 加一下：
 
-![](./images/34e8e6085468efb3ceb6e53f9ecf1d68.png )
+![](./images/34e8e6085468efb3ceb6e53f9ecf1d68.webp )
 
 ```javascript
 const [_, drag] = useDrag({
@@ -33,11 +33,11 @@ const [_, drag] = useDrag({
 
 加上 dragType 属性，然后带上当前拖拽的组件 id：
 
-![](./images/00f9f17857e4c021e150751d59dd43f9.png )
+![](./images/00f9f17857e4c021e150751d59dd43f9.webp )
 
 在 useDrop 的时候判断下 dragTag，如果是 move，那就先 delete 再 add
 
-![](./images/5f455485862662a4ac4528dd8cd381a8.png )
+![](./images/5f455485862662a4ac4528dd8cd381a8.webp )
 
 ```javascript
 import { useDrop } from "react-dnd";
@@ -96,7 +96,7 @@ export function useMaterailDrop(accept: string[], id: number) {
 在 Container 组件也加上 useDrag：
 
 
-![](./images/7409c545c3887fb4939de0324e5469ef.png )
+![](./images/7409c545c3887fb4939de0324e5469ef.webp )
 
 这里因为要同时给 div 绑定 drag、drop 的处理，所以用 useRef 拿到 ref 之后再绑定。
 
@@ -204,17 +204,17 @@ export default Table;
 
 这里 columns 的处理比较巧妙：
 
-![](./images/5ab9875c992942834739ad02af4e3010.png )
+![](./images/5ab9875c992942834739ad02af4e3010.webp )
 
 我们拖拽 TableColumn 组件过来的时候，用 React.Children 遍历，把它变为 columns 配置。
 
-![](./images/ea130605696fb4e6517373f4fd768443.png )
+![](./images/ea130605696fb4e6517373f4fd768443.webp )
 
 当然，这个 TableColumn 组件还没写。
 
 在 componentConfig 添加 Table 组件的配置：
 
-![](./images/ea11e5282748cdc7020dd3234ea29dc4.png )
+![](./images/ea11e5282748cdc7020dd3234ea29dc4.webp )
 
 ```javascript
 Table: {
@@ -234,17 +234,17 @@ Table: {
 ```
 然后在 Page、Modal、Container 组件里支持下 Table 的 drop：
 
-![](./images/f0fdf771f8b3280d3f088ce86c226860.png )
+![](./images/f0fdf771f8b3280d3f088ce86c226860.webp )
 
-![](./images/1047378906501e7d177c14a9d05531ac.png )
+![](./images/1047378906501e7d177c14a9d05531ac.webp )
 
-![](./images/95cdc6d02b045fc6aac44537c43ab1f9.png )
+![](./images/95cdc6d02b045fc6aac44537c43ab1f9.webp )
 
 试一下：
 
 ![](./images/2c93bbbc6808fd3b926e4e9feb01e9b5.gif )
 
-![](./images/395d9bc190e36f10748e57190f0ca6ee.png )
+![](./images/395d9bc190e36f10748e57190f0ca6ee.webp )
 
 没啥问题。
 
@@ -270,7 +270,7 @@ export default TableColumn;
 
 在 ColumnConfig 加一下配置：
 
-![](./images/b7ce0be5e50b63bd4de512778a0d2ec2.png )
+![](./images/b7ce0be5e50b63bd4de512778a0d2ec2.webp )
 
 ```javascript
 TableColumn: {
@@ -391,7 +391,7 @@ npm install --save dayjs
 ```
 改下 componentConfig 里的组件：
 
-![](./images/a73fd7345c4c6d88e11e1e2e1eb376cf.png )
+![](./images/a73fd7345c4c6d88e11e1e2e1eb376cf.webp )
 
 试一下：
 
@@ -406,11 +406,11 @@ npm install --save dayjs
 ```
 npx @nestjs/cli new lowcode-demo-backend
 ```
-![](./images/c3eb1e239fe4f689dfe4dca4031cceb4.png )
+![](./images/c3eb1e239fe4f689dfe4dca4031cceb4.webp )
 
 改下 AppController，加一个接口：
 
-![](./images/aa2c4bb574baf763cd2c32793ae76a1e.png )
+![](./images/aa2c4bb574baf763cd2c32793ae76a1e.webp )
 
 ```javascript
 @Get('data')
@@ -424,33 +424,33 @@ data() {
 ```
 在 main.ts 开启跨域：
 
-![](./images/a241cffe8adcc861282411cc6607d0ed.png )
+![](./images/a241cffe8adcc861282411cc6607d0ed.webp )
 
 把服务跑起来：
 ```
 npm run start:dev
 ```
-![](./images/46f4ae26385953e97290efcc6203896f.png )
+![](./images/46f4ae26385953e97290efcc6203896f.webp )
 
 浏览器访问下：
 
-![](./images/6ad1bcad65c852e6b70ed2efbfb4dbef.png )
+![](./images/6ad1bcad65c852e6b70ed2efbfb4dbef.webp )
 
 这样接口就有了。
 
 我们再来试下 Table 组件：
 
-![](./images/db7c36db4d6dc97a4a1b158fc6dbddb2.png )
+![](./images/db7c36db4d6dc97a4a1b158fc6dbddb2.webp )
 
-![](./images/c442417d48e52fbad5b2a4b9204c31c7.png )
+![](./images/c442417d48e52fbad5b2a4b9204c31c7.webp )
 
-![](./images/1d80ee3c56833f72fcd6247f363adadd.png )
+![](./images/1d80ee3c56833f72fcd6247f363adadd.webp )
 
 添加三个 TableColumn，配置下字段。
 
 然后在 Table 配置下 url：
 
-![](./images/7ec9de039587641e973639b6a3ab096e.png )
+![](./images/7ec9de039587641e973639b6a3ab096e.webp )
 
 再点击预览：
 
@@ -458,7 +458,7 @@ npm run start:dev
 
 这样，Table 组件就会请求 url，然后根据配置渲染表格
 
-![](./images/724798bbf1a72db2d34521dc2b0f2ca1.png )
+![](./images/724798bbf1a72db2d34521dc2b0f2ca1.webp )
 
 案例代码上传了[小册仓库](https://github.com/QuarkGluonPlasma/react-course-code/tree/main/lowcode-editor)，可以切换到这个 commit 查看：
 

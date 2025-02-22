@@ -24,13 +24,13 @@ volume.connect(out);
 ```
 创建一个 Oscillator 节点，一个 Gain 节点，和 destination 节点连接起来：
 
-![image.png](./images/39005221d8ad2f047cb7702aedf9af8f.png )
+![image.png](./images/39005221d8ad2f047cb7702aedf9af8f.webp )
 
 Oscillator 振荡器节点产生不同波形、频率的声音，Gain 节点调节音量，然后 destination 节点播放声音。
 
 在 main.ts 里引入下：
 
-![image.png](./images/646cb086d50e1eafda36f6be5b23cbc2.png )
+![image.png](./images/646cb086d50e1eafda36f6be5b23cbc2.webp )
 
 这时候你在页面上就能听到声音了。
 
@@ -38,7 +38,7 @@ Oscillator 振荡器节点产生不同波形、频率的声音，Gain 节点调�
 
 有 connect 当然也有 disconnect：
 
-![image.png](./images/6813a1c373b4d5425941cd7afdb90a65.png )
+![image.png](./images/6813a1c373b4d5425941cd7afdb90a65.webp )
 
 断开节点的连接就没声音了。
 
@@ -48,12 +48,12 @@ connect、disconnect 在流程图上就是 edge 的创建和删除。
 
 而且你可以用两个振荡器节点 connect 到一个 destination
 
-![image.png](./images/4ca80f6f47a862f77ccbd3f695c2f6dc.png )
+![image.png](./images/4ca80f6f47a862f77ccbd3f695c2f6dc.webp )
 
 对应的代码就是这样：
 
 
-![image.png](./images/8917ed55bdefd308aa98397db1f83aae.png )
+![image.png](./images/8917ed55bdefd308aa98397db1f83aae.webp )
 
 ```javascript
 const context = new AudioContext();
@@ -94,7 +94,7 @@ volume2.connect(out);
 
 对应到流程图就是这样的：
 
-![image.png](./images/8a021f3ff46ddc33712b806929e8338c.png )
+![image.png](./images/8a021f3ff46ddc33712b806929e8338c.webp )
 
 接下来我们就来实现流程图操作到 audio 的对应。
 
@@ -188,42 +188,42 @@ export function createAudioNode(id: string, type: string, data: Record<string, a
 
 因为可能有多个振荡器节点、音量节点，所以用一个 Map 来存储，key 是流程图节点 id：
 
-![image.png](./images/4ca80f6f47a862f77ccbd3f695c2f6dc.png )
+![image.png](./images/4ca80f6f47a862f77ccbd3f695c2f6dc.webp )
 
 首先，内置 3 个节点：
 
-![image.png](./images/7d9c66ef3b5f01fdf952cd62a966649a.png )
+![image.png](./images/7d9c66ef3b5f01fdf952cd62a966649a.webp )
 
 然后暴露了一个 createAudioNode 的方法来创建两种节点（destination 节点只有一个）：
 
-![image.png](./images/2261fff580057c5970a49dd60bbde76d.png )
+![image.png](./images/2261fff580057c5970a49dd60bbde76d.webp )
 
 创建完加到 Map 里。
 
 然后提供两个 Audio 节点的连接和断开连接的方法：
 
-![image.png](./images/17cedcd4c296dba96f89d7eab45cd5af.png )
+![image.png](./images/17cedcd4c296dba96f89d7eab45cd5af.webp )
 
 这就是我们用流程图节点 id 来作为 Map 的 key 的好处，可以直接把流程图节点的操作对应到 Audio 节点。
 
 然后暴露一个删除 Audio 节点的方法：
 
-![image.png](./images/b022ed24639bf4dd68660c86183f9929.png )
+![image.png](./images/b022ed24639bf4dd68660c86183f9929.webp )
 
 首先 disconnect 所有的连接，然后 stop 这个 Audio 节点，之后从 map 中删除它。
 
 然后是更新参数的方法：
 
-![image.png](./images/cc05ebe29e6635e06f43d8b4cd301a46.png )
+![image.png](./images/cc05ebe29e6635e06f43d8b4cd301a46.webp )
 
 两种流程图节点中的参数修改，就通过这个方法更新到 Audio 节点
 
 
-![image.png](./images/7fb8c0fbaa2cd6a35950fe5510a9ec05.png )
+![image.png](./images/7fb8c0fbaa2cd6a35950fe5510a9ec05.webp )
 
 最后暴露一个暂停、修复声音播放的方法：
 
-![image.png](./images/10b7c9ec24720e3f1c10ae38967ea16f.png )
+![image.png](./images/10b7c9ec24720e3f1c10ae38967ea16f.webp )
 
 总结一下，就是用一个 Map 保存所有的 Audio 节点，key 为对应流程图节点的 id，然后暴露创建节点、节点连接、删除节点、更新节点参数，暂停、恢复播放的方法。
 
@@ -233,13 +233,13 @@ export function createAudioNode(id: string, type: string, data: Record<string, a
 
 初始有 a、b、c 三个节点：
 
-![image.png](./images/2ee30e5ae984c47e0fc3b328af026f66.png )
+![image.png](./images/2ee30e5ae984c47e0fc3b328af026f66.webp )
 
 没有边。
 
 流程图节点 connect 的时候，顺便也把对应的 Audio 节点 connect：
 
-![image.png](./images/c1f07c79b0de8a09b0cb3b1efbfe0493.png )
+![image.png](./images/c1f07c79b0de8a09b0cb3b1efbfe0493.webp )
 
 ```javascript
 const initialNodes: Node[] =  [
@@ -278,7 +278,7 @@ connect(params.source, params.target);
 
 我们在 OutputNode 点击喇叭的时候调用下 toogleAudio 来切换状态：
 
-![image.png](./images/b1a601fb75a8a92fbbb014728c0ef42f.png )
+![image.png](./images/b1a601fb75a8a92fbbb014728c0ef42f.webp )
 
 这样点击喇叭就有声音了：
 
@@ -290,7 +290,7 @@ connect(params.source, params.target);
 
 在 onChange 的时候，修改 audio 节点的参数：
 
-![image.png](./images/cdc6f84693cf504892489300c69af811.png )
+![image.png](./images/cdc6f84693cf504892489300c69af811.webp )
 ```javascript
 import { Handle, Position } from '@xyflow/react';
 import { updateAudioNode } from '../Audio';
@@ -345,7 +345,7 @@ export function VolumeNode({ id, data }: VolumeNodeProps) {
 
 注意，这里加上了 nodrag：
 
-![image.png](./images/9437f31bc7ae5fc9b401b746901c8505.png )
+![image.png](./images/9437f31bc7ae5fc9b401b746901c8505.webp )
 
 不加的话拖动进度条就变成了拖动节点：
 
@@ -353,11 +353,11 @@ export function VolumeNode({ id, data }: VolumeNodeProps) {
 
 这个是 react flow 提供的用于禁止拖动的 className：
 
-![image.png](./images/b84086ec1e7d1022641035edd61edd8a.png )
+![image.png](./images/b84086ec1e7d1022641035edd61edd8a.webp )
 
 同样的方式处理下 OscillatorNode
 
-![image.png](./images/10c7277a2464f5ece5392a2c87903f74.png )
+![image.png](./images/10c7277a2464f5ece5392a2c87903f74.webp )
 
 
 ```javascript
@@ -425,7 +425,7 @@ export function OscillatorNode({ id, data }: OscillatorNodeProps) {
 然后我们再支持下添加振荡器节点和音量节点：
 
 
-![image.png](./images/03cbaa008cb8906d54eee8100a67c74f.png )
+![image.png](./images/03cbaa008cb8906d54eee8100a67c74f.webp )
 
 ```javascript
 import { addEdge, Background, BackgroundVariant, Connection, Controls, Edge, EdgeTypes, MiniMap, Node, OnConnect, Panel, ReactFlow, useEdgesState, useNodesState } from '@xyflow/react';
@@ -527,7 +527,7 @@ export default function App() {
 
 我们还没处理流程节点删除的时候，去掉 Audio Node，也做一下：
 
-![image.png](./images/99bf13de5fea80c0434f73cde6eee085.png )
+![image.png](./images/99bf13de5fea80c0434f73cde6eee085.webp )
 
 ```javascript
 onNodesDelete={(nodes) => {
@@ -548,11 +548,11 @@ onEdgesDelete={(edges) => {
 
 不过现在不好操作，Handle 有点小，我们加大一点：
 
-![image.png](./images/ecc240649ad3f742079ac9330566ff5b.png )
+![image.png](./images/ecc240649ad3f742079ac9330566ff5b.webp )
 
 看下效果：
 
-![image.png](./images/92e3ae0bfdd7667edf9d78c82c5a8bcd.png )
+![image.png](./images/92e3ae0bfdd7667edf9d78c82c5a8bcd.webp )
 
 这样，操作起来就方便多了。
 

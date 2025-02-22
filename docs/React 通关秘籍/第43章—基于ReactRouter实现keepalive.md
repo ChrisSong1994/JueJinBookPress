@@ -15,7 +15,7 @@
 ```
 npx create-vite
 ```
-![](./images/9e4a8f3ae04b53b81a064602fe12d1a4.png )
+![](./images/9e4a8f3ae04b53b81a064602fe12d1a4.webp )
 
 进入项目，安装依赖，把开发服务跑起来：
 
@@ -23,7 +23,7 @@ npx create-vite
 npm install
 npm run dev
 ```
-![](./images/edeea93ff4d43c6ca7146425f6b217de.png )
+![](./images/edeea93ff4d43c6ca7146425f6b217de.webp )
 
 安装 react-router：
 
@@ -114,13 +114,13 @@ export default App;
 
 这里的 Outlet 组件，也可以换成 useOutlet，效果一样：
 
-![](./images/d22df533e6f3c3789b57ea148e26ad7d.png )
+![](./images/d22df533e6f3c3789b57ea148e26ad7d.webp )
 
-![](./images/56d2bec09e2225cf2072e274dc557e8f.png )
+![](./images/56d2bec09e2225cf2072e274dc557e8f.webp )
 
 注释掉 index.css 还有 StrictMode：
 
-![](./images/9205a6f552206e507ced91c05a68b701.png )
+![](./images/9205a6f552206e507ced91c05a68b701.webp )
 
 在浏览器看一下：
 
@@ -224,7 +224,7 @@ export default KeepAliveLayout;
 ```
 代码比较多，从上到下来看。
 
-![](./images/46393531b6e5328128e9426bd7defe0d.png )
+![](./images/46393531b6e5328128e9426bd7defe0d.webp )
 
 首先，我们创建一个 context。
 
@@ -238,37 +238,37 @@ dropByPath 是根据页面路径删除 keepElement 中的对应组件。
 
 Record 是创建一个 key value 的对象类型：
 
-![](./images/0316d2d893d5b25313146c51045afe92.png )
+![](./images/0316d2d893d5b25313146c51045afe92.webp )
 
 Requried 是去掉可选 -?
 
-![](./images/401a803a42e2596d9d63344df3828f1a.png )
+![](./images/401a803a42e2596d9d63344df3828f1a.webp )
 
 Omit 是删掉其中的部分属性：
 
-![](./images/d18206476d6c133465ac072c29a55168.png )
+![](./images/d18206476d6c133465ac072c29a55168.webp )
 
 KeepAliveLayoutProps 类型处理后就是这样的：
 
-![](./images/962045709bcdbbcc0dc731bf8e5157f5.png )
+![](./images/962045709bcdbbcc0dc731bf8e5157f5.webp )
 
 ts 类型编程部分的知识可以看我的 [TS 类型体操小册](https://juejin.cn/book/7047524421182947366)
 
 继续往下看：
 
-![](./images/6c370d17514510e54b01abca735e6d60.png )
+![](./images/6c370d17514510e54b01abca735e6d60.webp )
 
 暴露出一个组件，里面用 context.Provider 修改 context 中的值，主要是设置 keepPaths，其余的都用 useContext 从 context 中取。
 
 然后暴露一个 useKeepOutlet 的 hook：
 
-![](./images/1c08b354840b98ea4f4a05bb632b520a.png )
+![](./images/1c08b354840b98ea4f4a05bb632b520a.webp )
 
 用 useLocation 拿到当前路由，用 useOutlet 拿到对应的组件。
 
 判断下当前路由是否在需要 keepalive 的路由内，是的话就保存到 keepElements。
 
-![](./images/0e7841af02f34ac0c1ba64787da3c20d.png )
+![](./images/0e7841af02f34ac0c1ba64787da3c20d.webp )
 
 然后渲染所有的 keepElements，如果不匹配就隐藏。
 
@@ -276,7 +276,7 @@ ts 类型编程部分的知识可以看我的 [TS 类型体操小册](https://ju
 
 isKeepPath 就比较简单了，根据是 string 还是 RegExp 分别做处理，判断路由是否在 keepPaths 内：
 
-![](./images/6dd49f93d516fe3ea3fb4a4d27f6c00e.png )
+![](./images/6dd49f93d516fe3ea3fb4a4d27f6c00e.webp )
 
 其实原理比较容易看懂：**在 context 中保存所有需要 keepalive 的组件，全部渲染出来，通过路由是否匹配来切换对应组件的显示隐藏。**
 
@@ -284,11 +284,11 @@ isKeepPath 就比较简单了，根据是 string 还是 RegExp 分别做处理�
 
 在外面包一层 KeepAliveLayout 组件：
 
-![](./images/fbb855ef9577aa0fe2ddd8df4dd8e53f.png )
+![](./images/fbb855ef9577aa0fe2ddd8df4dd8e53f.webp )
 
 然后把 useOutlet 换成 useKeepOutlet：
 
-![](./images/e50ff3d39a7f03c717b27d3cdce7c9a5.png )
+![](./images/e50ff3d39a7f03c717b27d3cdce7c9a5.webp )
 
 测试下：
 
@@ -298,7 +298,7 @@ isKeepPath 就比较简单了，根据是 string 还是 RegExp 分别做处理�
 
 我们配置下：
 
-![](./images/69bc3c1d44b6de6e9ef9acf20935be49.png )
+![](./images/69bc3c1d44b6de6e9ef9acf20935be49.webp )
 
 现在两个路由的组件就都 keepalive 了：
 

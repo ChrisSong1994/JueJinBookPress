@@ -14,21 +14,21 @@ zustand 算是其中最流行的一个。
 
 redux：
 
-![](./images/e319563f5623a9a2360549afbf63a3e7.png )
+![](./images/e319563f5623a9a2360549afbf63a3e7.webp )
 
 zustand：
 
-![](./images/a60111b512f94d9ff3cdab3c62f4d349.png )
+![](./images/a60111b512f94d9ff3cdab3c62f4d349.webp )
 
 看 npm 包的周下载量，redux 有 880w，而 zustand 也有 260w 了：
 
 redux：
 
-![](./images/918af1a3a6c4d9b3f428d5d7acd4b2a1.png )
+![](./images/918af1a3a6c4d9b3f428d5d7acd4b2a1.webp )
 
 zustand：
 
-![](./images/4689fe5d398ffe5f91c71a841957d26c.png )
+![](./images/4689fe5d398ffe5f91c71a841957d26c.webp )
 
 从各方面来说，zustand 都在快速赶超 redux。
 
@@ -45,7 +45,7 @@ zustand：
 ```
 npx create-react-app zustand-test
 ```
-![](./images/271d37029420a167551888a2db9b26f9.png )
+![](./images/271d37029420a167551888a2db9b26f9.webp )
 
 用 cra 创建个 react 项目。
 
@@ -56,7 +56,7 @@ npm run start
 ```
 浏览器访问下：
 
-![](./images/5e9afe73b16625f20f1f89c818506c9c.png )
+![](./images/5e9afe73b16625f20f1f89c818506c9c.webp )
 
 然后安装 zustand:
 
@@ -104,17 +104,17 @@ function Ccc() {
 ```
 用 create 函数创建一个 store，定义 state 和修改 state 的方法。
 
-![](./images/928be14cbe9e79d744583f1851b124c6.png )
+![](./images/928be14cbe9e79d744583f1851b124c6.webp )
 
 然后在组件里调用 create 返回的函数，取出属性或者方法在组件里用：
 
-![](./images/0ae77c8052acdc2381fafa7108ffd518.png )
+![](./images/0ae77c8052acdc2381fafa7108ffd518.webp )
 
-![](./images/3a6491a2c2ec3fd7d57cb4e3d482e2b0.png )
+![](./images/3a6491a2c2ec3fd7d57cb4e3d482e2b0.webp )
 
 此外，你还可以调用 subscribe 来添加一个监听器：
 
-![](./images/cffdda16e34f9ba5e4c46bb3458a5b62.png )
+![](./images/cffdda16e34f9ba5e4c46bb3458a5b62.webp )
 
 ```javascript
 useEffect(() => {
@@ -125,7 +125,7 @@ useEffect(() => {
 ```
 回调函数可以拿到当前 state，或者调用 store.getState 也可以拿到 state。
 
-![](./images/0bc3a44ea7b7d466023f09c800f6454d.png )
+![](./images/0bc3a44ea7b7d466023f09c800f6454d.webp )
 
 这就是 zustand 的全部用法了，就这么简单。
 
@@ -137,7 +137,7 @@ useEffect(() => {
 
 你看这个 create 方法的参数，它是一个接受 set、get、store 的三个参数的函数：
 
-![](./images/321a91be3fc8d7c6eafa899f2a41656f.png )
+![](./images/321a91be3fc8d7c6eafa899f2a41656f.webp )
 
 那我们可不可以包一层，自己拿到 get、set、store，对这些做一些修改，之后返回一个接受三个参数的函数呢？
 
@@ -158,7 +158,7 @@ function logMiddleware(func) {
 ```
 我接受之前的函数，然后对把 set、get、store 修改之后再调用它：
 
-![](./images/89665eeceef801428231ab09c9a8b0d4.png )
+![](./images/89665eeceef801428231ab09c9a8b0d4.webp )
 
 这样不就给 zustand 的 set 方法加上了额外的功能么？
 
@@ -174,23 +174,23 @@ persist 就是同步 store 数据到 localStorage 的。
 
 我们试一下：
 
-![](./images/3e88cd8e5779f4fc461ff299355d6b86.png )
+![](./images/3e88cd8e5779f4fc461ff299355d6b86.webp )
 
 效果如下：
 
-![](./images/bf4fa38c19c56af73bf321a91990790a.png )
+![](./images/bf4fa38c19c56af73bf321a91990790a.webp )
 
 而且，中间件是可以层层嵌套的：
 
 我们把自己写的 log 和内置的 persist 结合起来：
 
-![](./images/79be2ad94d5c650f40221da262396a28.png )
+![](./images/79be2ad94d5c650f40221da262396a28.webp )
 
 效果如下：
 
-![](./images/9d8e1486a69d6662f0fb85804939aa1c.png )
+![](./images/9d8e1486a69d6662f0fb85804939aa1c.webp )
 
-![](./images/73a029e53324cf06b488595b2a89cb14.png )
+![](./images/73a029e53324cf06b488595b2a89cb14.webp )
 
 因为中间件不就是修改 set、get 这些参数么，这些 set、get 是可以层层包装的，所以自然中间件也就可以层层嵌套。
 
@@ -251,7 +251,7 @@ state 是全局状态，listeners 是监听器。
 
 至于 replace，这是 zustand 在 set 状态的时候默认是合并，你也可以传一个 true 改成替换：
 
-![](./images/40dbcfd7b8b1a700a8e37ad551740fc5.png )
+![](./images/40dbcfd7b8b1a700a8e37ad551740fc5.webp )
 
 那如果状态变了，如何触发渲染呢？
 
@@ -278,7 +278,7 @@ function useStore(api, selector) {
 
 selector 说的是传入的这个函数：
 
-![](./images/1316e2135fa24d80972f04fa89676f14.png )
+![](./images/1316e2135fa24d80972f04fa89676f14.webp )
 
 我们用 useState 设置随机数来触发渲染。
 
@@ -305,13 +305,13 @@ export const create = (createState) => {
 
 把 create 函数换成我们自己的，其余代码不变：
 
-![](./images/d4736d1188b3336905f04c4301e8d20f.png )
+![](./images/d4736d1188b3336905f04c4301e8d20f.webp )
 
 可以看到，功能依然正常：
 
-![](./images/9c48b3ec40d2d0dc568436573817913f.png )
+![](./images/9c48b3ec40d2d0dc568436573817913f.webp )
 
-![](./images/ff9f420b983828aa93ae67dbe287c8ba.png )
+![](./images/ff9f420b983828aa93ae67dbe287c8ba.webp )
 
 我们的 my-zustand 已经能够完美替代 zustand 了。
 
@@ -391,11 +391,11 @@ export const create = (createState) => {
 
 react [有一个 hook](https://react.dev/reference/react/useSyncExternalStore) 就是用来定义外部 store 的，store 变化以后会触发 rerender：
 
-![](./images/5e6796df6a352ecdfcccd4db4871e424.png )
+![](./images/5e6796df6a352ecdfcccd4db4871e424.webp )
 
 有了这个 useSyncExternalStore 的 hook，我们就不用自己监听 store 变化触发 rerender 了：
 
-![](./images/ea96eab2a6ab556dd968e809e18e70ac.png )
+![](./images/ea96eab2a6ab556dd968e809e18e70ac.webp )
 
 可以简化成这样：
 
@@ -478,23 +478,23 @@ export const create = (createState) => {
 
 点击 vscode 的 create a launch.json file，创建一个调试配置：
 
-![](./images/5d9ebfeaa17c99200f0201ba0514d4e7.png )
+![](./images/5d9ebfeaa17c99200f0201ba0514d4e7.webp )
 
 改下调试的端口，点击调试启动：
 
-![](./images/802c858de29d1bac4cd8208f5d8c1b2f.png )
+![](./images/802c858de29d1bac4cd8208f5d8c1b2f.webp )
 
 把 zustand 换成之前的，然后打个断点：
 
-![](./images/9a869b5fee8178c18ade1d05b53d5c45.png )
+![](./images/9a869b5fee8178c18ade1d05b53d5c45.webp )
 
 通过调试，可以看到 create 的实现如下：
 
-![](./images/568a94522900ba65358eb4380524570f.png )
+![](./images/568a94522900ba65358eb4380524570f.webp )
 
 而 useStore 的实现如下：
 
-![](./images/25d55f2c973d80b7c11025b11d74f81b.png )
+![](./images/25d55f2c973d80b7c11025b11d74f81b.webp )
 
 唯一的区别就是它用的是一个 shim 包里的，因为它要保证这个 hook 的兼容性。
 
@@ -508,15 +508,15 @@ export const create = (createState) => {
 
 当你用了 ts 并且用了中间件，那要这样写，第一次调用不传参数，第二次传：
 
-![](./images/55d17e99d21cf27becfd1754720c6633.png )
+![](./images/55d17e99d21cf27becfd1754720c6633.webp )
 
 源码里确实做了处理：
 
-![](./images/083e336c157e6c77ca6976abb1a754ed.png )
+![](./images/083e336c157e6c77ca6976abb1a754ed.webp )
 
 至于为什么要这样，[官方解释](https://github.com/pmndrs/zustand/blob/main/docs/guides/typescript.md)说是为了好做中间件的 ts 类型处理：
 
-![](./images/7dd82428570c0f34d8c8c2a502ac0af6.png )
+![](./images/7dd82428570c0f34d8c8c2a502ac0af6.webp )
 
 反正功能是一样的，大家记住 ts + middleware 的场景换个写法就好了。
 

@@ -12,7 +12,7 @@ vue playground 是有这个功能的：
 
 然后在新的浏览器窗口打开，可以看到分享的代码：
 
-![](./images/e111db23871da54311f908f80a7f17ee.png )
+![](./images/e111db23871da54311f908f80a7f17ee.webp )
 
 我们也来实现下。
 
@@ -22,7 +22,7 @@ vue playground 是有这个功能的：
 
 files 包含所有文件的信息，编辑、编译、预览都是围绕 files 来的。
 
-![](./images/90349ea5199754bb344ac73dc58d4d46.png )
+![](./images/90349ea5199754bb344ac73dc58d4d46.webp )
 
 而 files 是一个对象，我们只需要 JSON.stringify 一下，就变为字符串了。
 
@@ -30,7 +30,7 @@ files 包含所有文件的信息，编辑、编译、预览都是围绕 files �
 
 在 Context.Provider 里设置下 JSON.stringify(files) 到 location.hash
 
-![](./images/21ffd6b38c120d61161599445f7f89bb.png )
+![](./images/21ffd6b38c120d61161599445f7f89bb.webp )
 
 ```javascript
 useEffect(() => {
@@ -42,13 +42,13 @@ useEffect(() => {
 
 这里还要对字符串 encodeURIComponent 下，把 url 里不支持的字符做下转换：
 
-![](./images/3339ad8cf7214b55ae3a21dbd8448d0a.png )
+![](./images/3339ad8cf7214b55ae3a21dbd8448d0a.webp )
 
 可以看到，确实会把 files 内容保存到 hash。
 
 那把这个 url 分享出去之后，初始化的时候用 hash 中的 files 就好了：
 
-![](./images/69b24013f129bea5ae159f77d5a330e1.png )
+![](./images/69b24013f129bea5ae159f77d5a330e1.webp )
 
 ```javascript
 const getFilesFromUrl = () => {
@@ -66,11 +66,11 @@ const getFilesFromUrl = () => {
 
 试下效果：
 
-![](./images/9ee7753a60cb4483239345a110ea6167.png )
+![](./images/9ee7753a60cb4483239345a110ea6167.webp )
 
 我在 chrome 里改了一下代码内容，新建了一个 Aaa.tsx 组件。
 
-![](./images/f8d705962737c473026ecda157123057.png )
+![](./images/f8d705962737c473026ecda157123057.webp )
 
 在别的浏览器打开这个链接试下：
 
@@ -84,7 +84,7 @@ const getFilesFromUrl = () => {
 
 用 [fflate](https://www.npmjs.com/package/fflate) 这个包：
 
-![](./images/a190ce8183964f816de9642fd1780421.png )
+![](./images/a190ce8183964f816de9642fd1780421.webp )
 
 安装下：
 
@@ -93,7 +93,7 @@ npm install --save fflate
 ```
 在 utils.ts 添加两个方法
 
-![](./images/f2befb51aca4259c6670329364d85c6a.png )
+![](./images/f2befb51aca4259c6670329364d85c6a.webp )
 ```javascript
 import { strFromU8, strToU8, unzlibSync, zlibSync } from "fflate"
 
@@ -115,9 +115,9 @@ export function uncompress(base64: string): string {
 
 这里的 atob、btoa 是二进制的 ASC 码和 base64 的字符串的转换：
 
-![](./images/2b86ef28de41048f8d88a788decafa20.png )
+![](./images/2b86ef28de41048f8d88a788decafa20.webp )
 
-![](./images/c884e78fc16ece8e7e5542c9c6344908.png )
+![](./images/c884e78fc16ece8e7e5542c9c6344908.webp )
 
 compress 方法里，我们先调用 fflate 包的 strToU8 把字符串转为字节数组，然后 zlibSync 压缩，之后 strFromU8 转为字符串。
 
@@ -127,7 +127,7 @@ uncompress 方法正好反过来。
 
 我们调用下试试效果：
 
-![](./images/2b4f73f7312b2fe264b786c3364f3b17.png )
+![](./images/2b4f73f7312b2fe264b786c3364f3b17.webp )
 
 ```javascript
 useEffect(() => {
@@ -136,7 +136,7 @@ useEffect(() => {
 }, [files])
 ```
 
-![](./images/c91c5ed6374f3c42c94f576236805573.png )
+![](./images/c91c5ed6374f3c42c94f576236805573.webp )
 
 ```javascript
 const getFilesFromUrl = () => {
@@ -152,11 +152,11 @@ const getFilesFromUrl = () => {
 ```
 现在，代码内容会压缩后以 asc 码字符串的方式保存在 url 里：
 
-![](./images/304ef53d4ca49b58790e35d7e4fca66a.png )
+![](./images/304ef53d4ca49b58790e35d7e4fca66a.webp )
 
 在另一个窗口里打开这个 url：
 
-![](./images/5e80ed4202f95d6bb6cef46495de426e.png )
+![](./images/5e80ed4202f95d6bb6cef46495de426e.webp )
 
 内容同样能恢复。
 
@@ -164,7 +164,7 @@ const getFilesFromUrl = () => {
 
 在 Header 里加个按钮：
 
-![](./images/e6f41b13d5191f7957c55c4b2eeaa5c4.png )
+![](./images/e6f41b13d5191f7957c55c4b2eeaa5c4.webp )
 
 ```javascript
 <ShareAltOutlined 
@@ -200,7 +200,7 @@ npm install --save-dev @types/file-saver
 ```
 在 utils.ts 加一个 downloadFiles 方法：
 
-![](./images/505503226cfeab0b44787d97a3a7194d.png )
+![](./images/505503226cfeab0b44787d97a3a7194d.webp )
 
 ```javascript
 export async function downloadFiles(files: Files) {
@@ -217,7 +217,7 @@ export async function downloadFiles(files: Files) {
 
 然后在 Header 加一个按钮：
 
-![](./images/894a8a4d3acd3953ae22107485dd8b0a.png )
+![](./images/894a8a4d3acd3953ae22107485dd8b0a.webp )
 
 ```javascript
 <DownloadOutlined 

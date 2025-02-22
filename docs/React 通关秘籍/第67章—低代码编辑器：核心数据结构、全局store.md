@@ -4,7 +4,7 @@
 
 这种编辑器都差不多，比如百度开源的 [amis](https://aisuda.github.io/amis-editor-demo/#/edit/0)：
 
-![](./images/1bf6a88e841fa18d9d918533d19447f7.png )
+![](./images/1bf6a88e841fa18d9d918533d19447f7.webp )
 
 左边是物料区，中间是画布区，右边是属性编辑区。
 
@@ -18,11 +18,11 @@
 
 左边可以看到组件的大纲视图，用树形展示组件嵌套结构：
 
-![](./images/d16abb0a20d3c7e5c8f72976ef00b3b0.png )
+![](./images/d16abb0a20d3c7e5c8f72976ef00b3b0.webp )
 
 也可以直接看生成的 json 结构：
 
-![](./images/a6c90c32a08da1b9c7fc40e3161ca9a6.png )
+![](./images/a6c90c32a08da1b9c7fc40e3161ca9a6.webp )
 
 可以看到，json 的嵌套结构和页面里组件的结构一致，并且 json 对象的属性也是在属性编辑区编辑后的。
 
@@ -55,7 +55,7 @@
 ```
 npx create-vite lowcode-editor
 ```
-![](./images/5a357c073b8703407a7ceceb447d1a10.png )
+![](./images/5a357c073b8703407a7ceceb447d1a10.webp )
 
 安装依赖，把项目跑起来：
 
@@ -63,9 +63,9 @@ npx create-vite lowcode-editor
 npm install
 npm run dev
 ```
-![](./images/df97751a21be34c8969103b77628342a.png )
+![](./images/df97751a21be34c8969103b77628342a.webp )
 
-![](./images/56f869d053272dfbe3a19585ad86261f.png )
+![](./images/56f869d053272dfbe3a19585ad86261f.webp )
 
 改下 main.tsx：
 
@@ -100,7 +100,7 @@ export default App
 
 ```
 
-![](./images/04fbde21b28ae956d1757ae0db57cd01.png )
+![](./images/04fbde21b28ae956d1757ae0db57cd01.webp )
 
 按照 [tailwind 文档](https://www.tailwindcss.cn/docs/guides/vite#react)里的步骤安装 tailwind：
 
@@ -112,7 +112,7 @@ npx tailwindcss init -p
 
 会生成 tailwind 和 postcss 配置文件：
 
-![](./images/c8d394b151bb664295c8a4b03eccc1f5.png )
+![](./images/c8d394b151bb664295c8a4b03eccc1f5.webp )
 
 修改下 content 配置，也就是从哪里提取 className：
 
@@ -141,19 +141,19 @@ tailwind 会提取 className 之后按需生成最终的 css。
 
 在 main.tsx 里引入：
 
-![](./images/e98d8bfc390783d10faf2aab705bd2d5.png )
+![](./images/e98d8bfc390783d10faf2aab705bd2d5.webp )
 
 如果你没安装 tailwind 插件，需要安装一下：
 
-![](./images/c59ffea76ccbff5cb7b305d3ff0baaf1.png )
+![](./images/c59ffea76ccbff5cb7b305d3ff0baaf1.webp )
 
 这样在写代码的时候就会提示 className 和对应的样式值：
 
-![](./images/cc0cd0111d5090efe200a0cc230d3b12.png )
+![](./images/cc0cd0111d5090efe200a0cc230d3b12.webp )
 
 不知道 className 叫啥的样式，还可以在 [tailwind 文档](https://www.tailwindcss.cn/docs/border-width)里搜：
 
-![](./images/c69e7e6253a5c8ba4175e88a30a6f63b.png )
+![](./images/c69e7e6253a5c8ba4175e88a30a6f63b.webp )
 
 接下来写布局：
 
@@ -204,7 +204,7 @@ h-[100vh] 就是 height: 100vh
 
 看下样式：
 
-![](./images/d84565bdbe641642ff809e95efa3d7ad.png )
+![](./images/d84565bdbe641642ff809e95efa3d7ad.webp )
 
 没问题。
 
@@ -216,14 +216,14 @@ h-[100vh] 就是 height: 100vh
 
 然后写下 header 的样式。
 
-![](./images/4905a5d6b7bd06ab63437065c6e0683e.png )
+![](./images/4905a5d6b7bd06ab63437065c6e0683e.webp )
 
 高度 60px、用 flex 布局，竖直居中，有一个底部 border
 
 ```
 h-[60px] flex items-center border-b-[1px] border-[#000]
 ```
-![](./images/8598bb6b5bfcb8aea226f408504e2630.png )
+![](./images/8598bb6b5bfcb8aea226f408504e2630.webp )
 
 没啥问题。
 
@@ -296,7 +296,7 @@ npm install --save zustand
 ```
 前面做 todolist 案例用过 zustand：
 
-![](./images/4a0bd865d1ea7cec7b7f3fb9032e0f76.png )
+![](./images/4a0bd865d1ea7cec7b7f3fb9032e0f76.webp )
 
 声明 State、Action 的类型，然后在 create 方法里声明 state、action 就行。
 
@@ -407,7 +407,7 @@ export function getComponentById(
 ```
 我们从上到下来看下：
 
-![](./images/35bb21b02948791703f4414f2ebe64db.png )
+![](./images/35bb21b02948791703f4414f2ebe64db.webp )
 
 store 里保存着 components 组件树，它是一个用 children 属性连接起来的树形结构。
 
@@ -417,7 +417,7 @@ store 里保存着 components 组件树，它是一个用 children 属性连接�
 
 这是一个树形结构，想要增删改都要先找到 parent 节点，我们实现了查找方法：
 
-![](./images/f231538e1b735c3ddfa35f7563f05095.png )
+![](./images/f231538e1b735c3ddfa35f7563f05095.webp )
 
 树形结构中查找节点，自然是通过递归。
 
@@ -427,7 +427,7 @@ store 里保存着 components 组件树，它是一个用 children 属性连接�
 
 新增会传入 parentId，在哪个节点下新增：
 
-![](./images/75355c185817ffecec528155eb55e573.png )
+![](./images/75355c185817ffecec528155eb55e573.webp )
 
 查找到 parent 之后，在 children 里添加一个 component，并把 parentId 指向这个 parent。
 
@@ -435,11 +435,11 @@ store 里保存着 components 组件树，它是一个用 children 属性连接�
 
 删除则是找到这个节点的 parent，在 parent.children 里删除当前节点：
 
-![](./images/7a73574c4a909dca768dcba97820c3fe.png )
+![](./images/7a73574c4a909dca768dcba97820c3fe.webp )
 
 修改 props 也是找到目标 component，修改属性：
 
-![](./images/85a5129595050c049eb8f9c1f1b291a2.png )
+![](./images/85a5129595050c049eb8f9c1f1b291a2.webp )
 
 这样，components 和它的增删改查方法就都定义好了。
 
@@ -489,7 +489,7 @@ export function EditArea() {
 
 然后把 components 组件树渲染出来：
 
-![](./images/3d59b42d37e7c98cfc76ff35dd7fdf8d.png )
+![](./images/3d59b42d37e7c98cfc76ff35dd7fdf8d.webp )
 
 可以看到，Page 下多了一个 Container 组件。
 
@@ -499,7 +499,7 @@ export function EditArea() {
 
 对应的底层操作就是这样的：
 
-![](./images/82d25ef4ab3a4edfb72f1dac673f87f2.png )
+![](./images/82d25ef4ab3a4edfb72f1dac673f87f2.webp )
 
 ```javascript
 addComponent({
@@ -510,7 +510,7 @@ addComponent({
 }, 222);
 ```
 
-![](./images/0ce5e88379b7549bf10869f297aded50.png )
+![](./images/0ce5e88379b7549bf10869f297aded50.webp )
 
 在编辑器中把这个组件删除：
 
@@ -518,7 +518,7 @@ addComponent({
 
 对应的操作就是 deleteComponent：
 
-![](./images/a33c61c552cbc4a30b659ddd7c980b59.png )
+![](./images/a33c61c552cbc4a30b659ddd7c980b59.webp )
 
 ```javascript
 setTimeout(() => {
@@ -533,21 +533,21 @@ setTimeout(() => {
 
 对应的就是 updateComponentProps：
 
-![](./images/dc6e57f14cd01eb62ad33344a60243fb.png )
+![](./images/dc6e57f14cd01eb62ad33344a60243fb.webp )
 
 （amis 用的 body 属性关联子组件，我们用的 children）
 
-![](./images/898dde474648d5a8d418c4a9c9d01c35.png )
+![](./images/898dde474648d5a8d418c4a9c9d01c35.webp )
 
 至于大纲和 json：
 
-![](./images/7e3e98925cd201bbd34c1bc720d5414b.png )
+![](./images/7e3e98925cd201bbd34c1bc720d5414b.webp )
 
-![](./images/c994dca9c6ccfe8b10aec69b17b69ec7.png )
+![](./images/c994dca9c6ccfe8b10aec69b17b69ec7.webp )
 
 就是对这个 json 的展示：
 
-![](./images/7386be520e1f20179015adb34236fb15.png )
+![](./images/7386be520e1f20179015adb34236fb15.webp )
 
 所以说，从物料区拖组件到画布，删除组件、在属性编辑区修改组件属性，都是对这个 json 的修改。
 

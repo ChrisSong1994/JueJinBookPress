@@ -38,21 +38,21 @@
 npx create-react-app --template=typescript react-unit-test
 ```
 
-![](./images/a9d9412d1a5f32f0ecfb532d3e9493a1.png )
+![](./images/a9d9412d1a5f32f0ecfb532d3e9493a1.webp )
 
 测试 react 组件和 hooks 可以使用 @testing-library/react 这个包，然后测试用例使用 jest 来组织。
 
 这两个包 cra 都给引入了，我们直接跑下 npm run test 就可以看到单测结果。
 
-![](./images/0069c44b14ccd7896f6c3df25e8c022d.png )
+![](./images/0069c44b14ccd7896f6c3df25e8c022d.webp )
 
 App 组件是这样的：
 
-![](./images/924bbb3b30a7042d2912eff128d59458.png )
+![](./images/924bbb3b30a7042d2912eff128d59458.webp )
 
 它的单测是这么写的：
 
-![](./images/a684a9d0583a9091ea810583d372308d.png )
+![](./images/a684a9d0583a9091ea810583d372308d.webp )
 
 通过 @testing-library/react 的 render 函数把组件渲染出来。
 
@@ -71,7 +71,7 @@ test('renders learn react link 2', () => {
 ```
 render 会返回组件挂载的容器 dom，它是一个 HTMLElement 的对象，有各种 dom 方法。
 
-![](./images/7a654811e0c60bf0d57d497a7ddd3393.png )
+![](./images/7a654811e0c60bf0d57d497a7ddd3393.webp )
 
 可以用 querySelector 查找到那个 a 标签，然后判断它的内容是否匹配正则。
 
@@ -83,7 +83,7 @@ render 会返回组件挂载的容器 dom，它是一个 HTMLElement 的对象�
 
 antd 组件的测试也是用的第二种来查找 dom 的：
 
-![](./images/7397dc8e6bfde8da08210ddecf256fc3.png )
+![](./images/7397dc8e6bfde8da08210ddecf256fc3.webp )
 
 那如果有 onClick、onChange 等事件监听器的组件，怎么测试呢？
 
@@ -114,7 +114,7 @@ export default Toggle;
 
 渲染出来是这样的：
 
-![](./images/5f4a200d233bcec3a140fab833f8193c.png )
+![](./images/5f4a200d233bcec3a140fab833f8193c.webp )
 
 这个组件如何测试呢？
 
@@ -151,17 +151,17 @@ npm run test
 ```
 测试通过了：
 
-![](./images/383bf6315661412977822cd561181c7c.png )
+![](./images/383bf6315661412977822cd561181c7c.webp )
 
 fireEvent 可以触发任何元素的任何事件：
 
-![](./images/3f8c85930b245f25c305530e88cde370.png )
+![](./images/3f8c85930b245f25c305530e88cde370.webp )
 
 那如何触发 change 事件呢？
 
 这样写：
 
-![](./images/fe0b8bc3ea0b60a813a90854e5bf9843.png )
+![](./images/fe0b8bc3ea0b60a813a90854e5bf9843.webp )
 
 第二个参数传入 target 的 value 值。
 
@@ -169,7 +169,7 @@ fireEvent 可以触发任何元素的任何事件：
 
 比如 Toggle 组件里点击按钮之后，过了 2s 才改状态：
 
-![](./images/4a132d4c501fccdbf50d94fd3080cfcd.png )
+![](./images/4a132d4c501fccdbf50d94fd3080cfcd.webp )
 
 ```javascript
 setTimeout(() => {
@@ -179,11 +179,11 @@ setTimeout(() => {
 
 这时候测试用例就报错了：
 
-![](./images/b472b0a1b59f2587d449ccd02c286a39.png )
+![](./images/b472b0a1b59f2587d449ccd02c286a39.webp )
 
 这种用 waitFor 包裹下，设置 timeout 的时间就好了：
 
-![](./images/553169cc37794e53b6528ac28e475cfd.png )
+![](./images/553169cc37794e53b6528ac28e475cfd.webp )
 
 ```javascript
 await waitFor(() => expect(container.querySelector('p')?.textContent).toBe('open'), {
@@ -193,19 +193,19 @@ await waitFor(() => expect(container.querySelector('p')?.textContent).toBe('open
 
 测试通过了：
 
-![](./images/cb4ca62ff3adaddbc08a64e6433cb14c.png )
+![](./images/cb4ca62ff3adaddbc08a64e6433cb14c.webp )
 
 除了这些之外，还有一个 api 比较常用，就是 act
 
 它是 react-dom 包里的，@testing-library/react 对它做了一层包装。
 
-![](./images/181dd668b69a6dc385e62e18e7da8bc4.png )
+![](./images/181dd668b69a6dc385e62e18e7da8bc4.webp )
 
 就是可以把所有浏览器里跑的代码都包一层 act，这样行为会和在浏览器里一样。
 
 文档里的例子是这样的：
 
-![](./images/1257750bd58bc0128073b6dda0f109bb.png )
+![](./images/1257750bd58bc0128073b6dda0f109bb.webp )
 
 把单测里的 fireEvent 用 act 包一层：
 
@@ -230,7 +230,7 @@ test('toggle', async () => {
 
 结果一样：
 
-![](./images/2c64952763ddaa7e8167c26d432e5c47.png )
+![](./images/2c64952763ddaa7e8167c26d432e5c47.webp )
 
 组件测试我们学会了，那如果我想单独测试 hooks 呢？
 
@@ -320,7 +320,7 @@ test('useCounter', async () => {
 
 renderHook 返回的 result.current 就是 hook 的返回值。
 
-![](./images/d426207b4cb5069ad0efe17f2e8eb50c.png )
+![](./images/d426207b4cb5069ad0efe17f2e8eb50c.webp )
 
 这就是 hook 的单测写法。
 

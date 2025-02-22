@@ -18,7 +18,7 @@
 npx create-react-app --template typescript debug-test
 ```
 
-![](./images/a2dc48b726451e9e8bebed946fa17e4e.png )
+![](./images/a2dc48b726451e9e8bebed946fa17e4e.webp )
 
 改下 index.tsx
 
@@ -74,15 +74,15 @@ npm run start
 
 点击 debug 面板的 create a launch.json file
 
-![](./images/0e695bdd0e76d5da6e0b36bb36c38c57.png )
+![](./images/0e695bdd0e76d5da6e0b36bb36c38c57.webp )
 
 选择 chrome 类型的调试配置：
 
-![](./images/a8d58aadf780271921ec8bd4af73c12a.png )
+![](./images/a8d58aadf780271921ec8bd4af73c12a.webp )
 
 它会创建 .vscode/launch.json 文件：
 
-![](./images/095a313363a522294fb3be8fa2de5ef4.png )
+![](./images/095a313363a522294fb3be8fa2de5ef4.webp )
 
 把端口改为 3000
 
@@ -92,25 +92,25 @@ npm run start
 
 打几个断点，然后点击刷新：
 
-![](./images/7c374b3267468e07cfe16147aeeb3772.png )
+![](./images/7c374b3267468e07cfe16147aeeb3772.webp )
 
 代码会在断点处断住，左边可以看到作用域、调用栈，鼠标 hover 到变量上可以看到变量值：
 
-![](./images/c713be78ba62bfa3e910a6c8711a7cc1.png )
+![](./images/c713be78ba62bfa3e910a6c8711a7cc1.webp )
 
 这几个按钮分别是跳断点执行、单步执行、进入函数、跳出函数、刷新、停止：
 
-![](./images/4c868f374cafaa267b5fbc87b1917dfc.png )
+![](./images/4c868f374cafaa267b5fbc87b1917dfc.webp )
 
 可以点点试试看。
 
 在页面点击 div，会触发 click 事件，在断点处断住，
 
-![](./images/2dc6ea42ad3256cb96dd15d970d5625d.png )
+![](./images/2dc6ea42ad3256cb96dd15d970d5625d.webp )
 
 可以在下面的 debug console 输入变量或者表达式，会输出执行结果：
 
-![](./images/29b2339d9c554c3e35432d5528008dca.png )
+![](./images/29b2339d9c554c3e35432d5528008dca.webp )
 
 这样调试不比 console.log 方便多了？
 
@@ -118,25 +118,25 @@ npm run start
 
 右键可以选择添加一个条件断点:
 
-![](./images/102f735e5122e2f4ed0b018f8aca5d25.png )
+![](./images/102f735e5122e2f4ed0b018f8aca5d25.webp )
 
 输入表达式，代码会在满足条件的时候断住：
 
-![](./images/9b1d1bba1fe3536eac2e38e51ea1ce5b.png )
+![](./images/9b1d1bba1fe3536eac2e38e51ea1ce5b.webp )
 
-![](./images/68cd49fb676947eaf9f59026d6cb11b5.png )
+![](./images/68cd49fb676947eaf9f59026d6cb11b5.webp )
 
 也可以选择 hit count，代码会在触发对应的次数的时候断住：
 
-![](./images/608c862be3df910b8d01192ed63852f0.png )
+![](./images/608c862be3df910b8d01192ed63852f0.webp )
 
 或者是 logpoint，它不会断住，但会在代码执行到这里的时候打印表达式的值：
 
-![](./images/7aebb52b8e1e936711b76c68096ef6cf.png )
+![](./images/7aebb52b8e1e936711b76c68096ef6cf.webp )
 
-![](./images/fd9cd0a08cea91a28696386df9b0f2da.png )
+![](./images/fd9cd0a08cea91a28696386df9b0f2da.webp )
 
-![](./images/f29579cc8468a020d284a6b231c356c8.png )
+![](./images/f29579cc8468a020d284a6b231c356c8.webp )
 
 这些断点类型也都挺有用的。
 
@@ -144,7 +144,7 @@ npm run start
 
 不过，有同学可能会问，这个浏览器好像没有 React DevTools 啊。
 
-![](./images/ac0eb289360278e3bb7c6028994e1794.png )
+![](./images/ac0eb289360278e3bb7c6028994e1794.webp )
 
 确实，因为这跑的是一个新的浏览器实例，没有之前的那些用户数据。
 
@@ -152,17 +152,17 @@ npm run start
 
 不信我们试试看：
 
-![](./images/4544327105d9d95e2164e64a75b602fe.png )
+![](./images/4544327105d9d95e2164e64a75b602fe.webp )
 
 我指定一个 userDataDir，然后点击调试启动。
 
 在启动的浏览器里把掘金收藏为书签：
 
-![](./images/fad4c5475ace034d191721785a078985.png )
+![](./images/fad4c5475ace034d191721785a078985.webp )
 
 然后进入刚才那个 userDataDir，进入 defaults 目录，看一下 Bookmarks 文件的内容： 
 
-![](./images/5a414f386bada9b12fb9bc1c10d2838b.png )
+![](./images/5a414f386bada9b12fb9bc1c10d2838b.webp )
 
 就有刚才保存的书签了。
 
@@ -176,13 +176,13 @@ chrome 一个 userDataDir 只能跑一个实例。
 
 如果想调试的时候还用这些插件，那可以把 userDataDir 设置为 false，就是这样就是用默认的 userDatDir 来跑：
 
-![](./images/47c62d068fe5f872de45c9600bf55323.png )
+![](./images/47c62d068fe5f872de45c9600bf55323.webp )
 
 这时候需要你把之前跑的 chrome 关掉才能跑，因为一个 userDataDir 只能跑一个实例。
 
 之后再点击调试，这次跑的浏览器就有你之前装的 React DevTools 了：
 
-![](./images/1b0a57b3b90a2a1c7e80171f0d3ef9d8.png )
+![](./images/1b0a57b3b90a2a1c7e80171f0d3ef9d8.webp )
 
 这样，我们就可以在 VSCode 里断点调试，并且跑的调试浏览器还有 React DevTools 可用了。
 

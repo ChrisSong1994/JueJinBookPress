@@ -4,11 +4,11 @@
 
 看下 antd 的 [ColorPicker 组件](https://ant-design.antgroup.com/components/color-picker-cn#%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA)：
 
-![](./images/8967cfdf6bc6ed3b227ac92667889fc5.png )
+![](./images/8967cfdf6bc6ed3b227ac92667889fc5.webp )
 
 可以分成这两部分：
 
-![](./images/882b34bab87849278e81d76fe68cad9c.png )
+![](./images/882b34bab87849278e81d76fe68cad9c.webp )
 
 上面是一个 ColorPickerPanel，可以通过滑块选择颜色，调整色相、饱和度。
 
@@ -16,7 +16,7 @@
 
 我们先写 ColorPickerPanel 的部分：
 
-![](./images/581235a569f4cacda3286b15a883dd18.png )
+![](./images/581235a569f4cacda3286b15a883dd18.webp )
 
 这部分分为上面的调色板 Palette，下面的 Slider 滑动条。
 
@@ -27,7 +27,7 @@
 ```
 npx create-react-app --template=typescript color-picker-component
 ```
-![](./images/dfb517e9c6b0ce1d212d8dfbb0757352.png )
+![](./images/dfb517e9c6b0ce1d212d8dfbb0757352.webp )
 
 新建 ColorPicker 目录，然后创建 ColorPickerPanel 组件：
 
@@ -67,7 +67,7 @@ style 和 className 这俩 props 就不用解释了。
 
 然后添加 value 和 onChange 的参数：
 
-![](./images/132b8de8badeceaf22de680e12013bae.png )
+![](./images/132b8de8badeceaf22de680e12013bae.webp )
 
 ```javascript
 interface ColorPickerProps {
@@ -114,7 +114,7 @@ console.log();
 ```
 跑一下：
 
-![](./images/64015f10855b45109b63ac049d9e048d.png )
+![](./images/64015f10855b45109b63ac049d9e048d.webp )
 
 可以看到，TinyColor 能识别出颜色的格式，并且在 hex、hsl、rgb 之间进行转换。
 
@@ -129,7 +129,7 @@ export class Color extends TinyColor {
 ```
 那 value 直接写 Color 类型么？
 
-![](./images/8b643235a79ff6a1e5462e2bbebddac0.png )
+![](./images/8b643235a79ff6a1e5462e2bbebddac0.webp )
 
 也不好，这样用起来得 new 一个 Color 对象才行，不方便。
 
@@ -174,7 +174,7 @@ export type ColorType =
 
 在组件里判断下 value 类型，如果不是 Color，那就创建一个 Color 对象，传入 Palette：
 
-![](./images/695f1340b9be5ca4a01626e97e1554fa.png )
+![](./images/695f1340b9be5ca4a01626e97e1554fa.webp )
 ```javascript
 import { CSSProperties, useState } from "react";
 import cs from 'classnames';
@@ -276,13 +276,13 @@ npm install --save-dev sass
 npm run start
 ```
 
-![](./images/030ca0539c326021e004fe4d927f4dc9.png )
+![](./images/030ca0539c326021e004fe4d927f4dc9.webp )
 
 调色板出来了。
 
 还要实现上面的滑块，这个封装个组件，因为 Slider 也会用到：
 
-![](./images/469ec3345de49af2cd69d3619eeb4d69.png )
+![](./images/469ec3345de49af2cd69d3619eeb4d69.webp )
 
 创建 ColorPicker/Handler.tsx：
 
@@ -316,11 +316,11 @@ export default Handler;
 
 size 是 default 和 small 两个取值，因为这俩滑块是不一样大的：
 
-![](./images/866966337e1e780fd6cbd3c4e6db039a.png )
+![](./images/866966337e1e780fd6cbd3c4e6db039a.webp )
 
 加一下两种滑块的样式：
 
-![](./images/e91ee8301fa7c617672c1115c9e1be8f.png )
+![](./images/e91ee8301fa7c617672c1115c9e1be8f.webp )
 
 ```scss
 &-handler {
@@ -338,22 +338,22 @@ size 是 default 和 small 两个取值，因为这俩滑块是不一样大的�
 ```
 在 Palette 引入下：
 
-![](./images/eb5902661bf599830ee8656099fcd7d4.png )
+![](./images/eb5902661bf599830ee8656099fcd7d4.webp )
 
 ```javascript
 <Handler color={color.toRgbString()}/>
 ```
 刷新下页面，确实是有的：
 
-![](./images/4d8ece3760af4c4a5b427462db917480.png )
+![](./images/4d8ece3760af4c4a5b427462db917480.webp )
 
 只是现在看不到。
 
 加一下 zindex 就好了：
 
-![](./images/e52e942cc0a960d1de31e9dcc1c98502.png )
+![](./images/e52e942cc0a960d1de31e9dcc1c98502.webp )
 
-![](./images/72d3635e334ecf85ce3fbee221f4a9a9.png )
+![](./images/72d3635e334ecf85ce3fbee221f4a9a9.webp )
 
 但是不建议写在这里。
 
@@ -399,7 +399,7 @@ const Transform = forwardRef<HTMLDivElement, TransformProps>((props, ref) => {
 export default Transform;
 ```
 
-![](./images/aabb71aa02e80c171b1ec6d4237135d7.png )
+![](./images/aabb71aa02e80c171b1ec6d4237135d7.webp )
 
 ```javascript
 import { useRef, type FC } from 'react';
@@ -433,13 +433,13 @@ export default Palette;
 ```
 看下效果：
 
-![](./images/0396e94402d6e59f12100921b53de1f4.png )
+![](./images/0396e94402d6e59f12100921b53de1f4.webp )
 
 如果不单独分 Transform 这个组件呢？
 
 那就是把这段样式写在 Hanlder 组件里，然后加上俩参数：
 
-![](./images/bf9f4425ce084e7c6a9c330df2a97158.png )
+![](./images/bf9f4425ce084e7c6a9c330df2a97158.webp )
 
 功能是一样的，但是不如拆分出来复用性好。
 
@@ -527,27 +527,27 @@ MouseEvent 是 ts 内置的原生鼠标事件类型，而 React.MouseEvent 是 r
 
 直接给 document 绑定事件，这时候 event 是 MouseEvent 类型：
 
-![](./images/1d8cf4c98fe2657150a5b9516e2c5f26.png )
+![](./images/1d8cf4c98fe2657150a5b9516e2c5f26.webp )
 
 而在 jsx 里绑定事件，这时候 event 是 React.MouseEvent 类型：
 
-![](./images/ccd96e8eb1b0997e7954e96747d288d1.png )
+![](./images/ccd96e8eb1b0997e7954e96747d288d1.webp )
 
 我们都要支持：
 
-![](./images/ce60175f31094deb5c14fc9b09bec779.png )
+![](./images/ce60175f31094deb5c14fc9b09bec779.webp )
 
 这两个一个是保存 offset 的，一个是保存是否在拖动中的标记的：
 
-![](./images/063a772b4408ffb300287f24471f0b76.png )
+![](./images/063a772b4408ffb300287f24471f0b76.webp )
 
 然后先把之前的事件监听器去掉：
 
-![](./images/da09179ae1b98d093c809748998e3c62.png )
+![](./images/da09179ae1b98d093c809748998e3c62.webp )
 
 在 mousedown 的时候绑定 mousemove 和 mouseup 事件：
 
-![](./images/8afdd07dedc4030a561f7382431762fd.png )
+![](./images/8afdd07dedc4030a561f7382431762fd.webp )
 
 mousemove 的时候根据 event 修改 offset。
 
@@ -604,11 +604,11 @@ const updateOffset: EventHandle = e => {
 
 这里如果传入的 direction 参数是 x，那么就只能横向拖动，是为了下面的 Slider 准备的：
 
-![](./images/ecf6d7a7c4e8603ebd7d4c6709b546f4.png )
+![](./images/ecf6d7a7c4e8603ebd7d4c6709b546f4.webp )
 
 我们来试下效果：
 
-![](./images/fa6741c02bb120d77a5f3ed17acbbd81.png )
+![](./images/fa6741c02bb120d77a5f3ed17acbbd81.webp )
 
 ```javascript
 import { useRef, type FC } from 'react';
@@ -706,11 +706,11 @@ export const calculateColor = (props: {
 
 然后在 onDragChange 里根据 offset 计算当前的颜色，并且通过 onChange 回调返回新颜色。
 
-![](./images/1d77a114ec94470ecb1d8a85c136f656.png )
+![](./images/1d77a114ec94470ecb1d8a85c136f656.webp )
 
 在 ColorPickerPanel 组件里处理下 onChange：
 
-![](./images/c42fdbc8214904c61dfcd4cef8ea572b.png )
+![](./images/c42fdbc8214904c61dfcd4cef8ea572b.webp )
 
 ```javascript
 function onPaletteColorChange(color: Color) {
@@ -728,11 +728,11 @@ function onPaletteColorChange(color: Color) {
 
 只是现在初始的颜色不对：
 
-![](./images/1e2d2797f3ac59e27dd6390ad46fbe4b.png )
+![](./images/1e2d2797f3ac59e27dd6390ad46fbe4b.webp )
 
 最开始也要计算一次滑块位置：
 
-![](./images/96cda0f0a70d2abf59d8d90f645e21fd.png )
+![](./images/96cda0f0a70d2abf59d8d90f645e21fd.webp )
 
 我们给 useColorDrag 添加 color 和 calculate 两个参数。
 
@@ -854,7 +854,7 @@ export default useColorDrag;
 
 然后在调用的时候传入这两个参数：
 
-![](./images/2588bd62a4275b1721128790a42d7a64.png )
+![](./images/2588bd62a4275b1721128790a42d7a64.webp )
 
 ```javascript
 const [offset, dragStartHandle] = useColorDrag({
@@ -904,22 +904,22 @@ export const calculateOffset = (
 
 可以看到，现在初始位置就对了：
 
-![](./images/4e157e16937ae7422b1a549ade543b35.png )
+![](./images/4e157e16937ae7422b1a549ade543b35.webp )
 
 我在 App.tsx 里设置个不同的颜色：
 
-![](./images/4570bcf2e8fdfe581a8ed5fb1ce214a2.png )
+![](./images/4570bcf2e8fdfe581a8ed5fb1ce214a2.webp )
 
 ```html
 <ColorPickerPanel value="rgb(166 57 57)"></ColorPickerPanel>
 ```
 
 初始位置也是对的：
-![](./images/a8c2480670765fcd1dc40a5c8de91333.png )
+![](./images/a8c2480670765fcd1dc40a5c8de91333.webp )
 
 我们在下面加一个颜色块：
 
-![](./images/11906bb8291dec3a4ea783e28bdc2f67.png )
+![](./images/11906bb8291dec3a4ea783e28bdc2f67.webp )
 
 ```html
 <div style={{width: 20, height: 20, background: colorValue.toRgbString()}}></div>
@@ -930,7 +930,7 @@ export const calculateOffset = (
 
 但有时候会变为选择，而不是拖拽，我们优化下体验：
 
-![image.png](./images/0d72ece75ce9967eba6e9f53860bf28d.png )
+![image.png](./images/0d72ece75ce9967eba6e9f53860bf28d.webp )
 
 ```css
 user-select: none;
@@ -943,7 +943,7 @@ cursor: pointer;
 
 还有一点，我们前面的 value 参数其实是 defaultValue：
 
-![image.png](./images/62c6fd492b64d33b8598e17a3b0d82e6.png )
+![image.png](./images/62c6fd492b64d33b8598e17a3b0d82e6.webp )
 
 也就是用来作为内部 state 的初始值。
 
@@ -958,7 +958,7 @@ npm install --save ahooks
 把 useState 换成 ahooks 的 useControllableValue：
 
 
-![image.png](./images/c4d498f66d9c0bf9b94a6d48f2e4c81f.png )
+![image.png](./images/c4d498f66d9c0bf9b94a6d48f2e4c81f.webp )
 
 ```javascript
 export interface ColorPickerProps {
@@ -977,7 +977,7 @@ const [colorValue, setColorValue] = useControllableValue<Color>(props);
 
 然后我们加上调节色相和亮度的滑块：
 
-![image.png](./images/12cae550bcd4f70397e4b60648f8d678.png )
+![image.png](./images/12cae550bcd4f70397e4b60648f8d678.webp )
 
 因为我们计算颜色用的是 hsv，这里两个滑块分别改变的就是 h（色相）、v（明度）。
 
@@ -1033,7 +1033,7 @@ export default App;
 ```
 h 的取值范围是 0 到 360
 
-![](./images/32f2fb90a25cffbe9572dc43adcb45b3.png )
+![](./images/32f2fb90a25cffbe9572dc43adcb45b3.webp )
 
 而 v 的取值范围是 0 到 100%
 

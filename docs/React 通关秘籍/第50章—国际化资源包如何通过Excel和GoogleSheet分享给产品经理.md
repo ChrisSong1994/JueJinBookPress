@@ -6,11 +6,11 @@
 
 比如 zh-CN.json：
 
-![](./images/dd7086f6d6d8672249cf8abfcc1cb211.png )
+![](./images/dd7086f6d6d8672249cf8abfcc1cb211.webp )
 
 en-US.json：
 
-![](./images/d88efb17d90a034f083785e30833ce79.png )
+![](./images/d88efb17d90a034f083785e30833ce79.webp )
 
 而这个文案的翻译一般是产品经理做的。
 
@@ -24,7 +24,7 @@ en-US.json：
 
 来写一下：
 
-![](./images/aa19ffaf72d52203f263426b55020e13.png )
+![](./images/aa19ffaf72d52203f263426b55020e13.webp )
 ```
 mkdir excel-export
 cd excel-export
@@ -74,7 +74,7 @@ main();
 
 打开看下：
 
-![](./images/ab401c970ad788eee14ec8dcaf7aef41.png )
+![](./images/ab401c970ad788eee14ec8dcaf7aef41.webp )
 
 可以看到 worksheet 的名字，还有每行的数据都是对的。
 
@@ -84,7 +84,7 @@ main();
 
 把 zh-CN.json 和 en-US.json 复制过来：
 
-![](./images/bc5691013ef81bcc1d11c6ecf255d75d.png )
+![](./images/bc5691013ef81bcc1d11c6ecf255d75d.webp )
 zh-CN.json
 ```json
 {
@@ -164,11 +164,11 @@ main();
 
 跑一下：
 
-![](./images/a1831355d562d0322a3b95e4881a86b2.png )
+![](./images/a1831355d562d0322a3b95e4881a86b2.webp )
 
 看下生成的 excel：
 
-![](./images/8e5dcd3a075bc24c6231df7115ae5b25.png )
+![](./images/8e5dcd3a075bc24c6231df7115ae5b25.webp )
 
 现在这个 excel 已经可以交给产品经理去编辑了，但是还少了一些描述。
 
@@ -181,11 +181,11 @@ main();
 ```
 npx formatjs extract "src/**/*.tsx" --out-file messages.json
 ```
-![](./images/69b06f5827a413ee24bbc16da48779b7.png )
+![](./images/69b06f5827a413ee24bbc16da48779b7.webp )
 
 现在有 defaultMessage，没有 description，我们在 defineMessages 的时候加一下：
 
-![](./images/2e672f7dfebcfd4d5f830e731723e3dc.png )
+![](./images/2e672f7dfebcfd4d5f830e731723e3dc.webp )
 
 ```javascript
 const messsages = defineMessages({
@@ -228,13 +228,13 @@ const messsages = defineMessages({
 npx formatjs extract "src/**/*.tsx" --out-file messages.json
 ```
 
-![](./images/f7d6207e733f2b7f4fab0c7f7a05a11b.png )
+![](./images/f7d6207e733f2b7f4fab0c7f7a05a11b.webp )
 
 上节我们把这个文件删掉了，其实没必要删掉，可以用它来生成 excel。
 
 把 messages.json 复制过去，我们改下 index2.js
 
-![](./images/d872b6edc6deaefd3f1a49e9f22dd46a.png )
+![](./images/d872b6edc6deaefd3f1a49e9f22dd46a.webp )
 ```javascript
 const { Workbook } = require('exceljs');
 const fs = require('fs');
@@ -294,15 +294,15 @@ main();
 ```
 现在生成的是这样的：
 
-![](./images/34c6a5d873cb475ace7842a02facdaec.png )
+![](./images/34c6a5d873cb475ace7842a02facdaec.webp )
 
-![](./images/4b5a964185b4db4ee50631ae7a8a871b.png )
+![](./images/4b5a964185b4db4ee50631ae7a8a871b.webp )
 
 这样产品经理就知道每个 key 是哪里的文案，什么意思，就知道怎么翻译了。
 
 改一下：
 
-![](./images/1341e0173b3e5a675906ad564dcfe1c6.png )
+![](./images/1341e0173b3e5a675906ad564dcfe1c6.webp )
 
 然后改完之后要用这个生成 en-US.json 和 zh-CN.json 在项目里引入用。
 
@@ -335,7 +335,7 @@ async function main(){
 
 main();
 ```
-![](./images/f0ddde72fb5a9b92cdadcab1bb1ac96c.png )
+![](./images/f0ddde72fb5a9b92cdadcab1bb1ac96c.webp )
 
 解析也是按照 workbook（工作簿） > worksheet（工作表）> row （行）的层次，调用 eachSheet、eachRow、eachCell 就好了。
 
@@ -378,15 +378,15 @@ main();
 ```
 跑一下：
 
-![](./images/20483ecd9c89042f3eb39e8b61b5925d.png )
+![](./images/20483ecd9c89042f3eb39e8b61b5925d.webp )
 
 这样就把产品经理编辑后的 excel 生成了国际化资源包：
 
-![](./images/75e632eb2aeebbff76f5612059629083.png )
+![](./images/75e632eb2aeebbff76f5612059629083.webp )
 
 项目里直接用这个资源包就好了。
 
-![](./images/b2ff5fd2e111293d5c408c3fa64e8fe9.png )
+![](./images/b2ff5fd2e111293d5c408c3fa64e8fe9.webp )
 
 现在这样的工作流是可以的，但是不能协同编辑。
 
@@ -398,7 +398,7 @@ main();
 
 登录之后创建一个新的 sheet：
 
-![](./images/3be7430e5a15c76be7eca696964e3329.png )
+![](./images/3be7430e5a15c76be7eca696964e3329.webp )
 
 它可以导入 csv 格式的文件：
 
@@ -410,16 +410,16 @@ main();
 
 这样，就导入了 csv 的数据：
 
-![](./images/09e340396ff2d2f438ff813f1fed1930.png )
+![](./images/09e340396ff2d2f438ff813f1fed1930.webp )
 
 可以在线编辑了。
 
 把这个 url 分享出去就行。
 
-![](./images/3e67f1cb3c9f8406cbdad39f1ad51413.png )
+![](./images/3e67f1cb3c9f8406cbdad39f1ad51413.webp )
 
 
-![](./images/082a2fe938e40445435f3fa3fe61e92d.png )
+![](./images/082a2fe938e40445435f3fa3fe61e92d.webp )
 
 比如这个 url： 
 
@@ -489,13 +489,13 @@ main();
 
 跑一下：
 
-![](./images/2fa60125de08a919b4fb6b23b6ee68b8.png )
+![](./images/2fa60125de08a919b4fb6b23b6ee68b8.webp )
 
 可以看到，生成了 message.csv 文件。
 
 然后在 google sheet 里导入：
 
-![](./images/b07d7ec16cb13d03abaac2a2cf1fb8fd.png )
+![](./images/b07d7ec16cb13d03abaac2a2cf1fb8fd.webp )
 
 ![](./images/17f1029c7212cb51d372844769489550.gif )
 
@@ -505,7 +505,7 @@ https://docs.google.com/spreadsheets/d/1FgCNmoTz9FWuR6Jv1SJ9ioWd2bBfrtRAeoi5CYpm
 
 改一下这个文案：
 
-![](./images/15f34a6c9928d565f4c9e3e33f457627.png )
+![](./images/15f34a6c9928d565f4c9e3e33f457627.webp )
 
 然后导出到本地再转成 json 就好了。
 
@@ -548,7 +548,7 @@ npm install --save-dev csv-parse
 ```
 跑一下：
 
-![](./images/48f8ba9e06a3a2997bcbd1576155dce0.png )
+![](./images/48f8ba9e06a3a2997bcbd1576155dce0.webp )
 
 可以看到，message2.csv 下载了下来，并且还解析出了其中的数据。
 
@@ -591,9 +591,9 @@ fs.writeFileSync('en-US.json', JSON.stringify(enUSBundle, null, 2));
 
 跑一下：
 
-![](./images/5e5b5b93169ab62c592bb56e09f7171e.png )
+![](./images/5e5b5b93169ab62c592bb56e09f7171e.webp )
 
-![](./images/229950259a714afebe5435df2aa36905.png )
+![](./images/229950259a714afebe5435df2aa36905.webp )
 
 这样，就完成了资源包在 google sheet 的在线编辑，以及编辑完以后下载并解析生成资源包的功能。
 

@@ -10,10 +10,10 @@
 
 ahooks：
 
-![](./images/422be9a3b299fa5670262b7bf5fbe2a2.png )
+![](./images/422be9a3b299fa5670262b7bf5fbe2a2.webp )
 
 react-use：
-![](./images/94fe06f6eb90f1d6f757ce84b95a0630.png )
+![](./images/94fe06f6eb90f1d6f757ce84b95a0630.webp )
 
 这节我们就挑 react-use 里的几个 hook 来实现下。
 
@@ -27,7 +27,7 @@ react-use：
 npx create-vite
 ```
 
-![](./images/a1a34e04f6b1530611a3f8097e989ca1.png )
+![](./images/a1a34e04f6b1530611a3f8097e989ca1.webp )
 
 进入项目，安装依赖，然后把服务跑起来：
 
@@ -36,11 +36,11 @@ npm install
 npm run dev
 ```
 
-![](./images/8a6c50553a2c279193b29099590933a5.png )
+![](./images/8a6c50553a2c279193b29099590933a5.webp )
 
 去掉 index.css 和 StrictMode：
 
-![](./images/5c7f86b886f6a0cddb37cb1508060c88.png )
+![](./images/5c7f86b886f6a0cddb37cb1508060c88.webp )
 
 安装 react-use：
 
@@ -213,11 +213,11 @@ export default useCookie;
 ```
 
 就是基于 js-cookie 来 get、set、remove cookie：
-![](./images/1a617a22455e30a160f0884bad36a520.png )
+![](./images/1a617a22455e30a160f0884bad36a520.webp )
 
 **一般自定义 hook 里返回的函数都要用 useCallback 包裹下，这样调用者就不用自己处理了。**
 
-![](./images/e6158117acda02397ff96c42cba724f2.png )
+![](./images/e6158117acda02397ff96c42cba724f2.webp )
 
 ## useHover
 
@@ -285,20 +285,20 @@ export default useHover;
 
 传入的可以是 ReactElement 也可以是返回 ReactElement 的函数，内部对函数做下处理：
 
-![](./images/01bcd63f19cd774d6b1fd1f57614c35a.png )
+![](./images/01bcd63f19cd774d6b1fd1f57614c35a.webp )
 
 用 cloneElement 复制 ReactElement，给它添加 onMouseEnter、onMouseLeave 事件。
 
 并用 useState 保存 hover 状态：
 
-![](./images/33d80fef00277fa582a371bf0d7fcf5a.png )
+![](./images/33d80fef00277fa582a371bf0d7fcf5a.webp )
 
 这里注意如果传入的 React Element 本身有 onMouseEnter、onMouseLeave 的事件处理函数，要先调用下：
 
-![](./images/8a4f47ed08f41ac77e4aaa02df5fa851.png )
+![](./images/8a4f47ed08f41ac77e4aaa02df5fa851.webp )
 换成我们实现的试一下：
 
-![](./images/198ccbbf2a93534a3a02bbe84424a1df.png )
+![](./images/198ccbbf2a93534a3a02bbe84424a1df.webp )
 
 ![](./images/9fcc474f2bf5ddf4d4fc23ec5ba4732b.gif )
 
@@ -395,7 +395,7 @@ export default useScrolling;
 ```
 用 useState 创建个状态，给 ref 绑定 scroll 事件，scroll 的时候设置 scrolling 为 true：
 
-![](./images/449a1fc96e99cdc53987fb958e525393.png )
+![](./images/449a1fc96e99cdc53987fb958e525393.webp )
 
 并且定时器 150ms 以后修改为 false。
 
@@ -413,21 +413,21 @@ export default useScrolling;
 
 比如 useHover 在 react-use 里用的 React Element + cloneElement 的方式实现，而在 ahooks 就是用的 ref + addEventListener 实现的：
 
-![](./images/123ee320610e4b8a3d5f9948f45db72d.png )
+![](./images/123ee320610e4b8a3d5f9948f45db72d.webp )
 
-![](./images/454952e3bcbf2e5953d08d303f9655c3.png )
+![](./images/454952e3bcbf2e5953d08d303f9655c3.webp )
 
 其实还有一种方式更常用，就是返回 hook 返回 onXxx 函数，调用者自己绑定。
 
 比如 @floating-ui/react 包的 useInteractions，就是返回 props 对象，比如 {onClick: xxx} 让调用者自己绑定：
 
-![](./images/f36a24abe7444120a5b52a3cc82fe110.png )
+![](./images/f36a24abe7444120a5b52a3cc82fe110.webp )
 
-![](./images/badfc9ae81f5ac6d6a6edfb83d3a2111.png )
+![](./images/badfc9ae81f5ac6d6a6edfb83d3a2111.webp )
 
 或者只返回事件处理函数：
 
-![](./images/328fef9786cc552bde77d619d0ab6906.png )
+![](./images/328fef9786cc552bde77d619d0ab6906.webp )
 
 封装绑定事件的自定义 hook，总共就这三种封装方式。
 

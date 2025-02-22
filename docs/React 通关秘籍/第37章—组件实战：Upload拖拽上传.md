@@ -6,7 +6,7 @@
 
 它有一个上传按钮，下面是上传的文件列表的状态：
 
-![](./images/45c71bde5fda68b3b5f77fd46f3ab547.png )
+![](./images/45c71bde5fda68b3b5f77fd46f3ab547.webp )
 
 并且，还支持拖拽上传：
 
@@ -18,13 +18,13 @@
 npx create-vite
 ```
 
-![](./images/c83a56ec5e947192037628fba3b15f76.png )
+![](./images/c83a56ec5e947192037628fba3b15f76.webp )
 
 用 create-vite 创建个 react 项目。
 
 去掉 index.css 和 StrictMode
 
-![](./images/d5db35f290c73453406960a05b0fe5de.png )
+![](./images/d5db35f290c73453406960a05b0fe5de.webp )
 
 然后把开发服务跑起来：
 
@@ -32,11 +32,11 @@ npx create-vite
 npm install
 npm run dev
 ```
-![](./images/67b7cd11d439cea8f9a117467c6a94dd.png )
+![](./images/67b7cd11d439cea8f9a117467c6a94dd.webp )
 
 访问下试试：
 
-![](./images/467774c4b01ea4e61852c42bb6788fed.png )
+![](./images/467774c4b01ea4e61852c42bb6788fed.webp )
 
 然后我们先用下 antd 的 Upload 组件：
 
@@ -119,13 +119,13 @@ node ./server.js
 ```
 这里 node 能直接跑 es module 的代码是因为 package.json 里指定了 type 为 module：
 
-![](./images/149bf66a20dbf3691c1a2870227abfe3.png )
+![](./images/149bf66a20dbf3691c1a2870227abfe3.webp )
 
 也就是说默认所有 js 都是 es module 的。
 
 然后改下上传路径：
 
-![](./images/445ff94f9d86ccad0ac4b02c2ee13ded.png )
+![](./images/445ff94f9d86ccad0ac4b02c2ee13ded.webp )
 
 试一下：
 
@@ -133,7 +133,7 @@ node ./server.js
 
 上传成功，服务端也接收到了文件：
 
-![](./images/dc277f4e75e3c7cce1090278d1544514.png )
+![](./images/dc277f4e75e3c7cce1090278d1544514.webp )
 
 只不过现在的文件名没有带后缀名，我们可以自定义一下：
 
@@ -177,7 +177,7 @@ app.listen(3333);
 ```
 自定义 storage，指定文件存储的目录以及文件名。
 
-![](./images/2eb2e43571161eeedb2ea1607cfd1332.png )
+![](./images/2eb2e43571161eeedb2ea1607cfd1332.webp )
 
 重新跑下服务，然后再次上传：
 
@@ -185,11 +185,11 @@ app.listen(3333);
 
 现在，文件保存的路径就改了
 
-![](./images/86bf4ff9385825c57aafbd6b519757bd.png )
+![](./images/86bf4ff9385825c57aafbd6b519757bd.webp )
 
 上传的图片也能正常打开：
 
-![](./images/c444dc474de608aa2583061746045e4d.png )
+![](./images/c444dc474de608aa2583061746045e4d.webp )
 
 接口搞定之后，我们自己来实现下这个 Upload 组件。
 
@@ -301,7 +301,7 @@ export default Upload;
 ```
 这些参数都很容易理解：
 
-![](./images/2ee538e332715917c799ca76f0774164.png )
+![](./images/2ee538e332715917c799ca76f0774164.webp )
 
 action 是上传的 url
 
@@ -317,21 +317,21 @@ multiple 是 input 可以多选
 
 然后渲染 children 外加一个隐藏的 file input
 
-![](./images/9b5e0cd102b7bd9fc500d602baed5706.png )
+![](./images/9b5e0cd102b7bd9fc500d602baed5706.webp )
 
-![](./images/30559569165e9650cbdfdbf5d7d2c26e.png )
+![](./images/30559569165e9650cbdfdbf5d7d2c26e.webp )
 
 onChange 的时候，拿到所有 files 依次上传，之后把 file input 置空：
 
-![](./images/17f11202a1db576441dc359c02868300.png )
+![](./images/17f11202a1db576441dc359c02868300.webp )
 
 用 axios 来发送 post 请求，携带 FormData 数据，包含 file 和其它 data 字段：
 
-![](./images/63ad5f46f4f15096eab5ab506cf7b13c.png )
+![](./images/63ad5f46f4f15096eab5ab506cf7b13c.webp )
 
 再就是点击其它区域也触发 file input 的点击：
 
-![](./images/959d9c7d5c61d30c4ff91737a9ee97f3.png )
+![](./images/959d9c7d5c61d30c4ff91737a9ee97f3.webp )
 
 安装用到的 axios 包：
 
@@ -369,25 +369,25 @@ export default App;
 
 虽然界面还没加啥反馈，但请求已经发送成功了：
 
-![](./images/8edf1d13527fee23c0ac5eb033245254.png )
+![](./images/8edf1d13527fee23c0ac5eb033245254.webp )
 
-![](./images/6431b0275fe836ca64a6ca8c346f33ca.png )
+![](./images/6431b0275fe836ca64a6ca8c346f33ca.webp )
 
-![](./images/67123ce85909cca93c985acfcd3a31f1.png )
+![](./images/67123ce85909cca93c985acfcd3a31f1.webp )
 
 服务端也接受到了这个文件：
 
-![](./images/e9ba4386e1a4f1456474348d5808699a.png )
+![](./images/e9ba4386e1a4f1456474348d5808699a.webp )
 
 上传功能没问题，然后我们添加几个上传过程中的回调函数：
 
-![](./images/df769ff35b9a54fab50ab41abc7f7e3a.png )
+![](./images/df769ff35b9a54fab50ab41abc7f7e3a.webp )
 
 beforeUpload 是上传之前的回调，如果返回 false 就不上传，也可以返回 promise，比如在服务端校验的时候，等 resolve 之后才会上传
 
 antd 的 [Upload 组件](https://ant-design.antgroup.com/components/upload-cn#components-upload-demo-avatar)就是这样的：
 
-![](./images/73f56a9851a40ff3e898e1c41528863e.png )
+![](./images/73f56a9851a40ff3e898e1c41528863e.webp )
 
 onProgress 是进度更新时的回调，可以拿到进度。
 
@@ -397,9 +397,9 @@ onChange 是上传状态改变时的回调。
 
 这几个回调分别在上传前、进度更新、成功、失败时调用：
 
-![](./images/e5e4364179c8496730ddd8df54df67ce.png )
+![](./images/e5e4364179c8496730ddd8df54df67ce.webp )
 
-![](./images/1946cbdc8bc8c6a9bece63681fcf7fa2.png )
+![](./images/1946cbdc8bc8c6a9bece63681fcf7fa2.webp )
 
 ```javascript
 import { FC, useRef, ChangeEvent, PropsWithChildren } from 'react'
@@ -578,7 +578,7 @@ export default App;
 
 网速快的时候没有上传进度，改下网络设置：
 
-![](./images/8ffcb4632b2a4a6edd8582330fd4db9e.png )
+![](./images/8ffcb4632b2a4a6edd8582330fd4db9e.webp )
 
 ![](./images/73d1b7d025e952e6fe497934091f4baa.gif )
 
@@ -586,7 +586,7 @@ export default App;
 
 接下来我们添加下面的文件列表：
 
-![](./images/45c71bde5fda68b3b5f77fd46f3ab547.png )
+![](./images/45c71bde5fda68b3b5f77fd46f3ab547.webp )
 
 新建 Upload/UploadList.tsx
 
@@ -657,7 +657,7 @@ export default UploadList;
 ```
 这个组件传入 UploadFile 的数组和 onRemove 回调作为参数：
 
-![](./images/68689473e9fe0552cedb8ff5f29dc7de.png )
+![](./images/68689473e9fe0552cedb8ff5f29dc7de.webp )
 
 UploadFile 里除了文件信息外，还有 status、response、error
 
@@ -665,7 +665,7 @@ UploadFile 里除了文件信息外，还有 status、response、error
 
 然后把 UploadFile 数组渲染出来：
 
-![](./images/3713d06a609f27964ed4ada8a6eaa5f5.png )
+![](./images/3713d06a609f27964ed4ada8a6eaa5f5.webp )
 
 显示文件名、进度、删除按钮等。
 
@@ -731,7 +731,7 @@ UploadFile 里除了文件信息外，还有 status、response、error
 ```
 在 Upload/index.tsx 里引入试试：
 
-![](./images/a5f65c3a234d5b23540c9784b50d0883.png )
+![](./images/a5f65c3a234d5b23540c9784b50d0883.webp )
 
 用 mock 的数据渲染 UploadList
 
@@ -795,21 +795,21 @@ return (
 
 声明一个 fileList 的 state，并封装一个更新它的方法：
 
-![](./images/7c6b01e9f8191f29a19644a6013c6f0c.png )
+![](./images/7c6b01e9f8191f29a19644a6013c6f0c.webp )
 
 在状态改变的时候调用更新方法来更新 fileList：
 
-![](./images/f1a4d6e2c05ac25fcfdb416935c9496d.png )
+![](./images/f1a4d6e2c05ac25fcfdb416935c9496d.webp )
 
 并且添加一个 onRemove 的回调：
 
-![](./images/31def01c7bf84d4e8fa2929905789297.png )
+![](./images/31def01c7bf84d4e8fa2929905789297.webp )
 
 在点击删除按钮的时候调用：
 
-![](./images/a91cb785706cfa2fd85ac0ebb45d21c8.png )
+![](./images/a91cb785706cfa2fd85ac0ebb45d21c8.webp )
 
-![](./images/40c734ac733002e12d7e044bcde333ef.png )
+![](./images/40c734ac733002e12d7e044bcde333ef.webp )
 
 ```javascript
 import { FC, useRef, ChangeEvent, PropsWithChildren, useState } from 'react'
@@ -994,7 +994,7 @@ export default Upload;
 
 ![](./images/beb250831875389d4bb500f3ebc6fe8f.gif )
 
-![](./images/27972ee260e8a049e6804fbd1b517664.png )
+![](./images/27972ee260e8a049e6804fbd1b517664.webp )
 
 文件上传状态没问题，服务端也收到了上传的文件。
 
@@ -1052,11 +1052,11 @@ export default Dragger;
 
 因为拖拽文件到这里的时候，会有对应的样式，所以我们要在 dragover 和 dragleave 的时候分别设置不同的 dragOver 状态值，然后更改 className
 
-![](./images/da7aa6d1168891d96ffb5e03043c1dad.png )
+![](./images/da7aa6d1168891d96ffb5e03043c1dad.webp )
 
 然后在 drop 的时候，把文件传给 onFile 回调函数：
 
-![](./images/0d2780bde9d1d82c0ac59cdb7d8ae551.png )
+![](./images/0d2780bde9d1d82c0ac59cdb7d8ae551.webp )
 
 在 index.scss 里加上它的样式：
 
@@ -1080,9 +1080,9 @@ export default Dragger;
 
 然后在 Upload/index.tsx 引入 Dragger 组件：
 
-![](./images/33f051d3f3c0e8fa534ca53e784b5986.png )
+![](./images/33f051d3f3c0e8fa534ca53e784b5986.webp )
 
-![](./images/bfbcdbb54c96da8c904dfe7109526524.png )
+![](./images/bfbcdbb54c96da8c904dfe7109526524.webp )
 
 ```javascript
 {
@@ -1096,7 +1096,7 @@ export default Dragger;
 
 在 index.tsx 里试试：
 
-![](./images/b7d3a32d7e9fbfb9df2bb5bda8687097.png )
+![](./images/b7d3a32d7e9fbfb9df2bb5bda8687097.webp )
 
 浏览器访问下：
 

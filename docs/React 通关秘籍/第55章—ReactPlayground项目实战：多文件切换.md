@@ -2,7 +2,7 @@
 
 ﻿上节完成了整体布局和代码编辑器部分的开发：
 
-![](./images/ec7c00d2a99170526bab720d545c9051.png )
+![](./images/ec7c00d2a99170526bab720d545c9051.webp )
 
 这节继续来做多文件的切换：
 
@@ -12,7 +12,7 @@
 
 上面的 FileNameList 组件、下面的 Editor 组件，还有右边的 Preview 组件都需要拿到所有文件的信息：
 
-![](./images/371b2b3bfdc35789a9ea3b7cad80c9c2.png )
+![](./images/371b2b3bfdc35789a9ea3b7cad80c9c2.webp )
 
 如何跨多个组件共享同一份数据呢？
 
@@ -22,7 +22,7 @@
 
 创建 PlaygroundContext.tsx
 
-![](./images/6ff973fc2e2ffea8b2c505d7f642c086.png )
+![](./images/6ff973fc2e2ffea8b2c505d7f642c086.webp )
 
 ```javascript
 import React, { createContext, useState } from 'react'
@@ -56,11 +56,11 @@ context 里保存了 files 的信息，还有当前选中的文件 selectedFileN
 
 file 的信息是这样保存的：
 
-![](./images/c682c061c676ee1defc9b4db6f3684a0.png )
+![](./images/c682c061c676ee1defc9b4db6f3684a0.webp )
 
 files 里是键值对方式保存的文件信息，键是文件名，值是文件的信息，包括 name、value、language。
 
-![](./images/4636f8ba7f6edda723e9766a91e1f0c5.png )
+![](./images/4636f8ba7f6edda723e9766a91e1f0c5.webp )
 
 context 里除了 files 和 selectedFileName 外，还有修改它们的方法 setXxx。
 
@@ -72,7 +72,7 @@ context 里除了 files 和 selectedFileName 外，还有修改它们的方法 s
 
 然后提供一个 PlaygroundProvider 组件：
 
-![](./images/d78aa6375ce5ca70cdf4aed608915985.png )
+![](./images/d78aa6375ce5ca70cdf4aed608915985.webp )
 
 它就是对 Context.Provider 的封装，注入了这些增删改文件的方法的实现：
 
@@ -133,7 +133,7 @@ export const PlaygroundProvider = (props: PropsWithChildren) => {
 
 用到的 fileName2Language 在 utils.ts 里：
 
-![](./images/0257551f88e6539bf10f98fbbf295f34.png )
+![](./images/0257551f88e6539bf10f98fbbf295f34.webp )
 
 ```javascript
 export const fileName2Language = (name: string) => {
@@ -149,11 +149,11 @@ export const fileName2Language = (name: string) => {
 
 在 monaco editor 这里会用到，用于不同语法的高亮：
 
-![](./images/989f5c48ceaa44ab5d7f29600d1fc235.png )
+![](./images/989f5c48ceaa44ab5d7f29600d1fc235.webp )
 
 然后我们在 App.tsx 里包一层 Provider：
 
-![](./images/1ca21c70732091623b9c7df8ee862ae3.png )
+![](./images/1ca21c70732091623b9c7df8ee862ae3.webp )
 
 这样就可以在任意组件用 useContext 读取 context 的值了。
 
@@ -256,7 +256,7 @@ import 模块的时候加一个 ?raw，就是直接文本的方式引入模块�
 
 在 template 目录下添加这四个文件：
 
-![](./images/4e22aa643d96645c75c45de45cf9e186.png )
+![](./images/4e22aa643d96645c75c45de45cf9e186.webp )
 
 App.tsx
 
@@ -373,17 +373,17 @@ import-map.json
 ```
 然后在 Provider 里初始化 files：
 
-![](./images/26d0d330667677d9fdd269832cb478e2.png )
+![](./images/26d0d330667677d9fdd269832cb478e2.webp )
 
 看下效果：
 
-![](./images/4e73b3a3303452f3f9004ab80ef9c3aa.png )
+![](./images/4e73b3a3303452f3f9004ab80ef9c3aa.webp )
 
 上面的 tab 展示出来了，下面的 editor 还没有展示对应的文件内容。
 
 改一下：
 
-![](./images/7a96256024c191967864c560dad9d13e.png )
+![](./images/7a96256024c191967864c560dad9d13e.webp )
 
 ```javascript
 const { 
@@ -397,11 +397,11 @@ const file = files[selectedFileName];
 ```
 换成从 context 读取的当前选中的 file 就好了。
 
-![](./images/6389f8106ddae01a32c3e9ca990459cd.png )
+![](./images/6389f8106ddae01a32c3e9ca990459cd.webp )
 
 然后点击文件名的时候做下 selectedFileName 的切换：
 
-![](./images/c6d8211350a90cda6a7c5fe1234c4849.png )
+![](./images/c6d8211350a90cda6a7c5fe1234c4849.webp )
 
 ![](./images/8cdeec7b5706143a06ff8d6650c74013.gif )
 
@@ -499,7 +499,7 @@ npm install --save classnames
 
 在 CodeEditor 里引入下 FileNameItem 组件，并加上 tabs 的 className：
 
-![](./images/0a07979a1ab868a738daec6592093d7e.png )
+![](./images/0a07979a1ab868a738daec6592093d7e.webp )
 
 ```javascript
 import { useContext, useEffect, useState } from "react"
@@ -548,7 +548,7 @@ selectedFileName 对应的 item 的 actived 为 true。
 
 在 initFiles 里多加点文件，我们测试下滚动条：
 
-![](./images/f3c1390797ed8d02c6fdc50727a4d602.png )
+![](./images/f3c1390797ed8d02c6fdc50727a4d602.webp )
 
 ![](./images/7003eb5c37ab2b900393460ef5b80ea5.gif )
 
@@ -556,7 +556,7 @@ selectedFileName 对应的 item 的 actived 为 true。
 
 改下滚动条样式：
 
-![](./images/9a3e40be7a9d94e6dc9d2c26c7151267.png )
+![](./images/9a3e40be7a9d94e6dc9d2c26c7151267.webp )
 
 ```css
 &::-webkit-scrollbar {
@@ -582,7 +582,7 @@ selectedFileName 对应的 item 的 actived 为 true。
 
 只要在编辑器内容改变的时候修改下 files 就好了：
 
-![](./images/6ef9c46b1d8758913d196c17c319932b.png )
+![](./images/6ef9c46b1d8758913d196c17c319932b.webp )
 
 ```javascript
 function onEditorChange(value?: string) {
@@ -603,7 +603,7 @@ npm install --save-dev @types/lodash-es
 ```
 安装 lodash，然后调用下 debounce：
 
-![](./images/57b9625196b64730b0ec9bef364a5042.png )
+![](./images/57b9625196b64730b0ec9bef364a5042.webp )
 
 ![](./images/76dad5e511d348b9d445fc86b9aca6ea.gif )
 

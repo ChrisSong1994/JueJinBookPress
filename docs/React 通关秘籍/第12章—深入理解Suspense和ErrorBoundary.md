@@ -9,7 +9,7 @@
 ```
 npx create-react-app --template=typescript suspense-error-boundary
 ```
-![](./images/f6ed7336152147886de5502e748e6836.png )
+![](./images/f6ed7336152147886de5502e748e6836.webp )
 
 先来看下 Suspense 组件：
 
@@ -52,13 +52,13 @@ npm run start
 
 当然，因为本地加载比较快，你可以用 chrome devtools 改成慢速网络再刷新看看：
 
-![](./images/0e797065dcb177233f81ae43708aa1c0.png )
+![](./images/0e797065dcb177233f81ae43708aa1c0.webp )
 
-![](./images/cf36e3b5a00f096461bc60faa35470b2.png )
+![](./images/cf36e3b5a00f096461bc60faa35470b2.webp )
 
 这里的 import 是 webpack 提供的用来异步加载模块的 api，它会动态下载模块所在的 chunk，然后从中解析出该模块，拿到 export 的值：
 
-![](./images/797429c66a44757ac8efdd8899fd3806.png )
+![](./images/797429c66a44757ac8efdd8899fd3806.webp )
 
 后台管理系统用这个挺多的，因为不可能一下子把所有路由的组件都下载下来，所以会用 lazy + Suspense 的方式异步加载暂时用不到的路由对应的组件。
 
@@ -101,7 +101,7 @@ export default function App() {
 ```
 渲染下这个组件：
 
-![](./images/7aa1b9236d4dd753bfefb60d7de7ce47.png )
+![](./images/7aa1b9236d4dd753bfefb60d7de7ce47.webp )
 
 浏览器访问下：
 
@@ -115,7 +115,7 @@ export default function App() {
 
 前面讲过，现在 react 官网都推荐用 function 组件而不是 class 组件了：
 
-![](./images/dc8601b817fcecc6c393b394cd3c7b21.png )
+![](./images/dc8601b817fcecc6c393b394cd3c7b21.webp )
 
 绝大多数情况我们用 function 组件就好了，没必要用 class 组件。
 
@@ -207,21 +207,21 @@ export default function App() {
 
 我们渲染下这个组件：
 
-![](./images/96d2410a3e223241c51b7af5b1ce9442.png )
+![](./images/96d2410a3e223241c51b7af5b1ce9442.webp )
 
 现在有 ErrorBoundary 是这样的：
 
-![](./images/23f8350dabf0383b2c289b47b3fac588.png )
+![](./images/23f8350dabf0383b2c289b47b3fac588.webp )
 
 把 ErrorBoundary 去掉后，可以看到，页面直接白屏了：
 
-![](./images/5bb79beea45b20336ee31c9a7b397d1c.png )
+![](./images/5bb79beea45b20336ee31c9a7b397d1c.webp )
 
 这就是 ErrorBoundary 的作用，捕获子组件抛出的错误，显示对应的 UI。
 
 回过头来看下这两个方法：
 
-![](./images/774c6739b13cdba7727fad831628ece0.png )
+![](./images/774c6739b13cdba7727fad831628ece0.webp )
 
 getDerivedStateFromError 修改 state 触发重新渲染，渲染出错误对应的 UI。
 
@@ -231,7 +231,7 @@ componentDidCatch 拿到错误信息，打印日志。
 
 这个特性只有 class 组件有，function 组件没有：
 
-![](./images/ee7cd1122e3ffc2743654b22e6e0bb08.png )
+![](./images/ee7cd1122e3ffc2743654b22e6e0bb08.webp )
 
 不过一般也不用自己写这种 ErrorBoundary 组件，直接用 react-error-boundary 这个包就行：
 
@@ -263,11 +263,11 @@ export default function App() {
 ```
 渲染下：
 
-![](./images/c0721cb9b2f5a0c46f18f6eb12f39243.png )
+![](./images/c0721cb9b2f5a0c46f18f6eb12f39243.webp )
 
 可以看到，ErrorBoundary 生效了：
 
-![](./images/caabe038f8a9ec76590dcbd63ebbeefc.png )
+![](./images/caabe038f8a9ec76590dcbd63ebbeefc.webp )
 
 而且并不一定是 ErrorBoundary 的 children，任意层级的子组件都可以：
 
@@ -299,7 +299,7 @@ export default function App() {
 
 ```
 
-![](./images/2d9cf812fc9dcb41c290a8bb2c64e69a.png )
+![](./images/2d9cf812fc9dcb41c290a8bb2c64e69a.webp )
 
 也就是说组件抛错的时候，会向上寻找最近的 ErrorBoundary 组件。
 
@@ -344,7 +344,7 @@ export default function App() {
 
 渲染下：
 
-![](./images/1a1435b6305e8bb1ab6a0a7daa62cb45.png )
+![](./images/1a1435b6305e8bb1ab6a0a7daa62cb45.webp )
 
 可以看到，触发了 Suspense：
 
@@ -359,7 +359,7 @@ promise 初始状态展示 fallback，promise 改变状态后展示子组件。
 
 看下源码，发现确实是这样：
 
-![](./images/2fe35d7efbef03e37d9512ea6be78040.png )
+![](./images/2fe35d7efbef03e37d9512ea6be78040.webp )
 
 React.lazy 包裹之后，也会 throw 一个 promise 来触发 Suspense。
 
@@ -369,13 +369,13 @@ React.lazy 包裹之后，也会 throw 一个 promise 来触发 Suspense。
 
 也是这样实现的：
 
-![](./images/632b594de54edc0d0fa9f201cd2b063e.png )
+![](./images/632b594de54edc0d0fa9f201cd2b063e.webp )
 
 有的同学可能会问了：ErrorBoundary 是捕获组件 throw 的错误，而 Suspense 是捕获组件 throw 的 promise，这俩会冲突么？
 
 试一下就知道了：
 
-![](./images/c198796850fe0c04e97fa1ffa86aaeda.png )
+![](./images/c198796850fe0c04e97fa1ffa86aaeda.webp )
 
 ```javascript
 const fallbackRender = ({ error }) => {
@@ -402,21 +402,21 @@ export default function App() {
 
 而 throw 一个 error 的时候：
 
-![](./images/e06f45e03cb494d3533ca1810623ee02.png )
+![](./images/e06f45e03cb494d3533ca1810623ee02.webp )
 
 ErrorBoundary 就触发了：
 
-![](./images/4746e7a8d71f25c1a818be69ecc26049.png )
+![](./images/4746e7a8d71f25c1a818be69ecc26049.webp )
 
 也就是说，ErrorBoundary 和 Suspense 虽然都是捕获组件 throw 出的东西，但这俩互不相干，一个捕获 error，一个捕获 promise。
 
 大概看下源码的处理：
 
-![](./images/cf0fd912b93dd38a1d4d13e523187336.png )
+![](./images/cf0fd912b93dd38a1d4d13e523187336.webp )
 
 首先会全部 catch，然后内部再区分两种情况：
 
-![](./images/8c7f23ef96741a21620a92e86787f172.png )
+![](./images/8c7f23ef96741a21620a92e86787f172.webp )
 
 如果 throw 的是 error，就是 error boundary 的处理逻辑，找最近的一个 ErrorBoundary 组件来处理。
 
@@ -464,7 +464,7 @@ export default function App() {
 ```
 渲染下：
 
-![](./images/e5b54f7b807f857a152a72ae6922b945.png )
+![](./images/e5b54f7b807f857a152a72ae6922b945.webp )
 
 ![](./images/48c57e79044a4a1dca2b0d723965ed95.gif )
 
@@ -508,7 +508,7 @@ react 团队也在想办法解决这个问题，所以出了一个  use 的 hook
 
 这样用：
 
-![](./images/33b8ae0e0ffb4273a53aab53421beb1c.png )
+![](./images/33b8ae0e0ffb4273a53aab53421beb1c.webp )
 
 它的参数是 promise。
 
@@ -518,7 +518,7 @@ react 团队也在想办法解决这个问题，所以出了一个  use 的 hook
 
 当 promise 是 reject 的时候，展示 ErrorBoundary 的 fallback。
 
-![](./images/1a7142dbe3b6529e96c5858d39005948.png )
+![](./images/1a7142dbe3b6529e96c5858d39005948.webp )
 
 这样就不用自己 throw promise 了，业务代码就可以用 Suspense 来 loading 了。
 
@@ -528,7 +528,7 @@ react 团队也在想办法解决这个问题，所以出了一个  use 的 hook
 
 我们刚才用的 jotai 就自己实现了一下 use：
 
-![](./images/9cac311ae5632b3aa85d7cb36a4a1d47.png )
+![](./images/9cac311ae5632b3aa85d7cb36a4a1d47.webp )
 
 就是 pending 的时候 throw promise，reject 的时候 throw error，否则 return 数据。
 
@@ -536,7 +536,7 @@ react 团队也在想办法解决这个问题，所以出了一个  use 的 hook
 
 这就是文档里写的触发 Suspense 的 3 种方式：
 
-![](./images/facb871c75eaf16f237bca7fb8ef6c1b.png )
+![](./images/facb871c75eaf16f237bca7fb8ef6c1b.webp )
 
 一种是用支持 Suspense 的框架，比如 next.js 或者 jotai。
 

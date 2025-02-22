@@ -68,15 +68,15 @@ export default Form;
 
 在 Page、Container、Modal 组件里支持 Form 组件的 drop：
 
-![](./images/b2750b2fbef9f4c751606fe0b6fdfd2b.png )
+![](./images/b2750b2fbef9f4c751606fe0b6fdfd2b.webp )
 
-![](./images/4037e67b6be35b17e8e1456b1d8e120f.png )
+![](./images/4037e67b6be35b17e8e1456b1d8e120f.webp )
 
-![](./images/21ae01ebf681e85dc8e90440ca984f41.png )
+![](./images/21ae01ebf681e85dc8e90440ca984f41.webp )
 
 在 componentConfig 里添加 Form 组件的配置：
 
-![](./images/ae9d27f7e2487f23f3d8cf9533f7d7a8.png )
+![](./images/ae9d27f7e2487f23f3d8cf9533f7d7a8.webp )
 
 ```javascript
 Form: {
@@ -128,7 +128,7 @@ export default FormItem;
 
 在 componentConfig 里配置下：
 
-![](./images/b1387b4b60864c8b651cff5e1e7b2406.png )
+![](./images/b1387b4b60864c8b651cff5e1e7b2406.webp )
 
 ```javascript
 FormItem: {
@@ -259,7 +259,7 @@ onFinish 的时候，需要对 DatePicker 的 value 做下处理，因为值是 
 
 我们还通过 forwardRef + useImperativeHandle 暴露了 submit 方法，需要在 componentConfig 里注册下：
 
-![](./images/eb0737a966bc7bb0489238198dfe0937.png )
+![](./images/eb0737a966bc7bb0489238198dfe0937.webp )
 ```javascript
 methods: [
     {
@@ -284,11 +284,11 @@ methods: [
 
 我们应该能在事件处理函数里拿到传过来的 values：
 
-![](./images/8a91622e262d89e661c02b2a1b34d43b.png )
+![](./images/8a91622e262d89e661c02b2a1b34d43b.webp )
 
 在 Preview 绑定事件的时候加一下参数：
 
-![](./images/cfacd7ea7955e218fae031ac95a42cff.png )
+![](./images/cfacd7ea7955e218fae031ac95a42cff.webp )
 测试下：
 
 ![](./images/9003b41c76ac7489834e59c07031d248.gif )
@@ -300,11 +300,11 @@ alert(JSON.stringify(values))
 ```
 点击按钮触发表单提交的动作。
 
-![](./images/2f600ca0988c9dffe63e96d0e26a80d0.png )
+![](./images/2f600ca0988c9dffe63e96d0e26a80d0.webp )
 
 表单提交触发脚本执行的动作。
 
-![](./images/f46c674a527dcf20188b91ff55631416.png )
+![](./images/f46c674a527dcf20188b91ff55631416.webp )
 
 我们可以再加一个发送请求的动作，根据传入的 values 来发送创建请求，之后调用 Table 的刷新方法就好了。
 
@@ -318,19 +318,19 @@ alert(JSON.stringify(values))
 
 我们做拖拽版 todolist 那个案例的时候用过：
 
-![](./images/687f6730b4607d7a1a91e6a365c45129.png )
+![](./images/687f6730b4607d7a1a91e6a365c45129.webp )
 
 用了 ts + middleware 的时候，create 要换种写法。
 
 [文档的解释](https://github.com/pmndrs/zustand/blob/main/docs/guides/typescript.md)是为了更好的处理类型：
 
-![](./images/4c5a38f877c86ef87aae1ead06ca22be.png )
+![](./images/4c5a38f877c86ef87aae1ead06ca22be.webp )
 
 不影响功能。
 
 我们加一下：
 
-![](./images/596efc80d297ef64c7ac8bf932a4d33e.png )
+![](./images/596efc80d297ef64c7ac8bf932a4d33e.webp )
 
 ```javascript
 const creator: StateCreator<State & Action> = (set, get) => ({

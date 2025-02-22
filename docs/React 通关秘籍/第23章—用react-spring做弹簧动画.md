@@ -22,7 +22,7 @@
 npx create-react-app --template=typescript react-spring-test
 ```
 
-![](./images/ab18e913a46ec8e2dbf8c5960c025c31.png )
+![](./images/ab18e913a46ec8e2dbf8c5960c025c31.webp )
 
 安装 react-spring 的包：
 
@@ -70,7 +70,7 @@ npm run start
 
 此外，你还可以不定义 duration，而是定义摩擦力等参数：
 
-![](./images/c60b7287d085d341eb9737fb1c47f0f8.png )
+![](./images/c60b7287d085d341eb9737fb1c47f0f8.webp )
 
 ```javascript
 const width = useSpringValue(0, {
@@ -92,7 +92,7 @@ const width = useSpringValue(0, {
 
 以及为什么 logo 是这样的：
 
-![](./images/34db7fcc351a4853135f2e7865a2fb9d.png )
+![](./images/34db7fcc351a4853135f2e7865a2fb9d.webp )
 
 它主打的就是这种弹簧动画。
 
@@ -174,7 +174,7 @@ export default function App() {
 
 当然，也可以不用 duration 的方式：
 
-![](./images/60fee82b5eb6551d888463a8d7a96913.png )
+![](./images/60fee82b5eb6551d888463a8d7a96913.webp )
 
 而是用弹簧动画的效果：
 
@@ -471,7 +471,7 @@ export default function App() {
 
 当你注释掉横线或者竖线，会更明显一点：
 
-![](./images/a22fc8336face3128b6e9333021e07ca.png )
+![](./images/a22fc8336face3128b6e9333021e07ca.webp )
 
 ![](./images/73dd73226d92cbcd26b2ce171f2c7e1d.gif )
 
@@ -479,13 +479,13 @@ export default function App() {
 
 然后再做笑脸的动画，这个就是用 rect 在不同画几个方块，做一个 scale 从 0 到 1 的动画：
 
-![](./images/358c154948d75148729b6bd5477b26e6.png )
+![](./images/358c154948d75148729b6bd5477b26e6.webp )
 
-![](./images/63a50db6a350c068ef8ecafdebcfe480.png )
+![](./images/63a50db6a350c068ef8ecafdebcfe480.webp )
 
 动画用弹簧动画的方式，指定 mass（质量） 和 tension（张力），并且每个 box 都有不同的 delay：
 
-![](./images/28fe777e06db1a572f84c2b18e5726c5.png )
+![](./images/28fe777e06db1a572f84c2b18e5726c5.webp )
 
 并用 useChain 来把两个动画串联执行。
 

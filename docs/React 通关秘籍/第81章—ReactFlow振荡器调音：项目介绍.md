@@ -10,11 +10,11 @@
 
 浏览器提供了振荡器的 api [createOscillator](https://developer.mozilla.org/zh-CN/docs/Web/API/BaseAudioContext/createOscillator)：
 
-![image.png](./images/884d26bfda4eada195c4f3b8d014d7f6.png )
+![image.png](./images/884d26bfda4eada195c4f3b8d014d7f6.webp )
 
 这样用：
 
-![image.png](./images/35a1d38515d356ce1aceb85df343508c.png )
+![image.png](./images/35a1d38515d356ce1aceb85df343508c.webp )
 
 ```javascript
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -28,7 +28,7 @@ oscillator.start();
 ```
 你可以现在打开 devtools 跑下这段代码：
 
-![image.png](./images/857feb4cb8188d79880a7a0852a1012a.png )
+![image.png](./images/857feb4cb8188d79880a7a0852a1012a.webp )
 
 是不是听到了一个持续的尖锐的声音？
 
@@ -44,25 +44,25 @@ oscillator.start();
 
 正弦波（sine）：
 
-![image.png](./images/72bdd9fe5d7b629ef0ad404b451f015b.png )
+![image.png](./images/72bdd9fe5d7b629ef0ad404b451f015b.webp )
 
 [jaudio](https://lf-activity-static.juejin.cn/obj/juejin-activity-static/user_book/2788017216685118_1724899586576_5433.mp3)
 
 方波（square）：
 
-![image.png](./images/33ec17cd0b19b2cca40c170eb3f2f189.png )
+![image.png](./images/33ec17cd0b19b2cca40c170eb3f2f189.webp )
 
 [jaudio](https://lf-activity-static.juejin.cn/obj/juejin-activity-static/user_book/2788017216685118_1724899664151_1724.mp3)
 
 三角波（triangle）：
 
-![image.png](./images/9b9c9a479e93c190a574e8a561ae8698.png )
+![image.png](./images/9b9c9a479e93c190a574e8a561ae8698.webp )
 
 [jaudio](https://lf-activity-static.juejin.cn/obj/juejin-activity-static/user_book/2788017216685118_1724899767351_9069.mp3)
 
 锯齿波（sawtooth）：
 
-![image.png](./images/6bcc1749e42ffcb9e74ed2980856c00f.png )
+![image.png](./images/6bcc1749e42ffcb9e74ed2980856c00f.webp )
 
 [jaudio](https://lf-activity-static.juejin.cn/obj/juejin-activity-static/user_book/2788017216685118_1724899782636_3047.mp3)
 
@@ -78,21 +78,21 @@ oscillator.start();
 
 实现原理就是正弦波，不同琴键振荡频率不同：
 
-![](./images/cfe1eccbdcd7135961bc4511fb5e2b0c.png )
+![](./images/cfe1eccbdcd7135961bc4511fb5e2b0c.webp )
 
 所以说，通过 createOscillator 创建振荡器，然后修改波形、修改频率，就能产生不同的声音。
 
 这个频率在网上也可以搜到：
 
-![image.png](./images/918466cce99b4d4bf32bb4c602ffed7c.png )
+![image.png](./images/918466cce99b4d4bf32bb4c602ffed7c.webp )
 
 声音调好了之后，你还可以通过 GainNode 调节音量：
 
-![image.png](./images/3485e13c01cb4e107cd24d86b5103b8c.png )
+![image.png](./images/3485e13c01cb4e107cd24d86b5103b8c.webp )
 
 比如下面的代码：
 
-![image.png](./images/6064516fe407afe9356f19bf4ee0773a.png )
+![image.png](./images/6064516fe407afe9356f19bf4ee0773a.webp )
 
 通过 createOscillator 创建振荡器，然后用 createGain 创建调节音量的节点。
 
@@ -109,7 +109,7 @@ oscillator 连接 gainNode，gainNode 连接最终输出。
 
 而且振荡器节点是可以设置多个的，会把多种声音合并播放：
 
-![image.png](./images/6849bac8de4de7a0bf2d58d3acc144ad.png )
+![image.png](./images/6849bac8de4de7a0bf2d58d3acc144ad.webp )
 
 这就是我们要做的实战项目，通过 React Flow 添加振荡器节点、设置参数，节点连接之后，播放合成的声音。
 

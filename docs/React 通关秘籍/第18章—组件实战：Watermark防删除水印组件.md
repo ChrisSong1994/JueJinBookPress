@@ -4,7 +4,7 @@
 
 比如这样：
 
-![](./images/c9f4a3d16e9566379a4b2249f15e0e8c.png )
+![](./images/c9f4a3d16e9566379a4b2249f15e0e8c.webp )
 
 [ant design](https://ant.design/components/watermark-cn/) 和 [arco design](https://arco.design/react/components/watermark) 都提供了 Watermark 水印组件。
 
@@ -14,11 +14,11 @@
 
 arco design 的：
 
-![](./images/389098d1cd09cba8cd95285d51221cd6.png )
+![](./images/389098d1cd09cba8cd95285d51221cd6.webp )
 
 ant desigin 的：
 
-![](./images/879ea6c939afdac365896c507365c756.png )
+![](./images/879ea6c939afdac365896c507365c756.webp )
 
 首先，有一个 div 覆盖在需要加水印的区域，宽高 100%，绝对定位，设置 pointer-events:none 也就是不响应鼠标事件。
 
@@ -28,23 +28,23 @@ ant desigin 的：
 
 点击这个 data url：
 
-![](./images/d9f0e96d6c1c65ee4e2f6e7742276854.png )
+![](./images/d9f0e96d6c1c65ee4e2f6e7742276854.webp )
 
-![](./images/b22a700c94c6309780155e540d7f2ed1.png )
+![](./images/b22a700c94c6309780155e540d7f2ed1.webp )
 
 是个包含文字的图片。
 
 而我们并没有传入图片作为参数：
 
-![](./images/b475119679f19e4621de2692d1732119.png )
+![](./images/b475119679f19e4621de2692d1732119.webp )
 
-![](./images/a6268bf45778a75156b218a5164949e4.png )
+![](./images/a6268bf45778a75156b218a5164949e4.webp )
 
 所以说要用 canvas 画出来，做一些旋转，并导出 base64 的图片，作为这个 div 的背景就好了。
 
 当然，也可以传入图片作为水印：
 
-![](./images/b1a0a104404552fdfbf20439b13d0fcd.png )
+![](./images/b1a0a104404552fdfbf20439b13d0fcd.webp )
 
 同样是用 canvas 画出来。
 
@@ -52,7 +52,7 @@ ant desigin 的：
 
 根据[传入的参数](https://ant.design/components/watermark-cn#watermark)来画：
 
-![](./images/553ad8007d495264f0b52f90105ee1ac.png )
+![](./images/553ad8007d495264f0b52f90105ee1ac.webp )
 
 上面是 antd 的 Watermark 组件的参数。
 
@@ -62,17 +62,17 @@ ant desigin 的：
 
 arco design 的 Watermark 组件画出的图片是上面的样子，所以 repeat 之后是这样的：
 
-![](./images/96a0e4156603806f1697521e7d6a9837.png )
+![](./images/96a0e4156603806f1697521e7d6a9837.webp )
 
 如果仔细看你会发现 ant design 的 Watermark 组件是这样的：
 
-![](./images/174b06a97115f94ce134a85f075fad9c.png )
+![](./images/174b06a97115f94ce134a85f075fad9c.webp )
 
 交错排列的。
 
 这是因为它 canvas 画的内容就是交错的 2 个：
 
-![](./images/76d309714f6f8d3dd4b054310c95718f.png )
+![](./images/76d309714f6f8d3dd4b054310c95718f.webp )
 
 整体思路是很清晰的：**用 canvas 把文字或者图片画出来，导出 base64 的 data url 设置为 div 的重复背景，这个 div 整个覆盖在需要加水印的元素上，设置 pointer-events 是 none。**
 
@@ -80,7 +80,7 @@ arco design 的 Watermark 组件画出的图片是上面的样子，所以 repea
 
 antd 就是这么做的：
 
-![](./images/0e5571907546ecbd1473d674acbedd12.png )
+![](./images/0e5571907546ecbd1473d674acbedd12.webp )
 
 思路理清了，我们来写下代码：
 
@@ -88,11 +88,11 @@ antd 就是这么做的：
 npx create-vite
 ```
 
-![](./images/67068a90a865b4ea3de544e1ab741dfe.png )
+![](./images/67068a90a865b4ea3de544e1ab741dfe.webp )
 
 去掉 index.css 和 StrictMode：
 
-![](./images/3fa0e138604096b7d3a009ae419bad1a.png )
+![](./images/3fa0e138604096b7d3a009ae419bad1a.webp )
 
 然后写下 Watermark/index.tsx
 
@@ -155,7 +155,7 @@ style、className 就不用解释了。
 
 width、height、rotate、offset、gap 等都是水印的参数：
 
-![](./images/f93c637238c6267579a94b2b81978a78.png )
+![](./images/f93c637238c6267579a94b2b81978a78.webp )
 
 gap 是两个水印之间的空白距离。
 
@@ -264,7 +264,7 @@ export default Watermark;
 
 getContainer 默认用 containerRef.current，或者传入的 props.getContainer。
 
-![](./images/d20e85fdeb040c47db989dbb6ae460fc.png )
+![](./images/d20e85fdeb040c47db989dbb6ae460fc.webp )
 
 调用 useWatermark，返回 generateWatermark 方法。
 
@@ -272,7 +272,7 @@ getContainer 默认用 containerRef.current，或者传入的 props.getContainer
 
 getContainer 我们加了 useCallback 避免每次都变，对象参数（fontSize）、数组参数（gap、offset）用 JSON.stringify 序列化后再放到 deps 数组里：
 
-![](./images/0bed09dab67d001ce4e4627d97f19935.png )
+![](./images/0bed09dab67d001ce4e4627d97f19935.webp )
 
 然后来实现 useWatermark 的 hook。
 
@@ -323,18 +323,18 @@ npm i --save-dev @types/lodash-es
 
 然后来处理下 options，和默认 options 做下合并：
 
-![](./images/a20cf04c21da6ae0cf16ede389f2a4b0.png )
+![](./images/a20cf04c21da6ae0cf16ede389f2a4b0.webp )
 
 这里的 toNumber 会把第一个参数转为 number，如果不是数字的话就返回第二个参数的默认值：
 
-![](./images/46d71af18f3deb82c029d2304c9beecc.png )
+![](./images/46d71af18f3deb82c029d2304c9beecc.webp )
 
 具体的合并逻辑是这样的：
 
-![](./images/e90954804d1a9507e32d4bd970a9d110.png )
+![](./images/e90954804d1a9507e32d4bd970a9d110.webp )
 
 
-![image.png](./images/1e7e4c8ef6fa650d2e95056f7b78f286.png )
+![image.png](./images/1e7e4c8ef6fa650d2e95056f7b78f286.webp )
 
 先合并传入的 options
 
@@ -437,7 +437,7 @@ export default function useWatermark(params: WatermarkOptions) {
 
 有了 options，接下来创建 dom，开始绘制：
 
-![](./images/d16abe230515f33e5928a105317d2b12.png )
+![](./images/d16abe230515f33e5928a105317d2b12.webp )
     
 用 useRef 保存水印元素的 dom。
     
@@ -576,7 +576,7 @@ export default function useWatermark(params: WatermarkOptions) {
 
 接下来实现 getCanvasData 方法。
 
-![](./images/cb457aaa5ae4ba82ad68214b006fc24a.png )
+![](./images/cb457aaa5ae4ba82ad68214b006fc24a.webp )
 
 创建个 canvas 元素，拿到画图用的 context。
 
@@ -584,7 +584,7 @@ export default function useWatermark(params: WatermarkOptions) {
 
 然后封装个 configCanvas 方法，用来设置 canvas 的宽高、rotate、scale：
 
-![](./images/3b9242721f686656c38a579824c659e7.png )
+![](./images/3b9242721f686656c38a579824c659e7.webp )
 
 宽高同样是 gap + width、gap + height。
 
@@ -767,7 +767,7 @@ ctx.measureText 是用来测量文字尺寸的。
 
 fontBoudingAscent 是 baseline 到顶部的距离，而 fontBoundingBoxDescent 是到底部的距离：
 
-![](./images/1a0a2e44126f59961615a1d156cb15e2.png )
+![](./images/1a0a2e44126f59961615a1d156cb15e2.webp )
 
 加起来就是行高。
 
@@ -800,7 +800,7 @@ const App = () => {
 export default App;
 ```
 
-![](./images/e68f82287bdfffe252a4fa7fb6bd825b.png )
+![](./images/e68f82287bdfffe252a4fa7fb6bd825b.webp )
 
 把 gap 设为 0：
 
@@ -831,13 +831,13 @@ export default App;
 ```
 也没问题：
 
-![](./images/a0f0e88c7c9056a0e36a998eb2928721.png )
+![](./images/a0f0e88c7c9056a0e36a998eb2928721.webp )
 
 只是现在 offset 还没有支持，也就是左上角的空白距离。
 
 这个就是改下 left、top 的值就好了，当然，width、height 也要从 100% 减去这块距离。
 
-![](./images/14d7a72effd7232a78bffae158fd7aa7.png )
+![](./images/14d7a72effd7232a78bffae158fd7aa7.webp )
 
 ```javascript
 const offsetLeft = mergedOptions.offset[0] + 'px';
@@ -887,7 +887,7 @@ const App = () => {
 export default App;
 ```
 
-![](./images/86e39740ddaf8ec70fb9d40a41feb343.png )
+![](./images/86e39740ddaf8ec70fb9d40a41feb343.webp )
 
 这样水印组件就完成了。
 
@@ -897,9 +897,9 @@ export default App;
 
 我们要加上防删功能，前面讲过，用 MutationObserver：
 
-![](./images/982e354399238a8eea389f56b3a6f349.png )
+![](./images/982e354399238a8eea389f56b3a6f349.webp )
 
-![](./images/e956685529534c103ef2e5bb4319ffcd.png )
+![](./images/e956685529534c103ef2e5bb4319ffcd.webp )
 
 创建完水印节点后，首先 disnonnect 去掉之前的 MutationObserver 的监听，然后创建新的 MutationObserver 监听 container 的变动。
 
@@ -992,15 +992,15 @@ export default function useWatermark(params: WatermarkOptions) {
 ```
 上节讲过，MutationObserver 可以监听子节点的变动和节点属性变动：
 
-![](./images/f6d9852d32a4d7ed1353a46e6b012c22.png )
+![](./images/f6d9852d32a4d7ed1353a46e6b012c22.webp )
 
-![](./images/4bd5644d7506ef47a4149b02d15a947b.png )
+![](./images/4bd5644d7506ef47a4149b02d15a947b.webp )
 
-![](./images/457e87ae3d93ebfbd06fb768781787b7.png )
+![](./images/457e87ae3d93ebfbd06fb768781787b7.webp )
 
 所以我们判断水印是否删除是通过判断是否修改了 watermark 节点的属性，是否增删了 watermark 节点：
 
-![](./images/934234511d734b36093b5af78c43e886.png )
+![](./images/934234511d734b36093b5af78c43e886.webp )
 
 是的话，就把 watermarkDiv.current 置空然后重新绘制。
 

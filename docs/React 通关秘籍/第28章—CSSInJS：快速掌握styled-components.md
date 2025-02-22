@@ -6,13 +6,13 @@
 
 比如 styled-components 的样式是这样写：
 
-![](./images/95bd8f10d68864f6996ca2237b49a597.png )
+![](./images/95bd8f10d68864f6996ca2237b49a597.webp )
 
 可以传参数。
 
 然后用的时候当作组件一样用：
 
-![](./images/e7bab44e286ec1c12f2956ee9c1f62c2.png )
+![](./images/e7bab44e286ec1c12f2956ee9c1f62c2.webp )
 
 样式用 js 写，可以当成组件用，可以传参，这是 CSS in JS 的方案独有的体验。
 
@@ -22,7 +22,7 @@
 npx create-vite styled-components-test
 ```
 
-![](./images/43379dccf68d89002854127976714741.png )
+![](./images/43379dccf68d89002854127976714741.webp )
 
 用 vite 创建个项目。
 
@@ -35,7 +35,7 @@ npm install --save styled-components
 ```
 去掉 index.css 和 StrictMode：
 
-![](./images/ff2b30a930d2dad36c608576254253f9.png )
+![](./images/ff2b30a930d2dad36c608576254253f9.webp )
 
 然后改下 App.tsx：
 
@@ -70,15 +70,15 @@ export default App
 npm run dev
 ```
 
-![](./images/1a253a58f8074986d1d6032eb1ceefff.png )
+![](./images/1a253a58f8074986d1d6032eb1ceefff.webp )
 
 样式生效了：
 
-![](./images/51615f93b50a381c93b5794dcf352eff.png )
+![](./images/51615f93b50a381c93b5794dcf352eff.webp )
 
 打开 devtools 看下：
 
-![](./images/c7b8bb4e199802accff4c2fa4af68563.png )
+![](./images/c7b8bb4e199802accff4c2fa4af68563.webp )
 
 可以看到 styled.div、styled.h1 会创建对应的标签，然后样式会生成一个唯一的 className。
 
@@ -121,11 +121,11 @@ export default App
 
 看下效果：
 
-![](./images/516f71e645571390a4d5ca58413fdd2b.png )
+![](./images/516f71e645571390a4d5ca58413fdd2b.webp )
 
 确实样式组件用起来和其他 React 组件体验一样，加的 ts 类型也会有提示：
 
-![](./images/3a989b0220ca05fcbb60ab5361e8674b.png )
+![](./images/3a989b0220ca05fcbb60ab5361e8674b.webp )
 
 这也是为啥这个库叫 styled-components，样式组件。
 
@@ -157,13 +157,13 @@ function App() {
 export default App
 ```
 
-![](./images/3a9730a8feb9287e29d27ab0d0e4d51d.png )
+![](./images/3a9730a8feb9287e29d27ab0d0e4d51d.webp )
 
 如果你还想改样式组件的标签，可以用 as：
 
-![](./images/675d78fc20171dd6b9557f6fc2836e68.png )
+![](./images/675d78fc20171dd6b9557f6fc2836e68.webp )
 
-![](./images/c7ea2808d48b1c1578e4d17fd10caf99.png )
+![](./images/c7ea2808d48b1c1578e4d17fd10caf99.webp )
 
 styled() 除了可以给样式组件扩展样式外，还可以给普通组件加上样式：
 
@@ -203,11 +203,11 @@ export default App
 
 这里要注意，Link 组件必须接收 className 参数，因为 styled-components 会把样式放到这个 className 上：
 
-![](./images/dd084a4d7d57d2e708435a070d9de705.png )
+![](./images/dd084a4d7d57d2e708435a070d9de705.webp )
 
 我们知道，样式组件也是可以接受参数的，为了区分两者，我们一般都是样式组件的 props 用 $ 开头：
 
-![](./images/8caf1dfdd3a28f0c81592cf6dd0a4970.png )
+![](./images/8caf1dfdd3a28f0c81592cf6dd0a4970.webp )
 
 ```javascript
 const StyledLink = styled(Link)<{ $color?: string;}>`
@@ -222,17 +222,17 @@ function App() {
 }
 ```
 
-![](./images/8349ff71e536b9d92f9b95f5e841b9d9.png )
+![](./images/8349ff71e536b9d92f9b95f5e841b9d9.webp )
 
 默认情况下，样式组件会透传所有不是它的 props 给被包装组件：
 
-![](./images/e36832ba91b102cb31cab033abeed8de.png )
+![](./images/e36832ba91b102cb31cab033abeed8de.webp )
 
-![](./images/642d7332c22aa62588d82e55736e51d7.png )
+![](./images/642d7332c22aa62588d82e55736e51d7.webp )
 
 样式组件包了一层，自然是可以修改 props 的：
 
-![](./images/7dac2fbae4e391752a6a10c936c5eeb2.png )
+![](./images/7dac2fbae4e391752a6a10c936c5eeb2.webp )
 
 用 attrs 方法，接收传入的 props 返回修改后的 props。
 
@@ -277,11 +277,11 @@ function App() {
 export default App
 ```
 
-![](./images/368fa51e0076a8684f963f688efe782b.png )
+![](./images/368fa51e0076a8684f963f688efe782b.webp )
 
 attrs 支持对象和函数，简单的场景直接传对象也可以：
 
-![](./images/193d5aa86fcea637092de42b282f41b7.png )
+![](./images/193d5aa86fcea637092de42b282f41b7.webp )
 
 ```javascript
 const Input = styled.input.attrs({ type: 'checkbox'})`
@@ -323,7 +323,7 @@ export default App;
 
 ![](./images/a525d90aff727c5b8fa298b0e759ddb5.gif )
 
-![](./images/bd4e499aae6743554f4fc7c50f92727a.png )
+![](./images/bd4e499aae6743554f4fc7c50f92727a.webp )
 
 但 styled components 这个 & 和 scss 里的 & 含义还不大一样。
 
@@ -374,13 +374,13 @@ export default App;
 
 &.bbb ~ & 就是 .bbb 的 ColoredText 样式组件之后的所有 ColoredText 样式组件实例。
 
-![](./images/36d348b48a8dba818834d64d78733865.png )
+![](./images/36d348b48a8dba818834d64d78733865.webp )
 
 此外，如果你把 & 全换成 &&，你会发现效果也一样：
 
-![](./images/789e1cda97126c6485b0d3ee5e6859da.png )
+![](./images/789e1cda97126c6485b0d3ee5e6859da.webp )
 
-![](./images/0b83be9ac625b926a69efea682a0f32f.png )
+![](./images/0b83be9ac625b926a69efea682a0f32f.webp )
 
 那什么时候用 &、什么时候用 && 呢？
 
@@ -388,13 +388,13 @@ export default App;
 
 styled-components 用 createGlobalStyle 创建全局样式：
 
-![](./images/2e71c030cc3a8df9160b2ab7d1443322.png )
+![](./images/2e71c030cc3a8df9160b2ab7d1443322.webp )
 
 我们全局指定 ColoredText 的 color 为 green，然后组件里指定 color 为 blue。
 
 看下效果：
 
-![](./images/59d9f3269772f5279571c621ae215a47.png )
+![](./images/59d9f3269772f5279571c621ae215a47.webp )
 
 每个 ColorText 组件都会有一个 src-aYaIB 的 className，全局样式就是给这个 className 加了 color 为 green 的样式。
 
@@ -402,15 +402,15 @@ styled-components 用 createGlobalStyle 创建全局样式：
 
 这时候你这样写是没用的：
 
-![](./images/81cf379b17b3712ead1c113abcd2b736.png )
+![](./images/81cf379b17b3712ead1c113abcd2b736.webp )
 
 用 && 才能覆盖：
 
-![](./images/480837393b9eb5fbb29f2a727c2614ac.png )
+![](./images/480837393b9eb5fbb29f2a727c2614ac.webp )
 
 它通过 .aaa.aaa 这样的方式实现了样式优先级的提升：
 
-![](./images/1af20940a21ae8617602a1fc71050cda.png )
+![](./images/1af20940a21ae8617602a1fc71050cda.webp )
 
 那动画怎么写呢？
 
@@ -451,13 +451,13 @@ export default App;
 
 它为 @keyframes 生成了一个唯一 ID：
 
-![](./images/356b1c9b02e151a59f1bf337a64fd613.png )
+![](./images/356b1c9b02e151a59f1bf337a64fd613.webp )
 
 这大概就是加一个 keyframes 的 api 的意义。
 
 此外，如果你想复用部分 css，要这样写：
 
-![](./images/d72be60befc9239c8d62aa04597363ba.png )
+![](./images/d72be60befc9239c8d62aa04597363ba.webp )
 
 ```javascript
 const animation = css`
@@ -475,7 +475,7 @@ const Rotate = styled.div`
 
 抽出来的 css 也是可以用 props 的：
 
-![](./images/8de257f317d45c9adde2601e53b15b86.png )
+![](./images/8de257f317d45c9adde2601e53b15b86.webp )
 
 ```javascript
 import { styled, keyframes, css } from 'styled-components';
@@ -510,11 +510,11 @@ export default App;
 ```
 但是 css 声明了类型，用到了这部分样式的 styled.xxx 也需要声明类型。
 
-![](./images/56dd6d98d54631b4e5e11a69592ebb81.png )
+![](./images/56dd6d98d54631b4e5e11a69592ebb81.webp )
 
 如果你希望样式组件用的时候可以传入一些样式，那可以用 RuleSet：
 
-![](./images/4040253cde1f7582b406be5ef2930ed8.png )
+![](./images/4040253cde1f7582b406be5ef2930ed8.webp )
 
 ```javascript
 import { styled, keyframes, css, RuleSet } from 'styled-components';
@@ -553,7 +553,7 @@ export default App;
 ```
 它是一个样式对象的数组类型：
 
-![](./images/8885fd7944fdcb064fcb9176d5f36386.png )
+![](./images/8885fd7944fdcb064fcb9176d5f36386.webp )
 
 可以用的时候传入一些样式：
 
@@ -584,7 +584,7 @@ function App() {
 export default App;
 ```
 
-![](./images/f7cb942ec0fb9c566ec3c91f203d9e4b.png )
+![](./images/f7cb942ec0fb9c566ec3c91f203d9e4b.webp )
 
 每个样式组件都有 props.theme 可以读取当前 theme 对象，然后这个对象可以通过 useTheme 读取，通过 ThemeProvider 修改。
 
@@ -632,7 +632,7 @@ export default App;
 
 用了 styled-components 之后，你的 className 都是这样的：
 
-![](./images/beceab9e1aa39e9cc6f3beecb195588c.png )
+![](./images/beceab9e1aa39e9cc6f3beecb195588c.webp )
 
 没有样式冲突问题，不需要类似 CSS Modules 这种方案。
 
@@ -665,13 +665,13 @@ scss 的 for 循环、if else 还有函数等的语法都要单独学习。
 
 你的 React 项目里会多出特别多样式组件：
 
-![](./images/e91b49defe14b71102a07d64f5db870b.png )
+![](./images/e91b49defe14b71102a07d64f5db870b.webp )
 
 随便找一个组件，一眼望去全是样式组件。
 
 你的 React DevTools 里也是一堆 styled-components 的组件：
 
-![](./images/0fffe72ea7b39a5fb2aa8ef15d7bbf24.png )
+![](./images/0fffe72ea7b39a5fb2aa8ef15d7bbf24.webp )
 
 当然，这些也不是啥大问题，styled-components 整体还是很好用的。
 

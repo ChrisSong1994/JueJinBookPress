@@ -9,7 +9,7 @@ npx create-react-app --template=typescript react-dnd-test
 ```
 新建个 react 项目
 
-![](./images/d5d38f6fe743a05b850ee5c00380c61b.png )
+![](./images/d5d38f6fe743a05b850ee5c00380c61b.webp )
 
 安装 react-dnd 相关的包：
 
@@ -62,7 +62,7 @@ npm run start
 ```
 
 是这样的：
-![](./images/a299f07e05e24c0a15c2631cd63cd276.png )
+![](./images/a299f07e05e24c0a15c2631cd63cd276.webp )
 
 现在我们想把 box 拖拽到 container 里，用 react-dnd 怎么做呢？
 
@@ -115,13 +115,13 @@ function Container() {
 
 就是我们 useDrag 的时候声明的 type 的元素。
 
-![](./images/0af2579917f82ac6623ae8d7d8bd83ac.png )
+![](./images/0af2579917f82ac6623ae8d7d8bd83ac.webp )
 
 在 drop 的时候会触发 drop 回调函数，第一个参数是 item，就是 drag 的元素声明的那个。
 
 只是这样还不行，还要在根组件加上 Context：
 
-![](./images/2340122e8dea826f67ab7ef0d7acb893.png )
+![](./images/2340122e8dea826f67ab7ef0d7acb893.webp )
 
 ```javascript
 import ReactDOM from 'react-dom/client';
@@ -147,7 +147,7 @@ root.render(<DndProvider backend={HTML5Backend}><App></App></DndProvider>);
 
 那如果 type 不一样呢？
 
-![](./images/d83ca199372caba25bbd4c600c8ca78c.png )
+![](./images/d83ca199372caba25bbd4c600c8ca78c.webp )
 
 ![](./images/edbeaa15fd1795fb84826349b21b4093.gif )
 
@@ -155,7 +155,7 @@ root.render(<DndProvider backend={HTML5Backend}><App></App></DndProvider>);
 
 然后我们给 Box 组件添加一个 color 的 props，用来设置背景颜色：
 
-![](./images/53650c02f6df161772a64c901afce8c5.png )
+![](./images/53650c02f6df161772a64c901afce8c5.webp )
 
 并且给 item 的数据加上类型。
 
@@ -185,15 +185,15 @@ function Box(props: BoxProps) {
 ```
 添加几个 Box 组件试一下：
 
-![](./images/0499f004bc02445772a28d7c1d7e01e8.png )
+![](./images/0499f004bc02445772a28d7c1d7e01e8.webp )
 
-![](./images/47bb6f5316b2bc46c2876b730088a9a6.png )
+![](./images/47bb6f5316b2bc46c2876b730088a9a6.webp )
 
 没啥问题。
 
 然后我们改下 Container 组件，增加一个 boxes 数组的 state，在 drop 的时候把 item 加到数组里，并触发渲染：
 
-![](./images/e38df482231235ad1ecab6491520188b.png )
+![](./images/e38df482231235ad1ecab6491520188b.webp )
 
 ```javascript
 function Container() {
@@ -230,7 +230,7 @@ function Container() {
 
 我们再加上一些拖拽过程中的效果：
 
-![](./images/89108eb73d3969bfff734db88d511be4.png )
+![](./images/89108eb73d3969bfff734db88d511be4.webp )
 
 useDrag 可以传一个 collect 的回调函数，它的参数是 monitor，可以拿到拖拽过程中的状态。
 
@@ -278,7 +278,7 @@ function Box(props: BoxProps) {
 
 但如果我们想把这个预览的样式也给改了呢？
 
-![](./images/1f559611d78918123ff87a97aa30f51b.png )
+![](./images/1f559611d78918123ff87a97aa30f51b.webp )
 
 这时候就要新建个组件了：
 
@@ -313,7 +313,7 @@ useDragLayer 的参数是函数，能拿到 monitor，从中取出很多东西�
 ```
 引入下这个组件：
 
-![](./images/b052b2d26662bb134c2e4ad43e8a33b1.png )
+![](./images/b052b2d26662bb134c2e4ad43e8a33b1.webp )
 
 现在的效果是这样的：
 
@@ -323,7 +323,7 @@ useDragLayer 的参数是函数，能拿到 monitor，从中取出很多东西�
 
 这个也可以去掉：
 
-![](./images/af08596d4eae6b5e5f6135ba68fd728a.png )
+![](./images/af08596d4eae6b5e5f6135ba68fd728a.webp )
 
 useDrag 的第三个参数就是处理预览元素的，我们用 getEmptyImage 替换它，就看不到了。
 
@@ -552,11 +552,11 @@ export default App;
 ```
 就是根据 cardList 的数据渲染一个列表。
 
-![](./images/164031b5cd1e65ab74c09cb7dd4bcbfd.png )
+![](./images/164031b5cd1e65ab74c09cb7dd4bcbfd.webp )
 
 把它渲染出来是这样的：
 
-![](./images/0ab55df7f152d742296aadc77164276d.png )
+![](./images/0ab55df7f152d742296aadc77164276d.webp )
 
 拖拽排序，显然 drag 和 drop 的都是 Card。
 
@@ -595,7 +595,7 @@ function Card(props: CardProps) {
 
 我们实现一个交换位置的方法，传入 Card 组件，并且把当前的 index 也传入：
 
-![](./images/a599bea4e2c44e740e3d0f7de3de3be6.png )
+![](./images/a599bea4e2c44e740e3d0f7de3de3be6.webp )
 ```javascript
 const swapIndex = useCallback((index1: number, index2: number) => {
     const tmp = cardList[index1];
@@ -608,7 +608,7 @@ const swapIndex = useCallback((index1: number, index2: number) => {
 
 然后在 Card 组件里调用下：
 
-![](./images/cd6ac9aa79b96950e7e9295fba4d03b9.png )
+![](./images/cd6ac9aa79b96950e7e9295fba4d03b9.webp )
 
 增加 index 和 swapIndex 两个参数，声明 drag 传递的 item 数据的类型
 
@@ -662,7 +662,7 @@ function Card(props: CardProps) {
 
 我们设置个背景色：
 
-![](./images/ba0b57be551e28bdab108ee839eb60fe.png )
+![](./images/ba0b57be551e28bdab108ee839eb60fe.webp )
 
 ![](./images/54a946287cb911ad9bca1966782cf260.gif )
 
@@ -672,7 +672,7 @@ function Card(props: CardProps) {
 
 useDrop 有 hover 时的回调函数，我们把 drop 改成 hover就好了：
 
-![](./images/ab174282429350e94775a57a422fa7e6.png )
+![](./images/ab174282429350e94775a57a422fa7e6.webp )
 
 但现在你会发现它一直在换：
 
@@ -680,7 +680,7 @@ useDrop 有 hover 时的回调函数，我们把 drop 改成 hover就好了：
 
 那是因为交换位置后，没有修改 item.index 为新的位置，导致交换逻辑一致触发：
 
-![](./images/a0335427fa57db22e8ecbaab00d68525.png )
+![](./images/a0335427fa57db22e8ecbaab00d68525.webp )
 
 ![](./images/917968cc94bf6e1f1d8ec867f91f596d.gif )
 
@@ -688,7 +688,7 @@ useDrop 有 hover 时的回调函数，我们把 drop 改成 hover就好了：
 
 然后我们再处理下拖拽时的样式。
 
-![](./images/970c3a67bd240b5fa82f54c012497cb4.png )
+![](./images/970c3a67bd240b5fa82f54c012497cb4.webp )
 
 样式如下：
 

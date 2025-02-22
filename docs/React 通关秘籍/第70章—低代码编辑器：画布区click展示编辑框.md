@@ -10,7 +10,7 @@
 
 hover 时记录了 hoverComponentId：
 
-![](./images/1e88eed781037114c403bcbb194eda43.png )
+![](./images/1e88eed781037114c403bcbb194eda43.webp )
 
 click 时同样也要记录。
 
@@ -22,9 +22,9 @@ click 时同样也要记录。
 
 我们加一下：
 
-![](./images/6c3572e929107dabc668760e05ba3a21.png )
+![](./images/6c3572e929107dabc668760e05ba3a21.webp )
 
-![](./images/21fb7929216852a93f8b7a9c76da801c.png )
+![](./images/21fb7929216852a93f8b7a9c76da801c.webp )
 
 ```javascript
 interface State {
@@ -52,9 +52,9 @@ setCurComponentId: (componentId) =>
 ```
 同样，click 事件也是绑定在画布区根组件 EditArea 上的：
 
-![](./images/3cd2291b3cf3aa21cc0e89d5bc582d6d.png )
+![](./images/3cd2291b3cf3aa21cc0e89d5bc582d6d.webp )
 
-![](./images/b71fb3246a8361bfa73fe3dbee92d7ee.png )
+![](./images/b71fb3246a8361bfa73fe3dbee92d7ee.webp )
 
 ```javascript
 import React, { MouseEventHandler, useEffect, useState } from "react";
@@ -287,21 +287,21 @@ export default SelectedMask;
 ```
 和 HoverMask 区别不大，主要这几点区别：
 
-![](./images/0cd188f0f7607283a4cd0285dee43449.png )
+![](./images/0cd188f0f7607283a4cd0285dee43449.webp )
 
 从 store 取出 curComponentId 来。
 
-![](./images/c751349c33c6c950f99c856ac5b3bf71.png )
+![](./images/c751349c33c6c950f99c856ac5b3bf71.webp )
 
 如果 id 不为 1，说明不是 Page 组件，就显示删除按钮。
 
 点击的时候删除组件：
 
-![](./images/9939980f9fb8a01922c06021dd973fa3.png )
+![](./images/9939980f9fb8a01922c06021dd973fa3.webp )
 
 再就是编辑框的颜色稍微深一点：
 
-![](./images/4bed2fad717e5a8ffa10dcdca4413085.png )
+![](./images/4bed2fad717e5a8ffa10dcdca4413085.webp )
 
 测试下：
 
@@ -313,7 +313,7 @@ export default SelectedMask;
 
 我们处理下：
 
-![](./images/e27e60fa6d6283ddc1faa5f2d9d85f46.png )
+![](./images/e27e60fa6d6283ddc1faa5f2d9d85f46.webp )
 
 hoverComponentId 和 curComponentId 一样的时候，就不显示高亮框。
 
@@ -329,13 +329,13 @@ amis 的编辑器还有这个功能：
 
 我们也实现下：
 
-![](./images/95f99f9497140168bcf50d1396adb5b3.png )
+![](./images/95f99f9497140168bcf50d1396adb5b3.webp )
 
 每个组件都有 component.parentId，用来找父组件也很简单，不断向上找，放到一个数组里就行。
 
 然后用 DropDown 组件展示下拉列表：
 
-![](./images/52ada156442f79e833a3eb037e8ebb5c.png )
+![](./images/52ada156442f79e833a3eb037e8ebb5c.webp )
 
 点击 item 的时候切换 curComponentId。
 
@@ -520,9 +520,9 @@ export default SelectedMask;
 
 这个问题也好解决，在 components 变化后调用下 updatePosition 就好了：
 
-![](./images/e19ac654bc524bc26982ddeb5de80174.png )
+![](./images/e19ac654bc524bc26982ddeb5de80174.webp )
 
-![](./images/a6b04fcaca515ebbfe73649c94028930.png )
+![](./images/a6b04fcaca515ebbfe73649c94028930.webp )
 
 ```javascript
 useEffect(() => {
@@ -539,39 +539,39 @@ SelectedMask 和 HoverMask 都处理下。
 
 此外，amis 编辑器左边物料和选中时的编辑框都是展示的组件描述，而我们直接展示组件名：
 
-![](./images/438f48873cdab0e25d898967e1d98043.png )
+![](./images/438f48873cdab0e25d898967e1d98043.webp )
 
-![](./images/3838204a30e9ff4ba90c3786e9108cf6.png )
+![](./images/3838204a30e9ff4ba90c3786e9108cf6.webp )
 
 这样不大好，我们改一下：
 
 在 Component 类型加一下 desc：
 
-![](./images/4ab8e60d1b579dc514a1c1de50627363.png )
+![](./images/4ab8e60d1b579dc514a1c1de50627363.webp )
 
 ComponentConfig 也加一下：
 
-![](./images/240948b14df1a2e1cb284d652c9c8554.png )
+![](./images/240948b14df1a2e1cb284d652c9c8554.webp )
 
 addComponent 的时候从 config 取出组件的 desc：
 
-![](./images/df5238c0bc7bab280be515f1fa2a540e.png )
+![](./images/df5238c0bc7bab280be515f1fa2a540e.webp )
 
 然后展示的时候展示 desc 就好了：
 
 左边的 MaterialItem 传入 desc：
 
-![](./images/764e7690e41080f61bba4482af1c470c.png )
+![](./images/764e7690e41080f61bba4482af1c470c.webp )
 
 显示的文案改成 desc：
 
-![](./images/57e058d1873902d8698772007c86b2dd.png )
+![](./images/57e058d1873902d8698772007c86b2dd.webp )
 
 HoverMask 和 SelectedMask 也显示 desc：
 
-![](./images/d143196c42756a11937e85008dc923a2.png )
+![](./images/d143196c42756a11937e85008dc923a2.webp )
 
-![](./images/43b992d529370968edf43b0a629f6faf.png )
+![](./images/43b992d529370968edf43b0a629f6faf.webp )
 
 测试下：
 
@@ -581,9 +581,9 @@ HoverMask 和 SelectedMask 也显示 desc：
 
 然后左边不需要展示页面组件，过滤下：
 
-![](./images/4efc9b089b2051b7af451b16c73cd9f7.png )
+![](./images/4efc9b089b2051b7af451b16c73cd9f7.webp )
 
-![](./images/39fa3362ab0ad66dd707f798c3dbcdda.png )
+![](./images/39fa3362ab0ad66dd707f798c3dbcdda.webp )
 
 还有，使用者是可能调整窗口大小的，这时候编辑框没有重新计算位置：
 
@@ -591,7 +591,7 @@ HoverMask 和 SelectedMask 也显示 desc：
 
 做下处理：
 
-![](./images/b890042eab9117901c2f2cd64290d331.png )
+![](./images/b890042eab9117901c2f2cd64290d331.webp )
 
 ```javascript
 useEffect(() => {
