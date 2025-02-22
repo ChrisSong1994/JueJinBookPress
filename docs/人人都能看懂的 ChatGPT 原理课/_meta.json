@@ -10,6 +10,7 @@
   "4.核心：ChatGPT 是如何处理文字输入的？.md",
   "5.ChatGPT 的灵魂：Attention 注意力机制.md",
   "6.ChatGPT 的组件：Transformer 模型结构.md",
+  "7.ChatGPT 的结构：Encoder-Decoder.md",
   "8.模型训练基础：监督学习与 ChatGPT 预训练.md",
   "9.模型训练基础：GPT 中的 few-shot 小样本学习.md",
   "10.模型训练基础：什么是强化学习？.md",

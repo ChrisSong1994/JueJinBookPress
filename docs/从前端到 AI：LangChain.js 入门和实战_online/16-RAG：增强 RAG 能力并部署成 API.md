@@ -310,7 +310,7 @@ fetchStream();
 
 然后，我们运行即可得到：
 
-![CleanShot 2024-04-10 at 00.51.23@2x.png](./images/90187806a8dc929ee437461132e2c6c6.png )
+![CleanShot 2024-04-10 at 00.51.23@2x.png](./images/90187806a8dc929ee437461132e2c6c6.webp )
 
 
 然后，我们的 rag chain 就被部署成了 API，可以给其他业务提供服务。

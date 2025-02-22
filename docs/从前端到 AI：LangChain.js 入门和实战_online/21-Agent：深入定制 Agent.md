@@ -60,28 +60,28 @@
 
 首先，在第一个 llm 节点中，输入和输出是：
 
-![CleanShot 2024-04-14 at 23.07.16@2x.png](./images/160375e4441d3958cc442b07061831b1.png )
+![CleanShot 2024-04-14 at 23.07.16@2x.png](./images/160375e4441d3958cc442b07061831b1.webp )
 
 是正常的输入用户的问题，llm 返回对 serpAPI 的调用，直接请求搜索 “17 USD to CNY”。 对比 reAct 框架，在 reAct 中，我们相当于引导 llm 去一步步进行思考，逐步获取完成任务所需要的信息，所以 llm 是先查询人民币和美元的汇率，再使用计算器进行乘法运算。  
 而在 openAI 中，gpt 是直接使用 serpAPI 查询最终结果。但就单一的测试并不能说明什么，也不能说执行两次的路就是差于执行一次。  
 
 后面就是，serpAPI 返回正常结果：
-![CleanShot 2024-04-14 at 23.13.27@2x.png](./images/b0b4978b7471ed7dcd4bcfd6635f6cba.png )
+![CleanShot 2024-04-14 at 23.13.27@2x.png](./images/b0b4978b7471ed7dcd4bcfd6635f6cba.webp )
 
 然后再次调用 llm 节点：
 
-![CleanShot 2024-04-14 at 23.14.18@2x.png](./images/290dca20b1f75f7355ecc801f8091db1.png )
+![CleanShot 2024-04-14 at 23.14.18@2x.png](./images/290dca20b1f75f7355ecc801f8091db1.webp )
 
 由 llm 生成最终的结果。注意，这里 AI 对 tool 的请求和 tool 的返回是由 prompt 模板中 `agent_scratchpad` 引入的，在正常的 chat history 中并不会包含 tool 调用和返回信息。  
 
 
 我们可以用另一个问题再测试下，输入 “我有 10000 人民币，可以购买多少微软股票”，然后通过 lang Smith 进行观察，第一次 llm 节点调用是：
 
-![CleanShot 2024-04-14 at 23.18.01@2x.png](./images/a45fe1d77b7dd2d6bc2d8dc896d2d0a7.png )
+![CleanShot 2024-04-14 at 23.18.01@2x.png](./images/a45fe1d77b7dd2d6bc2d8dc896d2d0a7.webp )
 
 是请求 serp 搜索微软当前的股价，serp 正常返回，然后第二次 llm 节点的调用是：
 
-![CleanShot 2024-04-14 at 23.18.55@2x.png](./images/bbbfc717ae1d51f8d906066534f18146.png )
+![CleanShot 2024-04-14 at 23.18.55@2x.png](./images/bbbfc717ae1d51f8d906066534f18146.webp )
 
 是请求 calculator 计算 10000 / 421.9。   
 
@@ -246,7 +246,7 @@ Final Answer: 小明有41个苹果。
 
 其思考过程是：
 
-![CleanShot 2024-04-15 at 13.56.13@2x.png](./images/c10bf2dcf653cb89a8644aa820d20c53.png )
+![CleanShot 2024-04-15 at 13.56.13@2x.png](./images/c10bf2dcf653cb89a8644aa820d20c53.webp )
 
 我们演示的都是较为简单的问题，对于复杂的问题 agents 会逐步推理和应用不同的 tools 来得出最终的结果。所以 tools 的种类、能力很大程度上决定了 agents 的上限，但对于 reAct 这种框架，tools 是作为 prompt 嵌入到 llm 上下文中，所以过多的 tools 会影响用于其他内容的 prompt。 同样的，openAI tools 的描述和输入的 schema 也是算在上下文中，也受窗口大小的限制。所以并不是 tools 越多越好，而是根据需求去设计。   
 
@@ -274,7 +274,7 @@ Final Answer: 小明有41个苹果。
   });
   console.log(res);
 ```
-![CleanShot 2024-04-15 at 17.39.25@2x.png](./images/416a0a8d5f03cb54fab43521a0dce1c2.png )
+![CleanShot 2024-04-15 at 17.39.25@2x.png](./images/416a0a8d5f03cb54fab43521a0dce1c2.webp )
 
 从 langSmith 的数据可以看到，当调用 `get-qiu-answer` 这个 tool 后，直接把 tool 的结果当做整个 agents 运行的最终结果返回了，而不是像前面一样再经过一次 llm 节点生成答案。所以，我们就可以利用 `returnDirect` feature，将入口的 agent 作为 route，去导向到不同领域的专业 agent，这也是多 agents 协同的一种方式。 
 

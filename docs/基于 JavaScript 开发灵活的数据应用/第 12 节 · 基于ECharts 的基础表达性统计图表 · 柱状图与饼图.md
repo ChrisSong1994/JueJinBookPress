@@ -1,4 +1,4 @@
-
+### 本资源由 itjc8.com 收集整理
 # 第 12 节 · 基于ECharts 的基础表达性统计图表 · 柱状图与饼图
 
 在上一节中我们学习了 ECharts 的基本使用方法以及如何使用 ECharts 绘制散点图与折线图。散点图主要用于表示多个数据点在一维或二维特征空间中的分布情况，而折线图主要用于表示某一个计量数据在一定的顺序范围内的变化情况。
@@ -25,25 +25,25 @@
 
 本科录取人数
 
-![N_A](./images/977c41641248dd3b61a799dcafa0d23c.png)
+![N_A](./images/977c41641248dd3b61a799dcafa0d23c.webp )
 
-![N_B](./images/32400c41eb22d52ff7dc325b94f2e0af.png)
+![N_B](./images/32400c41eb22d52ff7dc325b94f2e0af.webp )
 
-![N_C](./images/c4d6b9b8cfcf064db95c6f224dd459be.png)
+![N_C](./images/c4d6b9b8cfcf064db95c6f224dd459be.webp )
 
-![N_D](./images/df3c282c8fc50d43d9ea405564f42a23.png)
+![N_D](./images/df3c282c8fc50d43d9ea405564f42a23.webp )
 
 本科率
 
-![P_A](./images/53c3a614b50b4a8f9b1c2be79468be15.png)
+![P_A](./images/53c3a614b50b4a8f9b1c2be79468be15.webp )
 
-![P_B](./images/a6aee68f0539445afdfb37ed7d847316.png)
+![P_B](./images/a6aee68f0539445afdfb37ed7d847316.webp )
 
-![P_C](./images/ee187a76b346b28488f5c3129881f5ef.png)
+![P_C](./images/ee187a76b346b28488f5c3129881f5ef.webp )
 
-![P_D](./images/dbca9aa403210973c6873325b0547c23.png)
+![P_D](./images/dbca9aa403210973c6873325b0547c23.webp )
 
-其中，我们假设数列 ![N](./images/cf21739dd0f89e64267c5eac3ff5b1b1.png) 中的每一个元素都为大于 1000 小于 1500 的随机数，而数列 ![P](./images/ae49d4124b18af1844b0c22f662bf326.png) 中的元素则为大于 0.85 小于 1 的随机数。同样，我们使用 JavaScript 生成一个符合这些约束的数据集，以便于学习。
+其中，我们假设数列 ![N](./images/cf21739dd0f89e64267c5eac3ff5b1b1.webp ) 中的每一个元素都为大于 1000 小于 1500 的随机数，而数列 ![P](./images/ae49d4124b18af1844b0c22f662bf326.webp ) 中的元素则为大于 0.85 小于 1 的随机数。同样，我们使用 JavaScript 生成一个符合这些约束的数据集，以便于学习。
 
 ```
 const N = []

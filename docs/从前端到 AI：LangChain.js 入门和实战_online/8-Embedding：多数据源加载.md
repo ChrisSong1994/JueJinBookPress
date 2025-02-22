@@ -232,7 +232,7 @@ const docs = await loader.load();
 
 可以看到打印出来的效果就是纯文本，并不需要我们对其中的 html 标签进行处理。
 
-![CleanShot 2024-03-25 at 21.46.53@2x.png](./images/c29bf8c8582077a653c7ddb563dc81cf.png )
+![CleanShot 2024-03-25 at 21.46.53@2x.png](./images/c29bf8c8582077a653c7ddb563dc81cf.webp )
 
 我们也可以用类似于 jQuery 的语法对 html 中的元素进行选择和过滤，例如
 

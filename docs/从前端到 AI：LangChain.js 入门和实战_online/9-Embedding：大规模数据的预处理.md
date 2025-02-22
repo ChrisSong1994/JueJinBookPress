@@ -89,7 +89,7 @@ const splitDocs = await splitter.splitDocuments(docs);
 因为原始数据中，一行就是一段，中间用空行分割，所有前几个 `Document` 的 meta 都是 `lines: { from: 1, to: 1 }`。  
 我们可以使用 [ChunkViz](https://chunkviz.up.railway.app/) 去可视化的看一下效果。（注意，这里将 chunkSize 只是为了教学，一般不会设置的这么低）
 
-![CleanShot 2024-03-25 at 18.35.08@2x.png](./images/009320c178fce249b223c3eb56d9bc54.png )
+![CleanShot 2024-03-25 at 18.35.08@2x.png](./images/009320c178fce249b223c3eb56d9bc54.webp )
 
 
 然后，我们可以尝试去设置 `chunkOverlap` 去看，文档块之间的重叠是如何设置和形成的，
@@ -122,7 +122,7 @@ const splitDocs = await splitter.splitDocuments(docs);
 ]
 ```
 
-![CleanShot 2024-03-28 at 00.18.59@2x.png](./images/c92c2351e7b5ac6e52e65796fd7aa158.png )
+![CleanShot 2024-03-28 at 00.18.59@2x.png](./images/c92c2351e7b5ac6e52e65796fd7aa158.webp )
 
 图中墨绿色的部分就是两个文档块之间重叠的部分。  
 

@@ -14,15 +14,15 @@ Azure OpenAI 的优势是跟 OpenAI 同源，并且国内付款比较容易。
 
 进入 azure 首页后，搜索 OpenAI：
 
-![CleanShot 2024-04-23 at 22.11.05@2x.png](./images/d2a2ec04666dacffcd286a8b1beba838.png )
+![CleanShot 2024-04-23 at 22.11.05@2x.png](./images/d2a2ec04666dacffcd286a8b1beba838.webp )
 
 然后我们创建一个 Azure OpenAI 的服务：
 
-![CleanShot 2024-04-23 at 22.12.10@2x.png](./images/597b9f9ddbdf3fe4fd2713ac31ef0b66.png )
+![CleanShot 2024-04-23 at 22.12.10@2x.png](./images/597b9f9ddbdf3fe4fd2713ac31ef0b66.webp )
 
 目前 OpenAI 的业务需要申请才能使用，第一次打开这个界面会提醒填写表单进行申请：
 
-![CleanShot 2024-04-23 at 22.13.36@2x.png](./images/8cdad922023dc11cab19d1beaa2b1198.png )
+![CleanShot 2024-04-23 at 22.13.36@2x.png](./images/8cdad922023dc11cab19d1beaa2b1198.webp )
 
 按照表单内容填写公司相关的信息即可，邮箱一定使用公司的邮箱，使用个人邮箱会被直接拒绝，一般需要等待几天即可。  
 我们假设大家已经通过申请。
@@ -36,26 +36,26 @@ Azure OpenAI 的优势是跟 OpenAI 同源，并且国内付款比较容易。
 
 等待部署完成后，打开部署的服务，左上角打码部分就是你部署的名称，然后我们点击 模型部署 => 管理部署，跳转到 Azure OpenAI Studio 去管理模型。
 
-![CleanShot 2024-04-23 at 22.24.17@2x.png](./images/806b586eb0c428c1d5803afdb021428f.png )
+![CleanShot 2024-04-23 at 22.24.17@2x.png](./images/806b586eb0c428c1d5803afdb021428f.webp )
 
 
 
 Azure OpenAI 与 OpenAI API 有些不同，在 Azure 中，你需要先创建一个模型的部署，然后才能在 API 中使用部署名称去调用对应的部署，我们先创建一个 gpt4 的模型：
 
-![CleanShot 2024-04-23 at 22.27.06@2x.png](./images/07629c477e132189f79d23ddad6f0266.png )
+![CleanShot 2024-04-23 at 22.27.06@2x.png](./images/07629c477e132189f79d23ddad6f0266.webp )
 
 
-![CleanShot 2024-04-23 at 22.27.50@2x.png](./images/43f9e10781fcbd2e60604e97124d84de.png )
+![CleanShot 2024-04-23 at 22.27.50@2x.png](./images/43f9e10781fcbd2e60604e97124d84de.webp )
 
 
 这里模型的版本根据你服务部署所在的区域有关，并且不同模型的 API 定价不同，你可以根据需要去创建特定的模型版本。
 
-![CleanShot 2024-04-23 at 22.28.00@2x.png](./images/78215203fd5affe3d215cfb5dd21151e.png )
+![CleanShot 2024-04-23 at 22.28.00@2x.png](./images/78215203fd5affe3d215cfb5dd21151e.webp )
 
 
 创建之后，你就可以在聊天界面去测试这个部署：
 
-![CleanShot 2024-04-23 at 22.30.10@2x.png](./images/d2cd943e32992a929f97ba6ed26e1093.png )
+![CleanShot 2024-04-23 at 22.30.10@2x.png](./images/d2cd943e32992a929f97ba6ed26e1093.webp )
 
 
 这个界面已提供了非常丰富的参数和 prompt 功能，可以直接用来调试模型的参数和 prompt。 
@@ -79,7 +79,7 @@ AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=abc
 - AZURE_OPENAI_API_INSTANCE_NAME 是你部署服务的名称，也就是下面截图左上角打码部分的名称。
 - AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME 是你用于 embedding 的模型实例名称。创建步骤跟创建 gpt4 模型的部署一致。
 
-![CleanShot 2024-04-24 at 16.53.36@2x.png](./images/e33dc608c04abcc309d5187e4a573946.png )
+![CleanShot 2024-04-24 at 16.53.36@2x.png](./images/e33dc608c04abcc309d5187e4a573946.webp )
 
 
 把这些环境变量设置好后，langchain 运行时会自动读取，所以我们创建 OpenAI 的服务时就可以直接：

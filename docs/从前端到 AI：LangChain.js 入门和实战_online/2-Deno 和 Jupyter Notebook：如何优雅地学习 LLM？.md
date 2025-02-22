@@ -19,7 +19,7 @@
 const text = await Deno.readTextFile("./people.json");
 ```
 
-![CleanShot 2024-03-18 at 21.46.36@2x.png](./images/bbba7a733926b80b43250cec9172cbf3.png )
+![CleanShot 2024-03-18 at 21.46.36@2x.png](./images/bbba7a733926b80b43250cec9172cbf3.webp )
 
 Jupyter Notebook 的核心是代码块，每个代码块作为一个整体去执行，并且可以多次反复执行。在代码快的左侧，是执行顺序的标记，指这个代码块被执行的顺序。 
 
@@ -29,7 +29,7 @@ Jupyter Notebook 的核心是代码块，每个代码块作为一个整体去执
 
 这个理解起来有点怪，我们用 code demo 测试一下，我们在第二块中显示变量 text
 
-![CleanShot 2024-03-18 at 21.57.45@2x.png](./images/3efa20ebd8be97986a3197548f7d6c5a.png )
+![CleanShot 2024-03-18 at 21.57.45@2x.png](./images/3efa20ebd8be97986a3197548f7d6c5a.webp )
 
 在 Jupyter NoteBook 中，如果一个代码快只有一个变量，那就会自动把该变量显示出来，类似于 `console.log(单个变量)` 但又不一样，其中有些微妙的区别在使用中你会感受出来。
 
@@ -37,29 +37,29 @@ Jupyter Notebook 的核心是代码块，每个代码块作为一个整体去执
 
 例如，我们可以对 text 进行切割
 
-![CleanShot 2024-03-18 at 22.17.58@2x.png](./images/03e75f82686d615a4180bf54d5f3727d.png )
+![CleanShot 2024-03-18 at 22.17.58@2x.png](./images/03e75f82686d615a4180bf54d5f3727d.webp )
 
 如果我们对切割的结果不满意，可以调整切割的方式，
 
-![CleanShot 2024-03-18 at 22.18.36@2x.png](./images/abdd12253639ef4c069c70ed47489d4e.png )
+![CleanShot 2024-03-18 at 22.18.36@2x.png](./images/abdd12253639ef4c069c70ed47489d4e.webp )
 可以看到，再次运行第三个单元格两次后，左侧的数字就变成了 4。
 
 **注意**，如果上游数据发生了改变，下游并不会自动的更新或者重新运行，例如我们这里手动修改 text 的值改成一个字符串。
 
-![CleanShot 2024-03-18 at 22.21.05@2x.png](./images/9c158bceef197fb13a6ecf1f23d82588.png )
+![CleanShot 2024-03-18 at 22.21.05@2x.png](./images/9c158bceef197fb13a6ecf1f23d82588.webp )
 
 可以看到，后面依赖于 text 的代码格并没有自动更新，需要自己手动重新运行：
 
-![CleanShot 2024-03-18 at 22.20.26@2x.png](./images/acf9fd536a89eaa70cd7496082d448c6.png )
+![CleanShot 2024-03-18 at 22.20.26@2x.png](./images/acf9fd536a89eaa70cd7496082d448c6.webp )
 之所以叫 Notebook 是因为天然支持 markdown，我们新建一个块，然后设置为 markdown 块：
 
-![CleanShot 2024-03-19 at 11.37.55@2x.png](./images/15fc2395c5e585762d0c5a8d871ff1e6.png )
+![CleanShot 2024-03-19 at 11.37.55@2x.png](./images/15fc2395c5e585762d0c5a8d871ff1e6.webp )
 
-![CleanShot 2024-03-19 at 11.39.34@2x.png](./images/eb2c4442a57005638d11a43cd537a16b.png )
+![CleanShot 2024-03-19 at 11.39.34@2x.png](./images/eb2c4442a57005638d11a43cd537a16b.webp )
 
 在运行之后，就会渲染出来：
 
-![转存失败，建议直接上传图片文件](./images/b26e5f2db5b25d5885877cdf2babe769.png )
+![转存失败，建议直接上传图片文件](./images/b26e5f2db5b25d5885877cdf2babe769.webp )
 
 有了 Jupyter NoteBook，我们就可以节约 费事/费钱 的请求，并且基于某个运行结果的输出，在后面的代码块中，不断尝试各种解析或者处理方式。同时，也非常方便结合 markdown 来做一些笔记，获得比在注释里记录更方便的学习体验。
 
@@ -97,7 +97,7 @@ deno jupyter --unstable
 
 显示以下即为配置成功：
 
-![CleanShot 2024-03-19 at 11.27.05@2x.png](./images/1efda7877c82a14b6d73f57bd8e6e8e9.png )
+![CleanShot 2024-03-19 at 11.27.05@2x.png](./images/1efda7877c82a14b6d73f57bd8e6e8e9.webp )
 
 然后我们运行以下命令启动 notebook：
 
@@ -109,11 +109,11 @@ jupyter notebook
 
 目前 deno kernel 的 Jupyter Notebook 不支持代码提示，所以写代码会难受一点，大家可以安装 vscode 插件，使用 vscode 去编辑和运行 notebook。
 
-![CleanShot 2024-03-19 at 11.43.55@2x.png](./images/8b925ee00a4765d80a99414caae5d1fa.png )
+![CleanShot 2024-03-19 at 11.43.55@2x.png](./images/8b925ee00a4765d80a99414caae5d1fa.webp )
 
 <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>
 
-![CleanShot 2024-03-19 at 11.45.39@2x.png](./images/3573a357ba4b53786f5cfb46335c2d5f.png )
+![CleanShot 2024-03-19 at 11.45.39@2x.png](./images/3573a357ba4b53786f5cfb46335c2d5f.webp )
 记得在右上角切换 Kernel 为 Deno, 如果切换 Kernel 遇到问题，可以参考文档: https://code.visualstudio.com/docs/datascience/jupyter-kernel-management
 
 目前在 VSCode 里的体验也有问题，会因为识别不了 Deno 的引用在代码上显示出错的样式（这个在之后的代码中也会遇到），但不影响正常运行，可以忽略代码里的飘红即可。
@@ -152,7 +152,7 @@ import _ from "npm:/lodash@4.17.21"
 const a = _.random(0, 5);
 a
 ```
-![CleanShot 2024-03-19 at 21.58.38@2x.png](./images/f9e9eef9794c6d3060c9497d324fee8c.png )
+![CleanShot 2024-03-19 at 21.58.38@2x.png](./images/f9e9eef9794c6d3060c9497d324fee8c.webp )
 
 
 当然，我们每次都这样使用完整的链接引入就会比较麻烦，所以我们可以在顶层创建一个文件 `deno.json` 来给设置别名
@@ -187,7 +187,7 @@ a
 
 注意，如果你更新了 `deno.json` 需要重启 notebook 的内核才能让 deno 拿到最新的别名：
 
-![CleanShot 2024-03-19 at 22.05.50@2x.png](./images/9a8f73aa180ae929e742e532ea7052cc.png )
+![CleanShot 2024-03-19 at 22.05.50@2x.png](./images/9a8f73aa180ae929e742e532ea7052cc.webp )
 
 这里，我们只介绍了足够本教程使用 Deno 依赖管理，[更多信息可以参考](https://docs.deno.com/runtime/manual/basics/modules/)。
 

@@ -1,1 +1,31 @@
-["1-开篇：大模型时代，如何跟上节奏？.md","2-Deno 和 Jupyter Notebook：如何优雅地学习 LLM？.md","3-如何方便地获取 OpenAI 服务？.md","4- Langchain.js 的介绍、安装和快速入门.md","5-检索增强生成（RAG）原理和流程.md","6-Prompt：构建可复用的 Prompt Template.md","7-OutputParser：构建格式化输出.md","8-Embedding：多数据源加载.md","9-Embedding：大规模数据的预处理.md","10-Retriever：构建向量数据库.md","11-Retriever：retriever 常见优化方式.md","12-RAG：基于私域数据进行回答.md","13-Memory：让 Chatbot 拥有记忆能力.md","14-Memory：深入 Memory 运行机制.md","15-Memory：实现自定义 Memory 存储.md","16-RAG：增强 RAG 能力并部署成 API.md","17-Function Calling：使用 LLM 去调用外界 API.md","18-Function Calling：使用 LLM 进行数据标注和信息提取.md","19-Agent：agent 基础.md","20-Agent：迈出 AGI 第一步，基础 Agent 实现和解析.md","21-Agent：深入定制 Agent.md","22-新交互范式：用 LLM_UI 实现 MBTI chat bot.md","23-探索模型优势：使用 LLM 来 “算命” 的 chatbot.md","24-结语：另一个起点.md"]
+[
+  {
+    "type": "file",
+    "label": "主页：从前端到 AI：LangChain.js 入门和实战_online",
+    "name": "index"
+  },
+  "1-开篇：大模型时代，如何跟上节奏？.md",
+  "2-Deno 和 Jupyter Notebook：如何优雅地学习 LLM？.md",
+  "3-如何方便地获取 OpenAI 服务？.md",
+  "4- Langchain.js 的介绍、安装和快速入门.md",
+  "5-检索增强生成（RAG）原理和流程.md",
+  "6-Prompt：构建可复用的 Prompt Template.md",
+  "7-OutputParser：构建格式化输出.md",
+  "8-Embedding：多数据源加载.md",
+  "9-Embedding：大规模数据的预处理.md",
+  "10-Retriever：构建向量数据库.md",
+  "11-Retriever：retriever 常见优化方式.md",
+  "12-RAG：基于私域数据进行回答.md",
+  "13-Memory：让 Chatbot 拥有记忆能力.md",
+  "14-Memory：深入 Memory 运行机制.md",
+  "15-Memory：实现自定义 Memory 存储.md",
+  "16-RAG：增强 RAG 能力并部署成 API.md",
+  "17-Function Calling：使用 LLM 去调用外界 API.md",
+  "18-Function Calling：使用 LLM 进行数据标注和信息提取.md",
+  "19-Agent：agent 基础.md",
+  "20-Agent：迈出 AGI 第一步，基础 Agent 实现和解析.md",
+  "21-Agent：深入定制 Agent.md",
+  "22-新交互范式：用 LLM_UI 实现 MBTI chat bot.md",
+  "23-探索模型优势：使用 LLM 来 “算命” 的 chatbot.md",
+  "24-结语：另一个起点.md"
+]

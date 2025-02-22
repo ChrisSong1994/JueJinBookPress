@@ -1,4 +1,4 @@
-
+### 本资源由 itjc8.com 收集整理
 # 第 11 节 基于 ECharts 的基础表达性统计图表 · 散点图与折线图
 
 经过了对 JavaScript 中各种数据结构的学习和应用，我们已经掌握了绝大部分在实际开发中所需要使用到的数据操作技能。而接下来，我们便可以开始将这些技能应用到我们所收集到的数据上，并将经过处理的数据使用可视化数据图表进行展示。
@@ -350,13 +350,13 @@ const option = {
 
 ### 11.4.1 生成随机时间序列
 
-假设我们限定每一个单位时间内，当前值较前一个值的变化率绝对值不会超过 ![r \quad (0 < r < 1)](./images/691f2dcb44afc37c407a69b9feaf83a8.png))。
+假设我们限定每一个单位时间内，当前值较前一个值的变化率绝对值不会超过 ![r \quad (0 < r < 1)](./images/691f2dcb44afc37c407a69b9feaf83a8.webp ))。
 
-![\left| \frac{T_{i} - T_{i-1}}{T_{i-1}}\right| < r](./images/468f5235c1b9eb96226d7df1b3f8a374.png)
+![\left| \frac{T_{i} - T_{i-1}}{T_{i-1}}\right| < r](./images/468f5235c1b9eb96226d7df1b3f8a374.webp )
 
-那么我们便可以使用 JavaScript 中用于生成均匀分布在开区间 ![(0, 1)](./images/9dda86f760bdf4440acc250794f95d27.png))（不包含 0 与 1）随机数的 `Math.random()` 生成需要的随机数 ![rand](./images/a33b1ae4b30e26eeaf2781c913052472.png)，然后通过以下公式得到一个均匀分布在区间 ![(-r, r)](./images/0b256b57f0a66438a76415711b79b72c.png)) 的随机系数。
+那么我们便可以使用 JavaScript 中用于生成均匀分布在开区间 ![(0, 1)](./images/9dda86f760bdf4440acc250794f95d27.webp ))（不包含 0 与 1）随机数的 `Math.random()` 生成需要的随机数 ![rand](./images/a33b1ae4b30e26eeaf2781c913052472.webp )，然后通过以下公式得到一个均匀分布在区间 ![(-r, r)](./images/0b256b57f0a66438a76415711b79b72c.webp )) 的随机系数。
 
-![\text{coefficient} = 2r(rand - 0.5)](./images/66b7a464fef543a0d1e0115f6c97206a.png))
+![\text{coefficient} = 2r(rand - 0.5)](./images/66b7a464fef543a0d1e0115f6c97206a.webp ))
 
 该公式的推演过程如下。
 
@@ -376,7 +376,7 @@ function randomCoefficient(r) {
 
 这样每一项数据便为上一项数据加上该变化率。
 
-![T_i = T_{i-1}*(1+\text{coefficient}) \quad (i=1,2,\cdots, n)](./images/1aea3afa843cd364d3b39a74b99dac60.png)%20%5Cquad%20(i%3D1%2C2%2C%5Ccdots%2C%20n))
+![T_i = T_{i-1}*(1+\text{coefficient}) \quad (i=1,2,\cdots, n)](./images/1aea3afa843cd364d3b39a74b99dac60.webp )%20%5Cquad%20(i%3D1%2C2%2C%5Ccdots%2C%20n))
 
 我们假设数据集的第一项为 100，数据项总数目为 50，得到以下数据生成代码。
 

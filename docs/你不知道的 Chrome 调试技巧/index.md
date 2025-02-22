@@ -6,7 +6,7 @@
 - [3.通用篇 - 快捷键和通用技巧](./3.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E9%80%9A%E7%94%A8%E6%8A%80%E5%B7%A7)
 - [4.通用篇 - 使用 Command](./4.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20%E4%BD%BF%E7%94%A8%20Command)
 - [5.通用篇 - 代码块的使用](./5.%E9%80%9A%E7%94%A8%E7%AF%87%20-%20%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8)
-- [6.console 篇 - console 中的 $](./6.console%20%E7%AF%87%20-%20console%20%E4%B8%AD%E7%9A%84%20%24)
+- [6.console 篇 - console 中的  $](./6.console%20%E7%AF%87%20-%20console%20%E4%B8%AD%E7%9A%84%20%20%24)
 - [7.console 篇 - console 的  bug](./7.console%20%E7%AF%87%20-%20console%20%E7%9A%84%20%20bug)
 - [8.console 篇 - 异步的 console](./8.console%20%E7%AF%87%20-%20%E5%BC%82%E6%AD%A5%E7%9A%84%20console)
 - [9.console 篇 - Ninja console.log （忍者打印）](./9.console%20%E7%AF%87%20-%20Ninja%20console.log%20%EF%BC%88%E5%BF%8D%E8%80%85%E6%89%93%E5%8D%B0%EF%BC%89)
