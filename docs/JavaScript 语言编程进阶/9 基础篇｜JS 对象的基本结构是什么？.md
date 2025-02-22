@@ -368,7 +368,7 @@ Object.getPrototypeOf({}) === Object.prototype // true
 
 一个对象的 `[[Prototype]]` 属性称之为它的原型对象，因此，这种向上遍历查找关系就形成了原型链：
 
-![image.png](./images/eb48dfa152c1400f90f927490ed03fd0~tplv-k3u1fbpfcp-watermark.image.png)
+![image.png](./images/e8f968a94cbe092d05d7b7855d6a86a3.webp )
 
 我们来验证一下，首先有一个对象 `{}`，没有定义任何属性，但是依然可以调用 `toString()` 函数：
 
@@ -416,7 +416,7 @@ console.log(c.getName(), c.getAge()); // c 20
 
 我们手动实现了一个原型链，a 的原型是 b， b 的原型是 c， c 的原型是 d，而 d 的原型是 null。根据原型链的原理，上游的属性可以被下游访问得到，因此在 d 中定义的 **getName** 可以被 a、b、c 访问到，c 中定义的 **getAge** 可以被 a、b 访问到，b 中定义的 **getGender** 可以被 a 访问到。而由于 d 的原型是 null，没有链接到 `Object.prototype`，因此所有对象都访问不到 `toString()`，原理图示如下：
 
-![image.png](./images/d25bf775755f4d56bb115c6d268a6da2~tplv-k3u1fbpfcp-watermark.image.png)
+![image.png](./images/4fcbd2a1d109fb691266f1a5ca753330.webp )
 
 > 💡 上面代码中的 `__proto__` 仅为测试代码方便之用，你应该用 `Object.setPrototypeOf`，它映射了内部属性中的 `[[SetPrototypeOf]]`。
 
@@ -491,7 +491,7 @@ for (let key in Object.create(null)) {
 1.  一部分是自定义的属性，这部分属性以`属性描述符`的形式存在，可以是`数据属性`也可以是`存取器属性`。无论哪种，最终行为都会受到公共参数 `enumerable` 和 `configurable` 的控制。
 2.  另一部分是内部的属性，特别需要关注是 `[[Prototype]]`，通过它，不同对象可以组成了一个单向的`原型链`，属性的访问顺着原型链向上查找，一直到 `Object.prototype` 为止。
 
-![image.png](./images/10b8247f8d2e40338e8d450c3c686780~tplv-k3u1fbpfcp-watermark.image.png)
+![image.png](./images/5f6a3f53713e7002b6ff67bfae8b5f88.webp )
 
 创建指定的原型链关系，测试/调试环境可以用 `__proto__`，生产环境应该用 `Object.setPrototypeOf` 和 `Object.create`。但注意`原型链不可以形成一个环`。
 

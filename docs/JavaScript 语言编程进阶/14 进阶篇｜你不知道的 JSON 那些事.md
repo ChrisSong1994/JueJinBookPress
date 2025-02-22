@@ -174,7 +174,7 @@ function stringify(obj) {
 当然 toJSON 的返回值并不会直接作为 `JSON.stringify` 的输出，更像是递归传入 `JSON.stringify`。我把 `JSON.stringify` 的关键逻辑画成下面的图：
 
 
-![image.png](./images/1f2a9f897d7c421b97251f28f86884be~tplv-k3u1fbpfcp-watermark.image.png)
+![image.png](./images/a773f492ff11d410433913f4652ee4b2.webp )
 
 目前在 ECMAScript 内置的对象类型中，只有 **Date** 定义了 toJSON，它返回了等价于调用 **toISOString** 的字符串：
 
