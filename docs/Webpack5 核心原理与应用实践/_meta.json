@@ -1,1 +1,37 @@
-["1.重新认识 Webpack：旧时代的破局者.md","2.如何理解 Webpack 配置底层结构逻辑？.md","3.如何借助 Babel+TS+ESLint 构建现代 JS 工程环境？.md","4.如何借助预处理器、PostCSS 等构建现代 CSS 工程环境？.md","5.如何搭建 Vue 全栈开发环境？.md","6.如何搭建 React 全栈开发环境？.md","7.使用 Webpack 构建 NPM Library 的正确方式.md","8.使用 Webpack 构建微前端应用.md","9.如何借助 Webpack 开发 PWA、Node、Electron 应用？.md","10.深入理解图像加载原理与最佳实践.md","11.深入理解 Webpack 核心配置结构.md","12.构建性能：分享 7 款常用的性能分析工具.md","13.如何使用 Webpack 持久化缓存大幅提升构建性能？.md","14.Webpack 都有哪些实现并行构建的方法？.md","15.有哪些值得学习的构建性能极致优化技巧？.md","16.如何正确使用 SplitChunks提升应用性能？.md","17.不止 Terser：揭秘代码压缩的门门道道.md","18.还有哪些值得学习的应用性能极致优化技巧？.md","19.Loader 开发基础：从开源项目学到的 Loader 开发技巧.md","20.Loader 开发进阶：如何用好 Loader 扩展开发工具？.md","21.插件开发基础：实例剖析插件基本形态与架构逻辑.md","22.插件开发进阶：如何提升插件健壮性？.md","23.插件架构：Hook 体系是如何影响 Webpack 架构的？.md","24.Init、Make、Seal：真正读懂 Webpack 核心流程.md","25.Dependency Graph：如何管理模块间依赖？.md","26.Chunk：三种产物的打包逻辑.md","27.Runtime：模块编译打包及运行时逻辑.md","28.Tree-shaking：如何删除无用模块导出？.md","29.Sourcemap：源码映射原理与应用技巧.md","30.HMR：如何动态替换页面代码？.md"]
+[
+  {
+    "type": "file",
+    "label": "主页：Webpack5 核心原理与应用实践",
+    "name": "index"
+  },
+  "1.重新认识 Webpack：旧时代的破局者.md",
+  "2.如何理解 Webpack 配置底层结构逻辑？.md",
+  "3.如何借助 Babel+TS+ESLint 构建现代 JS 工程环境？.md",
+  "4.如何借助预处理器、PostCSS 等构建现代 CSS 工程环境？.md",
+  "5.如何搭建 Vue 全栈开发环境？.md",
+  "6.如何搭建 React 全栈开发环境？.md",
+  "7.使用 Webpack 构建 NPM Library 的正确方式.md",
+  "8.使用 Webpack 构建微前端应用.md",
+  "9.如何借助 Webpack 开发 PWA、Node、Electron 应用？.md",
+  "10.深入理解图像加载原理与最佳实践.md",
+  "11.深入理解 Webpack 核心配置结构.md",
+  "12.构建性能：分享 7 款常用的性能分析工具.md",
+  "13.如何使用 Webpack 持久化缓存大幅提升构建性能？.md",
+  "14.Webpack 都有哪些实现并行构建的方法？.md",
+  "15.有哪些值得学习的构建性能极致优化技巧？.md",
+  "16.如何正确使用 SplitChunks提升应用性能？.md",
+  "17.不止 Terser：揭秘代码压缩的门门道道.md",
+  "18.还有哪些值得学习的应用性能极致优化技巧？.md",
+  "19.Loader 开发基础：从开源项目学到的 Loader 开发技巧.md",
+  "20.Loader 开发进阶：如何用好 Loader 扩展开发工具？.md",
+  "21.插件开发基础：实例剖析插件基本形态与架构逻辑.md",
+  "22.插件开发进阶：如何提升插件健壮性？.md",
+  "23.插件架构：Hook 体系是如何影响 Webpack 架构的？.md",
+  "24.Init、Make、Seal：真正读懂 Webpack 核心流程.md",
+  "25.Dependency Graph：如何管理模块间依赖？.md",
+  "26.Chunk：三种产物的打包逻辑.md",
+  "27.Runtime：模块编译打包及运行时逻辑.md",
+  "28.Tree-shaking：如何删除无用模块导出？.md",
+  "29.Sourcemap：源码映射原理与应用技巧.md",
+  "30.HMR：如何动态替换页面代码？.md"
+]
