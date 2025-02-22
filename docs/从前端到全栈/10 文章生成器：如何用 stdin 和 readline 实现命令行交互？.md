@@ -27,7 +27,7 @@ process.stdin.on('end', () => {
 
 上面的代码是一个累加求和的交互程序，依次累加用户输入的数值，直到输入 0 为止，然后打印累加的结果。它执行的效果如下：
 
-![](./images/t01cd056009030ce833.jpg.png)
+![](./images/2f38d0c38fe93994a0bbd507237f435c.webp )
 
 `process.stdin.setEncoding('utf8')`表示将用户交互的编码设定为`utf-8`，如果你要输入中文，这个必须要设置。
 
@@ -112,7 +112,7 @@ let title = options.title || createRandomPicker(corpus.title)();
 }());
 ```
 
-![](./images/t015e026b29951f7bba.jpg.png)
+![](./images/96f8756312703bfc098d97cfacc65c45.webp )
 
 这样我们就实现了用户互动的方式完成文章生成器。
 

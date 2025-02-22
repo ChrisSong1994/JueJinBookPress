@@ -235,7 +235,7 @@ picker.addEventListener('change', async ({target}) => {
 
 最终运行效果如下：
 
-![Mar-31-2023 16-58-46.gif](./images/be022de78a12470e87d2512554226285~tplv-k3u1fbpfcp-zoom-1.image.png)
+![Mar-31-2023 16-58-46.gif](./images/953a90ceaa986612d1984695b7e61bfa.webp )
 
 ## 利用Canvas绘图
 
@@ -322,7 +322,7 @@ ctx.fill();
 
 这是最终运行的效果：
 
-![image.png](./images/4edf1628614040629d39c9199c73189a~tplv-k3u1fbpfcp-zoom-1.image.png)
+![image.png](./images/fe204c0397165305c0e8666f7f0af4b6.webp )
 
 还可以用它来绘制各种图像，非常方便，比如：
 
@@ -344,7 +344,7 @@ ctx.fill();
 
 最终效果如下：
 
-![image.png](./images/e8106fade0934fa893495d4ed0acd04f~tplv-k3u1fbpfcp-zoom-1.image.png)
+![image.png](./images/90fe99f8f5c33e2a961766a8ce03b08d.webp )
 
 ## 小结
 

@@ -6,7 +6,7 @@
 
 NeteaseCloudMusicApi，网易云音乐 NodeJS 版 API。
 
-![](./images/a1462e86731e1b0f892d74fd731677fe.png)
+![](./images/a1462e86731e1b0f892d74fd731677fe.webp )
 
 ### 在线文档
 
@@ -39,7 +39,7 @@ $ set PORT=4000 && node app.js
 
 成功启动打开浏览器访问：
 
-![](./images/2ecb4f21a7164351b658aede81034ff1.png)
+![](./images/2ecb4f21a7164351b658aede81034ff1.webp )
 
 ### 接口二次开发
 
@@ -231,15 +231,15 @@ module.exports = app
 
 2. 我选的系统是 CentOS 7.5 64位，申请完登录，进入腾讯云，
 
-![](./images/15990f64b1b2d6c78eb17f63462821e5.png)
+![](./images/15990f64b1b2d6c78eb17f63462821e5.webp )
 
 选择标准方式`登录`，密码注册时已发`消息中心`里，建议修改密码
 
-![](./images/7a9ca4a1f99189774ecffc9d4b330feb.png)
+![](./images/7a9ca4a1f99189774ecffc9d4b330feb.webp )
 
 登录成功
 
-![](./images/b8502f3bb808bbf37d2a93a6bd9b38e4.png)
+![](./images/b8502f3bb808bbf37d2a93a6bd9b38e4.webp )
 
 接下来依次键入命令安装几个软件：
 * Node.js 
@@ -301,22 +301,22 @@ pm2 start app.js -n uni
 pm2 list
 ```
 
-![](./images/b0433077113711b45a8c0cd44ec49a7f.png)
+![](./images/b0433077113711b45a8c0cd44ec49a7f.webp )
 
 已经启动成功，打开浏览器通过域名或 ip（公网ip） 访问。（如果打开不开，有可能是服务器3000端口没打开，需要自行去添加设置规则）
 
-![](./images/2629e96004c7c9ec655dba8874013baa.png)
+![](./images/2629e96004c7c9ec655dba8874013baa.webp )
 
 ## 安装Shell软件
 
 对于操作后台管理系统，更多人会选择可视化的软件。Windows 系统一般推荐就是 Xshell，对于 Mac 系统的，我使用 FinalShell（支持国产的，也没找到更傻瓜的）。
 也是一路安装，然后配置（Xshell 也是类似操作）：
 
-![](./images/710319fc1fade55ca813686e680d8eeb.png)
+![](./images/710319fc1fade55ca813686e680d8eeb.webp )
 
 登录成功之后：
 
-![](./images/fde0ff843059cfe43e1ad0b3102a6420.png)
+![](./images/fde0ff843059cfe43e1ad0b3102a6420.webp )
 
 尝试输入：
 
@@ -329,11 +329,11 @@ pm2 list
 
 众所周知，小程序接口需要使用 https，我们可以利用腾讯云提供的免费 [SSL 证书](https://console.cloud.tencent.com/ssl) 来配置 https，点击免费申请按钮，选择域名型的（DV）免费证书即可：
 
-![](./images/adc9239bf85449396d2cc19161751ae8.png)
+![](./images/adc9239bf85449396d2cc19161751ae8.webp )
 
 填上申请信息后，等待大概半小时，证书就能申请下来。
 
-![](./images/37e0091c7539ef72f42b3409ca8c18c1.png)
+![](./images/37e0091c7539ef72f42b3409ca8c18c1.webp )
 
 在证书申请通过后，进入SSL证书列表，将所申请的域名SSL证书下载到本地后，再上传到域名所在服务器。
 
@@ -347,7 +347,7 @@ mkdir ssl
 
 将 crt 和 key 两个文件(公钥和私钥)修改好名字上传到 ssl 文件夹 
 
-![](./images/4e32c6450b2310da9fb9e7ee7c7b43a1.png)
+![](./images/4e32c6450b2310da9fb9e7ee7c7b43a1.webp )
 
 修改 nginx 配置文件
 
@@ -426,7 +426,7 @@ Job for nginx.service failed because the control process exited with error code.
 docker -v
 ```
 
-![](./images/713bfc2c02b4802e295b4d8cdd83a765.png)
+![](./images/713bfc2c02b4802e295b4d8cdd83a765.webp )
 
 代表安装成功。
 
@@ -477,7 +477,7 @@ CMD ["pm2-runtime", "start", "app.js", "-n", "uni-docker"]
 sudo docker build -t uni-back .
 ```
 
-![](./images/edaede8c248ce9976dd207b4a59560be.png)
+![](./images/edaede8c248ce9976dd207b4a59560be.webp )
 
 等待构建成功，执行命令查看：
 
@@ -485,7 +485,7 @@ sudo docker build -t uni-back .
 docker images
 ```
 
-![](./images/bb8f55c3f638956d305d54aed3e1409f.png)
+![](./images/bb8f55c3f638956d305d54aed3e1409f.webp )
 
 ### 运行容器
 
@@ -497,7 +497,7 @@ docker images
 sudo docker run -d --name uni-back -p 3000:3000 uni-back
 ```
 
-![](./images/d3704f51be5e063f535e0a43d7f6f469.png)
+![](./images/d3704f51be5e063f535e0a43d7f6f469.webp )
 
 代表启动成功，通过你的域名+/api/ 访问。
 
@@ -510,7 +510,7 @@ sudo docker run -d --name uni-back -p 3000:3000 uni-back
  docker exec -it CONTAINER ID pm2 list
 ```
 
-![](./images/b052439c5854b8013212a4d3d95f09e4.png)
+![](./images/b052439c5854b8013212a4d3d95f09e4.webp )
 
 uni-docker 运行一切良好，部署完成。
 

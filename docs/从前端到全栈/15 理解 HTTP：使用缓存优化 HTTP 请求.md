@@ -60,17 +60,17 @@ const server = http.createServer((req, res) => {
 
 如上面代码，我们增加了一个响应头`'Cache-Control': 'max-age=86400'`，表示缓存一天。启动 HTTP 服务，我们访问`http://localhost:8080/index.html`。看到的内容和上一节课的一样：
 
-![](./images/t0178700f186debc72b.jpg.png)
+![](./images/83e4bdf805800a756b298a34a939022d.webp )
 
 但是，如果你再次刷新页面，在浏览器开发者工具中查看 Network 选项，你会看到以下结果：
 
-![](./images/t0108682e06db9e5639.jpg.png)
+![](./images/3132f32d3665aa74bf7355c76a36227b.webp )
 
 注意第二行 logo.png，Size 那一栏是`(memory cache)`，Time 是 0ms，这就表示浏览器直接使用了缓存的内容，并没有向服务器发起请求。
 
 为了验证这个结果，我们将 logo.png 这张图片换成灰色：
 
-![](./images/t01154608041a9c9148.png.png)
+![](./images/6766729b4dae07a7c8f78e41c38689d7.webp )
 
 然后再刷新页面，我们看到的结果里，图片还是原来的颜色。只有我们让浏览器强制刷新（按下 shift 点击刷新按钮）页面，才能看到图片的变化。
 
@@ -78,7 +78,7 @@ const server = http.createServer((req, res) => {
 
 这是因为在这个例子中，index.html 页面是直接通过浏览器地址栏访问的。根据浏览器的标准，通过地址栏访问、以及强制刷新网页的时候，HTTP 请求头自动会带上`Cache-Control: no-cache`和`Pragma: no-cache`的信息。只要有这两个请求头之一，浏览器就会忽略响应头中的`Cache-Control`字段。
 
-![](./images/t0171d9265d914d3b86.jpg.png)
+![](./images/e244f73e6c61e0e82a7cf5a784924a8a.webp )
 _浏览器请求中带有 Cache-Control:no-cache 和 Pragam:no-cache_
 
 💡注意，这并不是说网页不会被缓存，而是 _资源被访问的方式_ （比如直接通过地址栏）会导致服务器返回给浏览器响应头中的`Cache-Control`信息被忽略。如果这个网页是通过 iframe 加载的，那么这个网页就可能被浏览器缓存。
@@ -140,13 +140,13 @@ const server = http.createServer((req, res) => {
 
 如上面代码所示，我们通过`fs.statSync(filePath)`获取文件信息，其中的`stats.mtimeMs`表示文件的修改时间。我们设置`Last-Modified`响应头的值为`stats.mtimeMs`。这样，当浏览器第一次收到响应时，就会缓存响应内容，并且在以后访问同一个 URL 的时候，自动带上`If-Modified-Since`请求头，内容为之前`Last-Modified`响应头的时间戳。
 
-![](./images/t013f8676928edeaa8f.jpg.png)
+![](./images/d51d2ee7cd73b80d633e1abc408037ed.webp )
 
 我们判断如果`If-Modified-Since`请求头存在，我们比较`stats.mtimeMs`和请求头所带的时间戳，如果相等，那么说明文件没有修改，这时候返回响应状态码 304，并且不需要返回响应的 Body 内容。
 
 我们在浏览器开发者工具可以看到，第二次访问 index.html 文件的时候，返回的状态码是 304，而且响应内容的 size 很小，只有 179 字节，这是因为服务器只返回了响应头，而不用返回响应内容。
 
-![](./images/t016901819b8ab3f51d.jpg.png)
+![](./images/15abcec4998b2d4c465c60b99135dd1a.webp )
 
 此时，如果我们修改了 index.js 文件：
 

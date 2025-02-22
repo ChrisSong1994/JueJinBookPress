@@ -6,7 +6,7 @@
 
 HTTP 协议规定，客户端支持的编码格式由`Accept-Encoding`指定。下图是最新的 Chrome 浏览器下访问网页的请求头中的`Accept-Encoding`字段，有三个值，表示支持三种格式，分别是 gzip、deflate 和 br。
 
-![](./images/t01b860ee03ef5e7ee6.jpg.png)
+![](./images/ec0fa6928c8e2d57175ea3cac4929a69.webp )
 
 gzip、deflate 和 br 是三种不同的压缩算法，其中 gzip 和 deflate 是同一种格式（gzip）的两种不同算法实现，而 br 则是使用 Brotli 算法的压缩格式。Node.js 的内置模块 zlib 对这三种算法都能支持。
 
@@ -84,7 +84,7 @@ fileStream.pipe(zlib.createDeflate()).pipe(res);
 
 这个`spritejs.js`文件内容有 1.3MB，但是我们启用了 deflate 压缩之后，传输的内容就只有 247KB 了。
 
-![](./images/t011787cb97fc4d4d4b.jpg.png)
+![](./images/90d858ab41b39ecd42cd4240ac5ef1e8.webp )
 
 一般来说，我们对 HTML、JS、CSS 这样的资源文件启用压缩，而图片、音频、视频等格式因为通常已经经过了压缩，再启用压缩意义不大，还可能还会适得其反，所以我们可以根据 MIME type 判断一下，只对 text、appliaction 类型启用压缩：
 

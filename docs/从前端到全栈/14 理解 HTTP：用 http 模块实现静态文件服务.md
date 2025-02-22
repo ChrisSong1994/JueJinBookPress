@@ -99,11 +99,11 @@ if(isDir) {
 
 我们发现网页上的图片加载失败了。
 
-![](./images/t0118fb5b4b4aa49de8.jpg.png)
+![](./images/b32c1a805d602cc4eaced082789b59d0.webp )
 
 我们通过浏览器的开发者工具查看 HTTP 请求，问题出现在服务器对图片请求的响应上：
 
-![](./images/t0124a78d4a52d96617.jpg.png)
+![](./images/adff2ee0f814afddb0d1200ce6ce2a65.webp )
 
 浏览器的请求头中，Accept 字段值是`image/webp,image/apng,image/*,*/*;q=0.8`，而我们的响应头中，返回的`Content-Type`却是`text/html`，这样浏览器当然无法识别图片格式了。
 
@@ -152,7 +152,7 @@ if(fs.existsSync(filePath)) {
 
 这么做确实能够解决问题，现在图片的内容已经能够正常展现出来了：
 
-![](./images/t0178700f186debc72b.jpg.png)
+![](./images/83e4bdf805800a756b298a34a939022d.webp )
 
 但是这么做不通用，如果请求其他的文件类型，难道我们需要不断的增加 if 条件判断吗？这显然不合适。
 
@@ -202,7 +202,7 @@ const server = http.createServer((req, res) => {
 
 **所谓可读写的流，形象地表示就如同水流，源（Source）对象中的数据内容会像水流一样流向目的(Dest)对象。**
 
-![](./images/t01313250f2f2ecc394.png.png)
+![](./images/587a508040c7d3746c9ec282b3e861b3.webp )
 
 在 Node.js 中，文件、 HTTP 请求和响应都是流式对象，它们继承了 Stream 对象，还有像我们前面接触过的 stdin 和 stdout 其实也是流式对象。
 
@@ -236,7 +236,7 @@ const server = http.createServer((req, res) => {
 
 整个处理过程如下：
 
-![](./images/t016efe0b3d92bb9fbd.jpg.png)
+![](./images/54d5335edb50f25ac49d6808639e0420.webp )
 
 如上图所以，res 对象可以一边从流中读取数据一边将数据返回到客户端，大大减少了用户的等待时间。
 

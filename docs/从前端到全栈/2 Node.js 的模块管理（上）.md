@@ -121,7 +121,7 @@ console.log(ziyue(argv[2] || '有朋自远方来，不亦乐乎！'));
 
 然后运行`node index.mjs`，可以得到和上一节课一样的输出：
 
-![image.png](./images/ff3f026cebf8494780cc9ef421c041ee~tplv-k3u1fbpfcp-watermark.image.png)
+![image.png](./images/e761dac4d92b7bd3459a1ef4041770f0.webp )
 
 通过例子，我们可以看出`ES Modules`的基本使用方法。
 
@@ -265,7 +265,7 @@ console.log(foo) // {a, b, default}
 
 这里还有一点需要注意，我们命名 js 模块文件不是用 .js 扩展名，而是用 .mjs 扩展名。这是因为 Node.js 目前默认用`CommonJS`规范定义 .js 文件的模块，用`ES Modules`定义 .mjs 文件的模块。如果我们直接将`index.mjs`文件改成`index.js`，然后运行`node index.js`，控制台上将报告错误信息。
 
-![](./images/t01cf26b0402615bcf0.jpg.png)
+![](./images/255b1663e417287e26e4229878e14a7e.webp )
 
 如果要用`ES Modules`定义 .js 文件的模块，可以在 Node.js 的配置文件`package.json`中设置参数`type: module`。
 

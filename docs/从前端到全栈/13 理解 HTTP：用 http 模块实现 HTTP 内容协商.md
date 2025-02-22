@@ -121,7 +121,7 @@ const server = http.createServer((req, res) => {
 
 这样一来，我们如果用浏览器直接访问`localhost:8080`，得到的就是 HTML 的结果：
 
-![](./images/t01f8c963940670fd07.jpg.png)
+![](./images/2e1a0e1dcc6df72082456567e151d08a.webp )
 
 这是因为浏览器默认发送的 HTTP 请求中，accept 字段的值是`text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9`，不包括`appliaction/json`。
 
@@ -131,7 +131,7 @@ const server = http.createServer((req, res) => {
 
 通过 PostMan 发送请求，设置 accept 请求头为`application/json`，得到的结果如下：
 
-![](./images/t01a9e75f394d5727c2.jpg.png)
+![](./images/8c4bb4db020dd519bd6903f9941948ac.webp )
 
 对于 HTTP 协议来说，内容协商是一个比较广泛的概念，并不仅仅指根据  Accept 属性值返回对应的内容，还可以根据 HTTP 动作（Verb）实现内容协商。
 
@@ -158,7 +158,7 @@ const server = http.createServer((req, res) => {
 
 `req.method`可以获取请求的动作信息，如果是 POST 请求，`req.method`的值是`POST`。修改了代码之后，如果请求是 POST，那么不管 Accept 值是不是`application/json`，都返回 JSON 格式。
 
-![](./images/t01dce399213673d320.jpg.png)
+![](./images/6cef89a0f609426d4a3d30c4219944dd.webp )
 
 ## HTTP 请求的动作和状态码
 
@@ -184,7 +184,7 @@ GET、HEAD、POST 请求是 HTTP/1.0 就支持的请求动作，OPTIONS、PUT、
 
 按照规范，GET、OPTIONS 请求允许被缓存，其他请求不允许被缓存。关于缓存，在后续的课程中会有详细描述。
 
-![](./images/t01bfdb8e222f2d831a.png.png)
+![](./images/fef6f65b7a0de0fe1114b3aa5839be8a.webp )
 
 HTTP 的状态码表示 HTTP 请求的结果，它是一个三位数字，首位可能是 1、2、3、4、5。
 - 首位是 1 表示中间状态，按照规范 POST 请求会先提交HEAD信息，如果服务器返回 100，才将数据信息提交。

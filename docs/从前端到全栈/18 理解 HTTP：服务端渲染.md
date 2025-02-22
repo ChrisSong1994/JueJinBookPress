@@ -2,7 +2,7 @@
 
 上一节课里，我们实现了一个简单的动态 HTTP 服务，它采用拦截器模式。接下来几节课，我们将逐步实现动态 HTTP 服务器的其他功能，让它成为能够真正处理业务逻辑的 HTTP 服务器。通常情况下，HTTP 服务器处理业务逻辑的标准流程如下：
 
-![](./images/t01ddd7e5a440f0cb25.png.png)
+![](./images/0bc8f1dba9ca51c92c0fd6ae717d15b3.webp )
 
 URL 路由我们已经学完了，所以这一节课我们将实现请求参数的解析、HTTP 模板文件的加载和解析。
 
@@ -148,11 +148,11 @@ app.use(router.all('.*', async ({params, req, res}, next) => {
 
 那么现在启动这个 HTTP 服务器，访问`http://localhost:9090/coronavirus/index`可以获得日期的 JSON 数据：
 
-![](./images/t011805c10db6dc1eb5.jpg.png)
+![](./images/c0b8c2b1f338c7257e35e094a618832b.webp )
 
 访问`http://localhost:9090/coronavirus/2020-01-22`可以获得 2020 年 1 月 22 日当天的疫情 JSON 数据：
 
-![](./images/t010ba4e6fb84b5a268.jpg.png)
+![](./images/72c27af8f80bd9f75170be687185ff47.webp )
 
 上面说的都是将 JSON 数据直接返回给客户端（这里是浏览器），再由客户端（浏览器）通过 JavaScript 将这些数据渲染成网页，这种渲染方式称为**客户端渲染**。此外还有一种方式，我们可以将数据在服务端直接渲染成 HTML 页面，再将它返回给客户端展示。这种在服务端直接渲染 HTML 页面的方式叫做**服务端渲染**。
 
@@ -228,7 +228,7 @@ app.use(router.get('/coronavirus/index', async ({route, res}, next) => {
 
 最终渲染出来的页面内容是一个日期的列表，点击链接进入相应的疫情数据页面。
 
-![](./images/t01a1377d7ef0483d69.jpg.png)
+![](./images/0439b5d6b6592e45e9b5d73f2d4f5fc7.webp )
 
 同样，我们可以准备疫情数据页面的模板文件（coronavirus_date.html）：
 
@@ -288,7 +288,7 @@ app.use(router.get('/coronavirus/:date', async ({params, route, res}, next) => {
 
 这样我们就直接用服务端渲染生成了疫情数据的 HTML 表格，这是最终访问的输出结果：
 
-![](./images/t01faea89382fc7af10.jpg.png)
+![](./images/0cb95319ca15935ecb280c7f1f1671fc.webp )
 
 这样我们就实现了简单的服务端渲染。
 

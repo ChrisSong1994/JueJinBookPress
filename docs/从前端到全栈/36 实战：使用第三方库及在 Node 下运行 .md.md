@@ -107,7 +107,7 @@ class Divoom {
 
 这里我们对 forceUpdate 方法进行修改，如果有`_updateDelay`参数，那么使用 setTimeout 降低更新的频率，否则使用 requestAnimationFrame。最终的效果如下：
 
-![Apr-10-2023 11-13-34.gif](./images/f5e239e93fa54bbd9fcd2c160dd45cf8~tplv-k3u1fbpfcp-zoom-1.image.png)
+![Apr-10-2023 11-13-34.gif](./images/4655f86b6f2df145a12c649bdf0b8bb0.webp )
 
 其次，这个客户端也可以不运行在浏览器上，只要做一个非常简单的处理，我们就可以使用 Node.js 来运行这个客户端，从而快速检验以及自动化地测试我们的代码。
 
@@ -188,7 +188,7 @@ const config = {
 
 最终在终端运行上面的 Node 代码，结果如下：
 
-![image.png](./images/19cfcc5dc3ce4609acaae554502162a3~tplv-k3u1fbpfcp-zoom-1.image.png)
+![image.png](./images/683460fce72d7bbcdbba316f222170a9.webp )
 
 其实经过这么设计，我们的服务和客户端代码天然能够支持跨端的能力，它以 Canvas API 为基础，能够在 Web 和 Node.js 环境中运行，甚至如果我们愿意，简单适配一下就可以让它运行在小程序或者 Android 端的环境中。
 

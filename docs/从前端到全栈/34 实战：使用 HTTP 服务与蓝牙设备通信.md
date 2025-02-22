@@ -172,7 +172,7 @@ const config = {
 npm run server -- 11:75:58:CE:DB:2F
 ```
 
-![image.png](./images/b5d28200d1854c4e9b8123d4d912fc3c~tplv-k3u1fbpfcp-zoom-1.image.png)
+![image.png](./images/3d87f24544690a9cabdc3ed9abb79d31.webp )
 
 接下来，我们需要实现蓝牙设备数据的发送。我们可以在`server/index.js`中添加一个`post`方法，用来接收 HTTP 请求，然后将请求的数据发送到蓝牙设备：
 
@@ -326,7 +326,7 @@ picker.addEventListener('change', async ({target}) => {
 
 在上面的代码里，我们将颜色选择器的值转换成了 16 进制的字符串，然后将其拼接成了一个完整的数据包，最后将其发送到 HTTP 服务。可以看到，我们的 HTTP 服务接收到了这个数据包，并将其发送到了蓝牙设备，最终的效果如下：
 
-![Mar-20-2023 15-31-13.gif](./images/527df583bb3c4813bb911bd05eff9e0f~tplv-k3u1fbpfcp-zoom-1.image.png)
+![Mar-20-2023 15-31-13.gif](./images/56dc839561eb950b9a9308ff17790bf7.webp )
 
 ## 小结
 

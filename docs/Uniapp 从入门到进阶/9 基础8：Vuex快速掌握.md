@@ -21,7 +21,7 @@ Vuex 需要解决的问题：
 * view，以声明方式将 state 映射到视图；
 * actions，响应在 view 上的用户输入导致的状态变化。
 
-![](./images/58a26a25aebb451061d9156b1c90c653.png)
+![](./images/58a26a25aebb451061d9156b1c90c653.webp )
 
 上面的概念比较模糊，我们先来点简单的。
 
@@ -76,7 +76,7 @@ export default store
 
 在 `pages` 下新建一个页面 login.vue，鼠标悬浮在当前项目目录下选择【新建页面】，命名为 `login` 勾选【自动在 pages.json 中注册】:
 
-![](./images/7bebf7b60a2bd5ff90001a5f197a70da.png)
+![](./images/7bebf7b60a2bd5ff90001a5f197a70da.webp )
 
 上面新建了一个 `login` 路由页面，勾选【自动在 pages.json 中注册】是在 `pages.json` 文件中注册页面路由，在 HBuilder 上部操作 【运行】>>【运行到浏览器】>> 选择一个浏览器，这样客户端就能以 `http://localhost:8080/#/pages/login/login` 访问。
 

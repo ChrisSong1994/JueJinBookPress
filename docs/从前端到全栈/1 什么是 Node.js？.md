@@ -6,7 +6,7 @@
 
 但是，**Node.js 的运行环境和浏览器的运行环境还是不一样的**。
 
-![](./images/t01072a67f1315ec168.jpg.png)
+![](./images/53d6ba16c4c08c8f703043ad33b343d9.webp )
 _Node.js、V8与Chrome浏览器的关系_
 
 因为 Node.js 不是浏览器，所以它**不具有浏览器提供的 DOM API**，比如 Window 对象、Location 对象、Document 对象、HTMLElement 对象、Cookie 对象等等。但是，Node.js 提供了自己特有的 API，比如全局的 global 对象，也提供了当前进程信息的 Process 对象，操作文件的 fs 模块，以及创建 Web 服务的 http 模块等等。这些 API 能够让我们使用 JavaScript 操作计算机，所以我们可以用 Node.js 平台开发 web 服务器。
@@ -20,7 +20,7 @@ _Node.js、V8与Chrome浏览器的关系_
 
 ## Node.js 的基本架构
 
-![](./images/t01bdaf1234dcdbef5c.jpg.png)
+![](./images/49295b2805d1db92e29c79aad2de8f4a.webp )
 _图片来源：[medium.com](https://medium.com/@chathuranga94/nodejs-architecture-concurrency-model-f71da5f53d1d)_
 
 上图是 Node.js 的基本架构，我们可以看到，Node.js 是运行在操作系统之上的，它底层由 V8 JavaScript 引擎，以及一些 C/C++ 写的库构成，包括 libUV 库、c-ares、llhttp/http-parser、open-ssl、zlib 等等。
@@ -58,7 +58,7 @@ Node.js 内置的模块比较丰富，常用的主要是以下几个。
 
 我们可以在 Node.js 官网 [https://nodejs.org](https://nodejs.org) 上下载适合我们操作系统的 Node.js。不论是 MacOS、Linux 系统还是 X86 或 64 位 windows 系统，都有对应的版本可以安装。
 
-![](./images/b3b9879db87845c59370b3734b6dcf13~tplv-k3u1fbpfcp-watermark.image.png)
+![](./images/cf154986213b281df6aa1a7157ce199a.webp )
 
 这里有两个可以选择的版本，一个是 LTS 版本，叫做 Long Term Support 版，也就是官方推荐的比较成熟稳定的版本，目前是 16.16.0。另一个是 Current 版本，也就是当前发布的最新版，没有那么成熟，但是包含最多的新特性。
 
@@ -119,7 +119,7 @@ node ziyue.js
 
 然后，我们就可以看到控制台上的输出内容了。
 
-![image.png](./images/ff3f026cebf8494780cc9ef421c041ee~tplv-k3u1fbpfcp-watermark.image.png)
+![image.png](./images/e761dac4d92b7bd3459a1ef4041770f0.webp )
 
 接下来，我们看一下上面这段代码做了什么。这个代码和浏览器的 JS 没有什么区别，我们定义了一个输出模板字符串的函数`template`，它接受一个`text`参数，然后用它解析模板字符串，最终通过`console.log`得到输出结果。
 
@@ -135,7 +135,7 @@ node ziyue.js 三人行必有我师焉
 
 得到如下输出。
 
-![](./images/t01b91ef85b28178989.jpg.png)
+![](./images/716157826d5bb489c37a6d0dd4244830.webp )
 
 ## 总结
 

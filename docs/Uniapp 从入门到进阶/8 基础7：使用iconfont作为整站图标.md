@@ -19,23 +19,23 @@
 
 在阿里图标库里，可以找到非常多各式各样的字体图标，并且可以私人上传定制图标库，与团队协同开发管理图标。首次登录需要先捆绑账号，支持github及新浪微博快捷入口登录。登录后点击【图标管理】>>【我的项目】进入项目页面：
 
-![](./images/ca0f013ecd3ee160d12af5a0d2ce5dbd.png)
+![](./images/ca0f013ecd3ee160d12af5a0d2ce5dbd.webp )
 
 进入页面点击右侧紫色的添加图标新建一个项目，点进出现弹窗，在弹出的弹窗中填好项目名称及项目描述，然后点击新建：
 
-![](./images/c240c2a731240afbfb724fa059ca1296.png)
+![](./images/c240c2a731240afbfb724fa059ca1296.webp )
 
 回到图标库，在搜索框中输入自己想要的图标，并鼠标悬浮到具体图标中，点击购物车（添加入库），此时你的购物车会添加1：
 
-![](./images/f2569e7a475e6852c9faa2fcc4695051.png)
+![](./images/f2569e7a475e6852c9faa2fcc4695051.webp )
 
 找到所有想要的图标并添加进购物车后，点击右上角购物车的图标，将购物车里的图标添加至项目，选择刚才新建的项目：
 
-![](./images/1825be6d33b44ca2fe02ad9c818a4fb8.png)
+![](./images/1825be6d33b44ca2fe02ad9c818a4fb8.webp )
 
 回到我的项目页面，点击**下载至本地**按钮，解压即可：
 
-![](./images/70d6da973fbd576934c15debc9b0a7e9.png)
+![](./images/70d6da973fbd576934c15debc9b0a7e9.webp )
 
 ## 在项目中使用 iconfont
 
@@ -43,7 +43,7 @@
 
 将上面下载的文件解压缩后可以看到以下内容，woff，woff2，ttf，eot后缀名的等都是字体文件：
 
-![](./images/602a12db01bdf227dc5d0e3786925be0.png)
+![](./images/602a12db01bdf227dc5d0e3786925be0.webp )
 
 查看 iconfont.css  样式表中如何引用这些字体文件，并且可以清楚知道，引用了四个字体文件加上一个svg文件：
 
@@ -62,7 +62,7 @@
 
 将上面提到的5个文件放入到新建文件夹 common/css 中，放在这里的原因是字体属于全局文件，可以统一管理：
 
-![](./images/0975a698359bfcbe91c1dfb4ddd26d13.png)
+![](./images/0975a698359bfcbe91c1dfb4ddd26d13.webp )
 
 要想在所有页面上生效，就要在 App.vue 引入：
 
@@ -89,7 +89,7 @@
 
 然后就可以在浏览器，小程序上预览效果了：
 
-![](./images/20f22027271c27ffd340f7bc3de21294.png)
+![](./images/20f22027271c27ffd340f7bc3de21294.webp )
 
 可能有小伙伴会有疑问，为什么这样做会生效？其实我们在 App.vue 引入 iconfont.css 的时候，样式表`font-family`属性指定了字体文件，作用于`iconfont`命名的元素，并且在字体库中查找对应的 code（以 `iconfont` 命名的元素包裹的字符）：
 
@@ -106,11 +106,11 @@
 
 以 `iconfont` 命名的元素包裹的字符从哪里来呢？就是在 iconfont 项目中把字体图标显示以 Unicode 的形式显示，鼠标悬浮可复制代码：
 
-![](./images/44ae8c6c584143c70eee93ae93f51b08.png)
+![](./images/44ae8c6c584143c70eee93ae93f51b08.webp )
 
 如果你不想每次都这么麻烦，添加一个图标然后又重复以上操作，你可以使用生成的 cdn 地址：
 
-![](./images/7a2e88e50f10bdca10a42b8027d9aba8.png)
+![](./images/7a2e88e50f10bdca10a42b8027d9aba8.webp )
 
 代码修改调整：
 ```css

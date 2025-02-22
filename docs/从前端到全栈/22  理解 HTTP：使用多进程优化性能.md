@@ -115,15 +115,15 @@ app.listen({
 
 虽然我们把 server.js 模式改为了 Cluster 模式，但它们的使用方式几乎没有什么差别，依然是通过`const app = new Server({instances: 0});`创建一个基于 CPU 内核数的多进程服务。
 
-![](./images/t01bb2c64a488abfed8.jpg.png)
+![](./images/c8bacaa42687192a936981e84b71371f.webp )
 
 因为我的电脑是 8 核的 CPU，所以 server 一共启动了 8 个子进程（也就是 8 份 index.js 进程）。如图所示：
 
-![](./images/t017f9c70268d9f5a26.jpg.png)
+![](./images/a822cf94976b75f6076159f38f2eb3ea.webp )
 
 然后，我们开启两个浏览器窗口分别访问`localhost:9090/abc`。这里我们可以看到，Cluster 将请求分配到了不同的进程去处理。
 
-![](./images/t01b9e30a2be757cf7e.jpg.png)
+![](./images/8952ccde2b8a4808a73ff7135f696e0a.webp )
 
 现在，我们的多进程服务器就搭建好了，接下来再看看进程之间是如何同步数据的。
 
@@ -172,7 +172,7 @@ Node.js 提供的`process.send`方法允许我们在进程间传递消息，比�
 
 如上代码所示，在主进程中我们通过遍历 cluster.workers，可以访问各个子进程对象（Worker)，然后我们为每个子进程添加 on message 事件监听器。这样一来，每个子进程就能通过主进程监听来自`process.send`方法的消息了。下图直观地展示了进程间信息的传递过程：
 
-![](./images/t018db6bd1bccfbd3df.jpg.png)
+![](./images/2cb7f611a1ead115457f97a5975767a4.webp )
 
 
 但是，这种实现方式也有局限性。当接收的消息不同时，我们需要修改所有 server模块，无法通用。所以最好的办法是让主进程（Master）将消息广播给所有的 Worker 进程，再让 Worker 进程自己去处理。

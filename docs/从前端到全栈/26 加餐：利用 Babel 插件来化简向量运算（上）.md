@@ -39,7 +39,7 @@ Babel 是通用的多功能 JavaScript 编译器，准确的说，它是一个 J
 
 这个过程通常分为几个步骤：
 
-![](./images/b5b01c68965c4151a7499fa6bd2b2c3c~tplv-k3u1fbpfcp-zoom-1.image.png)
+![](./images/5ffc17bfc1379dca248a7aa4bbcdba6a.webp )
 
 首先是**解析**(parse)，在这个步骤里，Babel 接收代码，并将代码解析成抽象语法树（Abstract Syntex Tree）。
 

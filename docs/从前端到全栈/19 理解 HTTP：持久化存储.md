@@ -2,7 +2,7 @@
 
 在上一节课里，我们通过 Mock 数据模拟了 Web 应用的数据源，实现了一个简单的数据查询功能。在一般的 Web 应用服务端，数据通常存储在关系数据库、分布式 K/V 存储或者分布式文件系统等**持久化存储服务**中，Web 服务端通过 TCP 或者其他协议与这些存储服务通讯、存储或读取数据。
 
-![](./images/t0133d10def576cfad7.png.png)
+![](./images/f457df8e1336c3816e52050b934963a5.webp )
 
 所以这节课，我们就来看一下如何实现数据的持久化存储。
 
@@ -18,11 +18,11 @@ SQLite 数据库是基于文件的，不需要在系统中安装 server 服务�
 
 接下来我们将用 Node.js 作为服务端实现一个简单的 Todolist 应用。它的前端界面我已经写好了，如下所示：
 
-![](./images/t01bfa80e4d0694ea90.jpg.png)
+![](./images/ed047d22c6d3822d01c28293ea0790ac.webp )
 
 我们设计一个`todo`表来存储 Todolist 的数据，这个表结构很简单，只有3个字段：id、text 和 state。其中 id 是自动产生的，text 字段表示任务描述，state 字段表示任务的状态（已完成或未完成）。
 
-![](./images/t018ec7501be3876578.jpg.png)
+![](./images/77640731489b89b01f47203d5c8ff672.webp )
 
 然后，我们在的 HTTP 服务器的项目中安转 SQLite 模块：
 
@@ -149,7 +149,7 @@ app.use(router.get('/list', async ({database, route, res}, next) => {
 
 这样我们就实现了一个查询 SQLite 数据库 todo 表的服务，它返回的 JSON 结果如下：
 
-![](./images/t011392a3856d8088a1.jpg.png)
+![](./images/9e4fdbe9028c5320cd9eab2c0edc3087.webp )
 
 因为现在数据表中没有数据，所以返回的是空数组。
 

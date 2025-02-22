@@ -232,7 +232,7 @@ console.log(`${title}\n\n    ${article.join('\n    ')}`);
 
 控制台输出的内容如下图：
 
-![](./images/t01bd42a089fb930de8.jpg.png)
+![](./images/0aed3f8105713fda16ef4f197a34a13a.webp )
 
 这样我们就将内容输出到控制台了。
 
@@ -290,7 +290,7 @@ function saveCorpus(title, article) {
 
 这样我们就在文件名后面增加了时间戳，避免了覆盖相同主题的文件。下图是使用了`moment.js`后生成并保存到`output`目录中的文件。
 
-![](./images/t013197b9e5e4b5a004.jpg.png)
+![](./images/52b6147343b04198d7cc61d68241af18.webp )
 
 ## 总结
 

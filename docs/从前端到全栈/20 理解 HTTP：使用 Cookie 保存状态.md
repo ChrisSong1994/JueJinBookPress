@@ -29,7 +29,7 @@ app.use(router.get('/', async ({route, res}, next) => {
 
 当我们的浏览器访问了`http://localhost:9090/`后，服务器就已经在浏览器中写入了一个 Cookie，我们打开 Chrome 的开发者工具，可以看到这个 Cookie：
 
-![](./images/t018cbe0bfeb4252f70.jpg.png)
+![](./images/3435ea3437db24eee8b80d7b4dffff9d.webp )
 
 同时我们可以在这里看到，Cookie 除了名字（Name）和值（Value）之外，还有其他的属性，包括 Domain、Path、Expires/Max-Age、Size、HttpOnly、Secure、SameSite 以及 Priority 等属性，这些属性也是有用的，它们中的一部分可以通过服务器设置，后面我们会详细讲。
 

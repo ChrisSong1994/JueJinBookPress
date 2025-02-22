@@ -14,7 +14,7 @@
 
 我们知道，标准的开放式互联网模型（Open System Interconnection Model）是七层结构，从下到上分别是**物理层、数据链路层、网络层、传输层、会话层、表示层和应用层**。而万维网（World Wide Web）模型把物理层和数据链路层合并为物理层，把会话层、表示层和应用层合并为应用层，所以是四层结构。
 
-![](./images/t01e5f575e21a82f87d.webp.png)
+![](./images/bc6fed993e37c99f6d701d721c569133.webp )
 
 在我们编写 Web 应用时，通常很少和物理层打交道，基本上是和网络层、传输层和应用层打交道。网络层主要是 IP 协议，也就是 IP 地址的解析；传输层主要是 TCP 协议；应用层主要是 HTTP 协议。
 
@@ -196,7 +196,7 @@ ${str}
 
 这样，浏览器中显示出来的结果就是正常`<H1>`标题的 Hello World 内容。
 
-![](./images/t01aef51f54582b545e.jpg.png)
+![](./images/a94e5e6dde7962dcd5e6ce6d51bf2d79.webp )
 
 服务器可以给浏览器返回不同的响应内容和状态码，浏览器会根据响应内容、状态码执行不同的动作。比如我们再修改一下代码：
 
@@ -236,7 +236,7 @@ const server = net.createServer((socket) => {
 
 我们修改了上面代码的 responseData 函数，让它能够支持传入 status 状态码和 desc 状态描述。然后我们判断浏览器请求的 URL 地址，如果路径是`/`，则返回 200，否则返回 404。
 
-![](./images/t01f2dbbeb493efb2ca.jpg.png)
+![](./images/585e72657a861da09deaae60fa7b55ee.webp )
 
 所以如果我们请求一个非`/`的地址，比如`/abc`，那么浏览器就会返回 404。
 

@@ -100,7 +100,7 @@ inter.run({count: 0});
 
 首先，我们给拦截器注册了 5 个拦截切面，分别是 task0 到 task4 。当我们调用 run 方法时，这 5 个拦截切面被拼接为如下形式，即 `proc`：
 
-![](./images/t01a3d5a2fc20b65cda.jpg.png)
+![](./images/8cc854a4363d60260a5a69008b35f95d.webp )
 
 然后，执行这个异步洋葱模型，它的输出结果如下：
 
@@ -366,7 +366,7 @@ app.use(router.all('/test/:course/:lecture', async ({route, res}, next) => {
 
 比如，我们访问的路径是`http://localhost:9090/test/123/abc`，它刚好与路由规则匹配，所以`ctx.route`得到的是`{course: "123", lecture: "abc"}`。这个请求的效果如下图所示：
 
-![](./images/t01f93c7634d8fb3e46.jpg.png)
+![](./images/53eff38812daa4a78ee00502a164b11f.webp )
 
 然后我们还可以再添加一个默认的路由：
 

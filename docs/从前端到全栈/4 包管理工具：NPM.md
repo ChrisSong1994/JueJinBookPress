@@ -20,7 +20,7 @@ console.log(builtinModules);
 
 然后我们运行`node show_builtins.js`，就能显示所有内置模块名的信息：
 
-![](./images/t018851f49e0a0d35d9.jpg.png)
+![](./images/c4fafb4c9cf0993045f2f531b0e49de8.webp )
 
 我们看到，Node.js 有数十个内置模块，其中有一些常用的，比如 console、fs、http 等等，我们在后续的课程中会详细介绍。这里我们只需要知道，通过模块名，我们就能将它们引入我们自己的模块中。
 
@@ -84,7 +84,7 @@ npm install moment --save
 
 `moment.js`库的包名就叫做`moment`，所以我们运行上面的`npm install`命令。
 
-![](./images/t01826a7ad21252cf89.jpg.png)
+![](./images/f644e8992ab37516617019fb53b1704f.webp )
 
 如果没有异常的话，很快就安装完成，并给出安装的模块的版本信息。这里我们安装的`moment.js`版本是`2.24.0`。你可能注意到了，我们执行`npm install`的时候加了一个`--save`参数，这个参数会在包安装成功后自动修改`pacakge.json`文件，在其中的`dependencies`属性中增加安装的包的名字和版本信息。
 
@@ -136,7 +136,7 @@ npm -g install eslint
 
 比如我们对 ziyue.js 进行检查。可以先到项目目录下，执行`eslint --init`命令，初始化一份 .eslintrc.js 配置。
 
-![](./images/t019486c2e074fb71c3.jpg.png)
+![](./images/f9f4e48b91154bab98bfc83373b16e95.webp )
 
 然后执行命令：
 
@@ -144,7 +144,7 @@ npm -g install eslint
 eslint ziyue.js
 ```
 
-![](./images/t0113421b8ad1c30735.jpg.png)
+![](./images/9d85fdf739b4a9cc58b915964d2efe44.webp )
 
 这时命令行终端就会输出检查结果。这个结果包括 4 个书写错误，因为我们默认配置了 Standard 规范来检查 JS，而 Standard 是采用让引擎自动补全分号的书写风格，而且文件最末尾要保留一个空行。
 

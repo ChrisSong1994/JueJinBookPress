@@ -338,7 +338,7 @@ function randomColor() {
 
 这样，我们将上面这段代码保存为`test.js`，然后执行`node test.js`，就可以看到设备的颜色在不断的变化了，效果如下图所示：
 
-![Mar-15-2023 10-41-14.gif](./images/0e92fa7e95c9468cbc9c229342fa0595~tplv-k3u1fbpfcp-zoom-1.image.png)
+![Mar-15-2023 10-41-14.gif](./images/358cdc48dcd00e3a76bbaadef8b832d6.webp )
 
 ## 小结
 

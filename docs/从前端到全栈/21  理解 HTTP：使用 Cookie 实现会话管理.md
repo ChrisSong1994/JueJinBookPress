@@ -16,7 +16,7 @@ Session 机制对于复杂的互联网应用十分重要。试想一下，假设
 
 我们先在 SQLite 中创建一个 user 表，它有三个字段：`id`、`name` 和 `password`。简单起见，我们不实现用户注册功能，预先在表里输入一个用户信息。
 
-![](./images/t01a85e3832de6ed6bb.jpg.png)
+![](./images/670ff74fae0f11b64fb52865523d8ec2.webp )
 
 这个用户名叫 junyux，密码是 123456。
 
@@ -63,7 +63,7 @@ module.exports = {
 
 我们在 SQLite 中创建一个 Session 表，用来存放 Session 信息：
 
-![](./images/t01753420d4a7116e2c.jpg.png)
+![](./images/159fb88e1f3d7e45c896862008f2df32.webp )
 
 Session 表有六个字段：
 
@@ -187,14 +187,14 @@ app.use(router.post('/login', async (ctx, next) => {
 
 ⚠️注意，更新 Cookie 的切面必须放在所有切面的前面，无论用户是否进行登录操作，服务器都会为该用户更新他的 Cookie。我们启动服务器，用 postman 试一下这个接口：
 
-![](./images/t018c2ad4eb41f8187e.jpg.png)
+![](./images/a74d265dbb7fa325434d9d30d9923b12.webp )
 
 
 这样我们就实现了将用户信息保存到 Session，以及从 Session 中读取用户信息的功能。
 
 现在，我们打开事先实现好的登录页面（具体的页面代码可以查看[TODO: 仓库连接]）：
 
-![](./images/t01edede0193a1fdae1.jpg.png)
+![](./images/ee7b215c26cfa215ff4aa4dc0a319658.webp )
 
 当我们点击登录后，服务器会将这个请求转发到如下拦截切面中处理：如果用户登录失败，返回 302 跳转并回到登录页面；如果登录成功，则进入 index.html 页面：
 
@@ -266,7 +266,7 @@ app.use(router.get('/list', async (ctx, next) => {
 
 当然，这里我们需要给 Todo 表添加用户 ID 字段：
 
-![](./images/t01fbd2df3964a6f8a3.jpg.png)
+![](./images/e2ab5d6ee4657fb765958ba35e82f634.webp )
 
 这样，服务器才能根据用户 ID 来获得和该用户相关的任务数据：
 
@@ -332,7 +332,7 @@ async function loadItems(list) {
 
 这样，如果访问的时候没有登录，就会自动跳转到`/login.html`进行登录了。最终完整的应用的操作流程如下：
 
-![](./images/t01fab3087a1ae27cd0.gif.png)
+![](./images/4e5aee291c3a1742e09dbd1596dec4e6.webp )
 
 ## 总结
 

@@ -180,7 +180,7 @@ if('help' in options) { // 如果输入的是help，就打印帮助文本
 
 我们判断命令中如果有`--help`那么就打印使用帮助，否则就输出文章。那么运行`node index.js --help`实际效果如下图所示：
 
-![](./images/t01149aa3eb55a56504.jpg.png)
+![](./images/8e8442cca30a233b3ec63a7c04f8430d.webp )
 
 现在，我们命令行交互就全部完成了。
 

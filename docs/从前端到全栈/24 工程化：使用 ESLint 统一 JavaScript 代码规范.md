@@ -168,13 +168,13 @@ ESLint 的警告等级有 3 种：`error`表示报告错误；`warn`表示不报
 
 现在大部分主流的代码编辑器都支持 ESLint 插件，比如你使用 VisualStudio Code，那么你可以安装 ESLint 插件，就可以直接在代码中显示出 ESLint 规则的提示信息：
 
-![](./images/2e1b66e6d6784ea1b399611276f91ec1~tplv-k3u1fbpfcp-zoom-1.image.png)
+![](./images/1cf938f81fa1ae192d41e2dd523721c3.webp )
 
 因为我们刚才把警告等级改为`warn`了，所以现在显示出的是黄色的波浪线。
 
 我们将`no-var`规则的警告等级改回`error`，那么波浪线的颜色就变成红色的了。
 
-![](./images/b8aab4fb196f454ab7613415b5a28fea~tplv-k3u1fbpfcp-zoom-1.image.png)
+![](./images/849123736a97993170291df5e0aafe1a.webp )
 
 使用 eslint 配合编辑器插件，可以帮助我们快速找到代码错误或者不规范的地方，有助于我们养成良好代码风格的书写习惯。
 
