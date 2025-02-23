@@ -9,8 +9,8 @@
     "preview": "rspress preview",
     "start": "serve -p 3090  ./doc_build",
     "gen": "node scripts/booksGenerate.js",
-    "docker:buildx": "docker buildx build --platform linux/amd64,linux/arm64 . --no-cache -t chrissong1994/JuejinBookPress:latest --push",
-    "docker:build": "docker build  . --no-cache -t chrissong1994/JuejinBookPress:latest "
+    "docker:buildx": "docker buildx build --platform linux/amd64,linux/arm64 . --no-cache -t chrissong1994/juejinbookpress:latest --push",
+    "docker:build": "docker build  . --no-cache -t chrissong1994/juejinbookpress:latest "
   },
   "dependencies": {
     "rspress": "^1.38.0"
