@@ -6,11 +6,14 @@ const BASE_PATH = "/";
 export default defineConfig({
   root: path.join(__dirname, "docs"),
   title: "前端小册",
-  description: '前端知识小册',
+  description: "前端知识小册",
   icon: "/logo.icon.png",
   logo: "/logo.png",
   base: BASE_PATH,
   logoText: "前端小册",
+  search: {
+    searchHooks: path.join(__dirname, "./search.tsx"),
+  }, // 关闭搜索功能
   builderConfig: {
     output: {
       assetPrefix: BASE_PATH,
@@ -22,6 +25,7 @@ export default defineConfig({
   ssg: true,
   // 覆写主题配置
   themeConfig: {
+    enableScrollToTop: true,
     socialLinks: [
       {
         icon: "github",
