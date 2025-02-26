@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",
-    "build:gp": "cross-env BASE_PATH=JueJinBookPress rspress build",
+    "build:gp": "cross-env BASE_PATH=JueJinBookPress NODE_OPTIONS=--max-old-space-size=8192 rspress build",
     "preview": "rspress preview",
     "start": "serve -p 3090  ./doc_build",
     "gen": "node scripts/booksGenerate.js",
