@@ -2,7 +2,6 @@ import * as path from "node:path";
 import { defineConfig } from "rspress/config";
 
 const BASE_PATH = process.env.BASE_PATH || "/";
-console.log("BASE_PATH", BASE_PATH);
 
 export default defineConfig({
   root: path.join(__dirname, "docs"),
