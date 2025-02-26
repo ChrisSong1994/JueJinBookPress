@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",
+    "build:gp": "cross-env BASE_PATH=juejinbookpress rspress build",
     "preview": "rspress preview",
     "start": "serve -p 3090  ./doc_build",
     "gen": "node scripts/booksGenerate.js",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/node": "^18.11.17",
     "@types/react": "^19.0.2",
+    "cross-env": "^7.0.3",
     "fs-extra": "^11.3.0",
     "node-fetch": "^2.7.0",
     "serve": "^14.2.4",
