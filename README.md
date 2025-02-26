@@ -23,7 +23,7 @@ npm run start
 ```bash
 docker build -t juejinbookpress .
 docker run -d -p 8080:80 --name juejinbookpress juejinbookpress
-``
+```
 或者使用 `chrissong1994/juejinbookpress` docker 体验；
 
 ## 开发
