@@ -6,7 +6,7 @@ const BASE_PATH = "/";
 export default defineConfig({
   root: path.join(__dirname, "docs"),
   title: "前端小册",
-  description: '前端知识小册',
+  description: "前端知识小册",
   icon: "/logo.icon.png",
   logo: "/logo.png",
   base: BASE_PATH,
@@ -22,6 +22,8 @@ export default defineConfig({
   ssg: true,
   // 覆写主题配置
   themeConfig: {
+    search: false, // 自带的搜索服务因为索引文件太大会导致浏览器 oom，需要自定义 TODO
+    enableScrollToTop: true,
     socialLinks: [
       {
         icon: "github",
