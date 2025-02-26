@@ -19,7 +19,7 @@ export default defineConfig({
   route: {
     cleanUrls: true,
   },
-  ssg: false,
+  ssg: true,
   // 覆写主题配置
   themeConfig: {
     socialLinks: [
